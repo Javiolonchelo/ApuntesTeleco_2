@@ -13,7 +13,7 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 #### Segundo Semestre
 - Ciencia, Tecnología y Sociedad - `Aún no comenzado`
 - Fundamentos de Sonido e Imagen - `Aún no comenzado`
-- Microprocesadores _(Aún no comenzado)_
+- Microprocesadores - `Aún no comenzado`
 - Procesado Digital de la Señal - `Aún no comenzado`
 - Propagación de Ondas - `Aún no comenzado`
 - [Teoría de la Comunicación](../main/Segundo_Semestre/Teoria_de_la_Comunicacion/Teoria_de_la_Comunicacion.pdf) - `En progreso`
