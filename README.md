@@ -9,7 +9,7 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 - [Electrónica II](../main/Primer_Semestre/Electronica_II/Electronica_II.pdf) - `En progreso`
 - [Estadística y Procesos Estocásticos](../main/Primer_Semestre/Estadistica_y_Procesos_Estocasticos/Estadistica_y_Procesos_Estocasticos.pdf) - `En progreso`
 - [Redes y Servicios de Telecomunicación](../main/Primer_Semestre/Redes_y_Servicios_de_Telecomunicacion/Redes_y_Servicios_de_Telecomunicacion.pdf) - `En progreso`
-- [Señales y Sistemas](../main/Senales_y_Sistemas/Primer_Semestre/Senales_y_Sistemas.pdf) - `En progreso`
+- [Señales y Sistemas](../main/Primer_Semestre/Senales_y_Sistemas/Senales_y_Sistemas.pdf) - `En progreso`
 #### Segundo Semestre
 - Ciencia, Tecnología y Sociedad - `Aún no comenzado`
 - Fundamentos de Sonido e Imagen - `Aún no comenzado`
