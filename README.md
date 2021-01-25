@@ -116,7 +116,7 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 ### Variables aleatorias
 - Variable aleatoria discreta
 - Variable aleatoria continua
-- ~~Desigualdad de Chebysev~~
+- Desigualdad de Chebysev
 - Cuantil y percentil
 ### Vectores aleatorios
 - Variable aleatoria bidimensional discreta. Funciones de distribución conjunta, marginales y condicionadas. Cálculo de probabilidades
