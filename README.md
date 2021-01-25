@@ -191,10 +191,10 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 <details><summary>Señales y Sistemas</summary>
 <p>
   
-  ### Introducción al análisis de señales en el dominio del tiempo
-- Señales: definición y clasificación
-- Propiedades y tansformaciones de la variable independiente
-- Estudio de las señales básicas
+  ### ~~Introducción al análisis de señales en el dominio del tiempo~~
+- ~~Señales: definición y clasificación~~
+- ~~Propiedades y tansformaciones de la variable independiente~~
+- ~~Estudio de las señales básicas~~
 ### Análisis de sistemas en el dominio del tiempo
 - Definición de sistema y de sus propiedades
 - Sistemas LTI
