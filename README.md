@@ -24,7 +24,7 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 - Propagación de Ondas - `Aún no comenzado`
 - [Teoría de la Comunicación](../main/Segundo_Semestre/Teoria_de_la_Comunicacion/Teoria_de_la_Comunicacion.pdf) - `En progreso`
 
-## Estado de los apuntes
+## Estado de los apuntes (NO DISPONIBLE TEMPORALMENTE)
 Puedes comprobar el estado en el que se encuentran los apuntes desplegando a continuación su correspondiente pestaña. Los apartados tachados son aquellos que ya han sido implementados en los apuntes.
 
 <details><summary>Primer Semestre</summary>
