@@ -3,6 +3,12 @@ Este repositorio contiene mis apuntes de las asignaturas de 2º curso del grado 
 
 Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hacérmelo saber, a través de GitHub (en el menú _Issues_) o bien por correo electrónico a [javiolonchelo@gmail.com](mailto:javiolonchelo@gmail.com)
 
+### Tabla de contenidos
+* [Asignaturas](#asignaturas)
+  * [Primer semestre](#primer-semestre)
+  * [Segundo semestre](#segundo-semestre)
+* [Estado de los apuntes](#estado-de-los-apuntes)
+
 ## Asignaturas
 #### Primer semestre
 - [Electromagnetismo y Ondas](../main/Primer_Semestre/Electromagnetismo_y_Ondas/Electromagnetismo_y_Ondas.pdf) - `En progreso`
