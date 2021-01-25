@@ -1,0 +1,153 @@
+\babel@toc {spanish}{}
+\babel@toc {spanish}{}
+\contentsline {section}{Introducción}{2}{section*.2}%
+\contentsline {section}{\numberline {0.1}Notación}{5}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Pasos para la resolución de problemas}{5}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Análisis dimensional}{5}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Trigonometría}{6}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}Propiedades importantes}{6}{subsection.0.4.1}%
+\contentsline {subsubsection}{Sumas de ángulos}{6}{equation.0.2}%
+\contentsline {section}{\numberline {0.5}Vectores}{6}{section.0.5}%
+\contentsline {subsection}{\numberline {0.5.1}Operaciones con vectores}{6}{subsection.0.5.1}%
+\contentsline {subsubsection}{Base de vectores}{7}{subsection.0.5.1}%
+\contentsline {subsubsection}{Cambio de base}{7}{subsection.0.5.1}%
+\contentsline {subsection}{\numberline {0.5.2}Fasores}{7}{subsection.0.5.2}%
+\contentsline {section}{\numberline {0.6}Cinemática general}{7}{section.0.6}%
+\contentsline {subsection}{\numberline {0.6.1}Posición}{7}{subsection.0.6.1}%
+\contentsline {subsection}{\numberline {0.6.2}Velocidad}{7}{subsection.0.6.2}%
+\contentsline {subsection}{\numberline {0.6.3}Aceleración}{8}{subsection.0.6.3}%
+\contentsline {subsection}{\numberline {0.6.4}Movimiento circuilar uniforme}{8}{subsection.0.6.4}%
+\contentsline {subsubsection}{Circunferencia}{8}{subsection.0.6.4}%
+\contentsline {section}{\numberline {0.7}Dinámica general}{8}{section.0.7}%
+\contentsline {subsection}{\numberline {0.7.1}Leyes de Newton}{8}{subsection.0.7.1}%
+\contentsline {subsubsection}{Primera ley de Newton}{8}{subsection.0.7.1}%
+\contentsline {subsubsection}{Segunda ley de Newton}{8}{equation.0.7}%
+\contentsline {subsubsection}{Tercera ley de Newton}{8}{equation.0.8}%
+\contentsline {subsection}{\numberline {0.7.2}Energía}{9}{subsection.0.7.2}%
+\contentsline {subsubsection}{Energía cinética}{9}{subsection.0.7.2}%
+\contentsline {subsubsection}{Energía potencial}{9}{subsection.0.7.2}%
+\contentsline {subsubsection}{Energía mecánica}{9}{subsection.0.7.2}%
+\contentsline {subsection}{\numberline {0.7.3}Trabajo}{9}{subsection.0.7.3}%
+\contentsline {subsection}{\numberline {0.7.4}Fuerza conservativa}{9}{subsection.0.7.4}%
+\contentsline {chapter}{\numberline {1}Oscilaciones}{11}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Movimiento armónico simple}{11}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}\centering Cinemática del M.A.S.}{11}{subsection.1.1.1}%
+\contentsline {subsubsection}{Propiedades generales}{11}{subsection.1.1.1}%
+\contentsline {subsubsection}{Velocidad y aceleración}{11}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}\centering Dinámica del M.A.S.}{12}{subsection.1.1.2}%
+\contentsline {subsubsection}{Dinámica básica}{12}{subsection.1.1.2}%
+\contentsline {subsubsection}{Ecuación diferencial del M.A.S.}{12}{equation.1.1}%
+\contentsline {subsubsection}{Energía cinética del M.A.S.}{12}{equation.1.1}%
+\contentsline {subsubsection}{Energía potencial del M.A.S.}{12}{equation.1.1}%
+\contentsline {section}{\numberline {1.2}Composición de movimientos armónicos}{13}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Composición de 2 M.A.S. paralelos de igual frecuencia}{13}{subsection.1.2.1}%
+\contentsline {subsubsection}{Calcular la fase}{13}{figure.caption.6}%
+\contentsline {subsubsection}{Calcular la amplitud}{14}{figure.caption.6}%
+\contentsline {subsection}{\numberline {1.2.2}Composición de 2 M.A.S. paralelos de diferente frecuencia}{14}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Composición de 2 M.A.S. perpendiculares de igual frecuencia}{14}{subsection.1.2.3}%
+\contentsline {subsubsection}{Movimientos en fase}{15}{subsection.1.2.3}%
+\contentsline {subsubsection}{Movimientos en oposición de fase}{15}{Item.7}%
+\contentsline {subsubsection}{Movmientos en cuadratura}{16}{Item.9}%
+\contentsline {subsection}{\numberline {1.2.4}Caso general}{17}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Oscilaciones amortiguadas y forzadas}{17}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Movimiento oscilatorio amortiguado}{17}{subsection.1.3.1}%
+\contentsline {subsubsection}{Energía en movimientos oscilatorios amortiguados}{18}{Item.15}%
+\contentsline {subsection}{\numberline {1.3.2}Movimiento oscilatorio forzado}{18}{subsection.1.3.2}%
+\contentsline {subsubsection}{Resonancia en amplitud}{19}{subsection.1.3.2}%
+\contentsline {subsubsection}{Resonancia en energía}{19}{subsection.1.3.2}%
+\contentsline {chapter}{\numberline {2}Ondas en medios elásticos}{21}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Características. Función y ecuación de ondas}{21}{section.2.1}%
+\contentsline {subsubsection}{Definición de onda}{21}{section.2.1}%
+\contentsline {subsubsection}{Función de onda}{21}{section.2.1}%
+\contentsline {subsubsection}{Frente de onda}{21}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Clasificación de las ondas en función del frente de onda}{21}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Clasificación de las ondas en función del movimiento}{21}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Ondas armónicas}{21}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Función de onda unidimensional}{22}{subsection.2.2.1}%
+\contentsline {subsubsection}{Comportamiento temporal}{22}{subsection.2.2.1}%
+\contentsline {subsubsection}{Comportamiento espacial}{22}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Función de onda armónica}{23}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Ondas en dos y tres dimensiones}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Función de onda plana}{23}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Función de onda esférica}{23}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Función de onda cilíndrica}{24}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Intensidad y nivel de intensidad}{24}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Intensidad de una onda}{24}{subsection.2.4.1}%
+\contentsline {subsubsection}{Onda armónica plana}{25}{subsection.2.4.1}%
+\contentsline {subsubsection}{Onda armónica esférica}{25}{subsection.2.4.1}%
+\contentsline {subsubsection}{Ondas cilíndricas}{25}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Nivel de intensidad}{25}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Ecuación de onda}{26}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Sonido y efecto Doppler}{26}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Sonido}{26}{subsection.2.5.1}%
+\contentsline {subsubsection}{Función de onda para el sonido}{26}{subsection.2.5.1}%
+\contentsline {subsubsection}{Variaciones de presión}{27}{Item.17}%
+\contentsline {subsubsection}{Energía de las ondas sonoras}{27}{Item.17}%
+\contentsline {subsubsection}{Nivel de intensidad sonora}{27}{Item.17}%
+\contentsline {subsubsection}{Diferencia de nivel de intensidad}{27}{Item.17}%
+\contentsline {subsection}{\numberline {2.5.2}Efecto Doppler}{28}{subsection.2.5.2}%
+\contentsline {subsubsection}{Cómo usar la ecuación del efecto Doppler}{28}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Leyes de la reflexión y la refracción}{28}{section.2.6}%
+\contentsline {subsubsection}{Ley de Snell de la reflexión.}{28}{section.2.6}%
+\contentsline {subsubsection}{Ley de Snell de la refracción.}{29}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Interferencias}{29}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Ejemplo 1}{29}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Ejemplo 2}{30}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Caso general}{30}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Coherencia}{30}{subsection.2.7.4}%
+\contentsline {subsubsection}{Focos coherentes}{30}{subsection.2.7.4}%
+\contentsline {subsubsection}{Focos incoherentes}{31}{subsection.2.7.4}%
+\contentsline {section}{\numberline {2.8}Ondas estacionarias}{31}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Electrostática}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Conservación y cuantificación de la carga}{33}{section.3.1}%
+\contentsline {subsubsection}{Carga eléctrica}{33}{section.3.1}%
+\contentsline {subsubsection}{Características de la carga eléctrica}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Ley de Coulomb y principio de superposición}{33}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Ley de Coulomb}{33}{subsection.3.2.1}%
+\contentsline {subsubsection}{Principio de superposición}{34}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Campo eléctrico}{34}{subsection.3.2.2}%
+\contentsline {subsubsection}{Principio de superposición}{34}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Distribución continua de cargas}{34}{subsection.3.2.3}%
+\contentsline {subsubsection}{Distribución lineal de carga}{34}{subsection.3.2.3}%
+\contentsline {subsubsection}{Distribución superficial de carga}{34}{subsection.3.2.3}%
+\contentsline {subsubsection}{Distribución volumétrica de carga}{34}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Potencial eléctrico}{34}{section.3.3}%
+\contentsline {subsubsection}{Energía potencial eléctrica}{34}{section.3.3}%
+\contentsline {subsubsection}{Potencial eléctrico}{35}{section.3.3}%
+\contentsline {subsubsection}{Gradiente eléctrico}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Movimiento de una partícula en un campo}{35}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Ley de Gauss}{35}{section.3.5}%
+\contentsline {subsubsection}{Simetría esférica}{36}{section.3.5}%
+\contentsline {subsubsection}{Simetría cilíndrica}{36}{section.3.5}%
+\contentsline {subsubsection}{Simetría plana}{36}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Dipolo eléctrico}{36}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Campo eléctrico en medios conductores}{36}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Campo eléctrico en medios dieléctricos}{36}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Energía electrostática}{36}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Magnetostática}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Corrientes estacionarias}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Fuerza de Lorentz. Campo magnético}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3} Ley de Laplace. Pares sobre circuitos. Momento magnético}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Ley de Biot y Savart}{37}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Teorema de Ampère}{37}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Campo magnético en la materia}{37}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Materiales magnéticos}{37}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Campos electromagnéticos}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Inducción electromagnética. Ley de Faraday}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Inducción mutua y autoinducción}{39}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ley de Ampère-Maxwell}{39}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Energía del campo electromagnético}{39}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Ecuaciones de Maxwell en forma integral}{39}{section.5.5}%
+\contentsline {chapter}{\numberline {A}Prácticas}{41}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Incertidumbre y medida}{41}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Oscilaciones amortiguadas y forzadas}{41}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Ondas estacionarias en una cuerda}{41}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}Velocidad del sonido. Tubo de Kundt}{41}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}Distribuciones de potenciales y campos eléctricos}{41}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}Campo magnético. Fuerza electromotriz}{41}{section.Alph1.6}%
+\contentsline {chapter}{\numberline {B}Formularios}{43}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Oscilaciones}{43}{section.Alph2.1}%
+\contentsline {section}{\numberline {B.2}Ondas en medios elásticos}{44}{section.Alph2.2}%
+\contentsline {section}{\numberline {B.3}Campo electrostático}{45}{section.Alph2.3}%
+\contentsline {section}{\numberline {B.4}Campo magnético}{46}{section.Alph2.4}%
+\contentsline {section}{\numberline {B.5}Campo electromagnético}{47}{section.Alph2.5}%

@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\setlist{itemsep=1em, after=\vspace{\parskip}}
+\usepackage{geometry} 
+\geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
+
+\setlength{\parskip}{0.5em}
+
+\newcounter{myenumi}
+\renewcommand{\themyenumi}{\alph{myenumi})}
+\newenvironment{myenumerate}{\setlength{\parindent}{0pt}\setcounter{myenumi}{0}\renewcommand{\item}{\par\refstepcounter{myenumi}\makebox[1.3em][l]{\themyenumi}}}{\par\bigskip\noindent\ignorespacesafterend}
+
+\title{Señales y Sistemas}
+\author{Examen del Tema 4}
+\date{16 de diciembre de 2020}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+	\item Siendo $H(\Omega)$ la función de transferencia de un sistema, realiza las siguientes operaciones.
+	      \[H(\Omega)=\frac{e^{j\Omega}}{e^{j\Omega}-0.6}\]
+	      \begin{enumerate}
+		      \item $\displaystyle{h[n-2]}$
+		      \item $\displaystyle{(-1)^n\cdot h[n]}$
+		      \item $\displaystyle{h[n]\cdot \cos \left( \frac{1}{10} \pi n \right)}$
+		      \item $\displaystyle{x[n]\circledast h[n]\, , \ \text{con }X(\Omega) = \delta (\Omega)}$
+		      \item $\displaystyle{x[n]\circledast h[n]\, , \ \text{con }x(n) = 2\cos \left( 0.2 \pi n -0.3 \pi \right)}$
+		      \item $\displaystyle{x[n]\circledast h[n]\, , \ \text{con }X(\Omega) = 2\cos \left( \Omega \right)}$
+	      \end{enumerate}
+
+
+
+	\item Realiza la transformada de Laplace de las siguientes señales.
+
+\end{enumerate}
+
+\end{document}

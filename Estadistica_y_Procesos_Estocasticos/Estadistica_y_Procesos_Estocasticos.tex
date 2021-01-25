@@ -1,0 +1,756 @@
+\documentclass[a4paper]{book}
+
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc} % Escribir en cualquier idioma
+\usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
+
+\usepackage{babelbib} % Para usar bibliografía en español.
+
+\usepackage{nccmath}
+\usepackage{amsthm}
+\usepackage{lipsum}
+
+%\usepackage{vwcol}
+\usepackage{tcolorbox}
+\usepackage[thicklines]{cancel} % when something goes to zero
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath} % símbolos matemáticos
+\usepackage{graphicx}      % tools for importing graphics
+\usepackage{caption}
+\usepackage{subcaption}    % create subfigures
+\usepackage{color}         % change the colour of the words
+\usepackage{verbatim}      % display LaTeX commands instead of having them executed.
+\usepackage{longtable}     % helps with long table options
+\usepackage{enumerate}
+\usepackage{epsf}          % old package handles encapsulated postscript issues
+\usepackage{bm}            % special bold-math package. usge: \bm{mathsymbol}
+\usepackage{textcomp} % provides many text symbols (such as baht, bullet, copyright, musical­note, onequarter, section and yen
+\usepackage{gensymb} % Permite símbolo º
+\usepackage{geometry} % Fijar los márgenes de todo el documento
+\geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
+
+\usepackage{isotope} % Poner isótopos
+\usepackage{maybemath} % Making math bold, upright, italic or sans-serif according to context
+\usepackage{upgreek} % Letras griegas
+\usepackage{wasysym} % Provides male, female and astronomical symbols
+\usepackage[italic]{hepparticles} % Ver documentación adjunta
+\usepackage{subdepth} % Equalise the height of subcripts in maths
+\usepackage{physics} % Ver documentación adjunta
+\usepackage{braket} % Notación Bra-ket de Dirac
+\newcommand{\Int}{\int\limits} % símbolo de integrales y límites
+\usepackage{tensor} % escribir tensores
+\usepackage{chemformula} % reacciones y fórmulas químicas
+\usepackage{tikz} % minipages
+\usepackage{siunitx} % notacion científica
+\usepackage{url} % enlaces a páginas web
+\usepackage{multirow} % Necessary when placing two or more numbers in the same row
+\usepackage{multicol} % Necessary when placing two or more numbers in the same column
+
+\usepackage[colorlinks=true]{hyperref}  % fijar los colores de las referencias
+\hypersetup{citecolor = blue, linkcolor = blue, urlcolor = blue} % colores de los enlaces a citas, figuras y url
+
+\renewcommand{\sin}{\sen}
+\renewcommand{\arcsin}{\arcsen}
+\renewcommand{\arctan}{\arctg}
+\newcommand{\sen}{\operatorname{\sen}}
+
+
+\usepackage{eso-pic}
+
+
+\usepackage{siunitx} % Required for alignment of decimal numbers in the tables
+\sisetup{ % How many digital places it should display
+  round-mode          = places, % Rounds numbers
+  round-precision     = 2, % to 2 places
+}
+
+\numberwithin{figure}{section}
+\numberwithin{equation}{subsection}
+
+\newcommand{\proy}[2][1]{\text{proy}_{#1}#2}
+
+\newenvironment{caja}{\begin{tcolorbox}[colback = white, sharp corners, boxrule = 1 pt]}{\end{tcolorbox}}
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
+
+
+\titlespacing{\section}{0pt}{2\parskip}{\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+%\renewcommand{\thefigure}{\Roman{figure}}
+%\renewcommand{\thesubfigure}{\arabic{subfigure}}
+
+\captionsetup[figure]{labelfont={bf},name={Figura},labelsep=period}
+\numberwithin{figure}{chapter}
+
+\usepackage{wallpaper}
+
+
+\theoremstyle{definition}
+\newtheorem{teorema}{Teorema}
+\newtheorem{definicion}{Definición}
+\newtheorem{ejercicio}{Ejercicio}
+\newtheorem{formulario}{Formulario}
+
+\newenvironment{nota}{\underline{\textbf{NOTA:}}}{}
+
+\setlength{\parindent}{0pt}
+
+
+
+
+\usepackage{titling}
+
+\setlength{\droptitle}{-10em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% con esto nos aseguramos de que las cabeceras
+% de capítulo y de sección vayan en minúsculas
+\renewcommand{\chaptermark}[1]{%
+        \markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{%
+\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[RE]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0.5pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
+ \fancypagestyle{plain}{%
+   \fancyhead{} % elimina cabeceras en páginas "plain"
+   \renewcommand{\headrulewidth}{0pt} % así como la raya
+}
+
+% Organización del texto
+\newcommand{\formula}[1]{\vspace{13 pt}\noindent \textbf{\underline{#1}}}
+
+% Unidades y utilidades varias
+\renewcommand{\S}{\operatorname{S}}
+\newcommand{\db}{\operatorname{db}}
+\newcommand{\s}{\operatorname{s}}
+\newcommand{\A}{\operatorname{A}}
+\newcommand{\C}{\operatorname{C}}
+\newcommand{\m}{\operatorname{m}}
+\newcommand{\incremento}{\Delta}
+\newcommand{\psus}{\, \ldots \,}
+
+% Derivadas
+\newcommand{\derivadaParcial}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\derivada}[2]{\frac{d #1}{d #2}}
+
+% Vectores
+\usepackage{esvect}
+\renewcommand{\vec}[1]{\vv{{#1}}}
+
+% Repeticiones
+\usepackage{forloop}
+\newcommand{\repvec}[3]{
+	\foreach \uwu in{1,...,#2}
+		{\vec{#1}_{\uwu} ,}
+	\, \ldots \, , \vec{#1}_{#3}
+}
+\newcommand{\rep}[3]{
+	\foreach \uwu in {1,...,#2}
+		{#1_{\uwu} ,}
+	\, \ldots \, , #1_{#3}
+}
+\newcommand{\repinf}[3]{
+	\foreach \uwu in {#2,...,#3}
+		{#1_{\uwu} ,}
+	\, \ldots
+}
+
+\newcommand{\subtext}[1]{_{\text{#1}}}
+\newcommand{\probCond}[2]{P \left( #1 \: \middle\vert\:  #2 \right) }
+
+\usepackage{enumitem}
+\setlist{before={\parskip=3pt}, after=\vspace{\baselineskip}}
+
+% Estadística
+\DeclareMathOperator{\Var}{Var}
+\renewcommand{\var}{\sigma ^2}
+\DeclareMathOperator{\B}{B}
+\DeclareMathOperator{\BN}{BN}
+\DeclareMathOperator{\Geo}{Geo}
+\DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\N}{N}
+
+
+\title{\Huge Estadística y Procesos Estocásticos\\
+\Large Apuntes de clase}
+\author{Javier Rodrigo López \thanks{E-mail: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}}
+\date{\today}
+
+
+\begin{document}
+
+
+\setlength{\wpYoffset}{-5 cm}
+\ThisCenterWallPaper{0.65}{Boticelli.jpg}
+
+
+\maketitle
+
+
+
+\AddToShipoutPictureFG{
+	\begin{tikzpicture}[overlay,remember picture]
+		\path (current page.south west) -- (current page.north east)
+		node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+	\end{tikzpicture}
+}
+
+
+
+
+\begin{figure}[t!]
+	\centering
+	\begin{subfigure}[b]{0.65\linewidth}
+		\includegraphics[width=\linewidth]{upm_logo.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\includegraphics[width=\linewidth]{etsist_logo.png}
+	\end{subfigure}
+\end{figure}
+
+
+\newpage
+\setlength{\parskip}{0.5em}
+\phantomsection
+
+\addcontentsline{toc}{section}{Introducción}
+\section*{Introducción}
+Esta pequeña recopilación de fórmulas, teoremas y demás apuntes de teoría ha sido elaborada durante el primer semestre del curso 2019-2020, en la escuela \href{https://www.etsist.upm.es/}{\textbf{ETSIST}} de la \href{http://www.upm.es/}{\textbf{UPM}} por Javier Rodrigo López, alumno de 1º de Ingeniería de Sonido e Imagen.
+bruuh
+\newpage
+
+\setlength{\parskip}{0em}
+\tableofcontents
+\setlength{\parskip}{0.5em}
+
+\chapter*{Conceptos básicos de teoría de conjuntos}
+\section*{Notación básica}
+\begin{definicion}
+	Un \textbf{conjunto} es una colección de elementos considerada como una sola entidad. Los conjuntos se denotan con letras mayúsculas, $A,B,C \ldots \ $ , mientras que los elementos se denotan con letras minúsculas, $a,b,c \ldots $
+
+	Utilizamos la notación $x\in A$ para indicar que $x$ es un elemento de $A$. Si, por el contrario, $x$ no pertenece a $A$, entonces se escribe como $x\not \in A$.
+
+	Si todos los elementos de un conjunto $A$ pertenecen a su vez a un conjunto $B$, entonces se dice que $A$ es subconjunto de $B$ y se denota como $A\subset B$.
+
+	Si $A$ y $B$ tienen exactamente los mismos elementos, entonces $A=B$.
+\end{definicion}
+
+\section*{Operaciones con conjuntos}
+\begin{definicion}
+	La \textbf{unión} de $A$ y $B$ se denota como $A\cup B$ y contiene a todos los elementos de $A$ y todos los elementos de $B$.
+\end{definicion}
+
+\begin{definicion}
+	La \textbf{intersección} de $A$ y $B$ se denota como $A\cap B$ y contiene solo a los elementos que se encuentran en $A$ y en $B$ al mismo tiempo. Si no comparten elementos, se dice que son \textbf{disjuntos}. La intersección de estos es el conjunto vacío, denotado como $\emptyset$. De esta forma, $A\cap B = \emptyset$
+\end{definicion}
+
+\begin{definicion}
+	El \textbf{complementario} de un conjunto $A$ contiene todos los elementos que no se encuentran en $A$. Se denota como $\overline{A}$ y se cumple que: \[A \cup \overline{A} = \Omega \qquad A \cap \overline{A} = \emptyset\]
+\end{definicion}
+
+\begin{definicion}
+	La \textbf{diferencia} de dos conjuntos $A, B$ se define como el conjunto de los elementos de $A$ que no pertenecen a $B$. Se denota como $A-B$, aunque también se puede escribir como $A\cap \overline{B}$.
+\end{definicion}
+
+\subsection*{Propiedades}
+Estas operaciones verifican las propiedades conmutativas, asociativas y distributivas, además de las siguientes propiedades:
+\[A \cup A = A \cap A = A\]
+\[A\cup \Omega = \Omega \]
+\[A \cap \Omega = A\]
+
+También podemos incluir las \textbf{Leyes de De Morgan}: \[\overline{A\cup B} = \overline{A} \cap \overline{B}\]
+\[\overline{A\cap B} = \overline{A} \cup \overline{B}\]
+Estas leyes son muy importantes y tienen una propiedad interesante. No hace falta que sean una pareja de conjuntos, también puede suceder algo como lo siguiente: \[\overline{A\cap B \cap C} = \overline{A} \cup \overline{B} \cup \overline{C}\]
+
+\chapter{Probabilidad}
+
+
+\section{Espacio probabilístico}
+\begin{definicion}
+	Un experimento es \textbf{aleatorio} si se verifica que: \begin{itemize}
+		\item Todos los resultados se conocen de antemano.
+		\item Cualquier realización da lugar a un resultado que no se conoce previamente.
+		\item Puede repetirse en condiciones idéntica.
+	\end{itemize}
+\end{definicion}
+
+\begin{definicion}
+	El \textbf{espacio muestral} $ \Omega $ asociado a un experimento es el conjunto de todos los posibles resultados del experimento.
+
+	Un suceso $A$ es un subconjunto del espacio muestral $\Omega$. Los sucesos que constan de un único elemento se denominan \textbf{sucesos elementales}. El espacio de sucesos $S$ es el conjunto de los subconjuntos de $\Omega$.
+\end{definicion}
+
+\begin{definicion}
+	La \textbf{frecuencia relativa} de un suceso $A$ se define como \[f_r(A) = \frac{n_A}{n} \qquad \qquad \left\lbrace \begin{matrix*}[l] n & \equiv & \text{número de veces que se realiza el experimento}\\
+			n_A & \equiv & \text{número de veces que sucede A}
+		\end{matrix*} \right. \]
+
+	La \textbf{ley de regularidad estadística} dice que la frecuencia relativa tiende a un número fijo según se incremente el valor de $n$.
+\end{definicion}
+
+\subsubsection*{Propiedades de la frecuencia relativa}
+\begin{itemize}
+	\item $0\leq f_r(A)\leq 1$
+	\item $f_r(\Omega )=1$
+	\item $ f_r\left( A \cup B \right) = f_r(A) + f_r(B)\qquad \quad $ solo si $A$ y $B$ son incompatibles $\left( A \cap B = \emptyset \right)$
+\end{itemize}
+\newpage
+
+\begin{definicion}
+	Una \textbf{probabilidad} $P$ sobre $(\Omega, S)$ es una función $P: S \longrightarrow [0,1]$ que verifica:
+\end{definicion}
+
+\begin{itemize}
+	\item $P(\Omega )=1$
+	\item Para toda colección de sucesos $A_1,A_2,\ldots , A_n$ incompatibles dos a dos\\ $\left( A_i \cap A_j = \emptyset \ \ \forall i \not = j \right)$, se verifica que: \[P\left( \bigcup _{i=1}^n A_i \right) = \sum^{n}_{i=1}{P\left( A_i \right)} \]
+\end{itemize}
+
+\subsubsection*{Consecuencias de esta definición}
+\vspace{\parskip}
+\begin{itemize}
+	\item $P\left( \overline{A} \right) = 1 - P(A)$
+	\item $P(\emptyset )=0$
+	\item Si $A\subset B \Longrightarrow P(A) \leq P(B)$
+	\item $P(A-B) = P(A\cap \overline{B})= P(A) - P(A\cap B)$
+	\item $ P(A\cup B) = P(A) + P(B) - P(A\cap B)$
+\end{itemize}
+
+\begin{nota}
+	Esta última puede interpretarse de forma diferente para tres sucesos: \[P(A\cup B \cup C) = P(A) + P(B) + P(C) - P(A\cap B) - P(B\cap C) - P(A\cap C) + P(A\cap B\cap C)\]
+\end{nota}
+
+En general, para un número $n$ de sucesos: \[\begin{split}
+		P\left( A_1\cup \ldots \cup A_n \right) = \sum^{n}_{i=1}{P\left( A_i \right)}-\sum_{i<j}{P\left( A_i \cap A_j \right)} +
+		\sum_{i<j<k}{P\left( A_i \cap A_j \cap A_k \right)}+ \ldots + \\
+		+ \left( -1 \right)^{n+1}P\left( A_1 \cap \ldots \cap A_n \right)
+	\end{split}
+\]
+
+\begin{definicion}
+	La terna $(\Omega, S, P)$ se llama \textbf{espacio probabilístico}.
+\end{definicion}
+
+\subsection*{Probabilidad en espacios muestrales finitos}
+Si $\Omega$ es finito, cada conjunto con un elemento $\left\lbrace \omega _j \right\rbrace , j =1,2,\ldots ,n$ , es un suceso elemental y es suficiente asignar probabilidades a cada $\left\lbrace \omega _j \right\rbrace$. Si $A \in S$, se tiene: \[P(A) =\sum_{\omega _j \in A}{P(\{ \omega _j\} )}\]
+
+Si particularizamos podemos obtener la \textbf{Regla de Laplace}\footnote{Para poder utilizar la Regla de Laplace, necesitamos que los sucesos sean equiprobables.}.
+
+Si $P(\{ \omega _j\} ) = \frac{1}{n}, j=1,2,\ldots ,n$; tenemos que:
+\[\boxed{P(A) = \frac{\text{Nº de elementos de }A}{\text{Nº de elementos de }\Omega}}\]
+
+\section{Combinatoria}
+
+Tenemos que tener en cuenta lo que significan los \textbf{elementos} y el \textbf{orden} en el que se encuentran dentro del conjunto.
+
+Si no importa el orden, estamos hablando de \textbf{combinaciones}:
+\begin{itemize}
+	\item Combinaciones de $m$ elementos tomados de $n$ en $n (n\leq m)$: \[C_{m,n}\cdot P_n = V_{m,n} \qquad \Rightarrow C_{m,n} = {\binom{m}{n}} = \frac{m!}{\left( m-n \right)! \, n!}\]
+\end{itemize}
+
+Ahora bien, si el orden importa tendremos que distinguir otras dos situaciones. Si cogemos todos los elementos del conjunto, hablaremos de \textbf{permutaciones}.
+\begin{itemize}
+	\item Permutaciones de $m$ elementos: \[P_m = m!\]
+	\item Permutaciones con repetición de $m$ elementos. Es decir, que hay un elemento que se repite $r_1$ veces, otro que se repite $r_2$ y demás: \[\sum^{i}_{j=1}{r_j}=m \qquad \qquad P^{r_1,r_2,\, \ldots\,  , r_i}_m=\frac{m!}{r_1!\, r_2!\, \ldots \, r_i!}\]
+\end{itemize}
+
+Si, por el contrario, los juntamos en grupos más pequeños, estaremos hablando de \textbf{variaciones}.
+
+\begin{itemize}
+	\item Variaciones con repetición de $m$ elementos tomados de $n$ en $n$: \[VR_{m,n}=m^n\]
+	\item Variaciones sin repetición de $m$ elementos tomados de $n$ en $n (n\leq m)$: \[V_{m,n}=\frac{m!}{\left( m-n \right)!} \]
+\end{itemize}
+
+\section{Probabilidad condicionada. Independencia.}
+\begin{definicion}
+	Sea $A$ un suceso de probabilidad $P(A)>0$, y $B$ otro suceso de probabilidad $P(B)$. La probabilidad de $B$ puede dejar de ser la misma, si se sabe que ha ocurrido el suceso $A$.
+
+	Sean $A$ y $B$ dos sucesos tal que $P(A)>0$. Llamaremos \textbf{probabilidad condicionada} del suceso $B$ respecto al suceso $A$, y la denotaremos por $\probCond{B}{A}$, al cociente: \[ \probCond{B}{A}  = \frac{P\left(  B\cap A\right)}{P(A)}\]
+
+	La fórmula de la probabilidad condicionada también se puede expresar como: \[\probCond{B}{A} = P(A)\ \probCond{B}{A} \]
+
+	Que se podría generalizar a tres sucesos $A, B$ y $C$, resultando en la \textbf{regla de la multiplicación}: \[P(A\cap B \cap C)=P(A)\probCond{B}{A}\probCond{C}{A\cap B}\]
+
+	olololo
+\end{definicion}
+
+\begin{definicion}
+	Si $\probCond{B}{A} =P(B)$ siendo $P(A)>0$, entonces que haya ocurrido $A$ no influye en la probabilidad que tenía $B$ de ocurrir, y se dice que $A$ y $B$ son independientes.
+
+	Despejando: \[P(A\cap B) = P(A)\, P(B)\]
+\end{definicion}
+
+\begin{definicion}
+	Diremos que los sucesos $A_1,A_2,\, \ldots\, ,A_n$ son mutuamente independientes si la probabilidad conjunta de todos los subconjuntos que pueden formarse con ellos es el producto de las probabilidades individuales. Es decir: \[P\left( \bigcap_{i\in I} A_i \right) = \prod_{i\in I}{P(A_i)} \qquad \forall I \left[ 1, 2, \, \ldots	\, ,n \right] \]
+\end{definicion}
+
+\begin{teorema}
+	El \textbf{teorema de la probabilidad total} nos dice que, sean los sucesos\\ $C_1, \psus ,C_n$ incompatibles dos a dos de modo que $\bigcup^{n}_{i=1}=\Omega$, entonces:
+	\[\boxed{P(A)=\sum^{n}_{i=1}{\probCond{A}{C_1}}P(C_i)}\qquad  \forall A \in \mathcal{S}\]
+\end{teorema}
+
+\begin{teorema}
+	El teoriema de Bayes nos dice, en las mismas hipótesis que el teorema anterior, que: \[\boxed{\probCond{C_i}{A}=\frac{\probCond{A}{C_1}P(C_i)}{\sum^{n}_{i=1}{\probCond{A}{C_i}P(C_i)}}}\]
+\end{teorema}
+
+Ejemplo 6 del documento anexo (falta referencia). %Aquí falta la referencia.
+
+$P(B) = 3$
+
+
+
+\chapter{Variables aleatorias}
+
+\section{Variable aleatoria discreta}
+Se dice que una variable aleatoria es \textbf{discreta} si solo puede tomar un número finito de valores, o bien un número infinito numerable (como pueden ser los números naturales $\mathbb{N}$.
+
+\subsection{Función de probabilidad}
+Si la v.a.\footnote{v.a. $\equiv$ variable aleatoria} $X$ puede tomar unos ciertos valores $x_n$ con $n=1, 2, \psus $
+
+La \textbf{función de probabilidad} es una función que asigna a cada valor $x_n$ una probabilidad.
+
+\subsection{Media}
+La \textbf{media} o \textbf{esperanza matemática} de una v.a. $X$ nos proporciona información sobre la localización de $X$. Se representa como $\mu _X$\footnote{Es común representar la media como $\mu$ a secas.} o como $E[X]$.
+\[\mu _X = E[X] = \sum^{\infty}_{n=1}{x_n \cdot P(X=x_n)}\]
+
+\begin{nota}
+	Es importante mencionar que la esperanza es un operador lineal.
+\end{nota}
+
+\subsection{Varianza y desviación típica}
+La \textbf{varianza} de una v.a. $X$ nos proporciona información sobre la dispersión de $X$. Se representa como $\Var(X)$.
+\[\Var(X) = \sigma_X^2 = E\left[ \left( X-\mu \right)^2 \right]\]
+
+A veces es más útil representar la \textbf{desviación típica}. Se denota por la letra $\sigma$.
+\[\sigma _X = \sqrt{\Var(X)}\]
+
+\subsection{Función de distribución}
+
+Sea $F$ la \textbf{función de distribución} (también conocida como función de distribución acumulativa) de la v.a. $X$. Las propiedades que caracterizan a la función de distribución son:
+
+\begin{enumerate}
+	\item Es monótona decreciente, es decir: $\displaystyle{\qquad \forall x , y\in \mathbb{R}, x<y \ \Rightarrow F(x) \leq F(y)}$
+	\item $\displaystyle{\lim_{x \to -\infty} F(x)=0}$
+	\item $\displaystyle{\lim_{x \to \infty} F(x)=1}$
+	\item $F$ es continua por la derecha en $ \mathbb{R} $. Es decir: $\displaystyle{\quad \lim_{x \to a^+} F(x)=F(a), \quad \forall a \in \mathbb{R}}$
+\end{enumerate}
+
+%Sean un número $h \in \mathbb{N}$ y una v.a. discreta $X$, con función de probabilidad $f$ y esperanza matemática $E[X]$. Llamaremos \textbf{momento de orden h} de $X$ a la expresión:
+%\[\alpha _h = E\left[ X^h \right] = \left\{ \begin{matrix*}[l]
+%\displaystyle{\sum^{k}_{i=1}{x_i^h \cdot  f(x_i)} \qquad \Im (X) = \left\lbrace \rep{x}{1}{k} \right\rbrace }\\[15pt]
+%\displaystyle{\sum^{\infty}_{i=1}{x_i^h \cdot  f(x_i)} \qquad \Im (X) = \left\lbrace \repinf{x}{1}{2} \right\rbrace }
+%\end{matrix*} \right.\]
+%
+%Llamaremos \textbf{momento central de orden h} a la expresión:
+%
+%\[\mu _h = E\left[\left( X - E[X] \right)^h \right] = \left\{ \begin{matrix*}[l]
+%\displaystyle{\sum^{k}_{i=1}{\left( x_i - E[X] \right)^h \cdot  f(x_i)} \qquad \Im (X) = \left\lbrace \rep{x}{1}{k} \right\rbrace }\\[15pt]
+%\displaystyle{\sum^{\infty}_{i=1}{\left( x_i - E[X] \right)^h \cdot  f(x_i)} \qquad \Im (X) = \left\lbrace \repinf{x}{1}{2} \right\rbrace }
+%\end{matrix*} \right.\]
+
+
+
+\subsection{Distribuciones}
+
+\subsubsection{Distribución uniforme discreta}
+Una v.a. $X$ tiene una distribución uniforme discreta si es una v.a. discreta en la que sus valores son todos \textbf{equiprobables}.
+
+\subsubsection{Pruebas de Bernoulli}
+Una prueba de Bernoulli es un experimento aleatorio con dos posibles resultados: \textbf{éxito} $(E)$ y \textbf{fracaso} $(\overline{E})$. Si se realizan varias pruebas de Bernoulli, los resultados serán independientes entre sí.
+
+La probabilidad del éxito se denota como $p$, de modo que la probabilidad del fracaso será $(1-p)$.
+
+\subsubsection{Distribución binomial}
+Generalizando un poco, si $N$ es el número de pruebas de Bernoulli que realizamos, la probabilidad de obtener $n$ éxitos será: \[\boxed{P\left( X=n \right)={\binom{N}{m}} p^n\left( 1-p \right)^{N-n}} \qquad n= 0,1,\psus , N\]
+
+Si una v.a. $X$ tiene una distribución binomial, se denota como: \[X \sim \B \left( N,p \right)\]
+
+\begin{itemize}
+	\item \textbf{Media:} $\mu = Np$
+	\item \textbf{Varianza:} $\sigma ^2 = Np(1-p)$
+\end{itemize}
+
+\subsubsection{Distribución geométrica}
+En esta distribución también se parte de las pruebas de Bernoulli. Sin embargo, y a diferencia de la distribución binomial, nos interesará conocer el \textbf{número de pruebas hasta el primer éxito}. Una v.a. $T$ tiene distribución geométrica si:
+
+\[\boxed{P\left( T=n \right)= \left( 1-p \right)^{n-1}n} \qquad n= 0,1,2,\psus\]
+
+Si una v.a. $T$ tiene una distribución geométrica, se denota como: \[T \sim \Geo(p)\]
+
+\begin{itemize}
+	\item \textbf{Media:} $\displaystyle{\mu = \frac{1}{p}}$
+	\item \textbf{Varianza:} $\displaystyle{\sigma ^2 = \frac{1-p}{p^2}}$
+\end{itemize}
+
+\begin{nota}
+	Si lo reescribimos para la probabilidad de fracaso $q$ (recordamos que $q = 1-p$), entonces: \[P\left( T>n \right) = q^n\]
+\end{nota}
+
+\subsubsection{Distribución binomial negativa}
+Este tipo de distribución nos interesa conocer el número de pruebas hasta obtener el $r$-ésimo éxito.
+
+Se dice que una v.a. $X$ tiene una distribución binomial negativa de parámetros $r$ y $p$, si: \[\boxed{P\left( X=n \right)={\binom{n-1}{r-1}} p^r\left( 1-p \right)^{n-r}} \qquad n= r,(r+1),(r+2),\psus \]
+
+Si una v.a. $X$ tiene una distribución binomial negativa, se denota como: \[X \sim \BN \left( r,p \right)\]
+
+\begin{itemize}
+	\item \textbf{Media:} $\displaystyle{\mu = \frac{r}{p}}$
+	\item \textbf{Varianza:} $\displaystyle{\sigma ^2 = \frac{r(1-p)}{p^2}}$
+\end{itemize}
+
+\subsubsection{Distribución de Poisson}
+Una v.a. $X$ tiene distribución de Poisson si representa \textbf{el número de ciertos eventos que ocurren en un periodo fijo de tiempo} (siempre que los eventos se produzcan de forma aleatoria en el tiempo). Se cumple que: \[\boxed{P\left( X=n \right)=e^{-\lambda} \frac{\lambda ^n}{n!}} \qquad n= 0,1,2,\psus \]
+
+Si una v.a. $X$ tiene una distribución de Poisson, se denota como: \[X \sim \Poisson \left( \lambda \right)\]
+
+\begin{itemize}
+	\item \textbf{Media:} $\displaystyle{\mu = \lambda}$
+	\item \textbf{Varianza:} $\displaystyle{\sigma ^2 = \lambda}$
+\end{itemize}
+
+\begin{nota}
+
+	Si $N$ es muy grande, una v.a. que tenga distribución binomial \textbf{puede aproximarse como una distribución de Poisson}, cometiendo un error prácticamente despreciable.
+
+	La forma realizar esta aproximación es igualando las medias típicas de cada distribución: \[Np = \lambda\]
+\end{nota}
+
+\section{Variable aleatoria continua}
+Una v.a. $X$ es continua si existe una función $f_X(x)$ llamada \textbf{función de densidad} tal que: \[\boxed{P\left( a<X\leq b \right) = \int_a^b{f(x)dx}} \qquad  f(x) \geq 0\: ,\qquad
+	\left\{ \begin{matrix*}[l]
+		a,b\in \mathbb{R}\\
+		a\leq b
+	\end{matrix*}\right. \]
+
+\begin{nota}
+	Como $P\left( -\infty < X < \infty \right) = 1$, la función de densidad verfica: \[\int_{-\infty}^{\infty}{f(x)dx} = 1\]
+\end{nota}
+
+\subsection{Media y varianza}
+La \textbf{media} $(\mu)$ de una v.a. $X$ se define de forma análoga a cómo se definía en variables aleatorias discretas: \[\mu = \int_{-\infty}^{\infty}{x f(x) dx}\]
+
+La varianza se define exactamente de la misma forma: \[\Var(X) = \sigma ^2\]
+
+\subsection{Función de distribución}
+La función de distribución con v.a. continua también se puede definir de forma análoga a como hicimos con v.a. discreta: \[\boxed{F(x) = P\left( X\leq x \right) = \int_{-\infty}^x{f(\xi )d\xi}}\]
+
+Esta es una función acotada entre 0 y 1 y, además, es monótona creciente.
+
+La función de distribución nos permite calcular \textbf{probabilidades de intervalos} de la siguiente forma: \[\left\{ \begin{matrix*}[l]
+		P(a<X<b) = F(b) - F(a)\\[5pt]
+		P(X>a) = 1 - F(a) \end{matrix*}\right.\]
+
+Un resultado intereseante haberlo definido así lo encontramos cuando intentamos calcular la probabilidad en un punto. \[P(X=a) = 0 \qquad \forall a \in \mathbb{R}\]
+
+\begin{nota}
+	En variable continua, podemos relacionar la función de distribución con la función de densidad.
+	\[F'(x) = f(x)\]
+\end{nota}
+
+
+\subsection{Distribuciones}
+\subsubsection{Distribución uniforme}
+Una v.a. $X$ tiene distribución uniforme en el intervalo $(a,b)$ si su función de densidad es: \[f(x) = \left\{ \begin{matrix*}[l]
+		\displaystyle{\frac{1}{b-a}} & \quad a<x<b\\[15pt]
+		0 & \quad \text{en el resto de casos}
+	\end{matrix*}\right.\]
+
+\begin{figure}[h!]
+	\begin{subfigure}[b]{\linewidth}
+		\centering
+		\includegraphics[width=0.4\linewidth]{aaa.png}
+	\end{subfigure}
+	\caption{Representación de la función de densidad de una v.a. de distribución uniforme.}
+\end{figure}
+
+A veces, es común verla como $f(x) = \frac{1}{b-a}$ para $a<x<b$. Se da por supuesto que, fuera de ese rango, la función es nula.
+
+Para indicar que $X$ tiene una distribución uniforme, lo escribimos como: \[X\sim \U(a,b)\]
+
+\textbf{¿Cuándo la voy a usar?} En algunas situaciones, y en la mayoría de los ejercicios que tendremos que resolver, es muy útil saber que: \[P\left( X \in (c,d) \right)= \frac{d-c}{b-a} \qquad \quad \text{siempre y cuando }(c,d)\subset (a,b)\]
+
+\begin{itemize}
+	\item \textbf{Media:} $\displaystyle{\mu = \frac{a+b}{2}}$
+	\item \textbf{Varianza:} $\displaystyle{\sigma ^2 = \frac{\left( b-a \right)^2}{12}}$
+\end{itemize}
+
+\subsubsection{Distribución exponencial}
+En las v.a. con distribución exponencial, nos interesa el \textbf{tiempo que hay que esperar hasta que suceda cierto evento }. Una v.a. $T$ tiene distribución exponencial si su función de densidad es: \[f(t) = \left\{ \begin{matrix}
+		\lambda e^{-\lambda t} & \quad t>0           \\[5pt]
+		0                      & \quad  \text{resto}
+	\end{matrix} \right.\qquad\qquad  \left( \lambda >0 \right)\]
+
+Para indicar que $T$ tiene una distribución exponencial, lo escribimos como: \[T\sim \Exp(\lambda )\]
+
+\begin{itemize}
+	\item \textbf{Media:} $\displaystyle{\mu = \frac{1}{\lambda}}\quad $ (tiempo medio de espera)
+	\item \textbf{Varianza:} $\displaystyle{\sigma ^2 = \frac{1}{\lambda ^2}}$
+\end{itemize}
+
+\subsubsection{Distribución normal}
+Una v.a. $X$ tiene distribución normal si su función de densidad es la \textbf{campana de Gauss}: \[f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left( \frac{x-\mu }{\sigma} \right)^2} \qquad -\infty <x< \infty \]
+
+Sin embargo, no es posible calcular su función de distribución en términos generales.
+
+Para indicar que $X$ tiene una distribución normal, caracterizada por su media y su desviación típica, lo escribimos como: \[X \sim \N(\mu , \sigma ) \]
+
+Además, se suele utilizar la \textbf{distribución normal estándar} $\N(0,1)$, ya que está tabulada. En otras palabras, para realizar los ejercicios utilizaremos una tabla con los valores más utilizados. Sin embargo, en la tabla no aparecen valores negativos de $X$. Eso se debe a que se puede calcular como $\Phi (-x) = 1 - \Phi(x)$.
+
+Cuando nos encontremos con una v.a. $X$ que se distribuya con una normal, lo que debemos hacer es \textbf{tipificarla}. Esto signfica que definiremos otra v.a. $Z$ que modelice a $X$ para que tenga distribución normal.
+\[\boxed{X \sim \N(\mu ,\sigma ) \ \longrightarrow \ Z = \frac{X-\mu}{\sigma} \sim \N(0,1)}\]
+
+\section{Desigualdad de Chebyshev}
+Sea $X$ una v.a. con media $\mu$ y varianza $\sigma ^2$, entonces para todo $k>0$ se cumple lo siguiente: \[P\left( \abs{X-\mu} < k\sigma \right)\geq 1 - \frac{1}{k^2}\]
+
+\begin{nota}
+	Es más fácil comprender la desigualdad de Chebyshev si la reescribimos de esta forma: \[ P\left[ (\mu - k\sigma )< X < (\mu +k\sigma ) \right] \geq 1 - \frac{1}{k^2}\]
+\end{nota}
+
+
+\section{Cuantil}
+\subsection*{En v.a. discreta}
+Sea $X$ una v.a. discreta, llamaremos \textbf{cuantil de orden} $p$, denotado como $q_p$, al menor valor en el que se cumpla que: \[F_X(x)\geq p \qquad \qquad \left( 0 < p < 1 \right) \]
+
+\subsection*{En v.a. continua}
+Sea $T$ una v.a. continua, llamaremos llamaremos \textbf{cuantil de orden} $p$, denotado como $q_p$, al número que verifica: \[P\left( T \leq q_p \right) = \int_{-\infty}^{q_p}{f(x)dx} = p\]
+
+O, en otras palabras: \[\boxed{F_T(q_p)=p}\]
+
+
+\section{Percentil}
+El percentil es un tipo de cuantil que separa las muestras en 100 grupos diferentes. Para calcular el \textbf{percentil de orden} $n$ de una v.a., basta con saber que: \[P_n = q_{\frac{n}{100}}\]
+
+Baia baiiiia la cabaiiia
+
+\chapter{Vectores aleatorios}
+
+
+\section{Variable aleatoria bidimensional discreta. Funciones de distribución conjunta, marginales y condicionadas. Cálculo de probabilidades}
+
+\section{Variable aleatoria bidimensional continua. Función de distribución y función de densidad. Cálculo de probabilidades}
+
+\section{Variable aleatoria multidimensional}
+
+\section{Variables aleatorias independientes}
+
+\section{Vector de medias. Matriz de covarianzas}
+
+\section{Transformaciones lineales de vectores aleatorios}
+
+\section{Vectores aleatorios normales}
+
+\section{Teorema central del límite}
+
+
+
+
+\chapter{Inferencia estadística}
+
+
+\section{Estadística descriptiva de una variable: momentos, cuantiles, box-plot, histograma, función de distribución empírica y cálculo de proporciones}
+
+\section{Muestra aleatoria. Media muestral y varianza muestral. Estimación paramétrica}
+
+\section{Intervalos de confianza para la media y para proporciones poblacionales}
+
+\section{Contraste de hipótesis. Nivel de significación y p-valor}
+
+
+
+\chapter{Procesos estocásticos}
+
+\section{Definición de proceso estocástico}
+Un proceso estocástico es una familia de variables aleatorias definidas sobre un espacio probabilístico.
+
+Es decir, para cada $ t\in T, X(t)$ es una variable aleatoria; el índice $t$ representa a menudo el tiempo y así diremos, que un proceso estocástico es una familia de variables aleatorias que describe la evolución a lo largo del tiempo de algún proceso físico.
+
+Otro punto de vista:
+
+Sea $E$ un experimento aleatorio cuyo espacio probabilístico asociado $(\Omega , S, P)$. Un \textbf{proceso estocástico} o proceso aleatorio es un conjunto de funciones temporales $x(t,\omega )$, cada una correspondiente a un punto particular $\omega$ del espacio muestral $\Omega$. Así, asociado a cada resultado específico $\omega$, tenemos una función específica $x(t,\omega )$, a la que llamaremos una realización del proceso.
+
+Denotaremos el proceso mediante: $X_t\equiv X(t) \equiv X(t,\omega )$, donde $t$ es el tiempo y $\omega$ una variable que representa un resultado en el espacio muestral $\Omega$.
+
+Normalmente, un proceso estocástico será denotado como $x(t)$.
+
+\section{Procesos estocásticos en tiempo continuo}
+\textbf{Primer ejemplo.}
+
+Tiramos un dado. Si se obtiene 1, 2 ó 3, entonces:
+\[X(t) = t\]
+Si se obtiene 4 ó 5, entonces:
+\[X(t) = 2t\]
+Si se obtiene un 6, entonces:
+\[X(t) = 3t\]
+
+Esto se puede modelizar de la siguiente manera:
+\[X(t) = A\cdot t\]
+De modo que la probabilidad de $A$ será:
+\begin{center}
+	\begin{tabular}{r || c | c | c}
+		$A$    & 1              & 2              & 3              \\ \hline
+		$P(A)$ & $\sfrac{1}{2}$ & $\sfrac{1}{3}$ & $\sfrac{1}{6}$
+	\end{tabular}
+\end{center}
+
+\textbf{Segundo ejemplo.}
+
+La señal $X(t) = \cos\left( t+\phi \right)$, donde la fase $\phi$ es desconocida, se puede considerar como un proceso estocástico, donde $\phi$ es una variable aleatoria con distribución uniforme en el intervalo $[0, 2\pi )$
+
+
+
+
+\section{Procesos estocásticos en tiempo discreto}
+
+Simplemente son procesos estocásticos pero en tiempo discreto.
+
+Por ejemplo, las pruebas de Bernoulli y el proceso binomial.
+
+
+
+\section{Distribuciones de primer y segundo orden, media, autocorrelación y autocovarianza}
+
+\section{Proceso de Bernoulli. Caminos aleatorios. Procesos normales. Proceso de Poisson}
+
+\section{Procesos estacionarios. Densidad espectral}
+
+\section{Sistemas lineales y procesos estocásticos}
+
+\chapter{Prácticas con software estadístico}
+
+
+\section{Modelos de distribución de probabilidad más comunes}
+
+\section{Estadística descriptiva}
+
+\section{Muestreo. Estimación puntual}
+
+\section{Estimación por intervalos de confianza}
+
+\section{Contraste paramétrico}
+Bla bla bla
+
+
+
+% BIBLIOGRAFÍA
+%\newpage
+%\phantomsection
+%\label{sec:bibliografia_final}
+%\renewcommand{\refname}{Bibliografía} % Para cambiar el título al incluir una librería de BibTeX
+%\addcontentsline{toc}{section}{Bibliografía}
+%\bibliography{biblio_Tex}
+%\bibliographystyle{bababbrv}
+
+\end{document}
