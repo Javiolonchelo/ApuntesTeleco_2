@@ -25,7 +25,7 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 * [Señales y Sistemas](/Primer%20Semestre/Señales%20y%20Sistemas/Señales%20y%20Sistemas.pdf) - `En progreso`
 
-#### Segundo Semestre
+### Segundo Semestre
 
 * [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia,%20Tecnología%20y%20Sociedad.pdf) - `Aún no comenzado`
 
