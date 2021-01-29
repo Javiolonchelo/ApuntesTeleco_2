@@ -27,17 +27,17 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 #### Segundo Semestre
 
-* [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia,%20Tecnología%20y%20Sociedad.pdf)
+* [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia,%20Tecnología%20y%20Sociedad.pdf) - `Aún no comenzado`
 
-* [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos%20de%20Sonido%20e%20Imagen.pdf)
+* [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos%20de%20Sonido%20e%20Imagen.pdf) - `Aún no comenzado`
 
-* [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf)
+* [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `Aún no comenzado`
 
-* [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado%20Digital%20de%20la%20Señal.pdf)
+* [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado%20Digital%20de%20la%20Señal.pdf) - `Aún no comenzado`
 
-* [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación%20de%20Ondas.pdf)
+* [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación%20de%20Ondas.pdf) - `Aún no comenzado`
 
-* [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría%20de%20la%20Comunicación.pdf) - `En progreso`
+* [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría%20de%20la%20Comunicación.pdf) - `Aún no comenzado`
 
 ## Estado de los apuntes (NO DISPONIBLE TEMPORALMENTE)
 
