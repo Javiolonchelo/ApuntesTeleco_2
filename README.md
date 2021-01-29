@@ -15,29 +15,29 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 ### Primer semestre
 
-* [Electromagnetismo y Ondas](../main/Primer_Semestre/Electromagnetismo y Ondas/Electromagnetismo y Ondas.pdf) - `En progreso`
+* [Electromagnetismo y Ondas](/Primer%20Semestre/Electromagnetismo%20y%20Ondas/Electromagnetismo%20y%20Ondas.pdf) - `En progreso`
 
-* [Electrónica II](../main/Primer_Semestre/Electrónica II/Electrónica II.pdf) - `En progreso`
+* [Electrónica II](/Primer%20Semestre/Electrónica%20II/Electrónica%20II.pdf) - `En progreso`
 
-* [Estadística y Procesos Estocásticos](../main/Primer_Semestre/Estadística y Procesos Estocásticos/Estadística y Procesos Estocásticos.pdf) - `En progreso`
+* [Estadística y Procesos Estocásticos](/Primer%20Semestre/Estadística%20y%20Procesos%20Estocásticos/Estadística%20y%20Procesos%20Estocásticos.pdf) - `En progreso`
 
-* [Redes y Servicios de Telecomunicación](../main/Primer_Semestre/Redes y Servicios de Telecomunicación/Redes y Servicios de Telecomunicación.pdf) - `En progreso`
+* [Redes y Servicios de Telecomunicación](/Primer%20Semestre/Redes%20y%20Servicios%20de%20Telecomunicación/Redes%20y%20Servicios%20de%20Telecomunicación.pdf) - `En progreso`
 
-* [Señales y Sistemas](../main/Primer_Semestre/Señales y Sistemas/Señales y Sistemas.pdf) - `En progreso`
+* [Señales y Sistemas](/Primer%20Semestre/Señales%20y%20Sistemas/Señales%20y%20Sistemas.pdf) - `En progreso`
 
 #### Segundo Semestre
 
-* [Ciencia, Tecnología y Sociedad](../main/Segundo Semestre/Ciencia, Tecnología y Sociedad/Ciencia, Tecnología y Sociedad.pdf)
+* [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia,%20Tecnología%20y%20Sociedad.pdf)
 
-* [Fundamentos de Sonido e Imagen](../main/Segundo Semestre/Fundamentos de Sonido e Imagen/Fundamentos de Sonido e Imagen.pdf)
+* [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos%20de%20Sonido%20e%20Imagen.pdf)
 
-* [Microprocesadores](../main/Segundo Semestre/Microprocesadores/Microprocesadores.pdf)
+* [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf)
 
-* [Procesado Digital de la Señal](../main/Segundo Semestre/Procesado Digital de la Señal/Procesado Digital de la Señal.pdf)
+* [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado%20Digital%20de%20la%20Señal.pdf)
 
-* [Propagación de Ondas](../main/Segundo Semestre/Propagación de Ondas/Propagación de Ondas.pdf)
+* [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación%20de%20Ondas.pdf)
 
-* [Teoría de la Comunicación](../main/Segundo Semestre/Teoría de la Comunicación/Teoría de la Comunicación.pdf) - `En progreso`
+* [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría%20de%20la%20Comunicación.pdf) - `En progreso`
 
 ## Estado de los apuntes (NO DISPONIBLE TEMPORALMENTE)
 
