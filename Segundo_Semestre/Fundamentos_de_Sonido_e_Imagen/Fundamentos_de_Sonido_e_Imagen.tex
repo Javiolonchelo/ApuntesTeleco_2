@@ -1,0 +1,321 @@
+\documentclass[a4paper]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
+\usepackage{babelbib}
+\usepackage{nccmath}
+\usepackage[oldvoltagedirection]{circuitikz}
+\usepackage{amsthm}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+\usepackage[thicklines]{cancel}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}   
+\usepackage{color}       
+\usepackage{verbatim}     
+\usepackage{enumerate}
+\usepackage{geometry} 
+\geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
+\usepackage{isotope}
+\usepackage{maybemath} 
+\usepackage{upgreek}
+\usepackage{wasysym} 
+\usepackage[italic]{hepparticles}
+\usepackage{subdepth}
+\usepackage{physics}
+\usepackage{braket}
+\usepackage{tensor}
+\usepackage{chemformula} 
+\usepackage{tikz} \usetikzlibrary{babel}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+citecolor = blue,
+linkcolor = blue,
+urlcolor = blue,
+pdfauthor = {Javier Rodrigo López}
+}
+\usepackage{eso-pic}
+\usepackage{siunitx}
+\sisetup{
+round-mode      = places,
+round-precision = 2,
+}
+
+% Títulos
+\usepackage{titlesec}
+\titleformat{\section}
+	{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+\titleformat{\subsubsection}
+	{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
+\titlespacing{\section}{0pt}{2\parskip}{\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+% Numeración de secciones
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+% Figuras y descripciones
+%\renewcommand{\thefigure}{\Roman{figure}}
+\renewcommand{\thesubfigure}{\Alph{subfigure}}
+\captionsetup[figure]{labelfont={bf},name={Figura},labelsep=period}
+\numberwithin{figure}{chapter}
+\numberwithin{equation}{chapter}
+
+% Enumerations
+\newcounter{myenumi}
+\renewcommand{\themyenumi}{\alph{myenumi})}
+\newenvironment{myenumerate}{\setlength{\parindent}{0pt}\setcounter{myenumi}{0}\renewcommand{\item}{\par\refstepcounter{myenumi}\makebox[1.3em][l]{\themyenumi}}}{\par\bigskip\noindent\ignorespacesafterend}
+
+% Own environments
+\newenvironment{nota}{\underline{\textbf{NOTA:}} }{}
+\newenvironment{caja}{\begin{tcolorbox}[colback = white, sharp corners, boxrule = 1 pt]}{\end{tcolorbox}}
+\newtheorem{ejemplo}{Ejemplo}
+\newtheorem{ejercicio}{Ejercicio}
+\newtheorem*{conclusion}{Conclusión}
+
+% Para una bonita portada
+\usepackage{wallpaper}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\droptitle}{-10cm} 
+\renewcommand{\chaptermark}[1]{%
+        \markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{%
+\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[RE]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0.5pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
+ \fancypagestyle{plain}{%
+   \fancyhead{} 
+   \renewcommand{\headrulewidth}{0pt}
+}
+
+% Organización del texto
+\newcommand{\formula}[1]{\vspace{13 pt}\noindent \textbf{\underline{#1}}}
+\newcommand{\subtext}[1]{_{\text{#1}}}
+
+% Unidades y utilidades varias
+\renewcommand{\S}{\operatorname{S}}
+\newcommand{\db}{\operatorname{dB}}
+\newcommand{\s}{\operatorname{s}}
+\newcommand{\A}{\operatorname{A}}
+\newcommand{\Pa}{\operatorname{Pa}}
+\newcommand{\W}{\operatorname{W}}
+\newcommand{\I}{\operatorname{I}}
+\newcommand{\C}{\operatorname{C}}
+\newcommand{\K}{\operatorname{K}}
+\newcommand{\m}{\operatorname{m}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\mol}{\operatorname{mol}}
+\newcommand{\J}{\operatorname{J}}
+\newcommand{\kg}{\operatorname{kg}}
+\newcommand{\incremento}{\Delta}
+\newcommand{\psus}{\, \ldots \,}
+\renewcommand{\sin}{\sen}
+\renewcommand{\arcsin}{\arcsen}
+\renewcommand{\arctan}{\arctg}
+\newcommand{\sen}{\operatorname{\sen}}
+
+% Vectores
+\usepackage{esvect}
+\renewcommand{\vec}[1]{\vv{{#1}}}
+\newcommand{\proy}[2][1]{\text{proy}_{#1}#2}
+
+% Espaciado
+\usepackage{enumitem}
+\setlist{before={\parskip=3pt}, after=\vspace{\baselineskip}}
+\setlength{\parindent}{0pt}
+
+% Estadística
+\DeclareMathOperator{\Var}{Var}
+\renewcommand{\var}{\sigma ^2}
+\DeclareMathOperator{\B}{B}
+\DeclareMathOperator{\BN}{BN}
+\DeclareMathOperator{\Geo}{Geo}
+\DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\N}{N}
+\newcommand{\probCond}[2]{P \left( #1 \: \middle\vert\:  #2 \right) }
+
+% Electromagnetismo y Ondas
+\newcommand{\errorGrave}{\textbf{FG!!!}}
+\newcommand{\mas}{M.A.S.}
+\newcommand{\mcu}{M.C.U.}
+\newcommand{\ed}{E.D.}
+\newcommand{\edmas}{E.D. del M.A.S.}
+
+% Repeticiones
+\usepackage{forloop}
+\newcommand{\repvec}[3]{
+	\foreach \uwu in {1,...,#2}
+		{\vec{#1}_{\uwu} ,}
+	\, \ldots \, , \vec{#1}_{#3}
+}
+\newcommand{\rep}[3]{
+	\foreach \uwu in {1,...,#2}
+		{#1_{\uwu} ,}
+	\, \ldots \, , #1_{#3}
+}
+\newcommand{\repinf}[3]{
+	\foreach \uwu in {#2,...,#3}
+		{#1_{\uwu} ,}
+	\, \ldots 
+}
+
+% Señales y Sistemas
+\renewcommand{\H}{H}
+
+% Circled number
+\newcommand{\circledNumber}[1]{\raisebox{.9pt}{\textcircled{\raisebox{-.9pt}{#1}}}}
+
+% Footnotes
+% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%%%% END OF PREAMBLE %%%%
+
+
+\title{\Huge Fundamentos de Sonido e Imagen\\\vspace*{5pt}
+\Large Apuntes de clase}
+\author{Javier Rodrigo López \thanks{Correo electrónico: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}} 
+\date{\today}
+
+\setlength{\parskip}{0.5em}
+
+\begin{document}
+
+
+\setlength{\wpYoffset}{1cm}
+\ThisCenterWallPaper{0.7}{Sorolla.jpg}
+
+
+\maketitle
+
+
+
+\AddToShipoutPictureFG{
+\begin{tikzpicture}[overlay,remember picture]
+\path (current page.south west) -- (current page.north east)
+ node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+\end{tikzpicture}
+}
+
+
+
+
+\begin{figure}[t!]
+\centering
+	\begin{subfigure}[b]{0.65\linewidth}
+		\includegraphics[width=\linewidth]{upm_logo.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\includegraphics[width=\linewidth]{etsist_logo.png}
+	\end{subfigure}
+\end{figure}
+
+
+\newpage
+
+\phantomsection
+
+\addcontentsline{toc}{section}{Introducción}
+\section*{Introducción}
+Imagen de la portada: \textsl{Corriendo por la playa. Valencia}, de Joaquín Sorolla.
+
+
+\newpage
+
+\setlength{\parskip}{0em}
+\tableofcontents 
+\setlength{\parskip}{0.5em}
+
+\chapter{Señales, sistemas y medidas acústicas. Revisión de conceptos}
+
+\chapter{Señales acústicas}
+\section{Valor RMS y nivel de una señal}
+\section{Serie de Fourier y Transformada de Fourier}
+\section{Densidad espectral de potencia}
+\section{Nivel espectral y nivel en banda}
+\section{Ruido blanco y ruido rosa}
+\section{Sistemas y medidas acústicas}
+\section{Sistema lineal. Función de transferencia. Respuesta al impulso}
+\section{Métodos de análisis de sistemas}
+\section{Analogías electro-mecánico-acústicas}
+
+\chapter{Audición y voz}
+\section{Fisiología y funcionamiento del sistema auditivo humano}
+\section{Características de la respuesta auditiva}
+\section{No linealidad del sistema auditivo}
+\section{Efecto de enmascaramiento temporal y frecuencial}
+\section{Audición binaural}
+\section{Mecanismo de generación de la voz}
+\section{Características acústicas de voz}
+\section{Análisis de la señal de voz}
+
+\chapter{Ondas planas y esféricas}
+\section{Ecuación de onda plana. Velocidad de propagación}
+\section{Velocidad vibratoria e impedancia de una onda plana}
+\section{Presión e intensidad acústicas}
+\section{Ecuación de una onda esférica}
+\section[Velocidad vibratoria e impedancia de una onda esférica]{Velocidad vibratoria e impedancia de una onda\\ esférica}
+\section{Campo acústico originado por una fuente. Divergencia esférica}
+\section{Potencia radiada por una fuente}
+
+\chapter{Ondas estacionarias}
+\section{Reflexión de una onda plana}
+\section{Impedancia de una línea de transmisión acústica}
+\section{Intensidad acústica de una onda estacionaria}
+\section{Transmisión acústica a través de varios medios}
+
+\chapter{Formación y captación de imágenes}
+\section{Introducción}
+\section{Óptica geométrica}
+\section{Fotografía}
+\section{Fotometría}
+
+\chapter{El sistema visual humano. Colorimetría}
+\section{Introducción a la visión}
+\section{Estructura y óptica del ojo humano}
+\section{La retina, nuestro sensor}
+\section{Percepción: Implicaciones en los sistemas de imagen}
+
+\chapter{Señales utilizadas para la representación de imágenes}
+\section{Modelos cromáticos para el almacenamiento cuantificado de los colores}
+\section{Señales de luminancia y de crominancia}
+\section{Importancia concedida por el ojo a las señales de luminancia y crominancia}
+\section{Cartas de barras para los estudios cromáticos de imágenes fijas y de vídeo}
+\section{Relación de aspecto y exploraciones progresivas y entrelazada}
+\section[Resolución horizontal y vertical de las imágenes (SD, HD, UHD)]{Resolución horizontal y vertical de las imágenes\\ (SD, HD, UHD)}
+\section{Señales normalmente utilizadas para la transmisión de señales de vídeo}
+\section{Intervalos de vídeo e intervalos de sincronismo}
+
+\appendix
+
+\chapter{Prácticas}
+\section[Introducción. Técnicas de medidas acústicas. Técnicas de análisis de sistemas mecánicos y acústicos]{Introducción. Técnicas de medidas acústicas.\\ Técnicas de análisis de sistemas mecánicos y acústicos}
+\section{Osciladores mecánicos y acústicos}
+\section{Ondas acústicas esféricas. Potencia radiada por una fuente}
+\section{Ondas acústicas estacionarias. Impedancia acústica. Impedancia de radiación de un tubo}
+\section{Imagen digital}
+\section{Relación de aspecto y adaptaciones}
+\section{Brillo y contraste}
+\section{Color. Saturación y tinte}
+
+% BIBLIOGRAFÍA
+%\newpage
+%\phantomsection
+%\label{sec:bibliografia_final}
+%\renewcommand{\refname}{Bibliografía}
+%\addcontentsline{toc}{section}{Bibliografía}
+%\bibliography{bibliografia} % Nombre del archivo (sin ".bib")
+%\bibliographystyle{bababbrv} 
+
+\end{document}
