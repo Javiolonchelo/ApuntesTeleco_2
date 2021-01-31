@@ -1,207 +1,21 @@
 \documentclass[a4paper]{book}
 
-\usepackage{lmodern}
-\usepackage[utf8]{inputenc} % Escribir en cualquier idioma
-\usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
-
-\usepackage{babelbib} % Para usar bibliografía en español.
-
-\usepackage{nccmath}
-\usepackage{amsthm}
-\usepackage{lipsum}
-
-%\usepackage{vwcol}
-\usepackage{tcolorbox}
-\usepackage[thicklines]{cancel} % when something goes to zero
-\usepackage{mathtools}
-\usepackage{amssymb}
-\usepackage{amsmath} % símbolos matemáticos
-\usepackage{graphicx}      % tools for importing graphics
-\usepackage{caption}
-\usepackage{subcaption}    % create subfigures
-\usepackage{color}         % change the colour of the words
-\usepackage{verbatim}      % display LaTeX commands instead of having them executed.
-\usepackage{longtable}     % helps with long table options
-\usepackage{enumerate}
-\usepackage{epsf}          % old package handles encapsulated postscript issues
-\usepackage{bm}            % special bold-math package. usge: \bm{mathsymbol}
-\usepackage{textcomp} % provides many text symbols (such as baht, bullet, copyright, musical­note, onequarter, section and yen
-\usepackage{gensymb} % Permite símbolo º
-\usepackage{geometry} % Fijar los márgenes de todo el documento
-\geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
-
-\usepackage{isotope} % Poner isótopos
-\usepackage{maybemath} % Making math bold, upright, italic or sans-serif according to context
-\usepackage{upgreek} % Letras griegas
-\usepackage{wasysym} % Provides male, female and astronomical symbols
-\usepackage[italic]{hepparticles} % Ver documentación adjunta
-\usepackage{subdepth} % Equalise the height of subcripts in maths
-\usepackage{physics} % Ver documentación adjunta
-\usepackage{braket} % Notación Bra-ket de Dirac
-\newcommand{\Int}{\int\limits} % símbolo de integrales y límites
-\usepackage{tensor} % escribir tensores
-\usepackage{chemformula} % reacciones y fórmulas químicas
-\usepackage{tikz} % minipages
-\usepackage{siunitx} % notacion científica
-\usepackage{url} % enlaces a páginas web
-\usepackage{multirow} % Necessary when placing two or more numbers in the same row
-\usepackage{multicol} % Necessary when placing two or more numbers in the same column
-
-\usepackage[colorlinks=true]{hyperref}  % fijar los colores de las referencias
-\hypersetup{citecolor = blue, linkcolor = blue, urlcolor = blue} % colores de los enlaces a citas, figuras y url
-
-\renewcommand{\sin}{\sen}
-\renewcommand{\arcsin}{\arcsen}
-\renewcommand{\arctan}{\arctg}
-\newcommand{\sen}{\operatorname{\sen}}
-
-
-\usepackage{eso-pic}
-
-
-\usepackage{siunitx} % Required for alignment of decimal numbers in the tables
-\sisetup{ % How many digital places it should display
-  round-mode          = places, % Rounds numbers
-  round-precision     = 2, % to 2 places
-}
-
-\numberwithin{figure}{section}
-\numberwithin{equation}{subsection}
-
-\newcommand{\proy}[2][1]{\text{proy}_{#1}#2}
-
-\newenvironment{caja}{\begin{tcolorbox}[colback = white, sharp corners, boxrule = 1 pt]}{\end{tcolorbox}}
-
-\usepackage{titlesec}
-\titleformat{\section}
-  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-
-\titleformat{\subsubsection}
-{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
-
-
-\titlespacing{\section}{0pt}{2\parskip}{\parskip}
-\titlespacing{\subsection}{0pt}{\parskip}{0pt}
-\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
-
-\setcounter{tocdepth}{2}
-\setcounter{secnumdepth}{2}
-
-%\renewcommand{\thefigure}{\Roman{figure}}
-%\renewcommand{\thesubfigure}{\arabic{subfigure}}
-
-\captionsetup[figure]{labelfont={bf},name={Figura},labelsep=period}
-\numberwithin{figure}{chapter}
-
-\usepackage{wallpaper}
-
-
-\theoremstyle{definition}
-\newtheorem{teorema}{Teorema}
-\newtheorem{definicion}{Definición}
-\newtheorem{ejercicio}{Ejercicio}
-\newtheorem{formulario}{Formulario}
-
-\newenvironment{nota}{\underline{\textbf{NOTA:}}}{}
-
-\setlength{\parindent}{0pt}
-
-
-
-
-\usepackage{titling}
-
-\setlength{\droptitle}{-10em}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-% con esto nos aseguramos de que las cabeceras
-% de capítulo y de sección vayan en minúsculas
-\renewcommand{\chaptermark}[1]{%
-        \markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{%
-\markright{\thesection\ #1}}
-\fancyhf{}
-\fancyhead[LE,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[RE]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0.5pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
- \fancypagestyle{plain}{%
-   \fancyhead{} % elimina cabeceras en páginas "plain"
-   \renewcommand{\headrulewidth}{0pt} % así como la raya
-}
-
-% Organización del texto
-\newcommand{\formula}[1]{\vspace{13 pt}\noindent \textbf{\underline{#1}}}
-
-% Unidades y utilidades varias
-\renewcommand{\S}{\operatorname{S}}
-\newcommand{\db}{\operatorname{db}}
-\newcommand{\s}{\operatorname{s}}
-\newcommand{\A}{\operatorname{A}}
-\newcommand{\C}{\operatorname{C}}
-\newcommand{\m}{\operatorname{m}}
-\newcommand{\incremento}{\Delta}
-\newcommand{\psus}{\, \ldots \,}
-
-% Derivadas
-\newcommand{\derivadaParcial}[2]{\frac{\partial#1}{\partial#2}}
-\newcommand{\derivada}[2]{\frac{d #1}{d #2}}
-
-% Vectores
-\usepackage{esvect}
-\renewcommand{\vec}[1]{\vv{{#1}}}
-
-% Repeticiones
-\usepackage{forloop}
-\newcommand{\repvec}[3]{
-	\foreach \uwu in{1,...,#2}
-		{\vec{#1}_{\uwu} ,}
-	\, \ldots \, , \vec{#1}_{#3}
-}
-\newcommand{\rep}[3]{
-	\foreach \uwu in {1,...,#2}
-		{#1_{\uwu} ,}
-	\, \ldots \, , #1_{#3}
-}
-\newcommand{\repinf}[3]{
-	\foreach \uwu in {#2,...,#3}
-		{#1_{\uwu} ,}
-	\, \ldots
-}
-
-\newcommand{\subtext}[1]{_{\text{#1}}}
-\newcommand{\probCond}[2]{P \left( #1 \: \middle\vert\:  #2 \right) }
-
-\usepackage{enumitem}
-\setlist{before={\parskip=3pt}, after=\vspace{\baselineskip}}
-
-% Estadística
-\DeclareMathOperator{\Var}{Var}
-\renewcommand{\var}{\sigma ^2}
-\DeclareMathOperator{\B}{B}
-\DeclareMathOperator{\BN}{BN}
-\DeclareMathOperator{\Geo}{Geo}
-\DeclareMathOperator{\Poisson}{Poisson}
-\DeclareMathOperator{\U}{U}
-\DeclareMathOperator{\Exp}{Exp}
-\DeclareMathOperator{\N}{N}
-
+\input{../../Preamble.tex} % Se incluye el preámbulo
 
 \title{\Huge Estadística y Procesos Estocásticos\\
 \Large Apuntes de clase}
 \author{Javier Rodrigo López \thanks{E-mail: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}}
 \date{\today}
 
-
+%%% INICIO DEL DOCUMENTO %%%
 \begin{document}
-
 
 \setlength{\wpYoffset}{-5 cm}
 \ThisCenterWallPaper{0.65}{Boticelli.jpg}
-
-
 \maketitle
 
 
-
+% Marca de agua
 \AddToShipoutPictureFG{
 	\begin{tikzpicture}[overlay,remember picture]
 		\path (current page.south west) -- (current page.north east)
@@ -209,9 +23,7 @@
 	\end{tikzpicture}
 }
 
-
-
-
+% Logotipos UPM y ETSIST
 \begin{figure}[t!]
 	\centering
 	\begin{subfigure}[b]{0.65\linewidth}

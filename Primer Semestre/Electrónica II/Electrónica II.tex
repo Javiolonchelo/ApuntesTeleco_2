@@ -1,225 +1,39 @@
 \documentclass[a4paper]{book}
 
-\usepackage[utf8]{inputenc}
-\usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
-\usepackage{babelbib}
-\usepackage{nccmath}
-\usepackage[oldvoltagedirection]{circuitikz}
-\usepackage{amsthm}
-\usepackage{lipsum}
-\usepackage{tcolorbox}
-\usepackage[thicklines]{cancel}
-\usepackage{mathtools}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{caption}
-\usepackage{subcaption}   
-\usepackage{color}       
-\usepackage{verbatim}     
-\usepackage{enumerate}
-\usepackage{geometry} 
-\geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
-\usepackage{isotope}
-\usepackage{maybemath} 
-\usepackage{upgreek}
-\usepackage{wasysym} 
-\usepackage[italic]{hepparticles}
-\usepackage{subdepth}
-\usepackage{physics}
-\usepackage{braket}
-\usepackage{tensor}
-\usepackage{chemformula} 
-\usepackage{tikz} \usetikzlibrary{babel}
-\usepackage{siunitx}
-\usepackage{url}
-\usepackage{multirow}
-\usepackage{multicol}
-\usepackage[colorlinks=true]{hyperref}
-\hypersetup{
-citecolor = blue,
-linkcolor = blue,
-urlcolor = blue,
-pdfauthor = {Javier Rodrigo López}
-}
-\usepackage{eso-pic}
-\usepackage{siunitx}
-\sisetup{
-round-mode      = places,
-round-precision = 2,
-}
+\input{../../Preamble.tex} % Se incluye el preámbulo
 
-% Títulos
-\usepackage{titlesec}
-\titleformat{\section}
-	{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-\titleformat{\subsubsection}
-	{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
-\titlespacing{\section}{0pt}{2\parskip}{\parskip}
-\titlespacing{\subsection}{0pt}{\parskip}{0pt}
-\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
-
-% Numeración de secciones
-\setcounter{tocdepth}{2}
-\setcounter{secnumdepth}{2}
-
-% Figuras y descripciones
-%\renewcommand{\thefigure}{\Roman{figure}}
-\renewcommand{\thesubfigure}{\Alph{subfigure}}
-\captionsetup[figure]{labelfont={bf},name={Figura},labelsep=period}
-\numberwithin{figure}{chapter}
-\numberwithin{equation}{chapter}
-
-% Enumerations
-\newcounter{myenumi}
-\renewcommand{\themyenumi}{\alph{myenumi})}
-\newenvironment{myenumerate}{\setlength{\parindent}{0pt}\setcounter{myenumi}{0}\renewcommand{\item}{\par\refstepcounter{myenumi}\makebox[1.3em][l]{\themyenumi}}}{\par\bigskip\noindent\ignorespacesafterend}
-
-% Own environments
-\newenvironment{nota}{\underline{\textbf{NOTA:}} }{}
-\newenvironment{caja}{\begin{tcolorbox}[colback = white, sharp corners, boxrule = 1 pt]}{\end{tcolorbox}}
-\newtheorem{ejemplo}{Ejemplo}
-\newtheorem{ejercicio}{Ejercicio}
-\newtheorem*{conclusion}{Conclusión}
-
-% Para una bonita portada
-\usepackage{wallpaper}
-\usepackage{titling}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\setlength{\droptitle}{-10cm} 
-\renewcommand{\chaptermark}[1]{%
-        \markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{%
-\markright{}}
-\fancyhf{}
-\fancyhead[LE,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[RE]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
- \fancypagestyle{plain}{%
-   \fancyhead{} 
-   \renewcommand{\headrulewidth}{0pt}
-}
-
-% Organización del texto
-\newcommand{\formula}[1]{\vspace{13 pt}\noindent \textbf{\underline{#1}}}
-\newcommand{\subtext}[1]{_{\text{#1}}}
-
-% Unidades y utilidades varias
-\renewcommand{\S}{\operatorname{S}}
-\newcommand{\db}{\operatorname{dB}}
-\newcommand{\s}{\operatorname{s}}
-\newcommand{\A}{\operatorname{A}}
-\newcommand{\Pa}{\operatorname{Pa}}
-\newcommand{\W}{\operatorname{W}}
-\newcommand{\I}{\operatorname{I}}
-\newcommand{\C}{\operatorname{C}}
-\newcommand{\K}{\operatorname{K}}
-\newcommand{\m}{\operatorname{m}}
-\newcommand{\rad}{\operatorname{rad}}
-\newcommand{\mol}{\operatorname{mol}}
-\newcommand{\J}{\operatorname{J}}
-\newcommand{\kg}{\operatorname{kg}}
-\newcommand{\incremento}{\Delta}
-\newcommand{\psus}{\, \ldots \,}
-\renewcommand{\sin}{\sen}
-\renewcommand{\arcsin}{\arcsen}
-\renewcommand{\arctan}{\arctg}
-\newcommand{\sen}{\operatorname{\sen}}
-
-% Vectores
-\usepackage[c]{esvect}
-\renewcommand{\vec}[1]{\vv{{#1}}}
-\newcommand{\proy}[2][1]{\text{proy}_{#1}#2}
-\newcommand{\antiparallel}{\downharpoonleft \! \upharpoonright}
-\newcommand{\parallelvec}{\upharpoonleft \! \upharpoonright}
-
-% Espaciado
-\usepackage{enumitem}
-\setlist{before={\parskip=3pt}, after=\vspace{\baselineskip}}
-\setlength{\parindent}{0pt}
-
-% Estadística
-\DeclareMathOperator{\Var}{Var}
-\renewcommand{\var}{\sigma ^2}
-\DeclareMathOperator{\B}{B}
-\DeclareMathOperator{\BN}{BN}
-\DeclareMathOperator{\Geo}{Geo}
-\DeclareMathOperator{\Poisson}{Poisson}
-\DeclareMathOperator{\U}{U}
-\DeclareMathOperator{\Exp}{Exp}
-\DeclareMathOperator{\N}{N}
-\newcommand{\probCond}[2]{P \left( #1 \: \middle\vert\:  #2 \right) }
-
-% Electromagnetismo y Ondas
-\newcommand{\errorGrave}{\textbf{FG!!!}}
-\newcommand{\mas}{M.A.S.}
-\newcommand{\mcu}{M.C.U.}
-\newcommand{\ed}{E.D.}
-\newcommand{\edmas}{E.D. del M.A.S.}
-\usepackage{esint}
-
-% Repeticiones
-\usepackage{forloop}
-\newcommand{\repvec}[3]{
-	\foreach \uwu in {1,...,#2}
-		{\vec{#1}_{\uwu} ,}
-	\, \ldots \, , \vec{#1}_{#3}
-}
-\newcommand{\rep}[3]{
-	\foreach \uwu in {1,...,#2}
-		{#1_{\uwu} ,}
-	\, \ldots \, , #1_{#3}
-}
-\newcommand{\repinf}[3]{
-	\foreach \uwu in {#2,...,#3}
-		{#1_{\uwu} ,}
-	\, \ldots 
-}
-
-% Señales y Sistemas
-\renewcommand{\H}{H}
-
-% Circled number
-\newcommand{\circledNumber}[1]{\raisebox{.9pt}{\textcircled{\raisebox{-.9pt}{#1}}}}
-
-% Footnotes
-% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-
-%%%% END OF PREAMBLE %%%%
-
-
+% Título y portada
 \title{\Huge Electrónica II\\
 \Large Apuntes de clase}
 \author{Javier Rodrigo López \thanks{E-mail: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}} 
 \date{\today}
 
+%%% INICIO DEL DOCUMENTO %%%
 \begin{document}
 
 
 \setlength{\wpYoffset}{-5 cm}
 \ThisCenterWallPaper{0.7}{El Bosco.jpg}
-
-
 \maketitle
 
 
-
+% Marca de agua
 \AddToShipoutPictureFG{
-\begin{tikzpicture}[overlay,remember picture]
-\path (current page.south west) -- (current page.north east)
- node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
-\end{tikzpicture}
+	\begin{tikzpicture}[overlay,remember picture]
+		\path (current page.south west) -- (current page.north east)
+		node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+	\end{tikzpicture}
 }
 
-
-
-
- \begin{figure}[t!]
- \centering
- \begin{subfigure}[b]{0.65\linewidth}
-   \includegraphics[width=\linewidth]{upm_logo.png}
- \end{subfigure}
- \begin{subfigure}[b]{0.25\linewidth}
-   \includegraphics[width=\linewidth]{etsist_logo.png}
- \end{subfigure}
+% Logotipos UPM y ETSIST
+\begin{figure}[t!]
+	\centering
+	\begin{subfigure}[b]{0.65\linewidth}
+		\includegraphics[width=\linewidth]{upm_logo.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\includegraphics[width=\linewidth]{etsist_logo.png}
+	\end{subfigure}
 \end{figure}
 
 
@@ -232,7 +46,7 @@ round-precision = 2,
 \section*{Introducción}
 Esta pequeña recopilación de fórmulas, teoremas y demás apuntes de teoría ha sido elaborada durante el primer semestre del curso 2019-2020, en la escuela \href{https://www.etsist.upm.es/}{\textbf{ETSIST}} de la \href{http://www.upm.es/}{\textbf{UPM}} por Javier Rodrigo López, alumno de 2º curso de Ingeniería de Sonido e Imagen.
 
-Muchas gracias al profesor \href{https://www.euitt.upm.es/escuela/directorio?departamento=DTE&idTrabajador=c0874849914b0380a54a53f80d4d60f1}{\textbf{José Antonio Herrera Camacho}} por hacer una labor excelente como docente y despertar en mí el interés por la Electrónica. Gran parte de estos apuntes no habría existido de no haber asistido a sus clases.
+Muchas gracias al profesor \href{https://www.euitt.upm.es/escuela/directorio?departamento=DTE&idTrabajador=c0874849914b0380a54a53f80d4d60f1}{\textbf{José Antonio Herrera Camacho}} por hacer una labor excelente como docente y despertar en mí el interés por la Electrónica. Una gran parte de estos apuntes existiría si no hubiera asistido a sus clases.
 \newpage
 
 \setlength{\parskip}{0em}
