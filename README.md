@@ -1,5 +1,7 @@
 # Apuntes de Teleco - 2º Curso
 
+![GitHub repo size](https://img.shields.io/github/repo-size/Javiolonchelo/ApuntesTeleco_2?label=Tama%C3%B1o%20del%20repositorio)
+
 Este repositorio contiene mis apuntes de las asignaturas de 2º curso del grado en Ingeniería de Sonido e Imagen impartidos en la ETSIST de la UPM.
 
 Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hacérmelo saber, a través de GitHub (en el menú _Issues_) o bien por correo electrónico a [javiolonchelo@gmail.com](mailto:javiolonchelo@gmail.com)
@@ -10,6 +12,7 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
   * [Primer semestre](#primer-semestre)
   * [Segundo semestre](#segundo-semestre)
 * [Estado de los apuntes](#estado-de-los-apuntes)
+* [Proyectos por asignatura](#proyectos-por-asignatura)
 
 ## Asignaturas
 
@@ -39,7 +42,7 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 * [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría%20de%20la%20Comunicación.pdf) - `Aún no comenzado`
 
-## Estado de los apuntes (NO DISPONIBLE TEMPORALMENTE)
+## Estado de los apuntes
 
 Puedes comprobar el estado en el que se encuentran los apuntes desplegando a continuación su correspondiente pestaña. Los apartados tachados son aquellos que ya han sido implementados en los apuntes.
 
@@ -52,30 +55,30 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 <details><summary>Electromagnetismo y Ondas </summary>
 <p>
 
-### Oscilaciones
+### ~~Oscilaciones~~
 
-* Movimiento armónico simple
-* Composición de movimientos armónicos
-* Oscilaciones amortiguadas y forzadas
+* ~~Movimiento armónico simple~~
+* ~~Composición de movimientos armónicos~~
+* ~~Oscilaciones amortiguadas y forzadas~~
 
-### Ondas en Medios Eléctricos
+### ~~Ondas en Medios Eléctricos~~
 
-* Características. Función y ecuación de ondas
-* Ondas armónicas
-* Ondas en dos y tres dimensiones
-* Intensidad y nivel de intensidad
-* Sonido y efecto Doppler
-* Leyes de la reflexión y la refracción
-* Interferencias
-* Ondas estacionarias
+* ~~Características. Función y ecuación de ondas~~
+* ~~Ondas armónicas~~
+* ~~Ondas en dos y tres dimensiones~~
+* ~~Intensidad y nivel de intensidad~~
+* ~~Sonido y efecto Doppler~~
+* ~~Leyes de la reflexión y la refracción~~
+* ~~Interferencias~~
+* ~~Ondas estacionarias~~
 
 ### Electrostática
 
-* Conservación y cuantificación de la carga
-* Ley de Coulomb y principio de superposición
-* Potencial eléctrico
-* Movimiento de una partícula en un campo
-* Ley de Gauss
+* ~~Conservación y cuantificación de la carga~~
+* ~~Ley de Coulomb y principio de superposición~~
+* ~~Potencial eléctrico~~
+* ~~Movimiento de una partícula en un campo~~
+* ~~Ley de Gauss~~
 * Dipolo eléctrico
 * Campo eléctrico en medios conductores
 * Campo eléctrico en medios dieléctricos
@@ -150,18 +153,18 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 <details><summary>Estadística y Procesos Estocásticos</summary>
 <p>
   
-### Probabilidad
+### ~~Probabilidad~~
 
-* Espacio probabilístico
-* Combinatoria
-* Probabilidad condicionada. Independencia
+* ~~Espacio probabilístico~~
+* ~~Combinatoria~~
+* ~~Probabilidad condicionada. Independencia~~
 
-### Variables aleatorias
+### ~~Variables aleatorias~~
 
-* Variable aleatoria discreta
-* Variable aleatoria continua
-* Desigualdad de Chebysev
-* Cuantil y percentil
+* ~~Variable aleatoria discreta~~
+* ~~Variable aleatoria continua~~
+* ~~Desigualdad de Chebysev~~
+* ~~Cuantil y percentil~~
 
 ### Vectores aleatorios
 
@@ -250,15 +253,15 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 <details><summary>Señales y Sistemas</summary>
 <p>
   
-### Introducción al análisis de señales en el dominio del tiempo
+### ~~Introducción al análisis de señales en el dominio del tiempo~~
 
-* Señales: definición y clasificación
-* Propiedades y tansformaciones de la variable independiente
-* Estudio de las señales básicas
+* ~~Señales: definición y clasificación~~
+* ~~Propiedades y tansformaciones de la variable independiente~~
+* ~~Estudio de las señales básicas~~
 
 ### Análisis de sistemas en el dominio del tiempo
 
-* Definición de sistema y de sus propiedades
+* ~~Definición de sistema y de sus propiedades~~
 * Sistemas LTI
 * Representación de señales en términos de impulsos
 * Sistemas discretos LTI
@@ -426,3 +429,49 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
   
 </p>
 </details>
+
+<br>
+
+## Proyectos por asignatura
+
+<details>
+  <summary>Primer Semestre</summary>
+<p>
+
+* [Electromagnetismo y Ondas](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/1)
+
+* [Electrónica II](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/2)
+
+* [Estadística y Procesos Estocásticos](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/5)
+
+* [Redes y Servicios de Telecomunicación](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/6)
+
+* [Señales y Sistemas](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/7)
+
+---
+
+</p>
+</details>
+
+<details>
+  <summary>Segundo Semestre</summary>
+<p>
+  
+* [Ciencia, Tecnología y Sociedad](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/4)
+
+* [Fundamentos de Sonido e Imagen](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/8)
+
+* [Microprocesadores](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/9)
+
+* [Procesado Digital de la Señal](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/10)
+
+* [Propagación de Ondas](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/11)
+
+* [Teoría de la Comunicación](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/12)
+
+---
+
+</p>
+</details>
+
+<br>
