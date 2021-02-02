@@ -1,0 +1,75 @@
+\documentclass[a4paper]{book}
+
+\input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+
+% Título y portada
+\title{\Huge Ciencia, Tecnología y Sociedad\\\vspace*{5pt}
+\Large Apuntes de clase}
+\author{Javier Rodrigo López \thanks{Correo electrónico: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}} 
+\date{\today}
+
+%%% INICIO DEL DOCUMENTO %%%
+\begin{document}
+
+\setlength{\wpYoffset}{0 cm}
+\ThisCenterWallPaper{0.7}{./Imágenes/Murillo.jpg}
+\maketitle
+
+% Marca de agua
+\AddToShipoutPictureFG{
+\begin{tikzpicture}[overlay,remember picture]
+\path (current page.south west) -- (current page.north east)
+ node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+\end{tikzpicture}
+}
+
+% Logotipos UPM y ETSIST
+\begin{figure}[t!]
+\centering
+	\begin{subfigure}[b]{0.65\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/upm_logo.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/etsist_logo.png}
+	\end{subfigure}
+\end{figure}
+
+% Introducción
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Introducción}
+\section*{Introducción}
+Imagen de la portada: \textsl{Jacob pone las varas al ganado de Labán}, por Bartolomé Esteban Murillo.
+\newpage
+
+% Índice (TOC)
+\setlength{\parskip}{0em}
+\tableofcontents 
+\setlength{\parskip}{0.5em}
+
+%%% INICIO DE LOS APUNTES %%%
+\chapter{Sostenibilidad ecológica y social}
+\section{Cooperación al desarrollo}
+
+\chapter{Las revoluciones tecnológicas}
+\section{Política científica}
+
+\chapter{TIC, ética y derechos humanos}
+\section{Códigos deontológicos del sector TIC}
+
+\chapter{Casos de uso de tecnología social}
+
+%%% FIN DE LOS APUNTES %%%
+
+%%% BIBLIOGRAFÍA %%%
+% Por defecto, se encuentra desactivada. Esto disminuye el tiempo de procesado. Se puede activar cuando se vaya a exportar el PDF definitivo
+
+%\newpage
+%\phantomsection
+%\label{sec:bibliografia_final}
+%\renewcommand{\refname}{Bibliografía}
+%\addcontentsline{toc}{section}{Bibliografía}
+%\bibliography{bibliografia} % Nombre del archivo (sin ".bib")
+%\bibliographystyle{bababbrv} 
+
+\end{document}

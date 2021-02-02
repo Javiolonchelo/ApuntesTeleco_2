@@ -1,0 +1,241 @@
+\documentclass[a4paper]{book}
+
+\input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+
+% Título y portada
+\title{\Huge Electrónica II\\
+\Large Apuntes de clase}
+\author{Javier Rodrigo López \thanks{E-mail: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}} 
+\date{\today}
+
+%%% INICIO DEL DOCUMENTO %%%
+\begin{document}
+
+
+\setlength{\wpYoffset}{-5 cm}
+\ThisCenterWallPaper{0.7}{./Imágenes/El Bosco.jpg}
+\maketitle
+
+
+% Marca de agua
+\AddToShipoutPictureFG{
+	\begin{tikzpicture}[overlay,remember picture]
+		\path (current page.south west) -- (current page.north east)
+		node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+	\end{tikzpicture}
+}
+
+% Logotipos UPM y ETSIST
+\begin{figure}[t!]
+	\centering
+	\begin{subfigure}[b]{0.65\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/upm_logo.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/etsist_logo.png}
+	\end{subfigure}
+\end{figure}
+
+
+\newpage
+
+\phantomsection
+\setlength{\parskip}{0.5em}
+
+\addcontentsline{toc}{section}{Introducción}
+\section*{Introducción}
+Esta pequeña recopilación de fórmulas, teoremas y demás apuntes de teoría ha sido elaborada durante el primer semestre del curso 2019-2020, en la escuela \href{https://www.etsist.upm.es/}{\textbf{ETSIST}} de la \href{http://www.upm.es/}{\textbf{UPM}} por Javier Rodrigo López, alumno de 2º curso de Ingeniería de Sonido e Imagen.
+
+Muchas gracias al profesor \href{https://www.euitt.upm.es/escuela/directorio?departamento=DTE&idTrabajador=c0874849914b0380a54a53f80d4d60f1}{\textbf{José Antonio Herrera Camacho}} por hacer una labor excelente como docente y despertar en mí el interés por la Electrónica. Una gran parte de estos apuntes existiría si no hubiera asistido a sus clases.
+\newpage
+
+\setlength{\parskip}{0em}
+\tableofcontents 
+\setlength{\parskip}{0.5em}
+
+
+\chapter{Bloque Temático 1}
+
+\section{Codificación de la información}
+
+Para convertir una señal analógica en digital, tenemos que aplicarle una transformación denominada \textbf{codificación}. 
+
+La codificación 
+\section{Codificación de números}
+\subsection{Código BN (Binario Natural)}
+
+La fórmula es \[n\geq \log_2{m}\]
+Siendo $n$ el número de bits y $m$ el número de objetos. Aunque la mayoría de las veces
+
+El rango de números naturales que se pueden codificar con $n$ bits es:
+\[\left( 0, 2^{n}-1 \right)\]
+
+Existen distintas opciones de asignación de códigos. \begin{itemize}
+\item A cada elemento del conjunto debe corresponderle un único código de 0s y 1s.
+\item Se debe utilizar el \textbf{menor número de bits} posible.
+\item La asignación debe favorecer las operaciones de codificar y descodificar.
+\end{itemize}
+\subsection{Código BCD (Binary Coded Decimal)}
+Representa cada una de las cifras decimales de un número expresado en decimal con 4 bits.
+
+Un número decimal de $n$ cifras necesita $4n$ bits para expresarlo en BCD.
+
+El BCD se utiliza mucho para interfaces con personas, ya que cada \textit{nibble} representa  
+\section{Aritmética Binaria}
+
+\subsection{Suma de números}
+De toda la vida. Aquí van algunos ejemplos...
+
+Puede sobrepasar el número de bits con el que se trabaja y se produce un \textbf{acarreo} o \textbf{carry}.
+
+\subsection{Resta de números}
+De toda la vida. Aquí van algunos ejemplos...
+
+Puede producirse un error por no utilizar suficientes bits y que el resultado no sea fiel a la operación. A esto se le denomina \textbf{overflow}.
+
+\section{Ejercicios sobre codificación y Aritmética Binaria}
+
+
+\section{Álgebra de Boole}
+\subsection{Teoremas básicos}
+
+\begin{itemize}
+\item \textbf{Teorema de idempotencia}: 
+\begin{multicols}{2}
+\[\boxed{a + a = a }\]
+\[\boxed{ a \cdot  a = a}\]
+\end{multicols}
+\item \textbf{Teorema de absorción}:
+\begin{multicols}{2}
+\[\boxed{a + ab = a}\]
+\[\boxed{ a \cdot  (a+b) = a}\]
+\end{multicols}
+\item \textbf{Teorema de adyacencia}:
+\begin{multicols}{2}
+\[\boxed{ab + a\overline{b} = a}\]
+\[\boxed{ (a+b)(a+\overline{b}) = a}\]
+\end{multicols}
+\item \textbf{Teorema de simplificación}:
+\begin{multicols}{2}
+\[\boxed{a + \overline{a}b = a + b}\]
+\[\boxed{ a (\overline{a}+b) = ab}\]
+\end{multicols}
+\item \textbf{Teorema de De Morgan}: 
+\begin{multicols}{2}
+\[\boxed{\overline{a_0 \cdot a_1\cdot \ldots \cdot a_n} = \overline{a_0} + \overline{a_1} + \ldots + \overline{a_n}}\]
+\[\boxed{ \overline{a_0 + a_1+ \ldots + a_n} = \overline{a_0} \cdot  \overline{a_1} \cdot  \ldots \cdot  \overline{a_n} }\]
+\end{multicols}
+\end{itemize}
+
+\section{Cronogramas}
+Un cronograma es un diagrama donde se representan las entradas, nodos intermedios y salidas en función del tiempo.
+
+Para esta parte del temario, y a falta de laboratorio en esta asignatura, intentaremos utilizar la aplicación Quartus. Esta herramienta CAD nos permitirá trabajar con puertas lógicas.
+
+
+\section{Sistemas combinacionales complejos}
+La complejidad de un circuito combinacional depende sobre todo del \textbf{número de entradas}, ya que con $N$ entradas la tabla de verdad tendrá $2^N$ filas.
+
+Hemos encontrado casos en los que los circuitos tenían muy poquitos unos o muy poquitos ceros en su tabla de verdad, o que se podían escribir de forma resumida.
+
+\subsection{Divide y vencerás}
+La estrategia principal consiste en dividir el circuito en otros más pequeños que, al agruparlos, sean fácilmente descriptibles.
+
+Por ejemplo, un sumador de $N$ bits. Podemos hacer un sumador de 1 bit y con
+
+\chapter{Bloque Temático 2} 
+\section{Arquitecturas digitales I}
+\subsection{Sistemas basados en microprocesador}
+\subsection{Sistemas cableados}
+Pros: \begin{itemize}
+\item Velocidad y eficiencia. 
+\end{itemize}
+Contras: \begin{itemize}
+\item Complejidad del hardware.
+\item Versatilidad. 
+\end{itemize}
+
+\section{Conceptos básicos}
+\subsection{Nivel logico}
+La representación de ceros y unos se define por intervalos de tensiones.
+
+Es decir, si el nivel alto se corresponde con una tensión $V_{CC}$
+
+\subsection{Células lógicas}
+Son circuitos electrónicos que realizan operaciones lógicas.
+
+\subsubsection{Nodos lógicos}
+Un nodo lógico es una interconexión entre células lógicas.
+
+\subsection{Modelo lógico de las células}
+Células estándar: Función lógica prefijada en el diseño de la célula. Por ejemplo, una NOR de dos entradas, construida con transistores CMOS.
+
+
+\section{Tecnologías}
+\subsection{Circuitos cableados}
+\subsubsection{SSI. Ciruitos de baja escala de integracíón}
+Tecnología de los años 60. Métodos manuales de diseño. Aplicación marginal. Lógica auxiliar (Glue logic)
+\subsubsection{Ciruitos de media escala de integracíón}
+MSI. 
+Como mucho, 100 transistores.
+\subsubsection{ASIC. Ciruitos de media escala de integracíón}
+Tecnología VLSI (Very Large Scale Integration).
+
+\subsubsection{Lógica configurable}
+Tecnología VLSI.
+Funcionamiento lógico configurable mediante la descarga de un fichero.
+\section{Arquitecturas digitales II}
+
+\subsection{Estructura de un sistema digital}
+
+PCB (Printed Circuit Board). Es básicamente la placa donde se colocan los componentes 
+
+Alimentación
+Interfaces
+Disipadores
+
+\section{Tecnología II}
+\subsection{Introducción al modelado de CIs}
+Necesitamos modelos simplificados para abordar el diseño de sistemas muy complejos.
+Hay tres modelos:
+\begin{enumerate}
+\item Lógico. Función lógica e interfaz.
+\item Eléctrico. Características eléctricas de la interfaz.
+\item Dinámico.
+\end{enumerate}
+\subsubsection{Modelo lógico}
+Decribe el funcionamiento y la interfaz del chip.
+\subsubsection{Modelo eléctrico}
+Es muy importante para conectarlo  
+
+\chapter{Bloque Temático 3}
+
+
+\section{Introducción a los circuitos secuenciales}
+\section{Cronogramas funcionales de circuitos de flip-flops}
+\section{Registros}
+\section{Diseño de autómatas}
+Un \textbf{autómata de Moore} es un autómata en el que la salida depende únicamente del estado actual de la memoria.
+
+Diagrama de estados para autómatas de Moore:
+
+Un \textbf{autómata de Mealy} es un autómata en el que la salida depende del estado actual de la memoria y de las entradas.
+
+Diagrama de estados para autómatas de Mealy:
+
+\section{Contadores}
+\section{Metodología completa de diseño de sistemas}
+
+
+
+
+% BIBLIOGRAFÍA
+%\newpage
+%\phantomsection
+%\label{sec:bibliografia_final}
+%\renewcommand{\refname}{Bibliografía} % Para cambiar el título al incluir una librería de BibTeX
+%\addcontentsline{toc}{section}{Bibliografía}
+%\bibliography{biblio_Tex}
+%\bibliographystyle{bababbrv} 
+
+\end{document}

@@ -1,0 +1,134 @@
+\documentclass[a4paper]{book}
+
+\input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+
+% Título y portada
+\title{\Huge Fundamentos de Sonido e Imagen\\\vspace*{5pt}
+\Large Apuntes de clase}
+\author{Javier Rodrigo López \thanks{Correo electrónico: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}} 
+\date{\today}
+
+%%% INICIO DEL DOCUMENTO %%%
+\begin{document}
+
+\setlength{\wpYoffset}{1cm}
+\ThisCenterWallPaper{0.7}{./Imágenes/Sorolla.jpg}
+\maketitle
+
+% Marca de agua
+\AddToShipoutPictureFG{
+\begin{tikzpicture}[overlay,remember picture]
+\path (current page.south west) -- (current page.north east)
+ node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+\end{tikzpicture}
+}
+
+% Logotipos UPM y ETSIST
+\begin{figure}[t!]
+\centering
+	\begin{subfigure}[b]{0.65\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/upm_logo.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/etsist_logo.png}
+	\end{subfigure}
+\end{figure}
+
+% Introducción
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Introducción}
+\section*{Introducción}
+Imagen de la portada: \textsl{Corriendo por la playa. Valencia}, de Joaquín Sorolla.
+\newpage
+
+% Índice (TOC)
+\setlength{\parskip}{0em}
+\tableofcontents 
+\setlength{\parskip}{0.5em}
+
+%%% INICIO DE LOS APUNTES %%%
+\chapter{Señales, sistemas y medidas acústicas. Revisión de conceptos}
+
+\chapter{Señales acústicas}
+\section{Valor RMS y nivel de una señal}
+\section{Serie de Fourier y Transformada de Fourier}
+\section{Densidad espectral de potencia}
+\section{Nivel espectral y nivel en banda}
+\section{Ruido blanco y ruido rosa}
+\section{Sistemas y medidas acústicas}
+\section{Sistema lineal. Función de transferencia. Respuesta al impulso}
+\section{Métodos de análisis de sistemas}
+\section{Analogías electro-mecánico-acústicas}
+
+\chapter{Audición y voz}
+\section{Fisiología y funcionamiento del sistema auditivo humano}
+\section{Características de la respuesta auditiva}
+\section{No linealidad del sistema auditivo}
+\section{Efecto de enmascaramiento temporal y frecuencial}
+\section{Audición binaural}
+\section{Mecanismo de generación de la voz}
+\section{Características acústicas de voz}
+\section{Análisis de la señal de voz}
+
+\chapter{Ondas planas y esféricas}
+\section{Ecuación de onda plana. Velocidad de propagación}
+\section{Velocidad vibratoria e impedancia de una onda plana}
+\section{Presión e intensidad acústicas}
+\section{Ecuación de una onda esférica}
+\section[Velocidad vibratoria e impedancia de una onda esférica]{Velocidad vibratoria e impedancia de una onda\\ esférica}
+\section{Campo acústico originado por una fuente. Divergencia esférica}
+\section{Potencia radiada por una fuente}
+
+\chapter{Ondas estacionarias}
+\section{Reflexión de una onda plana}
+\section{Impedancia de una línea de transmisión acústica}
+\section{Intensidad acústica de una onda estacionaria}
+\section{Transmisión acústica a través de varios medios}
+
+\chapter{Formación y captación de imágenes}
+\section{Introducción}
+\section{Óptica geométrica}
+\section{Fotografía}
+\section{Fotometría}
+
+\chapter{El sistema visual humano. Colorimetría}
+\section{Introducción a la visión}
+\section{Estructura y óptica del ojo humano}
+\section{La retina, nuestro sensor}
+\section{Percepción: Implicaciones en los sistemas de imagen}
+
+\chapter{Señales utilizadas para la representación de imágenes}
+\section{Modelos cromáticos para el almacenamiento cuantificado de los colores}
+\section{Señales de luminancia y de crominancia}
+\section{Importancia concedida por el ojo a las señales de luminancia y crominancia}
+\section{Cartas de barras para los estudios cromáticos de imágenes fijas y de vídeo}
+\section{Relación de aspecto y exploraciones progresivas y entrelazada}
+\section[Resolución horizontal y vertical de las imágenes (SD, HD, UHD)]{Resolución horizontal y vertical de las imágenes\\ (SD, HD, UHD)}
+\section{Señales normalmente utilizadas para la transmisión de señales de vídeo}
+\section{Intervalos de vídeo e intervalos de sincronismo}
+
+\appendix
+
+\chapter{Prácticas}
+\section[Introducción. Técnicas de medidas acústicas. Técnicas de análisis de sistemas mecánicos y acústicos]{Introducción. Técnicas de medidas acústicas.\\ Técnicas de análisis de sistemas mecánicos y acústicos}
+\section{Osciladores mecánicos y acústicos}
+\section{Ondas acústicas esféricas. Potencia radiada por una fuente}
+\section{Ondas acústicas estacionarias. Impedancia acústica. Impedancia de radiación de un tubo}
+\section{Imagen digital}
+\section{Relación de aspecto y adaptaciones}
+\section{Brillo y contraste}
+\section{Color. Saturación y tinte}
+%%% FIN DE LOS APUNTES %%%
+
+%%% BIBLIOGRAFÍA %%%
+% Por defecto, se encuentra desactivada. Esto disminuye el tiempo de procesado. Se puede activar cuando se vaya a exportar el PDF definitivo
+
+%\newpage
+%\phantomsection
+%\label{sec:bibliografia_final}
+%\renewcommand{\refname}{Bibliografía}
+%\addcontentsline{toc}{section}{Bibliografía}
+%\bibliography{bibliografia} % Nombre del archivo (sin ".bib")
+%\bibliographystyle{bababbrv} 
+\end{document}
