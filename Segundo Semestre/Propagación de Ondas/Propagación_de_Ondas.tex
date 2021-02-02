@@ -1,0 +1,113 @@
+\documentclass[a4paper]{book}
+
+\input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+
+% Título y portada
+\title{\Huge Propagación de Ondas\\\vspace*{5pt}
+\Large Apuntes de clase}
+\author{Javier Rodrigo López \thanks{Correo electrónico: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}} 
+\date{\today}
+
+%%% INICIO DEL DOCUMENTO %%%
+\begin{document}
+
+\setlength{\wpYoffset}{-2 cm}
+\ThisCenterWallPaper{0.5}{./Imágenes/Goya.jpg}
+\maketitle
+
+% Marca de agua
+\AddToShipoutPictureFG{
+\begin{tikzpicture}[overlay,remember picture]
+\path (current page.south west) -- (current page.north east)
+ node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+\end{tikzpicture}
+}
+
+% Logotipos UPM y ETSIST
+\begin{figure}[t!]
+\centering
+	\begin{subfigure}[b]{0.65\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/upm_logo.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.25\linewidth}
+		\includegraphics[width=\linewidth]{../../Archivos comunes/etsist_logo.png}
+	\end{subfigure}
+\end{figure}
+
+% Introducción
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Introducción}
+\section*{Introducción}
+Imagen de la portada: \textsl{Saturno devorando a su hijo}, de Franciso de Goya.
+\newpage
+
+% Índice (TOC)
+\setlength{\parskip}{0em}
+\tableofcontents 
+\setlength{\parskip}{0.5em}
+
+%%% INICIO DE LOS APUNTES %%%
+\chapter{Operadores vectoriales}
+\section{Gradiente de un campo escalar}
+\section{Divergencia y rotacional de un campo vectorial}
+\section{Teoremade Helmholtz}
+
+\chapter{Ondas acústicas planas}
+\section{Notación compleja}
+\section{Ecuación de onda. Solución armónica}
+\section{Densidad de energía. Intensidad acústica}
+
+\chapter{Ondas acústicas esféricas}
+\section{Ecuación de onda esférica}
+\section{Solución armónica. Variables acústicas de una onda esférica}
+\section{Intensidad de una onda esférica}
+
+\chapter{Reflexión y refracción de una onda plana}
+\section{Reflexión y transmisión de una onda plana}
+\section{Ondas acústicas estacionarias}
+\section{Impedancia de una onda estacionaria}
+
+\chapter{Ecuaciones de Maxwell. Ecuación de onda. Energía}
+\section{Ecuaciones de Maxwell en forma diferencial}
+\section{Potenciales eléctrico y magnético}
+\section{Ecuación de onda para los campos y para los potenciales}
+\section{Energía del campo electromagnético. Teorema de Poynting}
+\section{Aplicación: Radiación de un dipolo oscilante}
+
+\chapter{Propagación de ondas electromagnéticas en medios conductores}
+\section{Solución para ondas planas}
+\section{Impedancia e índice de refracción del medio}
+\section{Propagación de la energía}
+\section{Polarización}
+
+\chapter{Propagación de ondas electromagnéticas en medios conductores}
+\section{Densidad de carga libre en el conductor. Carácter transversal}
+\section{Solución para ondas planas. Magnitudes complejas}
+\section{Balance energético}
+
+\chapter{Reflexión y refracción de ondas electromagnéticas}
+\section[Reflexión y refracción en la frontera dieléctrico-dieléctrico]{Reflexión y refracción en la frontera\\ dieléctrico-dieléctrico}
+\section{Ecuaciones de Fresnel}
+\section{Coeficientes de reflexión y refracción}
+\section[Reflexión y refracción en la frontera dieléctrico-conductor]{Reflexión y refracción en la frontera\\ dieléctrico-conductor}
+
+\chapter{Ondas guiadas}
+\section{\texorpdfstring{Ondas estacionarias producidas por reflexión en la\\ frontera dieléctrico-conductor. Ondas TE y TM}{Ondas estacionarias producidas por reflexión en la frontera dieléctrico-conductor. Ondas TE y TM}}
+\section{Guía de onda formada por dos planos conductores paralelos}
+\section{Balance de energía}
+\section{Guía de onda rectangular}
+%%% FIN DE LOS APUNTES %%%
+
+%%% BIBLIOGRAFÍA %%%
+% Por defecto, se encuentra desactivada. Esto disminuye el tiempo de procesado. Se puede activar cuando se vaya a exportar el PDF definitivo
+
+%\newpage
+%\phantomsection
+%\label{sec:bibliografia_final}
+%\renewcommand{\refname}{Bibliografía}
+%\addcontentsline{toc}{section}{Bibliografía}
+%\bibliography{bibliografia} % Nombre del archivo (sin ".bib")
+%\bibliographystyle{bababbrv}
+
+\end{document}
