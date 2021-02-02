@@ -1,6 +1,6 @@
 # Apuntes de Teleco - 2º Curso
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Javiolonchelo/ApuntesTeleco_2?label=Tama%C3%B1o%20del%20repositorio)
+![GitHub repo size](https://img.shields.io/github/repo-size/Javiolonchelo/ApuntesTeleco_2?label=Tama%C3%B1o%20del%20repositorio) ![GitHub](https://img.shields.io/github/license/Javiolonchelo/ApuntesTeleco_2?label=Licencia)
 
 Este repositorio contiene mis apuntes de las asignaturas de 2º curso del grado en Ingeniería de Sonido e Imagen impartidos en la ETSIST de la UPM.
 
