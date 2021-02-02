@@ -457,100 +457,14 @@ Esta es \textbf{la misma definición} que para variables aleatorias unidimension
 
 \section{Variable aleatoria bidimensional discreta}
 
-La \textbf{función de probabilidad conjunta} de una variable aleatoria bidimensional discreta es una función que proporciona la información esencial de las variables $X$ e $Y$, y se define como:
-\[P\left( X=x_i,Y=y_j \right) = P\left( X=x_i \cap Y=y_j \right) \, , \qquad i, j = 1, 2, \dots \] 
-
-A partir de esta función, se pueden calcular las funciones de probabilidad de las variables aleatorias $X$ e $Y$. En este contexto, se les denomina \textbf{funciones de probabilidad marginales}:
-\[ P\left( X=x_i \right) = \sum_{j=1}^{\infty} P\left( X=x_i, Y=y_j \right) \, , \qquad i = 1, 2, \dots \]
-\[ P\left( Y=x_j \right) = \sum_{i=1}^{\infty} P\left( X=x_i, Y=y_j \right) \, , \qquad j = 1, 2, \dots \]
-
-Es importante observar que la probabilidad del espacio muestral es 1, por lo que se verifica que:
-\[ \sum_{i=1}^{\infty}\sum_{j=1}^{\infty} P\left( X=x_i, Y=y_j \right) = 1 \]
-
+t66
 \section{Variable aleatoria bidimensional continua}
-
-La \textbf{función de probabilidad conjunta} de una variable aleatoria bidimensional continua es una función que proporciona la información esencial de las variables $X$ e $Y$, y se define como:
-
-\[ P\left( \left( X,Y \right) \in D\right) = \iint_{D}f_{X,Y}(x,y)\dd{y} \dd{x}\]
-
-O, en particular:
-\[P\left( a\leq X \leq b, c\leq Y \leq d\right) = \int_{a}^{b}\int_{c}^{d} f_{X,Y}(x,y)\dd{y} \dd{x}\]
-
-Además:
-\[\boxed{F_{X,Y}(x,y) = P \left( X\leq x, Y\leq y\right)} = \int_{-\infty}^{x}\int_{-\infty}^{y} f_{X,Y}(\xi , \eta ) \dd{\xi} \dd{\eta}\]
-
-Al igual que antes, la propabilidad del espacio muestral es 1. Por tanto, se verifica que:
-\[\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} f_{X,Y}(x,y) \dd{x} \dd{y} = 1\]
-
-Como consecuencia del teorema fundamental del cálculo, se obtiene la siguiente expresión:
-\[\pdv[2]{}{x}{y} F_{X,Y}(x,y) = f_{X,Y}(x,y)\]
-
-Las variables aleatorias continuas $X$ e $Y$ tienen funciones de densidad, que en este caso denominaremos \textbf{funciones de densidad marginales}
-
 \section{Independencia de variables aleatorias}
-Sea $\left( X,Y\right)$ una variable aleatoria bidimensional, se dice que $X$ e $Y$ son independientes si para cualquiera $A$ y $B$:
-\[P\left( X\in A, Y\in B\right) = P\left(X\in A\right)\cdot P\left(Y\in B\right)\]
-
-Si $X$ e $Y$ son independientes, las variables aleatorias definidas a continuación también serán independientes:
-\[U=g(X) \qquad \qquad V=h(X)\]
-
 \section{Momentos}
-
-\subsection{Esperanza}
-
-Sea $\left(X,Y\right)$ una variable aleatoria discreta, la \textbf{esperanza} de la variable aleatoria $g\left(X,Y\right)$ es:
-\[E\left[g\left(X,Y\right)\right] = \sum_{x_i,y_j\in S}g\left(x_i,y_j\right)P\left(X=x_i, Y=y_j\right)\]
-
-Sea $\left(X,Y\right)$ una variable aleatoria continua, y análoga a la definición anterior, la esperanza de la variable aleatoria $g\left(X,Y\right)$ es:
-\[E\left[g\left(X,Y\right)\right] = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}g\left(x,y\right)f_{X,Y}(x,y)\dd{x} \dd{y}\]
-
-La esperanza es un operador \textbf{lineal}.
-
-\subsection{Covarianza}
-
-La covarianza se usa para \textbf{medir el grado de correlación} entre las variables $X$ e $Y$. Se define como:
-\[\Cov \left( X,Y \right) = E \left[\left(X-E\left[X\right]\right) \cdot \left(Y - E\left[Y\right]\right)\right]\]
-
-Sin embargo, \textbf{la forma habitual} de calcular la covarianza es la siguiente:
-\[\Cov \left( X,Y \right) = E\left[X\cdot Y\right] - E\left[X\right]E\left[Y\right]\]
-
-Para dos números $a,b \in \mathbb{R}$, se cumple que:
-\[\Cov \left( aX,bY \right) = ab\Cov \left( X,Y \right)\]
-
-Esta propiedad puede dificultar algunas operaciones. Por eso, se define el \textbf{coeficiente de correlación lineal} mediante la normalización de la covarianza:
-\[\rho \left(X,Y\right) = \frac{\Cov \left( X,Y \right)}{\sigma _X \sigma _Y} \]
-
-Es importante recalcar que $\rho \left( aX,bY \right) = \rho \left( X,Y \right) $. Además, se verifica que:
-\[-1\leq \rho \left( X,Y \right) \leq 1 \]
-
-Las variables aleatorias $X$ e $Y$ son \textbf{incorreladas} si $\rho \left( X,Y \right)=0$.
-
-Si las variables aleatorias $X$ e $Y$ son independientes, son incorreladas. Por lo tanto:
-\[X \text{ e } Y \text{ son independientes} \ \Longrightarrow \left\lbrace \begin{matrix*}[l]
-	E \left[ X \cdot Y \right] = E \left[ X \right] E \left[ Y \right] \\[5pt] 
-	\Cov \left( X,Y \right) = 0 \\[5pt] 
-	\rho \left( X,Y \right) = 0
-\end{matrix*} \right. \] 
-
-\subsection{Notación matricial}
-El \textbf{vector de medias} se define como:
-\[ \vec{m} = \left[ 
-\begin{matrix}
-	E \left[ X \right]\\ 
-	E \left[ Y \right]
-\end{matrix} \right] \]
-
-La \textbf{matriz de covarianza} se define como:
-\[M=\left[ 
-\begin{matrix}
-	\Var \left( X \right)& \Cov \left( X,Y \right)\\ 
-	\Cov \left( X,Y \right)& \Var \left( Y \right)
-\end{matrix} \right]\]
-
 \section{Variable aleatoria multidimensional}
-\section{Distribución normal n-dimensional}
+\section{\texorpdfstring{Distribución normal $n$-dimensional}{Distribución normal n-dimensional}}
 \section{Teorema central del límite}
-\section{Chi cuadrado y la T de Student}
+\section{\texorpdfstring{$\Xi$ cuadrado y la $T$ de Student}{Chi cuadrado y la T de Student}}
 
 
 \chapter{Inferencia estadística}
