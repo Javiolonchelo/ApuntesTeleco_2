@@ -2,6 +2,8 @@
 
 \input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
 
+\renewcommand{\vec}[1]{\mathbf{#1}} % Redefinición de vectores para adecuarse a la notación de negrita usada en esta asignatura.
+
 \title{\Huge Estadística y Procesos Estocásticos\\
 \Large Apuntes de clase}
 \author{Javier Rodrigo López \thanks{E-mail: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}}
@@ -548,6 +550,63 @@ La \textbf{matriz de covarianza} se define como:
 \end{matrix} \right]\]
 
 \section{Variable aleatoria multidimensional}
+
+Prácticamente todas las definiciones mostradas para dos variables aleatorias se pueden generalizar para $n$ variables aleatorias.
+
+Una variable aleatoria $n$-dimensional se define como una aplicación:
+\[\left( X_1,X_2,\dots , X_n \right):\Omega \longrightarrow \mathbb{R}^n\]
+Esta asigna a cada resultado del excperimento $\omega \in \Omega$ un elemento $\left( X_1(\omega ), X_2(\omega ) \dots X_n (\omega )\right)\in \mathbb{R}^n$
+
+Para cualquiera de las operaciones lineales, resulta apropiada la notación por columnas:
+\[\vec{X} = \left[ 
+\begin{matrix}
+	X_1\\ 
+	X_2\\ 
+	\vdots \\ 
+	X_n
+\end{matrix} \right]\]
+
+Por lo tanto, escribiremos el vector de medias como:
+\[\vec{m}_{\vec{X}} = E \left[ \vec{X} \right]= \left[ 
+\begin{matrix}
+	E \left[ X_1 \right]\\ 
+	E \left[ X_2 \right]\\ 
+	\vdots \\ 
+	E \left[ X_n \right]
+\end{matrix} \right] \]
+
+Y la matriz de covarianzas como:
+\[ M_{\vec{X}} = \left[ 
+\begin{matrix}
+	\Var \left( X_1 \right) & \Cov \left( X_1, X_2 \right) & \cdots & \Cov \left( X_1, X_n \right)\\ 
+	\Cov \left( X_1, X_2 \right) & \Var \left( X_2 \right) & \cdots & \Cov \left( X_2, X_n \right)\\ 
+	\vdots & \vdots & \ddots & \vdots \\
+	\Cov \left( X_1,X_n \right) & \Cov \left( X_2, X_n \right) & \cdots & \Var \left( X_n \right)
+\end{matrix} \right]\]
+
+\subsubsection{Linealidad}
+Si se realiza una combinación lineal con las variables aleatorias $\left( X_1,X_2, \dots , X_n \right)$ se obtiene una variable aleatoria:
+\[ Y = a_1X_1 + a_2X_2 + \dots + a_nX_n \]
+
+Podemos expresar la variables aleatoria $Y$ de la siguiente forma:
+\[ Y = A \vec{X}, \qquad A = \left[ 
+\begin{matrix}
+	a_1 & a_2 & \cdots & a_n
+\end{matrix} \right] \]
+
+Por la linealidad de la \textbf{esperanza}, tenemos que:
+\[ E \left[ Y \right] = a_1E \left[ X_1 \right] + a_2 E \left[ X_2 \right] + \dots + a_n E \left[ X_n \right] \]
+
+La \textbf{varianza} de $Y$ será:
+\[ \Var \left( Y \right) = A \times M_{\vec{X}} \times A ^{\top} \]
+
+Donde $A ^{\top} $ es la matriz traspuesta de $A$. Se puede generalizar este resultado para $m$ combinaciones lineales. Suponiendo que:
+\[ \vec{Y} = A \vec{X} + \vec{v} \]
+ 
+Donde $A$ es una matriz de dimensión $m \times n$ y $\vec{b}$ es un vector columna, entonces la variables aleatoria $m$-dimensional $\vec{Y}$ tiene un vector de medias $\vec{m}_{\vec{Y}}$ y una matriz de covarianza $M_{\vec{Y}}$ tales que:
+\[ \vec{m}_{\vec{Y}} = A \vec{m}_{\vec{X}} + \vec{b} \, ; \qquad \qquad \vec{m}_{\vec{Y}} = A \vec{m}_{\vec{X}} A ^{\top} \]
+
+
 \section{Distribución normal n-dimensional}
 \section{Teorema central del límite}
 \section{Chi cuadrado y la T de Student}
