@@ -555,7 +555,7 @@ Prácticamente todas las definiciones mostradas para dos variables aleatorias se
 
 Una variable aleatoria $n$-dimensional se define como una aplicación:
 \[\left( X_1,X_2,\dots , X_n \right):\Omega \longrightarrow \mathbb{R}^n\]
-Esta asigna a cada resultado del excperimento $\omega \in \Omega$ un elemento $\left( X_1(\omega ), X_2(\omega ) \dots X_n (\omega )\right)\in \mathbb{R}^n$
+Esta variable aleatoria asigna a cada resultado del excperimento $\omega \in \Omega$ un elemento\\ $\left( X_1(\omega ), X_2(\omega ) \dots X_n (\omega )\right)\in \mathbb{R}^n$
 
 Para cualquiera de las operaciones lineales, resulta apropiada la notación por columnas:
 \[\vec{X} = \left[ 
@@ -606,11 +606,66 @@ Donde $A ^{\top} $ es la matriz traspuesta de $A$. Se puede generalizar este res
 Donde $A$ es una matriz de dimensión $m \times n$ y $\vec{b}$ es un vector columna, entonces la variables aleatoria $m$-dimensional $\vec{Y}$ tiene un vector de medias $\vec{m}_{\vec{Y}}$ y una matriz de covarianza $M_{\vec{Y}}$ tales que:
 \[ \vec{m}_{\vec{Y}} = A \vec{m}_{\vec{X}} + \vec{b} \, ; \qquad \qquad \vec{m}_{\vec{Y}} = A \vec{m}_{\vec{X}} A ^{\top} \]
 
+\section{Distribución multinomial}
+
+Si se realizan $n$ pruebas de Bernoulli, la variable aleatoria bidimensional $\left( X_1, X_2 \right)$ definida por:
+\[ \begin{matrix*}[l]
+	X_1 \equiv \text{número de éxitos}\\[5pt] 
+	X_2 \equiv \text{número de fracasos}
+\end{matrix*} \]
+
+Esta variable solo podrá tomar los valores $\left( n_1, n_2 \right)$ con $n_1 = 0,1, \dots , n$ y $n_2 = n - n_1$. Para estos valores:
+\[ P \left( X_1 = n_1, X_2 = n_2 \right) = \frac{n!}{n_1!n_2!} p_1^{n_1} p_2^{n_2}\]
+
+Donde $p_1 = p$ es la probabilidad de éxito y $p_2 = 1-p$ es la probabilidad de fracaso.
+
+Un caso intereseante es aquel en el que en cada una de las $n$ pruebas se puedan obtener $k$ posibles resultados $A_1,A_2, \dots ,A_k$ con probabilidades $p_1,p_2, \dots ,p_k$, donde necesariamente $p_1 +p_2 + \dots + p_k = 1$. La variable $n$-dimensional $\left( X_1, \dots X_k \right)$ definida por:
+\[ \begin{matrix*}[l]
+	X_1 \equiv \text{número de veces que se obtiene }A_1\\[5pt] 
+	X_2 \equiv \text{número de veces que se obtiene }A_2\\[5pt] 
+	\ \, \vdots \\[5pt] 
+	X_k \equiv \text{número de veces que se obtiene }A_k
+\end{matrix*} \]
+
+solo puede tomar valores $\left( n_1, n_2, \dots , n_k \right)$ con $n_1,\dots ,n_k=0,1,\dots ,n$ y $n_1 + \dots + n_k = 1$. Para estos valores se tiene que:
+\[ P \left( X_1=n_1, \dots , X_k = n_k \right) = \frac{n!}{n_1!n_2!\dots n_k!} p_1^{n_1} \dots p_k^{n_k} \]
+
+Se dice que es $\left( X_1,\dots ,X_k \right)$ sigue una distribución multinomial de parámetros $n,p_1,p_2,\dots p_k$, y se denota como:
+\[ \left( X_1,\dots ,X_k \right) \sim \Mult \left( n,p_1,p_2,\dots p_k \right) \]
 
 \section{Distribución normal n-dimensional}
-\section{Teorema central del límite}
-\section{Chi cuadrado y la T de Student}
 
+Un vector aleatorio $ X = \left( X_1, \dots , X_n \right) $ sigue una distribución normal si la denominada función de densidad
+\[ f_{X_1,\dots , X_n}\left( x_1, \dots , x_n \right) = \frac{\partial ^n}{\partial x_1 \dots \partial x_n}F_{X_1, \dots , X_n} \left( x_1, \dots , x_n \right)\]
+es igual a
+\[ \frac{1}{\abs{M_{\vec{X}}}^{\frac{1}{2} } \left( 2 \pi  \right) ^{\frac{n}{2}}} e^{-\frac{1}{2}\left( \vec{X} - \vec{m}_{\vec{X}} \right) ^{\top} M_{\vec{X}}^{-1} \left( \vec{X} - \vec{m}_{\vec{X}} \right) }\]
+
+donde $M_{\vec{X}}$ es la matriz de covarianzas y $\vec{m}_{\vec{X}}$ es el vector de medias.
+
+\section{Teorema central del límite}
+
+Vamos a utilizar la definición de este teorema que nos será útil para resolver los ejercicios. La definición completa es [FALTA REFERENCIA].
+
+Sean $X_1,\dots , X_n$ variables aleatorias independientes e idénticamente distribuidas, cada una con media $\mu$ y varianza $\sigma ^2$.
+
+El \textbf{teorema central del límite} afirma que si $n$ es grande la suma $S_n$ tiene aproximadamente distribución normal de media $n\mu$ y desviación típica $\sigma \sqrt{n}$ (varianza $n\sigma ^2$), siendo esta suma:
+\[ S_n = X_1 + X_2 + \dots + X_n \]
+
+Equivalentemente, la \textbf{variable normalizada} $\frac{S_n-n\mu}{\sigma \sqrt{n}}$ tiene aproximadamente distribución normal de media 0 y varianza 1.
+
+\section{Chi cuadrado y la t de Student}
+
+Sean $Z_1,\dots ,Z_n$ variables aleatorias independientes con distribución normal estándar, $Z_i \sim N \left( 0,1 \right)$, con $i=1,\dots ,n$.
+
+La distribución de probabilidad que sigue la variable aleatoria
+\[ X=Z_1^2+\dots +Z_n^2 \]
+se denomina chi-cuadrado con $n$ grados de libertad. Se denota $X\sim \chi _n^2$. La distribución $\chi _n^2$ es positiva. Su media y su varianza son:
+\[ E (X) = n \, ; \qquad \qquad \Var \left( X \right)=2n \]
+
+Sea $X\sim \chi _n^2$, y $Z$ una variable aleatoria con distribución normal estándar, $Z\sim N(0,1)$, independiente de $X$. La distribución de probabilidad que sigue la variable aleatoria
+\[Y=\frac{Z}{\sqrt{X/n}}\]
+se denomina $t$ de Student con $n$ grados de libertad. Se denota $Y\sim t_n$. La $t$ de Student tiene una función de densidad simétrica muy similar, casi igual si $n$ es grande, a la de una normal $N(0,1)$. La principal diferencia es la varianza, que vale:
+\[ \Var \left( Y \right)=\frac{n}{n-2}  \]
 
 \chapter{Inferencia estadística}
 
@@ -693,17 +748,18 @@ Por ejemplo, las pruebas de Bernoulli y el proceso binomial.
 \section{Estimación por intervalos de confianza}
 
 \section{Contraste paramétrico}
-Bla bla bla
 
+%%% FIN DE LOS APUNTES %%%
 
+%%% BIBLIOGRAFÍA %%%
+% Por defecto, se encuentra desactivada. Esto disminuye el tiempo de procesado. Se puede activar cuando se vaya a exportar el PDF definitivo
 
-% BIBLIOGRAFÍA
 %\newpage
 %\phantomsection
 %\label{sec:bibliografia_final}
-%\renewcommand{\refname}{Bibliografía} % Para cambiar el título al incluir una librería de BibTeX
+%\renewcommand{\refname}{Bibliografía}
 %\addcontentsline{toc}{section}{Bibliografía}
-%\bibliography{biblio_Tex}
-%\bibliographystyle{bababbrv}
+%\bibliography{bibliografia} % Nombre del archivo (sin ".bib")
+%\bibliographystyle{bababbrv} 
 
 \end{document}

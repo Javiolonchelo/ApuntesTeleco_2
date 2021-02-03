@@ -166,16 +166,16 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 * ~~Desigualdad de Chebysev~~
 * ~~Cuantil y percentil~~
 
-### Vectores aleatorios
+### ~~Vectores aleatorios~~
 
 * ~~Variable aleatoria bidimensional discreta. Funciones de distribución conjunta, marginales y condicionadas. Cálculo de probabilidades~~
 * ~~Variable aleatoria bidimensional continua. Función de distribución y función de densidad. Cálculo de probabilidades~~
 * Variable aleatoria multidimensional
 * ~~Variables aleatorias independientes~~
 * ~~Vector de medias. Matriz de covarianzas~~
-* Transformaciones lineales de vectores aleatorios
-* Vectores aleatorios normales
-* Teorema central del límite
+* ~~Transformaciones lineales de vectores aleatorios~~
+* ~~Vectores aleatorios normales~~
+* ~~Teorema central del límite~~
 
 ### Inferencia estadística
 
