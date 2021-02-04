@@ -186,9 +186,9 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 
 ### Procesos estocásticos
 
-* Definición de proceso estocático
-* Procesos estocásticos en tiempo continuo
-* Procesos estocásticos en tiempo discreto
+* ~~Definición de proceso estocático~~
+* ~~Procesos estocásticos en tiempo continuo~~
+* ~~Procesos estocásticos en tiempo discreto~~
 * Distribuciones de primer y segundo orden, media, autocorrelación y autocovarianza
 * Proceso de Bernoulli. Caminos aleatorios. Procesos normales. Proceso de Poisson
 * Procesos estacionarios. Densidad espectral

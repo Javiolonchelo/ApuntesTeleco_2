@@ -683,11 +683,11 @@ se denomina $t$ de Student con $n$ grados de libertad. Se denota $Y\sim t_n$. La
 \section{Definición de proceso estocástico}
 Un proceso estocástico es una familia de variables aleatorias definidas sobre un espacio probabilístico.
 
-Es decir, para cada $ t\in T, X(t)$ es una variable aleatoria; el índice $t$ representa a menudo el tiempo y así diremos, que un proceso estocástico es una familia de variables aleatorias que describe la evolución a lo largo del tiempo de algún proceso físico.
+Sea $X(t)$ una variable aleatoria para cada instante de tiempo $t\in T$; un \textbf{proceso estocástico} es una familia de variables aleatorias que describe la evolución a lo largo del tiempo de algún proceso físico.
 
 Otro punto de vista:
 
-Sea $E$ un experimento aleatorio cuyo espacio probabilístico asociado $(\Omega , S, P)$. Un \textbf{proceso estocástico} o proceso aleatorio es un conjunto de funciones temporales $x(t,\omega )$, cada una correspondiente a un punto particular $\omega$ del espacio muestral $\Omega$. Así, asociado a cada resultado específico $\omega$, tenemos una función específica $x(t,\omega )$, a la que llamaremos una realización del proceso.
+Sea $E$ un experimento aleatorio cuyo espacio probabilístico asociado sea $(\Omega , S, P)$. Un \textbf{proceso estocástico} o proceso aleatorio es un conjunto de funciones temporales $x(t,\omega )$, cada una correspondiente a un punto particular $\omega$ del espacio muestral $\Omega$. Así, asociado a cada resultado específico $\omega$, tenemos una función específica $x(t,\omega )$, a la que llamaremos una realización del proceso.
 
 Denotaremos el proceso mediante: $X_t\equiv X(t) \equiv X(t,\omega )$, donde $t$ es el tiempo y $\omega$ una variable que representa un resultado en el espacio muestral $\Omega$.
 
@@ -706,29 +706,68 @@ Si se obtiene un 6, entonces:
 Esto se puede modelizar de la siguiente manera:
 \[X(t) = A\cdot t\]
 De modo que la probabilidad de $A$ será:
+\begingroup
+\renewcommand{\arraystretch}{1.2}
 \begin{center}
 	\begin{tabular}{r || c | c | c}
-		$A$    & 1              & 2              & 3              \\ \hline
+		$A$ & 1 & 2 & 3 \\ \hline
 		$P(A)$ & $\sfrac{1}{2}$ & $\sfrac{1}{3}$ & $\sfrac{1}{6}$
 	\end{tabular}
 \end{center}
+\endgroup
 
 \textbf{Segundo ejemplo.}
 
 La señal $X(t) = \cos\left( t+\phi \right)$, donde la fase $\phi$ es desconocida, se puede considerar como un proceso estocástico, donde $\phi$ es una variable aleatoria con distribución uniforme en el intervalo $[0, 2\pi )$
 
-
-
-
 \section{Procesos estocásticos en tiempo discreto}
 
-Simplemente son procesos estocásticos pero en tiempo discreto.
+Habitualmente, la notación para los procesos estocásticos es $X(n)$, donde $n$ solo puede tomar valores discretos.
 
-Por ejemplo, las pruebas de Bernoulli y el proceso binomial.
+\subsection{Procesos de Bernoulli y Binomial}
 
+Se realizan pruebas de Bernoulli siendo $p$ la probabilidad de éxito $(E)$.
 
+El \textbf{proceso de Bernoulli} asociado es:
+\[ I(n)= \left\lbrace 
+\begin{matrix*}[l]
+	1, & \text{si en la prueba } n \text{-ésima se obtiene }E\\ 
+	0, & \text{en otro caso}
+\end{matrix*} \right. \]
 
-\section{Distribuciones de primer y segundo orden, media, autocorrelación y autocovarianza}
+El \textbf{proceso binomial} asociado es:
+\[ B(n) = I(1), \dots , I(n) \]
+que da el número de éxitos obtenido hasta la $n$-ésima prueba.
+
+\subsection{Caminata aleatoria simétrica}
+
+Asociado a las pruebas de Bernoulli con probabilidad de éxito $p=\frac{1}{2}$, consideramos el proceso:
+\[ D(n) = \left\lbrace 
+\begin{matrix*}[l]
+	\phantom{-} 1, & \text{si en la prueba } n \text{-ésima se obtiene }E\\ 
+	-1, & \text{en otro caso}
+\end{matrix*} \right. \]
+
+Entonces, el proceso $S(n)$ se denomina \textbf{caminata aleatoria}.
+\[ S(n) = D(1)+D(2)+\dots +D(n) \]
+
+Se le llama así porque la definición de $S(n)$ implica que:
+\[ S(n) = S(n-1) + D(n) \]
+Y esto significa que, en el instante de tiempo $n$, la probabilidad de subir una unidad y la probabilidad de bajar una unidad, ambas son de $p=\frac{1}{2}$. 
+
+\section{Distribuciones de primer orden}
+
+Las funciones que describen las distribuciones de probabilidad son de $n$-ésimo orden si se fija un número $n$ de valores fijos de $t$.
+
+Para un tiempo $t$ fijo (funciones de distribución de primer orden), un proceso estocástico $X(t)$ es, en realidad, una variable aleatoria. Su \textbf{función de distribución} se denota como:
+\[ F \left( x;t \right) = P \left( X(t) \leq x \right) \]
+
+Si trabajamos en tiempo continuo, la función de densidad será:
+\[ f(x;t) = \dv{}{x} F(x;t) \]
+
+Si trabajamos en tiempo discreto, y tomando valores $n\in \mathbb{Z}$, la función de densidad será:
+\[ f \left( n;t \right) = P \left( X(t) = n \right) \]
+
 
 \section{Proceso de Bernoulli. Caminos aleatorios. Procesos normales. Proceso de Poisson}
 
