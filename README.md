@@ -18,29 +18,29 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 ### Primer semestre
 
-* [Electromagnetismo y Ondas](/Primer%20Semestre/Electromagnetismo%20y%20Ondas/Electromagnetismo%20y%20Ondas.pdf) - `En progreso`
+* [Electromagnetismo y Ondas](/Primer%20Semestre/Electromagnetismo%20y%20Ondas/Electromagnetismo_y_Ondas.pdf) - `En progreso`
 
-* [Electrónica II](/Primer%20Semestre/Electrónica%20II/Electrónica%20II.pdf) - `En progreso`
+* [Electrónica II](/Primer%20Semestre/Electrónica%20II/Electrónica_II.pdf) - `En progreso`
 
-* [Estadística y Procesos Estocásticos](/Primer%20Semestre/Estadística%20y%20Procesos%20Estocásticos/Estadística%20y%20Procesos%20Estocásticos.pdf) - `En progreso`
+* [Estadística y Procesos Estocásticos](/Primer%20Semestre/Estadística%20y%20Procesos%20Estocásticos/Estadística_y_Procesos_Estocásticos.pdf) - `En progreso`
 
-* [Redes y Servicios de Telecomunicación](/Primer%20Semestre/Redes%20y%20Servicios%20de%20Telecomunicación/Redes%20y%20Servicios%20de%20Telecomunicación.pdf) - `En progreso`
+* [Redes y Servicios de Telecomunicación](/Primer%20Semestre/Redes%20y%20Servicios%20de%20Telecomunicación/Redes_y_Servicios_de_Telecomunicación.pdf) - `En progreso`
 
-* [Señales y Sistemas](/Primer%20Semestre/Señales%20y%20Sistemas/Señales%20y%20Sistemas.pdf) - `En progreso`
+* [Señales y Sistemas](/Primer%20Semestre/Señales%20y%20Sistemas/Señales_y_Sistemas.pdf) - `En progreso`
 
 ### Segundo Semestre
 
-* [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia,%20Tecnología%20y%20Sociedad.pdf) - `Aún no comenzado`
+* [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia_Tecnología_y_Sociedad.pdf) - `Aún no comenzado`
 
-* [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos%20de%20Sonido%20e%20Imagen.pdf) - `Aún no comenzado`
+* [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos_de_Sonido_e_Imagen.pdf) - `Aún no comenzado`
 
 * [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `Aún no comenzado`
 
-* [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado%20Digital%20de%20la%20Señal.pdf) - `Aún no comenzado`
+* [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `Aún no comenzado`
 
-* [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación%20de%20Ondas.pdf) - `Aún no comenzado`
+* [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación_de_Ondas.pdf) - `Aún no comenzado`
 
-* [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría%20de%20la%20Comunicación.pdf) - `Aún no comenzado`
+* [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría_de_la_Comunicación.pdf) - `Aún no comenzado`
 
 ## Estado de los apuntes
 
@@ -189,10 +189,10 @@ Puedes comprobar el estado en el que se encuentran los apuntes desplegando a con
 * ~~Definición de proceso estocático~~
 * ~~Procesos estocásticos en tiempo continuo~~
 * ~~Procesos estocásticos en tiempo discreto~~
-* Distribuciones de primer y segundo orden, media, autocorrelación y autocovarianza
-* Proceso de Bernoulli. Caminos aleatorios. Procesos normales. Proceso de Poisson
-* Procesos estacionarios. Densidad espectral
-* Sistemas lineales y procesos estocásticos
+* ~~Distribuciones de primer y segundo orden, media, autocorrelación y autocovarianza~~
+* ~~Proceso de Bernoulli. Caminos aleatorios. Procesos normales. Proceso de Poisson~~
+* ~~Procesos estacionarios. Densidad espectral~~
+* ~~Sistemas lineales y procesos estocásticos~~
 
 ### Prácticas con software estadístico
 
