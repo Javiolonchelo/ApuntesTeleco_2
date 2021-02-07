@@ -25,7 +25,7 @@
 \usepackage{wasysym} 
 \usepackage[italic]{hepparticles}
 \usepackage{subdepth}
-\usepackage{physics}
+\usepackage[italicdiff]{physics}
 \usepackage{braket}
 \usepackage{tensor}
 \usepackage{chemformula} 
@@ -139,10 +139,11 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 \newcommand{\kg}{\operatorname{kg}}
 \newcommand{\incremento}{\Delta}
 \newcommand{\psus}{\, \ldots \,}
+\newcommand{\sen}{\operatorname{\sen}}
 \renewcommand{\sin}{\sen}
 \renewcommand{\arcsin}{\arcsen}
 \renewcommand{\arctan}{\arctg}
-\newcommand{\sen}{\operatorname{\sen}}
+\renewcommand{\min}{\operatorname{mín}}
 
 % Vectores
 \usepackage[c]{esvect}
@@ -159,6 +160,7 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 
 % Estadística
 \DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
 \renewcommand{\var}{\sigma ^2}
 \DeclareMathOperator{\B}{B}
 \DeclareMathOperator{\BN}{BN}
@@ -167,6 +169,7 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 \DeclareMathOperator{\U}{U}
 \DeclareMathOperator{\Exp}{Exp}
 \DeclareMathOperator{\N}{N}
+\DeclareMathOperator{\Mult}{Mult}
 \newcommand{\probCond}[2]{P \left( #1 \: \middle\vert\:  #2 \right) }
 
 % Electromagnetismo y Ondas
