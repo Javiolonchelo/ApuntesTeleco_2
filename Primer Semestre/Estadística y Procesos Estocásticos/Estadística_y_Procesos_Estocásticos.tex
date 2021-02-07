@@ -43,7 +43,6 @@
 \addcontentsline{toc}{section}{Introducción}
 \section*{Introducción}
 Esta pequeña recopilación de fórmulas, teoremas y demás apuntes de teoría ha sido elaborada durante el primer semestre del curso 2019-2020, en la escuela \href{https://www.etsist.upm.es/}{\textbf{ETSIST}} de la \href{http://www.upm.es/}{\textbf{UPM}} por Javier Rodrigo López, alumno de 1º de Ingeniería de Sonido e Imagen.
-bruuh
 \newpage
 
 \setlength{\parskip}{0em}
@@ -115,7 +114,7 @@ Estas leyes son muy importantes y tienen una propiedad interesante. No hace falt
 	La \textbf{ley de regularidad estadística} dice que la frecuencia relativa tiende a un número fijo según se incremente el valor de $n$.
 \end{definicion}
 
-\subsubsection*{Propiedades de la frecuencia relativa}
+\subsubsection*{Propiedades de la frecuencia relativa} \vspace*{\parskip}
 \begin{itemize}
 	\item $0\leq f_r(A)\leq 1$
 	\item $f_r(\Omega )=1$
@@ -223,8 +222,6 @@ Ejemplo 6 del documento anexo (falta referencia). %Aquí falta la referencia.
 
 $P(B) = 3$
 
-
-
 \chapter{Variables aleatorias}
 
 \section{Variable aleatoria discreta}
@@ -273,8 +270,6 @@ Sea $F$ la \textbf{función de distribución} (también conocida como función d
 %\displaystyle{\sum^{k}_{i=1}{\left( x_i - E[X] \right)^h \cdot  f(x_i)} \qquad \Im (X) = \left\lbrace \rep{x}{1}{k} \right\rbrace }\\[15pt]
 %\displaystyle{\sum^{\infty}_{i=1}{\left( x_i - E[X] \right)^h \cdot  f(x_i)} \qquad \Im (X) = \left\lbrace \repinf{x}{1}{2} \right\rbrace }
 %\end{matrix*} \right.\]
-
-
 
 \subsection{Distribuciones}
 
@@ -342,18 +337,18 @@ Si una v.a. $X$ tiene una distribución de Poisson, se denota como: \[X \sim \Po
 \end{nota}
 
 \section{Variable aleatoria continua}
-Una v.a. $X$ es continua si existe una función $f_X(x)$ llamada \textbf{función de densidad} tal que: \[\boxed{P\left( a<X\leq b \right) = \int_a^b{f(x)dx}} \qquad  f(x) \geq 0\: ,\qquad
+Una v.a. $X$ es continua si existe una función $f_X(x)$ llamada \textbf{función de densidad} tal que: \[\boxed{P\left( a<X\leq b \right) = \int_a^b{f(x)\dd{x}} \qquad  f(x) \geq 0}\: ,\qquad
 	\left\{ \begin{matrix*}[l]
 		a,b\in \mathbb{R}\\
 		a\leq b
 	\end{matrix*}\right. \]
 
 \begin{nota}
-	Como $P\left( -\infty < X < \infty \right) = 1$, la función de densidad verfica: \[\int_{-\infty}^{\infty}{f(x)dx} = 1\]
+	Como $P\left( -\infty < X < \infty \right) = 1$, la función de densidad verfica: \[\int_{-\infty}^{\infty}{f(x)\dd{x}} = 1\]
 \end{nota}
 
 \subsection{Media y varianza}
-La \textbf{media} $(\mu)$ de una v.a. $X$ se define de forma análoga a cómo se definía en variables aleatorias discretas: \[\mu = \int_{-\infty}^{\infty}{x f(x) dx}\]
+La \textbf{media} $(\mu)$ de una v.a. $X$ se define de forma análoga a cómo se definía en variables aleatorias discretas: \[\mu = \int_{-\infty}^{\infty}{x f(x) \dd{x}}\]
 
 La varianza se define exactamente de la misma forma: \[\Var(X) = \sigma ^2\]
 
@@ -438,7 +433,7 @@ Sea $X$ una v.a. con media $\mu$ y varianza $\sigma ^2$, entonces para todo $k>0
 Sea $X$ una v.a. discreta, llamaremos \textbf{cuantil de orden} $p$, denotado como $q_p$, al menor valor en el que se cumpla que: \[F_X(x)\geq p \qquad \qquad \left( 0 < p < 1 \right) \]
 
 \subsection*{En v.a. continua}
-Sea $T$ una v.a. continua, llamaremos llamaremos \textbf{cuantil de orden} $p$, denotado como $q_p$, al número que verifica: \[P\left( T \leq q_p \right) = \int_{-\infty}^{q_p}{f(x)dx} = p\]
+Sea $T$ una v.a. continua, llamaremos llamaremos \textbf{cuantil de orden} $p$, denotado como $q_p$, al número que verifica: \[P\left( T \leq q_p \right) = \int_{-\infty}^{q_p}{f(x)\dd{x}} = p\]
 
 O, en otras palabras: \[\boxed{F_T(q_p)=p}\]
 
@@ -662,9 +657,9 @@ La distribución de probabilidad que sigue la variable aleatoria
 se denomina chi-cuadrado con $n$ grados de libertad. Se denota $X\sim \chi _n^2$. La distribución $\chi _n^2$ es positiva. Su media y su varianza son:
 \[ E (X) = n \, ; \qquad \qquad \Var \left( X \right)=2n \]
 
-Sea $X\sim \chi _n^2$, y $Z$ una variable aleatoria con distribución normal estándar, $Z\sim N(0,1)$, independiente de $X$. La distribución de probabilidad que sigue la variable aleatoria
+Sea $X\sim \chi _n^2$, y $Z$ una variable aleatoria con distribución normal estándar, $Z\sim \N(0,1)$, independiente de $X$. La distribución de probabilidad que sigue la variable aleatoria
 \[Y=\frac{Z}{\sqrt{X/n}}\]
-se denomina $t$ de Student con $n$ grados de libertad. Se denota $Y\sim t_n$. La $t$ de Student tiene una función de densidad simétrica muy similar, casi igual si $n$ es grande, a la de una normal $N(0,1)$. La principal diferencia es la varianza, que vale:
+se denomina $t$ de Student con $n$ grados de libertad. Se denota $Y\sim t_n$. La $t$ de Student tiene una función de densidad simétrica muy similar, casi igual si $n$ es grande, a la de una normal $\N(0,1)$. La principal diferencia es la varianza, que vale:
 \[ \Var \left( Y \right)=\frac{n}{n-2}  \]
 
 \chapter{Inferencia estadística}
@@ -739,7 +734,7 @@ El \textbf{proceso binomial} asociado es:
 \[ B(n) = I(1), \dots , I(n) \]
 que da el número de éxitos obtenido hasta la $n$-ésima prueba.
 
-\subsection{Caminata aleatoria simétrica}
+\subsection{Caminata aleatoria simétrica} \label{sec:caminata_aleatoria_simetrica}
 
 Asociado a las pruebas de Bernoulli con probabilidad de éxito $p=\frac{1}{2}$, consideramos el proceso:
 \[ D(n) = \left\lbrace 
@@ -759,7 +754,7 @@ Y esto significa que, en el instante de tiempo $n$, la probabilidad de subir una
 
 Las funciones que describen las distribuciones de probabilidad son de $n$-ésimo orden si se fija un número $n$ de valores fijos de $t$.
 
-Para un tiempo $t$ fijo (funciones de distribución de primer orden), un proceso estocástico $X(t)$ es, en realidad, una variable aleatoria. Su \textbf{función de distribución} se denota como:
+Para un tiempo $t$ fijo (funciones de distribución de primer orden), un proceso estocástico $X(t)$ es, en realidad, una variable aleatoria. Su función de distribución se denota como:
 \[ F \left( x;t \right) = P \left( X(t) \leq x \right) \]
 
 Si trabajamos en tiempo continuo, la función de densidad será:
@@ -768,12 +763,159 @@ Si trabajamos en tiempo continuo, la función de densidad será:
 Si trabajamos en tiempo discreto, y tomando valores $n\in \mathbb{Z}$, la función de densidad será:
 \[ f \left( n;t \right) = P \left( X(t) = n \right) \]
 
+La media del proceso $X(T)$ es función del tiempo:
+\[ \mu _X (t) = E \left[ X(t) \right] \]
 
-\section{Proceso de Bernoulli. Caminos aleatorios. Procesos normales. Proceso de Poisson}
+\subsection{Procesos de Bernoulli y Binomial}
 
-\section{Procesos estacionarios. Densidad espectral}
+La distribución de primer orden del proceso de Bernoulli $I(n)$ viene dada por:
+\[ P \left( I(n) = 1 \right) = p \, \qquad \qquad P \left( I(n) = 0 \right) = 1-p \]
+donde $p$ es la probabilidad de éxito. La del proceso binomial $B(n)$ asociado viene dada por:
+\[ B(n)\sim \BN (n,p) \]
 
-\section{Sistemas lineales y procesos estocásticos}
+Las medias de estos procesos son:
+\[ \mu _1 (n) = p \qquad \text{y} \qquad  \mu _B (n) = np\]
+
+\section{Distribuciones de segundo orden}
+
+Para dos valores de tiempo fijos, $t_1$ y $t_2$, la variable $\left( X(t_1), X(t_2) \right)$ es una variable aleatoria bidimensional.
+
+Su función de distribución es:
+\[ F \left( x_1,x_2;t_1,t_2 \right) = P \left( X(t_1) \leq x_1, X(t_2) \leq x_2 \right) \]
+
+Si trabajamos en tiempo continuo, la función de densidad será:
+\[ f \left( x_1,x_2;t_1,t_2 \right) = \pdv{}{x_1}{x_2}F \left( x_1,x_2;t_1,t_2 \right)  \]
+
+Si trabajamos en tiempo discreto, la función de densidad:
+\[ f \left( n,m;t_1,t_2 \right) = P \left( X(t_1) = n, X(t_2) \right) \]
+
+De forma análoga se podrán sintetizar las funciones de densidad y distribución de cualquier orden.
+
+Se define la \textbf{autocovarianza} como la función que proporciona la covarianza entre $X(t_1)$ y $X(t_2)$:
+\[ C_X \left( t_1,t_2 \right)= \Cov \left[  X(t_1), X(t_2)\right] \]
+
+Es interesante ver que:
+\[ C_X \left( t_1,t_2 \right) = E \left[ X(t_1)X(t_2) \right] - E \left[ X(t_1)\right]\left[ X(t_2)\right] = \mathcal{R}_X \left( t_1,t_2 \right) - \mu (t_1)\mu (t_2)\]
+
+Donde $\mathcal{R}_X$ es la \textbf{autocorrelación} del proceso.
+\[\mathcal{R}_X \left( t_1,t_2 \right) = E \left[ X(t_1)X(t_2) \right]\]
+
+En particular:
+\[ \Var \left( X(t) \right) = C_X(t,t) = \mathcal{R}_X(t,t)-\mu ^2(t) \]
+
+Se denomina \textbf{coeficiente de autocorrelación} a:
+\[ \rho _X(t_1,t_2) = \frac{C_X \left( _1,t_2 \right)}{\sqrt{\Var \left( X(t_1) \right) \Var \left( X(t_2) \right)}} \]
+
+\section{Independencia}
+
+Se dice que el proceso $X(t)$ y la variable aleatoria $A$ son independientes si para cualquier tiempo $t_1,\dots ,t_n$ las variables aleatorias $A, X(t_1), \dots ,X(t_n)$ también son independientes.
+
+Se dice que dos procesos $X(t)$ e $Y(t)$ son independientes si para cualesquiera tiempos $t_1, \dots , t_n$ y $t_1', \dots , t_n'$ las variables aleatorias $\left[ X(t_1), \dots , X(t_n) \right]$ y $\left[ Y(t_1'), \dots , Y(t_n') \right]$ son también independientes.
+
+\section{Proceso de Poisson}
+
+Suponemos un suceso que ocurre en ciertos instantes de tiempo.
+
+Sea $N(t)$ el número de sucesos ocurridos hasta $t$.
+\[ N(t) \equiv \text{nº de sucesos ocurridos en }(0,t] \]
+
+Nótese que el número de sucesos ocurridos en un intervalo $(a,b)$ es $N(b)-N(a)$
+
+Se define la \textbf{tasa} como el número medio de sucesos que ocurren por unidad de tiempo.
+
+Si los sucesos ocurren de forma completamente aleatoria en el tiempo la tasa es $\lambda$, entonces se verifican las siguientes condiciones:
+\begin{enumerate}
+	 \item $N(0)=0$
+	 \item El número de sucesos que se producen en intervalos de tiempo disjuntos son independientes. Si $(a,b) \cap (c,d) = \emptyset$ entonces $N(b)-N(a)$ y $N(d)-N(c)$ son variables aleatorias independientes.
+	 \item El número de sucesos que se producen en un intervalo no depende de la situación del intervalo, sino únicamente de su duración. Las variable aleatoria $N(t+\tau ) - N(t)$ y la variable aleatoria $N(\tau )$ tienen la misma función de probabilidad.
+	 \item Para cada valor fijo de $t$, la variable $N(t)$ tiene distribución de Poisson de media $\lambda t$.
+\end{enumerate}
+
+Si estas condiciones se cumplen, se dice que $N$ es un proceso de Poisson de tasa $\lambda $.
+
+Según la cuarta condición, las distribuciones de de primer orden son de $\Poisson \left( \lambda t \right)$:
+\[ P \left[ N(t) = k \right] = \frac{\left( \lambda t \right)^k}{k!}e^{-\lambda t} \, , \qquad k = 0, 1, \dots \]
+
+La media del proceso $N$ es:
+\[ E \left[ N(T) \right] = \lambda t\]
+
+Por esta definición, la tasa $\lambda$ es el número medio de sucesos ocurridos por unidad de tiempo.
+
+El \textbf{tiempo de espera} $T$ hasta que ocurra un suceso tiene distribución exponencial de media $\frac{1}{\lambda}$. Por ello, su función de distribución es:
+\[ F_T(t) = 1-P \left( N(t) =0 \right) = 1 - e^{-\lambda t} \, , \qquad t>0\]
+
+\section{Procesos normales}
+Un proceso $X(t)$ es normal o Gaussiano cuando para valores de tiempo fijos $t_1, \dots , t_n$ la variable aleatoria $\left[ X(t_1), \dots , X(t_n) \right]$ tiene distribución normal.
+
+Este tipo de procesos es el más utilizado para modelar el ruido en el estudio del procesado de señales.
+
+Al igual que en ocasiones anteriores, para el análisis de procesos normales resultará útil la siguiente propiedad. Para $A\in \mathcal{M}_{m\times n}$ y $B\in \mathcal{M}_{m\times 1}$, la variable:
+\[ \vec{Y} = A \vec{X} + \vec{B} \]
+tiene distribución normal con vector de medias
+\[ \vec{m}_{\vec{Y}}= A \vec{m}_{\vec{X}} + B\]
+y matriz de covarianzas
+\[ M_{\vec{Y}} = A M_{\vec{X}} A ^{\top} \]
+
+En particular, si tenemos un vector $a=\left[ 
+\begin{matrix}
+	a_1\\
+	\vdots \\
+	a_n
+\end{matrix} \right]$, y definimos la variable $Y$ como:
+\[ \vec{Y}= a_1X(t_1) + \dots + a_nX(t_n) = \vec{a}^{\top}  \vec{X}\]
+
+Entonces, $Y$ tiene distribución normal cuya media y cuya varianza son:
+\[ \mu _{\vec{Y}} = \vec{a} ^{\top} \vec{m} \, , \qquad \sigma ^2 _{\vec{Y}} = \vec{a} M \vec{a}^{\top} x\]
+
+\section{Proceso de Wiener}
+
+Un proceso de Wiener es un proceso estocástico normal (al que llamaremos $X(t)$) con media $\mu _X (t) = 0$ y autocovarianza:
+\[ C_X \left( t_1, t_2 \right) = \alpha \min\left( t_1, t_2 \right)\]
+
+En realidad, el proceso de Wiener se parece mucho a una \hyperref[sec:caminata_aleatoria_simetrica]{caminata aleatoria simétrica}. Cada $h$ segundos (siendo $h$ un número muy pequeño) se salta hacia arriba o abajo con probabilidad $\frac{1}{2}$ una distancia de $\sqrt{\alpha h}$. 
+
+\section{Procesos estacionarios}
+
+Si las causas de la aleatoreidad no varían con el tiempo, entonces hablamos de que los procesos son \textbf{estacionarios}.
+
+\begin{itemize}
+	 \item Un proceso es estacionario \textbf{en sentido estricto} si la distribución de probabilidad de cualquier orden no depende del origen de tiempos.
+	 \item Un proceso es estacionario \textbf{en sentido amplio} si tiene media constante y su autocorrelación depende únicamente de la distancia entre los tiempos $\tau$ y se denota:
+	 \[ \mu _X = \mu _X(t) \, , \qquad \mathcal{R}_X \left( \tau \right) = \mathcal{R}_X \left( t, t+ \tau \right) \]
+	 La autocovarianza tampoco depende del tiempo, y es:
+	 \[ C_X(\tau ) = \mathcal{R}_X(\tau )-\mu_X^2 \]
+\end{itemize}
+
+Es importante ver que un proceso estacionario en sentido estricto también es estacionario en sentido amplio. Sin embargo, no siempre se cumple a la inversa.
+
+Además, todos los procesos normales son estacionarios en sentido estricto. Aunque en estos casos se los denomina estacionarios, a secas.
+
+\section{Sistemas lineales}
+
+La \textbf{densidad espectral} de un proceso estacionario en sentido amplio como la transformada de Fourier de la autocorrelación:
+\[ S_X(\omega ) = \int_{-\infty}^{\infty} \mathcal{R}_X (\tau )e^{-j\tau \omega }\dd{\omega} \]
+
+La densidad espectral es una función real, positiva y par.
+
+Además, aplicando la transformada inversa de Fourier podemos obtener:
+\[ \mathcal{R}_X(\tau )=\frac{1}{2\pi}\int_{-\infty}^{\infty}S_X(\omega )e^{j\tau \omega} \dd{\omega}\]
+
+Para el caso particular de $\tau = 0$, tenemos que:
+\[ \mathcal{R}_X(0)=\frac{1}{2\pi}\int_{-\infty}^{\infty}S_X(\omega )\dd{\omega}\]
+
+Llamaremos $H(\omega )$ a la función de transferencia del sistema, que es la transforma de Fourier de la respuesta al impulso $h(t)$ (más información en los apuntes de \href{https://github.com/Javiolonchelo/ApuntesTeleco_2/blob/main/Primer%20Semestre/Señales%20y%20Sistemas/Señales%20y%20Sistemas.pdf}{Señales y Sistemas}).
+
+Esta fórmula expresa la potencia media del ruido en función de la densidad espectral.
+
+Si la entrada a un sistema $X(t)$ es un proceso estacionario en sentido amplio, entonces la salida $Y(t)$ es un proceso también estacionario en sentido amplio cuya media es:
+\[ \mu _Y = H(0)\mu _X \]
+
+Y cuya densidad espectral es:
+\[ S_Y(\omega )= \abs{H(\omega )}^2 S_X(\omega )  \]
+
+Estas fórmulas sirven para calcular medias y autocorrelaciones de señales filtradas.
+
+Si la entrada $X(t)$ es un proceso normal, la salida $Y(t)$ también lo será, con las características que acabamos de describir.
 
 \chapter{Prácticas con software estadístico}
 
