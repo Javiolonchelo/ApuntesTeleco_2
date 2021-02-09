@@ -40,6 +40,17 @@
 \addcontentsline{toc}{section}{Introducción}
 \section*{Introducción}
 Imagen de la portada: \textsl{Le magie noire}, por René Magritte.
+
+Esta asignatura es básica para cualquier ingeniería de Telecomunicaciones. Se basa principalmente en las matemáticas explicadas en Señales y Sistemas. Por ello, para las prácticas de laboratorio usaremos MATLAB.
+
+El Bloque 1 representa el 40\%
+
+La evaluación del laboratorio se realizará a partir de los informes de las prácticas $(50\% )$ y del examen $(50\% )$.
+
+Teoría 90\% + LAB 10\%
+
+Repasar presentación en powerpoint para completar introducción.
+
 \newpage
 
 % Índice (TOC)
@@ -49,6 +60,75 @@ Imagen de la portada: \textsl{Le magie noire}, por René Magritte.
 
 %%% INICIO DE LOS APUNTES %%%
 \chapter{Modelo de sistema de comunicación}
+
+\section{Definiciones básicas}
+
+La \textbf{ITU} (Unión Internacional de Telecomunicaciones) nos indica la terminología que debemos usar en el ámbito de las telecomunicaciones.
+
+\begin{description}
+	 \item[Canal de transmisión:] Conjunto de medios necesarios para asegurar la transmisión de señales en un sentido entre dos puntos.
+	 \item[Señal:] Fenómeno físico en el cual pueden variar una o más características para \textbf{representar información}.
+	 \begin{itemize}
+		  \item \textbf{Canal de frecuencia:} Parte del espectro de frecuencias que se destina a ser utilizado para la transmisión de señales y que puede determinarse por su frecuencia central y el ancho de banda asociado. 
+	 \end{itemize} 
+	 \item[Telecomunicación:] Tota transmisión, emisión o recepción de señales que representan signos, escritura, imágenes y sonidos o \textbf{información de cualquier naturaleza} por hilo, ondas electromagnéticas, medios ópticos u otros sistemas electromagnéticos.
+	 \item[Teoría de la comunicación:] Tiene por objeto encontrar las técnicas más adecuadas que, con los condicionantes económicos, tecnológicos... permiten optimizar el \textbf{consumo de ancho de banda} (BW) y \textbf{potencia} ($P$) para poder transmitir una determinada información con una \textbf{calidad determinada}.
+\end{description}
+
+\section{Esquema funcional de un sistema de comunicación}
+FALTA AÑADIR IMAGEN 
+
+\subsection{Fuentes de información}
+
+Las diferentes fuentes de información pueden clasificarse como:
+\begin{description}
+	 \item[Analógica] La información a transmitir es una señal continua en el tiempo. Cabe mencionar que las señales analógicas pueden digitalizarse. Por ejemplo, una forma de conseguirlo sería mediante cuantificación y codificación PCM (explicado más adelante, falta añadir una referencia cuando lleguemos a esa parte del temario, en el Tema 6).
+	 \item[Digital] La información consiste en símbolos pertenecientes a un alfabeto finito, que se envían secuencialmente en intervalos discretos de tiempo. Los \textbf{símbolos} son los posibles valores que puede tomar. Por ejemplo, una señal digital binaria tiene dos símbolos.
+\end{description}
+
+\subsection{Transmisor}
+
+El transmisor convierte la señal de información (fuente) en señales eléctricas o electromagnéticas (formas de onda) adecuadas para su transmisión a través del medio físico (canal de comunicaciones).
+
+Existen varios tipos de transmisiones:
+
+\begin{itemize}
+	 \item Transmisión \textbf{banda base} $\longleftrightarrow$ Transmisión paso banda (\textbf{modulación}).
+	 \begin{itemize}
+		  \item En banda base: Se emite la información en la misma banda que ocupa, como se generó la fuente.
+		  \item Con modulación: La banda ocupada por la información se traslada a otra más alta. Esto se hace para:
+		  \begin{itemize}
+			   \item Adaptar la banda transmitida a los requerimientos del canal.
+			   \item Multiplexar señales. Es decir, permitir que varias compartan el mismo canal de comunicaciones. \textbf{FDM} (Multiplex por división en frecuencia).
+		  \end{itemize}
+	 \end{itemize}
+	 \item Transmisión \textbf{analógica} $\longleftrightarrow$ Transmisión \textbf{digital}
+\end{itemize}
+
+\subsubsection{Modulación}
+
+La señal moduladora modula una señal portadora (sinusoidal en nuestro caso)
+\[ S\subtext{moduladora}(t) \]
+\[ x_p(t) = A \sen \left( \omega t + \phi \right) \]
+\[ \omega _c = 2\pi f_c \]
+
+[Representación del espectro del seno]
+
+\begingroup
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+	\begin{tabular}{c | c | c}
+		Portadora & Analógica & Digital\\ \hline
+		& AM \footnotemark & ASK\\ 
+		Senoidal & FM & FSK \\ 
+		 & PM & PSK \\ \hline
+		 & PAM o PCM & \\ 
+		Cuadrada & PPM &  \\ 
+		 & PWM &  \\ \hline
+	\end{tabular}
+\end{center}
+\footnotetext{Modulación en amplitud}
+\endgroup
 
 \chapter{Caracterización de señales}
 \section{Representaciones logarítmicas}
