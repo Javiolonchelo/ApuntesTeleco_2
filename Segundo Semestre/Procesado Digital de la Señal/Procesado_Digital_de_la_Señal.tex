@@ -121,16 +121,16 @@ Sin nota mínima en ningún apartado.
 
 La transformada de Fourier nos servirá para representar señales como combinación lineal de unos ciertos componentes o señales básicas.
 
-La aplicación fundamental del análisis de Fourier es el estudio de las señales en el dominio de la frecuencia (dominio espectral).
+La aplicación fundamental del análisis de Fourier es el estudio de las señales en el dominio de la frecuencia (\textbf{dominio espectral}).
 
 El análisis de Fourier se puede realizar para:
 \begin{itemize}
-	 \item Señales continuas
+	 \item Señales continuas:
 	 \begin{itemize}
 		  \item Periódicas: Serie de Fourier de tiempo continuo
 		  \item No periódicas: Transformada de Fourier en tiempo discreto
 	 \end{itemize}
-	 \item Señales discretas 
+	 \item Señales discretas
 \end{itemize}
 
 \section{Series de Fourier de señales periódicas}
@@ -261,6 +261,14 @@ Existen diferentes tipos de filtros selectivos en frecuencia:
 	 \item Problemas de longitud de palabra finita
 	 \item Muchos datos son analógicos, por lo que se requieren procesos de conversión A/D \footnote{A/D: Conversión de analógico a digital} y D/A \footnote{D/A: Conversión de digital a analógico}
 \end{itemize}
+
+Serie exponencial de Fourier
+
+Ecuación de síntesis
+\[ \boxed{x[n] = \sum_{k=N}^{}a_ke^{jk \frac{2\pi}{N} n}} \, , \qquad \Omega_o = \frac{2\pi}{N} \]
+
+Ecuación de análisis
+\[ a_k = \frac{1}{n}  \]
 
 \section{Estructura de un sistema DSP}
 

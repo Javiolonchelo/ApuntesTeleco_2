@@ -1,6 +1,7 @@
 \documentclass[a4paper]{book}
 
 \input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+\input{TransmissionLines.tex} % Para poder dibujar líneas de transmisión con circutikz
 
 % Título y portada
 \title{\Huge Teoría de la Comunicación\\\vspace*{5pt}
@@ -131,7 +132,42 @@ La señal moduladora modula una señal portadora (sinusoidal en nuestro caso)
 \endgroup
 
 \chapter{Caracterización de señales}
+
 \section{Representaciones logarítmicas}
+
+\subsubsection{Ejercicio 1}
+
+Tenemos un canal de transmisión con un amplificador que ofrece una ganancia $G$ de $32\dB$ y un cable muy largo que afecta aplicando una atenuación $A$ de $20\dB$ a la señal. A la entrada del amplificador (punto 1), introducimos una señal con amplitud de pico $2\V$.
+
+Rellena la tabla con los valores que se piden para cada parte del canal de transmisión.
+
+\begin{center}
+	\begin{circuitikz}
+		 \draw (0,0) node[label={above:$\circledNumber{1}$}] {}
+		 to[amp,l_=${G=32\dB}$,o-o] ++(3,0) node[label={above:$\circledNumber{2}$}] {} to[TL,l_=${A=20\dB}$, -o] ++(5,0) node[label={above:$\circledNumber{3}$}] {};
+	\end{circuitikz}
+\end{center}
+
+\begin{center}
+	\underline{\textbf{Solución}}
+\end{center}
+
+Las respuestas han sido coloreadas de color verde en la tabla, y a continuación puedes observar la resolución del ejercicio. Existen numerosas formas de llegar al resultado. Esta solución es la que se me ocurrió según lo resolvía.
+
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		 \textbf{Magnitud} & $\circledNumber{1}$ & $\circledNumber{2}$ & $\circledNumber{3}$ \\ \hline 
+		 $x_p \ [\V ]$ & $2\V$ & \textcolor{green!65!black}{$79.62\V$} & \textcolor{green!65!black}{$7.96\V$} \\ \hline
+		 $p \ [\W ]$ & \textcolor{green!65!black}{$0.08\W$} & \textcolor{green!65!black}{$126.79\W$} & \textcolor{green!65!black}{$1.269\W$} \\ \hline
+		 $P \ [\dBW ]$ & \textcolor{green!65!black}{$-10.97\dBW$} & \textcolor{green!65!black}{$21.03\dBW$} & \textcolor{green!65!black}{$1.03\dBW$} \\ \hline
+		 $P \ [\dBm ]$ & \textcolor{green!65!black}{$19.03\dBm$} & \textcolor{green!65!black}{$51.03\dBm$} & \textcolor{green!65!black}{$31.03\dBm$} \\ \hline
+	\end{tabular}
+\end{center}
+\endgroup
+
 \section{Caracterización Temporal}
 \section{Caracterización Espectral}
 \section{Señales habituales}
