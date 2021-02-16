@@ -137,7 +137,7 @@ La señal moduladora modula una señal portadora (sinusoidal en nuestro caso)
 
 \subsubsection{Ejercicio 1}
 
-Tenemos un canal de transmisión con un amplificador que ofrece una ganancia $G$ de $32\dB$ y un cable muy largo que afecta aplicando una atenuación $A$ de $20\dB$ a la señal. A la entrada del amplificador (punto 1), introducimos una señal con amplitud de pico $2\V$.
+Tenemos un canal de transmisión con un amplificador que ofrece una ganancia $G$ de $32\dB$ y un cable muy largo que afecta aplicando una atenuación $A$ de $20\dB$ a la señal. A la entrada del amplificador (punto 1), introducimos un tono con amplitud de pico $2\V$.
 
 Rellena la tabla con los valores que se piden para cada parte del canal de transmisión.
 
@@ -161,16 +161,54 @@ Las respuestas han sido coloreadas de color verde en la tabla, y a continuación
 		\hline
 		 \textbf{Magnitud} & $\circledNumber{1}$ & $\circledNumber{2}$ & $\circledNumber{3}$ \\ \hline 
 		 $x_p \ [\V ]$ & $2\V$ & \textcolor{green!65!black}{$79.62\V$} & \textcolor{green!65!black}{$7.96\V$} \\ \hline
-		 $p \ [\W ]$ & \textcolor{green!65!black}{$0.08\W$} & \textcolor{green!65!black}{$126.79\W$} & \textcolor{green!65!black}{$1.269\W$} \\ \hline
-		 $P \ [\dBW ]$ & \textcolor{green!65!black}{$-10.97\dBW$} & \textcolor{green!65!black}{$21.03\dBW$} & \textcolor{green!65!black}{$1.03\dBW$} \\ \hline
-		 $P \ [\dBm ]$ & \textcolor{green!65!black}{$19.03\dBm$} & \textcolor{green!65!black}{$51.03\dBm$} & \textcolor{green!65!black}{$31.03\dBm$} \\ \hline
+		 $p \ [\W ]$ & \textcolor{green!65!black}{$0.04\W$} & \textcolor{green!65!black}{$63.4\W$} & \textcolor{green!65!black}{$0.0634\W$} \\ \hline
+		 $P \ [\dBW ]$ & \textcolor{green!65!black}{$-10.97\dBW$} & \textcolor{green!65!black}{$18\dBW$} & \textcolor{green!65!black}{$-2\dBW$} \\ \hline
+		 $P \ [\dBm ]$ & \textcolor{green!65!black}{$19.03\dBm$} & \textcolor{green!65!black}{$48\dBm$} & \textcolor{green!65!black}{$18\dBm$} \\ \hline
 	\end{tabular}
 \end{center}
 \endgroup
 
+Podemos calcular $p_1$ sabiendo que la potencia de un tono es la siguiente:
+\[ p_1 = \frac{x_p^2}{2R} = \frac{2^2}{2 \cdot 50} = 0.04\W \]
+
+Por lo tanto:
+\begin{align*}
+	P_1 [\dBW] &= 10 \log \left( 0.04 \right) = -14\dBW \\ 
+	P_1 [\dBm] &= 10 \log \left( 40 \right) = 16\dBm
+\end{align*}
+
+De aquí, podemos obtener el resto de potencias logarítmicas:
+\begin{align*}
+	P_2 [\dBW] &= P_1[\dBW] + G = -14 + 32 = 18\dBW \\ 
+	P_2 [\dBm] &= P_1[\dBm] + G = 16 + 32 = 48\dBm\\[5pt]
+	P_3 [\dBW] &= P_1[\dBW] + A  = -14\dBW \\ 
+	P_3 [\dBm] &= P_1[\dBm] + A  = 16\dBm
+\end{align*}
+
+
 \section{Caracterización Temporal}
 \section{Caracterización Espectral}
+
+\subsection{Densidad esoectral de potencia}
+
+La densidad espectral de potencia $G_x(f)$ mide la potencia de la señal por unidad de ancho de banda $\left( \W / \Hz \right)$.
+
+En un sistema LTI con respuesta en frecuencia $H(f)$, la densidad espectral a la salida se puede calcular como:
+\[ \boxed{G_y(f) = G_x(f) \cdot \abs{H(f)}^2} \]
+
+\subsubsection{Ancho de banda}
+
+El \textbf{ancho de banda a 3 dB} se mide entre las frecuencias donde la potencia es la mitad con respecto al máximo.
+
+el \textbf{ancho de banda equivalente} es el ancho de un espectro rectangular ficticio que contendría la misma potencia que la señal original. Es decir, que tiene potencia equivalente. [añadir imagen]
+
+El \textbf{ancho de banda entre nulos} se explicará con más detalle en el Tema 7 [falta referencia]
+
 \section{Señales habituales}
+
+\subsection{Señal triangular}
+
+\subsection{Señal cuadrada}
 
 \chapter{Ruido térmico}
 \section{Caracterización del ruido térmico}
