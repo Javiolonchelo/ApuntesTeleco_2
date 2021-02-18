@@ -1,6 +1,7 @@
 \documentclass[a4paper]{book}
 
 \input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+\input{TransmissionLines.tex} % Para poder dibujar líneas de transmisión con circutikz
 
 % Título y portada
 \title{\Huge Teoría de la Comunicación\\\vspace*{5pt}
@@ -40,6 +41,17 @@
 \addcontentsline{toc}{section}{Introducción}
 \section*{Introducción}
 Imagen de la portada: \textsl{Le magie noire}, por René Magritte.
+
+Esta asignatura es básica para cualquier ingeniería de Telecomunicaciones. Se basa principalmente en las matemáticas explicadas en Señales y Sistemas. Por ello, para las prácticas de laboratorio usaremos MATLAB.
+
+El Bloque 1 representa el 40\%
+
+La evaluación del laboratorio se realizará a partir de los informes de las prácticas $(50\% )$ y del examen $(50\% )$.
+
+Teoría 90\% + LAB 10\%
+
+Repasar presentación en powerpoint para completar introducción.
+
 \newpage
 
 % Índice (TOC)
@@ -50,11 +62,169 @@ Imagen de la portada: \textsl{Le magie noire}, por René Magritte.
 %%% INICIO DE LOS APUNTES %%%
 \chapter{Modelo de sistema de comunicación}
 
+\section{Definiciones básicas}
+
+La \textbf{ITU} (Unión Internacional de Telecomunicaciones) nos indica la terminología que debemos usar en el ámbito de las telecomunicaciones.
+
+\begin{description}
+	 \item[Canal de transmisión:] Conjunto de medios necesarios para asegurar la transmisión de señales en un sentido entre dos puntos.
+	 \item[Señal:] Fenómeno físico en el cual pueden variar una o más características para \textbf{representar información}.
+	 \begin{itemize}
+		  \item \textbf{Canal de frecuencia:} Parte del espectro de frecuencias que se destina a ser utilizado para la transmisión de señales y que puede determinarse por su frecuencia central y el ancho de banda asociado. 
+	 \end{itemize} 
+	 \item[Telecomunicación:] Tota transmisión, emisión o recepción de señales que representan signos, escritura, imágenes y sonidos o \textbf{información de cualquier naturaleza} por hilo, ondas electromagnéticas, medios ópticos u otros sistemas electromagnéticos.
+	 \item[Teoría de la comunicación:] Tiene por objeto encontrar las técnicas más adecuadas que, con los condicionantes económicos, tecnológicos... permiten optimizar el \textbf{consumo de ancho de banda} (BW) y \textbf{potencia} ($P$) para poder transmitir una determinada información con una \textbf{calidad determinada}.
+\end{description}
+
+\section{Esquema funcional de un sistema de comunicación}
+FALTA AÑADIR IMAGEN 
+
+\subsection{Fuentes de información}
+
+Las diferentes fuentes de información pueden clasificarse como:
+\begin{description}
+	 \item[Analógica] La información a transmitir es una señal continua en el tiempo. Cabe mencionar que las señales analógicas pueden digitalizarse. Por ejemplo, una forma de conseguirlo sería mediante cuantificación y codificación PCM (explicado más adelante, falta añadir una referencia cuando lleguemos a esa parte del temario, en el Tema 6).
+	 \item[Digital] La información consiste en símbolos pertenecientes a un alfabeto finito, que se envían secuencialmente en intervalos discretos de tiempo. Los \textbf{símbolos} son los posibles valores que puede tomar. Por ejemplo, una señal digital binaria tiene dos símbolos.
+\end{description}
+
+\subsection{Transmisor}
+
+El transmisor convierte la señal de información (fuente) en señales eléctricas o electromagnéticas (formas de onda) adecuadas para su transmisión a través del medio físico (canal de comunicaciones).
+
+Existen varios tipos de transmisiones:
+
+\begin{itemize}
+	 \item Transmisión \textbf{banda base} $\longleftrightarrow$ Transmisión paso banda (\textbf{modulación}).
+	 \begin{itemize}
+		  \item En banda base: Se emite la información en la misma banda que ocupa, como se generó la fuente.
+		  \item Con modulación: La banda ocupada por la información se traslada a otra más alta. Esto se hace para:
+		  \begin{itemize}
+			   \item Adaptar la banda transmitida a los requerimientos del canal.
+			   \item Multiplexar señales. Es decir, permitir que varias compartan el mismo canal de comunicaciones. \textbf{FDM} (Multiplex por división en frecuencia).
+		  \end{itemize}
+	 \end{itemize}
+	 \item Transmisión \textbf{analógica} $\longleftrightarrow$ Transmisión \textbf{digital}
+\end{itemize}
+
+\subsubsection{Modulación}
+
+La señal moduladora modula una señal portadora (sinusoidal en nuestro caso)
+\[ S\subtext{moduladora}(t) \]
+\[ x_p(t) = A \sen \left( \omega t + \phi \right) \]
+\[ \omega _c = 2\pi f_c \]
+
+[Representación del espectro del seno]
+
+\begingroup
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+	\begin{tabular}{c | c | c}
+		Portadora & Analógica & Digital\\ \hline
+		& AM \footnotemark & ASK\\ 
+		Senoidal & FM & FSK \\ 
+		 & PM & PSK \\ \hline
+		 & PAM o PCM & \\ 
+		Cuadrada & PPM &  \\ 
+		 & PWM &  \\ \hline
+	\end{tabular}
+\end{center}
+\footnotetext{Modulación en amplitud}
+\endgroup
+
 \chapter{Caracterización de señales}
+
 \section{Representaciones logarítmicas}
+
+\subsubsection{Ejercicio 1}
+
+Tenemos un canal de transmisión con un amplificador que ofrece una ganancia $G$ de $32\dB$ y un cable muy largo que afecta aplicando una atenuación $A$ de $20\dB$ a la señal. A la entrada del amplificador (punto 1), introducimos un tono con amplitud de pico $2\V$. Sabemos que la resistencia es de $50 \ohm$.
+
+Rellena la tabla con los valores que se piden para cada parte del canal de transmisión.
+
+\begin{center}
+	\begin{circuitikz}
+		 \draw (0,0) node[label={above:$\circledNumber{1}$}] {}
+		 to[amp,l_=${G=32\dB}$,o-o] ++(3,0) node[label={above:$\circledNumber{2}$}] {} to[TL,l_=${A=20\dB}$, -o] ++(5,0) node[label={above:$\circledNumber{3}$}] {};
+	\end{circuitikz}
+\end{center}
+
+\begin{center}
+	\underline{\textbf{Solución}}
+\end{center}
+
+Las respuestas han sido coloreadas de color verde en la tabla, y a continuación puedes observar la resolución del ejercicio. Existen numerosas formas de llegar al resultado. Esta solución es la que se me ocurrió según lo resolvía.
+
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		 \textbf{Magnitud} & $\circledNumber{1}$ & $\circledNumber{2}$ & $\circledNumber{3}$ \\ \hline 
+		 $x_p \ [\V ]$ & $2\V$ & \textcolor{green!55!black}{$79.62\V$} & \textcolor{green!55!black}{$7.96\V$} \\ \hline
+		 $p \ [\W ]$ & \textcolor{green!55!black}{$0.04\W$} & \textcolor{green!55!black}{$7.94\W$} & \textcolor{green!55!black}{$0.794\W$} \\ \hline
+		 $P \ [\dBW ]$ & \textcolor{green!55!black}{$-14\dBW$} & \textcolor{green!55!black}{$18\dBW$} & \textcolor{green!55!black}{$-2\dBW$} \\ \hline
+		 $P \ [\dBm ]$ & \textcolor{green!55!black}{$16\dBm$} & \textcolor{green!55!black}{$48\dBm$} & \textcolor{green!55!black}{$18\dBm$} \\ \hline
+	\end{tabular}
+\end{center}
+\endgroup
+
+Podemos calcular $p_1$ sabiendo que la potencia de un tono es la siguiente:
+\[ p_1 = \frac{x_p^2}{2R} = \frac{2^2}{2 \cdot 50} = \boxed{0.04\W }\]
+
+Por lo tanto:
+\begin{align*}
+	P_1 [\dBW] &= 10 \log \left( 0.04 \right) = \boxed{-14\dBW} \\ 
+	P_1 [\dBm] &= 10 \log \left( 40 \right) = \boxed{16\dBm}
+\end{align*}
+
+De aquí, podemos obtener el resto de potencias logarítmicas:
+\begin{align*}
+	P_2 [\dBW] &= P_1 + G = -14 + 32 = \boxed{18\dBW} \\ 
+	P_2 [\dBm] &= P_1 + G = 16 + 32  = \boxed{48\dBm}\\[10pt]
+	P_3 [\dBW] &= P_1 - A = 18 - 20  = \boxed{-2\dBW} \\ 
+	P_3 [\dBm] &= P_1 - A = 48 - 20  = \boxed{18\dBm}
+\end{align*}
+
+He decidido obtener los valores restantes de potencia lineal $p$ a partir de las potencias logarítmicas $P$\footnote{Recuerda que $P[\dBW ]=10 \log \left( \frac{p[\W ]}{1\W} \right) \Longrightarrow \boxed{p =10^{\frac{P[\dBW ]}{10}}\W}$}:
+\begin{align*}
+	p_2 &= 10^{\frac{18}{20}} = \boxed{7.94\W} \\ 
+	p_3 &= 10^{\frac{-2}{20}} = \boxed{0.794\W}
+\end{align*}
+
+Por último, nos queda averiguar los dos restantes valores de pico $x_p$. Haremos uso de la ganancia en tensión $g_v$:
+\[ g = \frac{p_2}{p_1} = \frac{V^2_2 / R}{V^2_1 / R} = \left( \frac{V_2}{V_1} \right)^2 = g_v^2 \qquad \Longrightarrow \qquad g_v = \sqrt{g} \]
+
+Sabiendo que la atenuación es simplemente una ganancia negativa, podemos obtener los valores de pico:
+\begin{align*}
+	x_{p2} &= x_{p1} \cdot g_v = x_{p1} \cdot \sqrt{g} = 2 \cdot \sqrt{10^{\frac{32}{10}}} = \boxed{79.62\V}\\ 
+	x_{p_3} &= x_{p2} \cdot a = 79.62 \cdot \sqrt{10^{-\frac{20}{10}}} = \boxed{7.962\V}
+\end{align*}
+
 \section{Caracterización Temporal}
 \section{Caracterización Espectral}
+
+\subsection{Densidad espectral de potencia}
+
+La densidad espectral de potencia $G_x(f)$ mide la potencia de la señal por unidad de ancho de banda $\left( \W / \Hz \right)$.
+
+En un sistema LTI con respuesta en frecuencia $H(f)$, la densidad espectral a la salida se puede calcular como:
+\[ \boxed{G_y(f) = G_x(f) \cdot \abs{H(f)}^2} \]
+
+\subsubsection{Ancho de banda}
+
+El \textbf{ancho de banda a 3 dB} se mide entre las frecuencias donde la potencia es la mitad con respecto al máximo.
+
+el \textbf{ancho de banda equivalente} es el ancho de un espectro rectangular ficticio que contendría la misma potencia que la señal original. Es decir, que tiene potencia equivalente. [añadir imagen]
+
+El \textbf{ancho de banda entre nulos} se explicará con más detalle en el Tema 7 [falta referencia]
+
+\subsubsection{Ejercicio 2}
+
 \section{Señales habituales}
+
+\subsection{Señal triangular}
+
+\subsection{Señal cuadrada}
 
 \chapter{Ruido térmico}
 \section{Caracterización del ruido térmico}

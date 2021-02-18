@@ -32,15 +32,15 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 * [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia_Tecnología_y_Sociedad.pdf) - `Aún no comenzado`
 
-* [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos_de_Sonido_e_Imagen.pdf) - `Aún no comenzado`
+* [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos_de_Sonido_e_Imagen.pdf) - `En progreso`
 
-* [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `Aún no comenzado`
+* [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `En progreso`
 
 * [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `Aún no comenzado`
 
 * [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación_de_Ondas.pdf) - `Aún no comenzado`
 
-* [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría_de_la_Comunicación.pdf) - `Aún no comenzado`
+* [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría_de_la_Comunicación.pdf) - `En progreso`
 
 ## Estado de los apuntes
 
