@@ -40,6 +40,72 @@
 \addcontentsline{toc}{section}{Introducción}
 \section*{Introducción}
 Imagen de la portada: \textsl{La fragua de Vulcano}, por Diego Velázquez.
+
+Profesores del grupo G6T2TL:
+\begin{itemize}
+	 \item  \href{mailto:cesar.diazm@upm.es}{César Díaz Martín}
+	 \item \href{mailto:eduardo.latorre.iglesias@upm.es}{Eduardo Latorre Iglesias}
+\end{itemize}
+
+\subsubsection{Metodología} \vspace{\parskip}
+\begin{itemize}
+	 \item Teoría
+	 \begin{itemize}
+		  \item 13 semanas x 2h + 1 semana x 2h
+		  \item Evaluación continua: 3 test de 30 minutos cada uno
+	 \end{itemize}
+	 \item Laboratorio
+	 \begin{itemize}
+		  \item 2 exámenes
+		  \item 5 prácticas
+	 \end{itemize}
+\end{itemize}
+
+\subsubsection{Evaluación} \vspace{\parskip}
+Asistencia no obligatoria (pero recomendada)
+Sin nota mínima en ningún apartado.
+
+\begingroup
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+	\begin{tabular}{c | c }
+		& Evaluación continua \\ \hline
+		& Test 1 (4\%) \\
+		Teoría & Test 2 (6\%) \\
+		70\% & Test 3 (10\%) \\
+		& Examen final (50\%) \\ \hline
+		& (5\%)  \\
+		Laboratorio 30\% & (10\%)  \\
+		& (15\%) \\
+	\end{tabular}
+\end{center}
+\endgroup
+
+\subsubsection{Conocimientos previos} \vspace{\parskip}
+\begin{itemize}
+	 \item Operaciones con números complejos
+	 \begin{itemize}
+		  \item Conversión de formatos (parte real-imaginaria y módulo-fase)
+		  \item Fórmula de Euler y exponenciales complejas
+	 \end{itemize}
+	 \item Conceptos matemáticos
+	 \begin{itemize}
+		  \item Representación de funciones complejas (módulo y fase)
+		  \item baia la cabaia
+	 \end{itemize}
+	 \item Señales y Sistemas
+\end{itemize}
+
+\subsubsection{Lista de tareas} \vspace{\parskip}
+\begin{enumerate}
+	 \item Cambiar el índice según la asignatura.
+	 \item Organizar los PDFs descargados.
+	 \item Mirar calendario para cuadrar laboratorios.
+	 \item Incluir lo que falta de los conocimientos previos.
+	 \item Descargar bibliografía.
+	 \item Descargar exámenes y resto del material.
+	 \item Añadir ejemplos diapositiva 9-10.
+\end{enumerate}
 \newpage
 
 % Índice (TOC)
@@ -48,25 +114,194 @@ Imagen de la portada: \textsl{La fragua de Vulcano}, por Diego Velázquez.
 \setlength{\parskip}{0.5em}
 
 %%% INICIO DE LOS APUNTES %%%
-\chapter{Procesado digital de señales continuas}
+
+\chapter*{Transformada Fourier y Muestreo}
+
+\section{Introducción a la Transformada de Fourier}
+
+La transformada de Fourier nos servirá para representar señales como combinación lineal de unos ciertos componentes o señales básicas.
+
+La aplicación fundamental del análisis de Fourier es el estudio de las señales en el dominio de la frecuencia (\textbf{dominio espectral}).
+
+El análisis de Fourier se puede realizar para:
+\begin{itemize}
+	 \item Señales continuas:
+	 \begin{itemize}
+		  \item Periódicas: Serie de Fourier de tiempo continuo
+		  \item No periódicas: Transformada de Fourier en tiempo discreto
+	 \end{itemize}
+	 \item Señales discretas
+\end{itemize}
+
+\section{Series de Fourier de señales periódicas}
+Sea $x(t)$ una señal periódica, de periodo $T_o$. Esta señal puede expresarse como una combinación lineal de exponenciales complejas (serie de Fourier).
+
+La \textbf{ecuación de síntesis} es la siguiente:
+\begin{equation}
+	x(t) = \sum_{k=-\infty}^{\infty}a_k e^{jk\omega _o t}
+\end{equation}
+
+Los pesos $a_k$ se denominan \textbf{coeficientes espectrales} y determinan qué cantidad de energía reside en cada frecuencia. Se calculan mediante la \textbf{ecuación de análisis}:
+\[  \]
+
+Notas.
+\begin{itemize}
+	 \item Coeficientes hermíticos
+	 \item baia la cabaia
+\end{itemize}
+
+Añadir ejemplos para el seno y el coseno (se hace mediante la fórmula de Euler).
+
+\subsection{Fenómeno de Gibbs}
+
+En una señal que necesite infinitos coeficientes de Fourier para ser representada de forma exacta, al coger solo un conjunto de los coeficientes se produce un "rizado" en ciertos puntos de la señal, con amplitud independiente del número de coeficientes escogidos. Esto es el fenómeno de Gibbs
+
+\section{Transformada de Fourier para señales no periódicas}
+
+Si tenemos una señal no periódica. Si intentamos hacerla periódica repitiéndola cada $T$ y luego hacemos que este tiempo $T$ tienda a infinito, tenemos la transformada de Fourier.
+
+AÑADIR FÓRMULAS
+Ecuación de síntesis (transformada de Fourier inversa)
+Ecuación de análisis
+
+\subsection{Propiedades de la transformada de Fourier}
+HAY QUE EXPLICARLAS
+
+Propiedad de convolución: Convolución en el tiempo es multiplicación en frecuencia.
+
+Propiedad de modulación: Multiplicación en el tiempo es convolución en frecuencia.
+
+Añadir ejemplo
+
+\section{Transformada de Fourier de señales periódicas}
+
+La transformada de Fourier de una señal periódica es una combinación lineal de deltas.
+
+EJEMPLO IMPORTANTE (en este ejemplo se basa el muestreo)
+Se calcula $a_k$
+\subsection{Algunos pares transformados}
+
+La transformada de un pulso siempre es una sinc.
+La transformada inversa de una sinc siempre es un pulso.
+
+\chapter{Procesado digital de señales analógicas}
+
 \section{Introducción}
-\section{Muestreo de señales continuas}
-\section{Procesado en tiempo discreto de señales continuas}
-\section{Procesado en tiempo continuo de señales discretas}
-\section{Cambio de velocidad de muestreo}
+
+Algunos términos.
+\subsection{Términos y conceptos importantes}
+Una \textbf{señal} es una variación de una corriente eléctrica u otra magnitud que se utiliza para transmitir información (RAE).
+
+Una \textbf{señal} es una función de una o más variables independientes que contiene información sobre un determinado fenómeno físico (Oppenheim).
+
+\subsubsection{Tipos de señal} 
+\begin{itemize}
+	 \item Según la variable independiente:
+	 \begin{description}
+		  \item[Continuas:] $x(t)$
+		  \item[Discretas:] $x[n]$
+	 \end{description}
+	 \item Según la variable dependiente:
+	 \begin{description}
+		  \item \textbf{Analógicas:}
+		  \item \textbf{Discretas:}
+	 \end{description}
+\end{itemize}
+
+\subsubsection{Procesamiento}
+
+\subsubsection{Sistema}
+
+\subsubsection{PDS}
+
+El Procesado Digital de la Señal (PDS) es la manipulación de señales digitales en tiempo discreto, con el fin de extraer algún tipo de información de las mismas, mediante un sistema discreto.
+
+Generalmente, las señales serán de banda limitada
+
+Todos los sistemas que veremos en la asignatura serán \textbf{LTI} (Lineales e Invariantes en el Tiempo). Por ello, tendremos varias formas de caracterizarlos:
+\begin{itemize}
+	 \item Caracterización Temporal
+	 \item Caracterización Frecuencial
+\end{itemize}
+
+\subsubsection{Filtros}
+
+Un \textbf{filtro} es cualquier sistema que modifica la forma de la señal, tanto en su amplitud como en su fase, del modo deseado.
+
+Existen diferentes tipos de filtros selectivos en frecuencia:
+\begin{itemize}
+	 \item Según la banda de paso.
+	 \begin{itemize}
+		  \item Paso bajo
+		  \item Paso alto
+		  \item Paso banda 
+		  \item Banda eliminada 
+		  \item Paso todo
+	 \end{itemize}
+	 \item Según la respuesta al impulso.
+\end{itemize}
+
+\subsection{Ventajas del PDS}
+\begin{itemize}
+	 \item Se puede garantizar precisión y reproducibilidad.
+	 \item No hay deriva del funcionamiento.
+	 \item Los avances tecnológicos en semiconductores experimentan mejoras de forma continua.
+	 \item La información tiende cada vez más al mundo digital.
+	 \item Existe una mayor flexibilidad al poder combinar hardware y software.
+	 \item Permite un amplio rango de frecuencias y margen dinámico.
+	 \item Permite un mejor funcionamiento, garantizando así una mayor calidad.
+	 \item Los datos pueden ser almacenados para un uso posterior.
+	 \item Se pueden crear algoritmos sofisticados de PDS, como son pueden ser la compresión, encriptación, análisis espectral...
+\end{itemize}
+
+\subsection{Desventajas}
+\begin{itemize}
+	 \item Velocidad
+	 \item Coste (dependiendo de la situación)
+	 \item Problemas de longitud de palabra finita
+	 \item Muchos datos son analógicos, por lo que se requieren procesos de conversión A/D \footnote{A/D: Conversión de analógico a digital} y D/A \footnote{D/A: Conversión de digital a analógico}
+\end{itemize}
+
+Serie exponencial de Fourier
+
+Ecuación de síntesis
+\[ \boxed{x[n] = \sum_{k=N}^{}a_ke^{jk \frac{2\pi}{N} n}} \, , \qquad \Omega_o = \frac{2\pi}{N} \]
+
+Ecuación de análisis
+\[ a_k = \frac{1}{n}  \]
+
+\section{Estructura de un sistema DSP}
+
+\section{Conversión A/D y D/A}
+
+\section{ADC reales. Cuantificación}
+
+\section{Cambio de la velocidad}
+
 
 \chapter{La transformada discreta de Fourier (DFT)}
+
 \section{Introducción}
+
 \section{Definición, cálculo, relaciones y propiedades}
+
 \section{Introducción al análisis espectral mediante la DFT}
+
 \section{Filtrado de señales mediante la DFT}
 
-\chapter{Diseño de filtros}
+
+\chapter{Diseño de filtros digitales}
+
 \section{Introducción}
+
 \section{Diseño de filtros FIR}
+
 \section{Diseño de filtros IIR}
+
 \section{Comparación entre métodos de diseño y tipos de filtros}
+
 \section{Estructuras para la implementación de filtros digitales}
+
 %%% FIN DE LOS APUNTES %%%
 
 %%% BIBLIOGRAFÍA %%%

@@ -234,9 +234,9 @@ La información puede perderse al poco tiemo de ser almacenada y necesitas un re
 		  \begin{itemize}
 			   \item Lectura y escritura
 			   \begin{itemize}
-					\item SRAM
-					\item DRAM
-					\item Flash 
+					\item SRAM (Dynamic Random Access Memory) más rápida
+					\item DRAM (SDRAM (Synchronous Dynamic Random Access Memory)) más densa
+					\item Flash (no volátil)
 			   \end{itemize}
 
 			   \item Solo lectura 
@@ -259,15 +259,48 @@ La información puede perderse al poco tiemo de ser almacenada y necesitas un re
 CAMBIAR ESTA LISTA POR UN ESQUEMA
 
 \subsection{Parámetros}
+\subsubsection{}
+Cantidad de información (bits) que puede almacenar.
+
+
+Tiempo que transcurre desde que se pide un dato a la memoria hasta que esta lo entrega.
+
+\begin{itemize}
+	 \item \textbf{Tiempo de acceso (ta)}
+	 \item \textbf{Capacidad de almacenamiento}
+	 \item \textbf{Coste por bit:} Precio de la memoria dividido entre su capacidad en bits
+\end{itemize}
+
+Estas tres características están relacionadas.
+A menor ta, menor capacidad y mayor coste.
+
+\subsubsection{Tiempos importantes}
+
+
+Control por RW
+
 
 \subsection{Cronogramas de funcionamiento}
 
 \subsection{Mapas de memoria}
 
+En un sistema puede haber diversos tipos de memoria.
+
+Por ejemplo, un ordenador puede necesitar memoria no volátil de lectura y escritura (flash) para almacenar un programa, y a la vez necesitar una memoria volátil estática (SRAM) para acceso de datos a alta velocidad.
+
+Un \textbf{mapa de memoria} es una representación esuqemática de qué tipo (chips o módulos)
+
 \section{Mapas de memoria}
+
+baia la cabaia
+
+\subsubsection{Ampliación del tamaño de palabra}
+
+En ocasiones, se puede desear una memoria de cierta longitud de palabra, pero se dispone de chips de palabra menor. En tal caso, la palabra deseada se divide en fragmentos del tamaño de palabra que tengan los chips disponibles.
 
 \chapter{Microprocesadores}
 
+Existen problemas que no pueden ser resueltos mediante sistemas combinacionales.
 \section{Concepto de algoritmo}
 
 \section{Sistemas secuenciales con memoria. Definición de microprocesador}

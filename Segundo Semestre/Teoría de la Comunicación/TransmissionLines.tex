@@ -1,0 +1,42 @@
+\usepackage{etoolbox}
+\makeatletter
+\pgfcircdeclarebipole{}
+    {\ctikzvalof{bipoles/tline/height}}{tline}
+    {\ctikzvalof{bipoles/tline/height}}
+    {\ctikzvalof{bipoles/tline/width}}
+{   
+    %% First find distance from startpoint to endpoint
+    \pgfpointdiff{\pgfpointanchor{\ctikzvalof{bipole/name}start}{center}}
+                 {\pgfpointanchor{\ctikzvalof{bipole/name}end}{center}}
+    \pgfmathparse{veclen(\the\pgf@x,\the\pgf@y)}
+    %% The coordinate system has been changed so that the origin is at the midpoint and
+    %% the line is along the x axis. So shift back by half the length of the line, and 
+    %% make the cylinder of width roughly the length of the line, with a 40pt setback
+    %% on each side.
+    \pgftransformxshift{\pgfmathresult/2-30pt}
+    \pgf@circ@res@left=\dimexpr-\pgfmathresult pt+40pt\relax
+
+    %% Here is the original function, copied directly from the source of circuittikz, 
+    %% down to next %%
+    \pgf@circ@res@step=.2\pgf@circ@res@right % half x axis
+    \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+    \pgfpathmoveto{\pgfpoint{\pgf@circ@res@right-\pgf@circ@res@step}{\pgf@circ@res@up}}
+    \pgfpathlineto{\pgfpoint{\pgf@circ@res@left+\pgf@circ@res@step}{\pgf@circ@res@up}}
+    \pgfpatharc{-90}{90}{-\pgf@circ@res@step and -\pgf@circ@res@up}
+    \pgfpathlineto{\pgfpoint{\pgf@circ@res@right-\pgf@circ@res@step}{\pgf@circ@res@down}}
+    \pgfsetfillcolor{white}
+    \pgfusepath{draw,fill}
+
+    %% I have to fill the figure to block out the original line
+    \pgfpathellipse{\pgfpoint{\pgf@circ@res@right-\pgf@circ@res@step}{0}}
+                   {\pgfpoint{\pgf@circ@res@step}{0}}
+                   {\pgfpoint{0}{-\pgf@circ@res@up}}
+    \pgfsetfillcolor{white}
+    \pgfusepath{draw, fill}
+
+    %% Redraw part of the line that gets blocked by the cylinder by mistake
+    \pgfsetlinewidth{\pgfstartlinewidth}
+    \pgfpathmoveto{\pgfpoint{\pgf@circ@res@right-1*\pgf@circ@res@step}{0pt}}
+    \pgfpathlineto{\pgfpoint{\pgf@circ@res@right}{0pt}}
+    \pgfusepath{draw}
+}
