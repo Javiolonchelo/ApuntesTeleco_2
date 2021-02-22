@@ -59,13 +59,13 @@ Por norma general, se suele colocar el origen de coordenadas ($O$) en la posici�
 
 Estudiaremos el movimiento armónico simple (\textbf{\mas} por sus siglas) por ser un caso sencillo, interesante y fácil de extrapolar a otras situaciones.
 
+En el primer apartado, analizaremos la cinemática\footnote{La cinemática es el estudio del movimiento.} necesaria para describir matemáticamente el \mas
+
+El movimiento armónico simple, como su propio nombre indica, realiza un movimiento de carácter armónico\footnote{En este contexto, nos referimos a las funciones seno y coseno} en torno a un punto de equilibrio y a lo largo de un eje (el eje $x$, por ejemplo). \[\boxed{x(t) = A\cdot \sen{\left( \omega t + \phi \right)}}\]
+
 \subsection{\texorpdfstring{\centering Cinemática del \mas}{Cinemática del M.A.S.}}
 \begin{multicols}{2}
-	En este apartado, analizaremos la cinemática\footnote{La cinemática es el estudio del movimiento.} necesaria para describir matemáticamente el \mas
-
-	El movimiento armónico simple, como su propio nombre indica, realiza un movimiento de carácter armónico\footnote{En este contexto, nos referimos a las funciones seno y coseno} en torno a un punto de equilibrio y a lo largo de un eje (el eje $x$, por ejemplo). \[\boxed{x(t) = A\cdot \sen{\left( \omega t + \phi \right)}}\]
-
-
+	
 	\subsubsection{Propiedades generales}
 
 	La \textbf{amplitud} $(A)$ es una distancia, y por lo tanto es positiva. Podemos encontrar situaciones en las que no lo encontremos así. Podemos reescribirlo de la siguiente forma: \begin{align*}
@@ -75,17 +75,13 @@ Estudiaremos el movimiento armónico simple (\textbf{\mas} por sus siglas) por s
 
 	Como el seno y el coseno son funciones acotadas, la \textbf{elongación} $(x)$ de nuestro \mas \space estará acotada entre $A$ y $-A$. \[\boxed{-A \leq x \leq A}\]
 
-
-
 	El \mas\space es un \textbf{movimiento periódico} con periodo $T$. La condición del periodo es que la partícula vuelva al mismo estado en el que se encontraba tras un tiempo $T$, de modo que $x(t) = x(t+T)$.\[\boxed{T=\frac{2\pi}{\omega}}\]
-
 
 	También se puede definir la \textbf{frecuencia} del movimiento de modo que $f=\frac{1}{T}$.
 
 	Para relacionar el seno y el coseno, recordamos que: \[\sen{\left( \alpha \right)} = \cos{\left( \alpha - \frac{\pi}{2} \right)}\]
 
 	Siendo la $\phi$ \textbf{fase inicial} en un \mas , esto se traduce en que habrá que ajustar la fase un poquito si cambiamos de seno a coseno y viceversa: \[x(t) = \cos{\left( \omega t + \phi ' \right)} \ \longrightarrow \ \boxed{\phi ' = \phi - \frac{\pi}{2}}\]
-
 
 	\subsubsection{Velocidad y aceleración}
 
@@ -314,7 +310,7 @@ Un movimiento está en cuadratura con otro si la diferencia de sus fases es $\de
 			      y^2 = B^2 \cdot \cos^2\left( \omega t + \phi_1 \right)
 		      \end{matrix*}\]
 
-	      Además, por la relación fundemental de la trigonometría (\ref{eq:trig_aad}), sabemos que $\sen^2 \left( a \right) + \cos^2 \left( a \right) = 1$, por lo que podemos establecer una relación entre $x$ e $y$:
+	      Además, por la relación fundamental de la trigonometría (\ref{eq:trig_aad}), sabemos que $\sen^2 \left( a \right) + \cos^2 \left( a \right) = 1$, por lo que podemos establecer una relación entre $x$ e $y$:
 	      \[\frac{x^2}{A^2} + \frac{y^2}{b^2} = 1\]
 
 	      Esta ecuación, representa la trayectoria de una elipse centrada en el origen y con los semiejes en los ejes de coordenadas.
@@ -664,7 +660,7 @@ La amplitud de una onda cilíndrica quedaría como:
 
 \subsection{Nivel de intensidad}
 Se compara la intensidad de la onda que se propaga con otra de referencia.
-\[\boxed{\beta = 10\log\left( \frac{I}{I_o} \right)} \ ; \qquad \beta = [\db ]\]
+\[\boxed{\beta = 10\log\left( \frac{I}{I_o} \right)} \ ; \qquad \beta = [\dB ]\]
 
 
 
@@ -767,7 +763,7 @@ Donde $\rho$ es la densidad del medio.
 	\end{matrix*} \right. \]
 
 El umbral del dolor en los humanos se encuentra alrededor de 1 $\W\cdot\m^{-2}$.
-\[S\subtext{umbral de audición} = 10\log\left( \frac{I_o}{I_o} \right) = 0\db \qquad \qquad S\subtext{umbral de dolor} = 10\log\left( \frac{1}{I_o}\right)= 120\db\]
+\[S\subtext{umbral de audición} = 10\log\left( \frac{I_o}{I_o} \right) = 0\dB \qquad \qquad S\subtext{umbral de dolor} = 10\log\left( \frac{1}{I_o}\right)= 120\dB\]
 
 \subsubsection{Diferencia de nivel de intensidad}
 \[\Delta S = S_1 - S_2 = 10 \log\left( \frac{I_1}{I_o} \right) - 10 \log\left( \frac{I_2}{I_o} \right) = 10 \log\left( \frac{\sfrac{I_1}{I_o}}{\sfrac{I_2}{I_o}} \right)\]
@@ -1103,8 +1099,8 @@ Siendo $r$ el radio de la superficie gaussiana (esfera) y siendo $a$ el radio de
 	\item $r<a$
 \end{enumerate}
 
-\subsubsection{Primera situación: $r\geq a$}
-Podemos averiguar la carga encerrada usando la densidad volumétrica de carga.
+\subsubsection{Primera situación}
+La primera situación sucede cuando $r\geq a$. Podemos averiguar la carga encerrada usando la densidad volumétrica de carga.
 \[\rho = \frac{Q}{V} = \frac{Q}{\frac{4}{3}\pi a^3} \, , \qquad r\geq a\]
 
 Por lo tanto, el campo eléctrico para una superficie gaussiana de radio $r\geq a$ será el siguiente:
@@ -1112,8 +1108,8 @@ Por lo tanto, el campo eléctrico para una superficie gaussiana de radio $r\geq 
 \[\Phi = E\left( r\geq a \right)4\pi r^2 =\frac{q\subtext{enc}}{\varepsilon_o} \quad \Rightarrow \quad \boxed{\vec{E}\left( r\geq a \right) = \frac{Q}{4\pi \varepsilon_o r^2}\vec{u_r}}\]
 
 
-\subsubsection{Segunda situación: $r<a$}
-Por analogía con el caso anterior, averiguamos la carga con la densidad volumétrica:
+\subsubsection{Segunda situación}
+La primera situación sucede cuando $r\leq a$. Por analogía con el caso anterior, averiguamos la carga con la densidad volumétrica:
 \[\rho = \frac{Q}{V} = \frac{Q}{\frac{4}{3}\pi r^3} \, , \qquad r<a\]
 Por lo tanto, el campo eléctrico será el siguiente:
 \[\boxed{\vec{E}\left( r<a \right) = \frac{Q}{4\pi \varepsilon_o r^2}\vec{u_r}}\]
@@ -1305,7 +1301,7 @@ El Sistema Internacional (SI) es a veces conocido como Sistema MKSA (metro, kilo
 \section{Trigonometría}
 \subsection{Propiedades importantes}
 
-\begin{equation}
+\begin{equation} \label{eq:trig_aad}
 	\sen^2 \left( a \right) + \cos^2 \left( a \right) = 1
 \end{equation}
 
@@ -1363,7 +1359,7 @@ Los fasores o \textbf{vectores rodantes} son vectores que rotan en torno al orig
 
 
 \subsection{Posición}
-Para poder trabajar, establecemos un \textbf{sistema de referencia}. Utilizaremos los vectores $\vec{u}_x, \vec{u}_y, \vec{u}_z$ para denotar a los vectores unitarios\footnote{Un vector es unitario si su módulo es 1.} en las direcciones de los ejes $x, y, z$, respectivamente. Se cumple que: \[\vec{u_x} \times \vec{u_y} = \vec{u_z} \]
+Para poder trabajar, establecemos un \textbf{sistema de referencia}. Utilizaremos los vectores $\vec{u_x}, \vec{u_y}, \vec{u}_z$ para denotar a los vectores unitarios\footnote{Un vector es unitario si su módulo es 1.} en las direcciones de los ejes $x, y, z$, respectivamente. Se cumple que: \[\vec{u_x} \times \vec{u_y} = \vec{u_z} \]
 
 Para establecer la posición de un objeto o una partícula, usaremos el \textbf{vector posición}. \[\boxed{\vec{r} = x\cdot \vec{u_x} + y\cdot \vec{u_y} + z\cdot \vec{u_z}}\]
 
@@ -1477,20 +1473,92 @@ Recordamos que el gradiente, denotado por el operador nabla ($\nabla$), es un op
 
 Básicamente, el gradiente sirve para ver cómo varía una función a lo largo de cada eje $x, y, z$.
 
-\chapter{Prácticas}
+% Cambio del formato para los ejercicios resueltos
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\titleformat{\subsubsection}
+	{\normalfont\normalsize\bfseries}{\thesubsubsection}{0em}{}[{\titlerule[0.05pt]}]
+
+\chapter{Ejercicios resueltos}
+
+\section{Oscilaciones}
+
+\subsection{Junio 2018}
+
+Debido a la acción simultánea de dos movimientos armónicos simples perpendiculares de igual frecuencia, una partícula describe, en el plano XY, una trayectoria elíptica centrada en el origen. Cuando la partícula se encuentra en el punto $\left( \frac{\sqrt{3}}{6} , \frac{1}{2} \right) \mm $, su aceleración es $-2\pi^2 \left( \frac{\sqrt{3}}{3} \vec{u_x} + \vec{u_y}\right)\mm \cdot \s ^{-2}$. Sabiendo que en ese punto, el vector $\left( \vec{u_x} - \vec{u_y}\right)$ es perpendicular a la trayectoria y apunta hacia el interior de la misma, determinar razonadamente:
+\begin{enumerate}[label = \arabic*)]
+	 \item La frecuencia de los dos movimientos armónicos simples que actúan sobre la partícula.
+	 \item Las componentes intrínsecas de la aceleración en el punto $\left( \frac{\sqrt{3}}{6} , \frac{1}{2} \right) \mm $.
+\end{enumerate}
+
+\underline{\textbf{Solución}}
+
+Tras leer el enunciado, hemos podido obtener los siguientes datos numéricos o con importancia matemática:
+\[ P\left( \frac{\sqrt{3}}{6} , \frac{1}{2} \right) \mm \, ; \quad \vec{a}_P = -2\pi^2 \left( \frac{\sqrt{3}}{3} \vec{u_x} + \vec{u_y}\right)\mm \cdot \s ^{-2} \, ; \quad \vec{n} = \left( \vec{u_x} - \vec{u_y}\right) \, ; \quad \vec{n} \perp \vec{v} \]
+
+Podemos pasar a resolver el problema.
+
+\begin{enumerate}[label = \arabic*)]
+	 \item El movimiento completo está formado por dos \mas\, perpendiculares, de modo que sus vectores de posición correspondientes serán:
+	 \[ \left\lbrace 
+	 \begin{matrix*}[l]
+		 \vec{r_x}(t) = A_x \sen \left( \omega t + \phi _x \right) \vec{u_x}\ [\mm]\\[5pt] 
+		 \vec{r_y}(t) = A_y \sen \left( \omega t + \phi _y \right) \vec{u_y}\ [\mm]\\
+	 \end{matrix*} \right. \]
+	 
+	 Relacionando la aceleración con la posición, tenemos:
+	 \[ \vec{a}(t) = \dv{}{t}\vec{v}(t) = \dv[2]{}{t}\vec{r}(t)\]
+	 
+	 De aquí, podemos obtener tanto la velocidad como la aceleración.
+	 \[\left\lbrace \begin{matrix*}[l]
+		 \vec{v_x}(t) = A_x \omega \cos \left( \omega t + \phi _x \right) \vec{u_x} \ [\frac{\mm}{\s}]\\[5pt] 
+		 \vec{v_y}(t) = A_y \omega \cos \left( \omega t + \phi _y \right) \vec{u_y}\ [\frac{\mm}{\s}]\\
+	 \end{matrix*} \right. \quad \Longrightarrow \quad \left\lbrace \begin{matrix*}[l]
+		 \vec{a_x}(t) = -A_x \omega^2 \sen \left( \omega t + \phi _x \right) \vec{u_x}\ [\frac{\mm}{\s^2} ]\\[5pt] 
+		 \vec{a_y}(t) = -A_y \omega^2 \sen \left( \omega t + \phi _y \right) \vec{u_y}\ [\frac{\mm}{\s^2} ]\\
+	 \end{matrix*} \right.\]
+	 
+	 Si relacionamos la posición y la aceleración, encontramos una expresión trivial:
+	 \[ \vec{a}(t) = -\omega ^2 \cdot \vec{r}(t) \qquad \Longrightarrow \qquad \omega = \sqrt{- \frac{\vec{a}(t)}{\vec{r}(t)}} \]
+
+	 Podemos utilizar los datos del punto $P$ para obtener la frecuencia $\omega$ de la siguiente forma:
+	 \[ \omega = \sqrt{- \frac{\vec{a_x}(t)}{\vec{r_x}(t)}} = \sqrt{- \frac{-2\pi^2 \frac{\sqrt{3}}{3}}{\frac{\sqrt{3}}{6}}} = \sqrt{4\pi^2} = 2\pi \]
+	 
+	 Cabe recalcar que hemos escogido los datos del movimiento horizontal de forma arbitraria. Si realizamos las mismas operaciones con los datos del movimiento vertical, obtendríamos lo mismo.
+	 
+	 Desarrollando:
+	 \[ f = \frac{2\pi}{\omega} = \frac{2\pi}{2\pi} = 1 \qquad \Longrightarrow \qquad \boxed{f = 1 \Hz} \]
+
+	 \item Para hallar las componentes intrínsecas de la aceleración, usaremos el vector $\vec{n}$, ya que nos ofrecen la información de que es perpendicular a la trayectoria.
+	 
+	 Si es perpendicular a la trayectoria, también será perpendicular a la componente normal de la aceleración. Podremos calcular la componente normal como la proyección de la aceleración $\vec{a}$ sobre $\vec{n}$:
+	 \begin{align*}
+		 \vec{a_n} = \left( \proy{a}{n} \right)\cdot \vec{n} &=\left(\frac{\vec{a}\cdot \vec{n}}{\abs{n}^2} \right)\cdot \vec{n}\\
+		 &=\frac{-2\pi^2 \frac{\sqrt{3}}{3} - \left( -2\pi^2 \right)}{\left( \sqrt{2} \right)^2}\left( \vec{u_x} - \vec{u_y}\right)\\
+		 &= \frac{-2\pi^2}{2} \left( \frac{\sqrt{3}}{3}-1 \right)\left( \vec{u_x} - \vec{u_y} \right)
+	 \end{align*} 
+	 \[\boxed{\vec{a_n} = \pi^2\left( 1-\frac{\sqrt{3}}{3} \right)\left( \vec{u_x} - \vec{u_y}\right) \ \left[ \frac{\mm}{\s^2} \right]}\]
+
+	 Por lo tanto, la aceleración tangencial será:
+	 \begin{align*}
+		 \vec{a_t} &= \vec{a} - \vec{a_n}\\ 
+	 	 &= \left[ -2\pi^2 \left( \frac{\sqrt{3}}{3}\vec{u_x} + \vec{u_y} \right) \right] - \left[ \pi^2 \left( 1-\frac{\sqrt{3}}{3} \right)\left( \vec{u_x} - \vec{u_y}\right) \right]\\
+		 &= \pi^2 \left[ \left( \frac{-2 \sqrt{3}}{3} -1 + \frac{\sqrt{3}}{3} \right) \vec{u_x} + \left( -2 +1 -\frac{\sqrt{3}}{3} \right)\vec{u_y}\right]\\
+		 &= \pi^2 \left[ \left( -1 - \frac{\sqrt{3}}{3} \right) \vec{u_x} + \left( -1 -\frac{\sqrt{3}}{3} \right)\vec{u_y}\right]
+	 \end{align*}
+	 \[ \boxed{\vec{a_t} = -\pi^2 \left( \frac{\sqrt{3}}{3} + 1 \right)\left( \vec{u_x} - \vec{u_y} \right) \ \left[ \frac{\mm}{\s^2} \right]}\]
+
+\end{enumerate}
 
 
-\section{Incertidumbre y medida}
 
-\section{Oscilaciones amortiguadas y forzadas}
+\section{Ondas en medios elásticos}
 
-\section{Ondas estacionarias en una cuerda}
+\section{Electrostática}
 
-\section{Velocidad del sonido. Tubo de Kundt}
+\section{Magnetostática}
 
-\section{Distribuciones de potenciales y campos eléctricos}
-
-\section{Campo magnético. Fuerza electromotriz}
+\section{Campos electromagnéticos}
 
 \setlength{\parskip}{0em}
 \chapter{Formularios}
@@ -1499,12 +1567,12 @@ Básicamente, el gradiente sirve para ver cómo varía una función a lo largo d
 \begin{fleqn}
 	\begin{multicols}{2}
 		\formula{Vector posición}
-		\[\vec{r} = x \vec{u}_x + y \vec{u}_x + z \vec{u}_z \]
+		\[\vec{r} = x \vec{u_x} + y \vec{u_x} + z \vec{u}_z \]
 		\[r = \abs{\vec{r}} = \sqrt{x^2 +y^2+z^2} >0\]
 
 		\formula{Vector velocidad}
 		\[\vec{v} = \frac{\partial \vec{r}}{\partial t}\]
-		\[\vec{v} = v_x \vec{u}_x + v_y \vec{u}_x + v_z \vec{u}_z\]
+		\[\vec{v} = v_x \vec{u_x} + v_y \vec{u_x} + v_z \vec{u}_z\]
 		\[\abs{\vec{v}} = \sqrt{{v_x}^2 +{v_y}^2+{v_z}^2} >0\]
 		\[\vec{v} \parallel \vec{u}_\text{\, tangente a la trayectoria} \]
 
@@ -1578,7 +1646,7 @@ Básicamente, el gradiente sirve para ver cómo varía una función a lo largo d
 		\[\frac{I_1}{I_2}=\frac{C_1 \Psi _{o1}^2}{C_1 \Psi _{o2}^2}=\frac{\Psi _{o1}^2}{\Psi _{o2}^2}\]
 
 		\formula{Nivel de intensidad sonora}
-		\[\S = 10 \log{\left( \frac{I}{I_o} \right)} \ (\db )\]
+		\[\S = 10 \log{\left( \frac{I}{I_o} \right)} \ (\dB )\]
 
 		\formula{Diferencia de intensidad sonora}
 		\[\Delta \S = 10 \log{\left( \frac{I_2}{I_1} \right) }\]
