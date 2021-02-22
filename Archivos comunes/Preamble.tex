@@ -138,6 +138,7 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 \newcommand{\C}{\operatorname{C}}
 \newcommand{\K}{\operatorname{K}}
 \newcommand{\m}{\operatorname{m}}
+\newcommand{\mm}{\operatorname{mm}}
 \newcommand{\rad}{\operatorname{rad}}
 \newcommand{\mol}{\operatorname{mol}}
 \newcommand{\J}{\operatorname{J}}
@@ -153,7 +154,7 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 % Vectores
 \usepackage[c]{esvect}
 \renewcommand{\vec}[1]{\vv{{#1}}}
-\newcommand{\proy}[2][1]{\text{proy}_{#1}#2}
+\newcommand{\proy}[2]{\operatorname{proy}_{\vec{#2}}\vec{#1}}
 \newcommand{\antiparallel}{\downharpoonleft \! \upharpoonright}
 \newcommand{\parallelvec}{\upharpoonleft \! \upharpoonright}
 
