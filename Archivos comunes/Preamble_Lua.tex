@@ -1,0 +1,216 @@
+%%% INICIO DEL PREÁMBULO %%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
+\usepackage{fontspec}
+\setmonofont{Consolas Bold}
+\usepackage{babelbib}
+\usepackage{nccmath}
+\usepackage[oldvoltagedirection]{circuitikz}
+\usepackage{amsthm}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+\usepackage[thicklines]{cancel}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}   
+\usepackage{color}       
+\usepackage{verbatim}     
+\usepackage{enumerate}
+\usepackage{geometry} 
+\geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
+\usepackage{isotope}
+\usepackage{maybemath} 
+\usepackage{upgreek}
+\usepackage{wasysym} 
+\usepackage[italic]{hepparticles}
+\usepackage{subdepth}
+\usepackage[italicdiff]{physics}
+\usepackage{braket}
+\usepackage{tensor}
+\usepackage{chemformula} 
+\usepackage{tikz} \usetikzlibrary{babel}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+citecolor = blue,
+linkcolor = blue,
+urlcolor = blue,
+pdfauthor = {Javier Rodrigo López}
+}
+\usepackage{eso-pic}
+\usepackage{siunitx}
+\sisetup{
+round-mode      = places,
+round-precision = 2,
+}
+
+% tikz
+\usepackage{tikz} \usetikzlibrary{fit,babel,shapes,arrows,positioning}
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+\tikzset{
+block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=3em},
+tmp/.style  = {coordinate}, 
+sum/.style= {draw, fill=white, circle, node distance=1cm},
+input/.style = {coordinate},
+output/.style= {coordinate},
+pinstyle/.style = {pin edge={to-,thin,black}}
+}
+
+% Títulos
+\usepackage{titlesec}
+\titleformat{\section}
+	{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+\titleformat{\subsubsection}
+	{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
+\titlespacing{\section}{0pt}{2\parskip}{\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+% Numeración de secciones
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+% Figuras y descripciones
+%\renewcommand{\thefigure}{\Roman{figure}}
+\renewcommand{\thesubfigure}{\Alph{subfigure}}
+\captionsetup[figure]{labelfont={bf},name={Figura},labelsep=period}
+\numberwithin{figure}{chapter}
+\numberwithin{equation}{chapter}
+
+% Enumerations
+\newcounter{myenumi}
+\renewcommand{\themyenumi}{\alph{myenumi})}
+\newenvironment{myenumerate}{\setlength{\parindent}{0pt}\setcounter{myenumi}{0}\renewcommand{\item}{\par\refstepcounter{myenumi}\makebox[1.3em][l]{\themyenumi}}}{\par\bigskip\noindent\ignorespacesafterend}
+
+% Own environments
+\newenvironment{nota}{\underline{\textbf{NOTA:}} }{}
+\newenvironment{caja}{\begin{tcolorbox}[colback = white, sharp corners, boxrule = 1 pt]}{\end{tcolorbox}}
+\newtheorem{ejemplo}{Ejemplo}
+\newtheorem{ejercicio}{Ejercicio}
+\newtheorem*{conclusion}{Conclusión}
+\newtheorem{teorema}{Teorema}
+\newtheorem{definicion}{Definición}
+
+% Para una bonita portada
+\usepackage{wallpaper}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\droptitle}{-10cm} 
+\renewcommand{\chaptermark}[1]{%
+        \markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{%
+\markright{}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[RE]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
+ \fancypagestyle{plain}{%
+   \fancyhead{} 
+   \renewcommand{\headrulewidth}{0pt}
+}
+
+% Organización del texto
+\newcommand{\formula}[1]{\vspace{13 pt}\noindent \textbf{\underline{#1}}}
+\newcommand{\subtext}[1]{_{\text{#1}}}
+
+% Unidades y utilidades varias
+\renewcommand{\S}{\operatorname{S}}
+\newcommand{\dB}{\operatorname{dB}}
+\newcommand{\dBW}{\operatorname{dBW}}
+\newcommand{\dBm}{\operatorname{dBm}}
+\newcommand{\Hz}{\operatorname{Hz}}
+\newcommand{\s}{\operatorname{s}}
+\newcommand{\A}{\operatorname{A}}
+\newcommand{\V}{\operatorname{V}}
+\newcommand{\ohm}{\,\Omega}
+\newcommand{\Pa}{\operatorname{Pa}}
+\newcommand{\W}{\operatorname{W}}
+\newcommand{\I}{\operatorname{I}}
+\newcommand{\K}{\operatorname{K}}
+\newcommand{\m}{\operatorname{m}}
+\newcommand{\mm}{\operatorname{mm}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\mol}{\operatorname{mol}}
+\newcommand{\J}{\operatorname{J}}
+\newcommand{\kg}{\operatorname{kg}}
+\newcommand{\incremento}{\Delta}
+\newcommand{\psus}{\, \ldots \,}
+\newcommand{\sen}{\operatorname{\sen}}
+\renewcommand{\sin}{\sen}
+\renewcommand{\arcsin}{\arcsen}
+\renewcommand{\arctan}{\arctg}
+\renewcommand{\min}{\operatorname{mín}}
+
+% Vectores
+\usepackage[c]{esvect}
+\renewcommand{\vec}[1]{\vv{{#1}}}
+\newcommand{\proy}[2]{\operatorname{proy}_{\vec{#2}}\vec{#1}}
+\newcommand{\antiparallel}{\downharpoonleft \! \upharpoonright}
+\newcommand{\parallelvec}{\upharpoonleft \! \upharpoonright}
+
+% Espaciado
+\usepackage{enumitem}
+\setlist{before={\parskip=3pt}, after=\vspace{\baselineskip}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+% Estadística
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\renewcommand{\var}{\sigma ^2}
+\DeclareMathOperator{\B}{B}
+\DeclareMathOperator{\BN}{BN}
+\DeclareMathOperator{\Geo}{Geo}
+\DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\N}{N}
+\DeclareMathOperator{\Mult}{Mult}
+\newcommand{\probCond}[2]{P \left( #1 \: \middle\vert\:  #2 \right) }
+
+% Electromagnetismo y Ondas
+\newcommand{\errorGrave}{\textbf{FG!!!}}
+\newcommand{\mas}{M.A.S.}
+\newcommand{\mcu}{M.C.U.}
+\newcommand{\ed}{E.D.}
+\newcommand{\edmas}{E.D. del M.A.S.}
+\usepackage{esint}
+
+% Señales y Sistemas
+\renewcommand{\H}{H}
+
+% Circled number
+\newcommand{\circledNumber}[1]{\raisebox{.9pt}{\textcircled{\raisebox{-.9pt}{#1}}}}
+
+% Footnotes
+% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+% Repeticiones
+\usepackage{forloop}
+\newcommand{\repvec}[3]{
+	\foreach \uwu in {1,...,#2}
+		{\vec{#1}_{\uwu} ,}
+	\, \ldots \, , \vec{#1}_{#3}
+}
+\newcommand{\rep}[3]{
+	\foreach \uwu in {1,...,#2}
+		{#1_{\uwu} ,}
+	\, \ldots \, , #1_{#3}
+}
+\newcommand{\repinf}[3]{
+	\foreach \uwu in {#2,...,#3}
+		{#1_{\uwu} ,}
+	\, \ldots 
+}
+
+%%% FIN DEL PREÁMBULO %%%
