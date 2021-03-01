@@ -1,6 +1,6 @@
 \documentclass[a4paper]{book}
 
-\input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+\input{../../Archivos comunes/Preamble_Lua.tex} % Se incluye el preámbulo
 
 % Título y portada
 \title{\Huge Microprocesadores\\\vspace*{5pt}
@@ -22,6 +22,8 @@
  node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
 \end{tikzpicture}
 }
+
+
 
 % Logotipos UPM y ETSIST
 \begin{figure}[t!]
@@ -207,54 +209,11 @@ El tiempo de acceso a los datos es puede ser dependiente o independiente en la m
 La información puede perderse al poco tiemo de ser almacenada y necesitas un refresco (\textit{refresh}), o no. Son las memorias dinámicas y las memorias estáticas, respectivamente.
 
 \subsection{Clasificación de los sistemas de almacenamiento}
-\begin{itemize}
-	 \item Magnéticos
-	 \begin{itemize}
-		  \item Cintas
-		  \item Discos
-		  \item Núcleos de ferrita
-	 \end{itemize}
 
-	 \item Ópticos
-	 \begin{itemize}
-		  \item CD 
-		  \item DVD
-	 \end{itemize}
-
-	 \item Memorias semiconductoras
-	 \begin{itemize}
-		  \item Acceso secuencial
-		  \begin{itemize}
-			   \item Registros de desplazamiento
-			   \item CCD (\textit{Charge Coupled Devices})
-			   \item Pilas LIFO (Last-In / First-Out) y FIFO (First-In / First-Out)
-		  \end{itemize}
-
-		  \item Acceso aleatorio
-		  \begin{itemize}
-			   \item Lectura y escritura
-			   \begin{itemize}
-					\item SRAM (Dynamic Random Access Memory) más rápida
-					\item DRAM (SDRAM (Synchronous Dynamic Random Access Memory)) más densa
-					\item Flash (no volátil)
-			   \end{itemize}
-
-			   \item Solo lectura 
-			   \begin{itemize}
-					\item ROM
-					\item PROM 
-					\item EPROM 
-					\item E2PROM
-					
-					M: Memoria
-					/ O: \textit{Read Only}
-					/ P: Programable
-					/ E(2): Erasable
-					/ E(1): Electrically
-			   \end{itemize}
-		  \end{itemize}
-	 \end{itemize}
-\end{itemize}
+\begin{figure}[t!]
+	\centering
+		\includegraphics[width=\linewidth]{./Imágenes/Memories.png}
+\end{figure}
 
 CAMBIAR ESTA LISTA POR UN ESQUEMA
 
@@ -297,6 +256,8 @@ baia la cabaia
 \subsubsection{Ampliación del tamaño de palabra}
 
 En ocasiones, se puede desear una memoria de cierta longitud de palabra, pero se dispone de chips de palabra menor. En tal caso, la palabra deseada se divide en fragmentos del tamaño de palabra que tengan los chips disponibles.
+
+\verb|int(main){Holaa}|
 
 \chapter{Microprocesadores}
 
@@ -349,7 +310,34 @@ Existen problemas que no pueden ser resueltos mediante sistemas combinacionales.
 
 \section{Entrada/Salida}
 
+Si se requiere que un procesador se comunique con el exterior, este lo hará a través de los \textbf{periféricos}. 
+
+Los \textbf{microcontroladores} son los chips que contienen procesador, memoria y periféricos.
+
+La descripción de la funcionalidad del periférico, de cada uno de los registros de su interfaz y sus direcciones en el mapa de memoria
+
+Modelo hardware
+
+La descripción de las características:
+\begin{itemize}
+	\item Eléctricas (niveles lógicos, corrientes...)
+	\item Dinámicas (capacidades, tiempos, consumos...)
+\end{itemize}
+
 \section{GPIO}
+
+mbed GPIO: \verb|DigitalIn|
+Entrada digital de un bit
+
+Constructores:
+
+\verb|DigitalIn(PinName pin)|
+
+\verb|DigitalIn(PinName pin, PinMode mode)|
+
+Otras opciones:
+
+\verb|void mode(PinMode mode)|
 
 \section{Interrupciones}
 
