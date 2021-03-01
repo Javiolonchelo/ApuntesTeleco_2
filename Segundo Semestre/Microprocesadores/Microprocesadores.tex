@@ -258,6 +258,11 @@ La información puede perderse al poco tiemo de ser almacenada y necesitas un re
 	 \end{itemize}
 \end{itemize}
 
+\begin{figure}[t!]
+	\centering
+		\includegraphics[width=\linewidth]{./Imágenes/Memories.png}
+\end{figure}
+
 CAMBIAR ESTA LISTA POR UN ESQUEMA
 
 \subsection{Parámetros}
@@ -353,7 +358,34 @@ Existen problemas que no pueden ser resueltos mediante sistemas combinacionales.
 
 \section{Entrada/Salida}
 
+Si se requiere que un procesador se comunique con el exterior, este lo hará a través de los \textbf{periféricos}. 
+
+Los \textbf{microcontroladores} son los chips que contienen procesador, memoria y periféricos.
+
+La descripción de la funcionalidad del periférico, de cada uno de los registros de su interfaz y sus direcciones en el mapa de memoria
+
+Modelo hardware
+
+La descripción de las características:
+\begin{itemize}
+	\item Eléctricas (niveles lógicos, corrientes...)
+	\item Dinámicas (capacidades, tiempos, consumos...)
+\end{itemize}
+
 \section{GPIO}
+
+mbed GPIO: \verb|DigitalIn|
+Entrada digital de un bit
+
+Constructores:
+
+\verb|DigitalIn(PinName pin)|
+
+\verb|DigitalIn(PinName pin, PinMode mode)|
+
+Otras opciones:
+
+\verb|void mode(PinMode mode)|
 
 \section{Interrupciones}
 
