@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1614079943 "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.tex" "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.pdf" "Formulario_TC" 1614079946
+["pdflatex"] 1614079943 "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.tex" "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.pdf" "Formulario_TC" 1614104797
   "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.aux" 1614079946 1985 77021a0b77c61acdc17c2fb14d4ccd58 ""
-  "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.tex" 1614079939 6907 b1765a9b920b040cf87aa66e3f013601 ""
+  "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.tex" 1614080253 6907 b1765a9b920b040cf87aa66e3f013601 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -299,12 +299,12 @@
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   "Formulario_TC.aux" 1614079946 1985 77021a0b77c61acdc17c2fb14d4ccd58 "pdflatex"
   "Formulario_TC.out" 1614079946 603 cc922cbc3317a5d7026b672ec5319280 "pdflatex"
-  "Formulario_TC.tex" 1614079939 6907 b1765a9b920b040cf87aa66e3f013601 ""
+  "Formulario_TC.tex" 1614080253 6907 b1765a9b920b040cf87aa66e3f013601 ""
   "TransmissionLines.tex" 1614079905 2058 7af3644942565e8935a228689efec365 ""
   (generated)
-  "Formulario_TC.log"
   "Formulario_TC.out"
-  "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.pdf"
   "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.log"
-  "Formulario_TC.pdf"
   "Formulario_TC.aux"
+  "/Users/javierrodrigolopez/Documents/GitHub/ApuntesTeleco_2/Segundo Semestre/Teoría de la Comunicación/Formulario_TC.pdf"
+  "Formulario_TC.pdf"
+  "Formulario_TC.log"
