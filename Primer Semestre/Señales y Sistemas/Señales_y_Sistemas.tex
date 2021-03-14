@@ -470,21 +470,43 @@ Un sistema que cumple $y(t) = x^2(t)$ no es invertible, ya que no podemos saber 
 	\item Un sistema no causal siempre tiene memoria
 \end{itemize}
 
-
-
-
-
-\section{Sistemas LTI}
 Por ahora, veremos solo sistemas \textbf{LTI} (lineales e invariantes en el tiempo).
 
-
 \section{Representación de señales en términos de impulsos}
+
+Una señal discreta $x[n]$ puede ser representada como una combinación de señales impulso, desplazadas y escaladas según la señal que usemos.
+
+Por ello, una misma señal puede ser representada de dos formas. Por ejemplo:
+\begin{align*}
+	x[n] &= u[n] - u[n-3]
+	x[n] &= \delta[n] + \delta[n-1] + \delta[n-2] 
+\end{align*}
+
+Puedes ver la representación de esta señal en la \autoref{fig:aav}.
+
+\begin{figure}[!ht]
+	\caption{Representación de la señal $x[n]$}
+	\label{fig:aav}
+	\centering
+	\begin{subfigure}[b]{0.75\linewidth}
+		\includegraphics[width=\linewidth]{./Imágenes/aav.png}
+	\end{subfigure}
+\end{figure}
+
+Para un señal cualquiera, se puede obtener la representación en términos de impulsos como:
+
+\[ x[n] = x[n] \circledast \delta [n] \]
+
+Donde $\circledast$ representa la operación de \textbf{convolución}.
+
+\subsection{Relación entrada/salida}
+
 Si introducimos la señal impulso como entrada en un sistema, obtenemos una salida $h[n]$ que denominamos \textbf{respuesta al impulso}. Con ella podemos caracterizar completamente una señal LTI.
 
 Entonces, tenemos que la relación entrada-salida del sistema viene dada por la \textbf{integral (o suma) de convolución}, y es:
 \begin{align*}
 	\text{Tiempo discreto: } & \qquad \boxed{y[n]=x[n]*h[n]=\sum^{\infty}_{m=-\infty}{x[k]h[n-k]}}    \\
-	\text{Tiempo continuo: } & \qquad \boxed{y(t)=x(t)*h(t)=\int^{\infty}_{-\infty}{x(k)h(t-k)}\dd k}
+	\text{Tiempo continuo: } & \qquad \boxed{y(t)=x(t)*h(t)=\int^{\infty}_{-\infty}{x(\tau )h(t-\tau )}\dd \tau }
 \end{align*}
 
 \subsection{Cálculo de la suma de convolución}
@@ -683,10 +705,10 @@ Solo nos queda representar $h(t)$:
 \end{figure}
 \item Recordemos la señal con la que trabajaremos: \[x_1(t) = \abs{t-1}\cdot \left( u(t+1) - u(t-1) \right)\]
 
-Si nos fijamos en las señales escalónsta señal es no nula para $-1\leq t<1$. Viendo que tiene un valor absoluto, vamos a redefinirla como una función a trozos. Si calculamos cuándo es negativo lo que se encuentra dentro del valor absoluto, veremos que la función a trozos quedará así:
+Si nos fijamos en las señales escalón, esta señal es no nula para $-1\leq t<1$. Viendo que tiene un valor absoluto, vamos a redefinirla como una función a trozos. Se puede comprobar fácilmente que la función a trozos quedará así:
 \[x_1(t) = \left\{ \begin{matrix*}[l]
-1-t	&& \text{si } -1\leq t<1\\[5pt]
-0	&& \text{resto de casos }
+1-t	&& -1\leq t<1\\[5pt]
+0	&& \text{resto de casos}
 \end{matrix*} \right.\]
 
 \begin{figure}[!ht]

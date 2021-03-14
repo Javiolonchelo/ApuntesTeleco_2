@@ -17,15 +17,15 @@
 
 % Marca de agua
 \AddToShipoutPictureFG{
-\begin{tikzpicture}[overlay,remember picture]
-\path (current page.south west) -- (current page.north east)
- node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
-\end{tikzpicture}
+	\begin{tikzpicture}[overlay,remember picture]
+		\path (current page.south west) -- (current page.north east)
+		node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+	\end{tikzpicture}
 }
 
 % Logotipos UPM y ETSIST
 \begin{figure}[t!]
-\centering
+	\centering
 	\begin{subfigure}[b]{0.65\linewidth}
 		\includegraphics[width=\linewidth]{../../Archivos comunes/upm_logo.png}
 	\end{subfigure}
@@ -43,22 +43,22 @@ Imagen de la portada: \textsl{La fragua de Vulcano}, por Diego Velázquez.
 
 Profesores del grupo G6T2TL:
 \begin{itemize}
-	 \item  \href{mailto:cesar.diazm@upm.es}{César Díaz Martín}
-	 \item \href{mailto:eduardo.latorre.iglesias@upm.es}{Eduardo Latorre Iglesias}
+	\item  \href{mailto:cesar.diazm@upm.es}{César Díaz Martín}
+	\item \href{mailto:eduardo.latorre.iglesias@upm.es}{Eduardo Latorre Iglesias}
 \end{itemize}
 
 \subsubsection{Metodología} \vspace{\parskip}
 \begin{itemize}
-	 \item Teoría
-	 \begin{itemize}
-		  \item 13 semanas x 2h + 1 semana x 2h
-		  \item Evaluación continua: 3 test de 30 minutos cada uno
-	 \end{itemize}
-	 \item Laboratorio
-	 \begin{itemize}
-		  \item 2 exámenes
-		  \item 5 prácticas
-	 \end{itemize}
+	\item Teoría
+	      \begin{itemize}
+		      \item 13 semanas x 2h + 1 semana x 2h
+		      \item Evaluación continua: 3 test de 30 minutos cada uno
+	      \end{itemize}
+	\item Laboratorio
+	      \begin{itemize}
+		      \item 2 exámenes
+		      \item 5 prácticas
+	      \end{itemize}
 \end{itemize}
 
 \subsubsection{Evaluación} \vspace{\parskip}
@@ -69,48 +69,48 @@ Sin nota mínima en ningún apartado.
 \renewcommand{\arraystretch}{1.2}
 \begin{center}
 	\begin{tabular}{c | c }
-		& Evaluación continua \\ \hline
-		& Test 1 (4\%) \\
-		Teoría & Test 2 (6\%) \\
-		70\% & Test 3 (10\%) \\
-		& Examen final (50\%) \\ \hline
-		& (5\%)  \\
-		Laboratorio 30\% & (10\%)  \\
-		& (15\%) \\
+		                 & Evaluación continua \\ \hline
+		                 & Test 1 (4\%)        \\
+		Teoría           & Test 2 (6\%)        \\
+		70\%             & Test 3 (10\%)       \\
+		                 & Examen final (50\%) \\ \hline
+		                 & (5\%)               \\
+		Laboratorio 30\% & (10\%)              \\
+		                 & (15\%)              \\
 	\end{tabular}
 \end{center}
 \endgroup
 
 \subsubsection{Conocimientos previos} \vspace{\parskip}
 \begin{itemize}
-	 \item Operaciones con números complejos
-	 \begin{itemize}
-		  \item Conversión de formatos (parte real-imaginaria y módulo-fase)
-		  \item Fórmula de Euler y exponenciales complejas
-	 \end{itemize}
-	 \item Conceptos matemáticos
-	 \begin{itemize}
-		  \item Representación de funciones complejas (módulo y fase)
-		  \item baia la cabaia
-	 \end{itemize}
-	 \item Señales y Sistemas
+	\item Operaciones con números complejos
+	      \begin{itemize}
+		      \item Conversión de formatos (parte real-imaginaria y módulo-fase)
+		      \item Fórmula de Euler y exponenciales complejas
+	      \end{itemize}
+	\item Conceptos matemáticos
+	      \begin{itemize}
+		      \item Representación de funciones complejas (módulo y fase)
+		      \item baia la cabaia
+	      \end{itemize}
+	\item Señales y Sistemas
 \end{itemize}
 
 \subsubsection{Lista de tareas} \vspace{\parskip}
 \begin{enumerate}
-	 \item Cambiar el índice según la asignatura.
-	 \item Organizar los PDFs descargados.
-	 \item Mirar calendario para cuadrar laboratorios.
-	 \item Incluir lo que falta de los conocimientos previos.
-	 \item Descargar bibliografía.
-	 \item Descargar exámenes y resto del material.
-	 \item Añadir ejemplos diapositiva 9-10.
+	\item Cambiar el índice según la asignatura.
+	\item Organizar los PDFs descargados.
+	\item Mirar calendario para cuadrar laboratorios.
+	\item Incluir lo que falta de los conocimientos previos.
+	\item Descargar bibliografía.
+	\item Descargar exámenes y resto del material.
+	\item Añadir ejemplos diapositiva 9-10.
 \end{enumerate}
 \newpage
 
 % Índice (TOC)
 \setlength{\parskip}{0em}
-\tableofcontents 
+\tableofcontents
 \setlength{\parskip}{0.5em}
 
 %%% INICIO DE LOS APUNTES %%%
@@ -125,12 +125,12 @@ La aplicación fundamental del análisis de Fourier es el estudio de las señale
 
 El análisis de Fourier se puede realizar para:
 \begin{itemize}
-	 \item Señales continuas:
-	 \begin{itemize}
-		  \item Periódicas: Serie de Fourier de tiempo continuo
-		  \item No periódicas: Transformada de Fourier en tiempo discreto
-	 \end{itemize}
-	 \item Señales discretas
+	\item Señales continuas:
+	      \begin{itemize}
+		      \item Periódicas: Serie de Fourier de tiempo continuo
+		      \item No periódicas: Transformada de Fourier en tiempo discreto
+	      \end{itemize}
+	\item Señales discretas
 \end{itemize}
 
 \section{Series de Fourier de señales periódicas}
@@ -146,8 +146,8 @@ Los pesos $a_k$ se denominan \textbf{coeficientes espectrales} y determinan qué
 
 Notas.
 \begin{itemize}
-	 \item Coeficientes hermíticos
-	 \item baia la cabaia
+	\item Coeficientes hermíticos
+	\item baia la cabaia
 \end{itemize}
 
 Añadir ejemplos para el seno y el coseno (se hace mediante la fórmula de Euler).
@@ -194,18 +194,18 @@ Una \textbf{señal} es una variación de una corriente eléctrica u otra magnitu
 
 Una \textbf{señal} es una función de una o más variables independientes que contiene información sobre un determinado fenómeno físico (Oppenheim).
 
-\subsubsection{Tipos de señal} 
+\subsubsection{Tipos de señal}
 \begin{itemize}
-	 \item Según la variable independiente:
-	 \begin{description}
-		  \item[Continuas:] $x(t)$
-		  \item[Discretas:] $x[n]$
-	 \end{description}
-	 \item Según la variable dependiente:
-	 \begin{description}
-		  \item \textbf{Analógicas:}
-		  \item \textbf{Discretas:}
-	 \end{description}
+	\item Según la variable independiente:
+	      \begin{description}
+		      \item[Continuas:] $x(t)$
+		      \item[Discretas:] $x[n]$
+	      \end{description}
+	\item Según la variable dependiente:
+	      \begin{description}
+		      \item \textbf{Analógicas:}
+		      \item \textbf{Discretas:}
+	      \end{description}
 \end{itemize}
 
 \subsubsection{Procesamiento}
@@ -220,8 +220,8 @@ Generalmente, las señales serán de banda limitada
 
 Todos los sistemas que veremos en la asignatura serán \textbf{LTI} (Lineales e Invariantes en el Tiempo). Por ello, tendremos varias formas de caracterizarlos:
 \begin{itemize}
-	 \item Caracterización Temporal
-	 \item Caracterización Frecuencial
+	\item Caracterización Temporal
+	\item Caracterización Frecuencial
 \end{itemize}
 
 \subsubsection{Filtros}
@@ -230,36 +230,36 @@ Un \textbf{filtro} es cualquier sistema que modifica la forma de la señal, tant
 
 Existen diferentes tipos de filtros selectivos en frecuencia:
 \begin{itemize}
-	 \item Según la banda de paso.
-	 \begin{itemize}
-		  \item Paso bajo
-		  \item Paso alto
-		  \item Paso banda 
-		  \item Banda eliminada 
-		  \item Paso todo
-	 \end{itemize}
-	 \item Según la respuesta al impulso.
+	\item Según la banda de paso.
+	      \begin{itemize}
+		      \item Paso bajo
+		      \item Paso alto
+		      \item Paso banda
+		      \item Banda eliminada
+		      \item Paso todo
+	      \end{itemize}
+	\item Según la respuesta al impulso.
 \end{itemize}
 
 \subsection{Ventajas del PDS}
 \begin{itemize}
-	 \item Se puede garantizar precisión y reproducibilidad.
-	 \item No hay deriva del funcionamiento.
-	 \item Los avances tecnológicos en semiconductores experimentan mejoras de forma continua.
-	 \item La información tiende cada vez más al mundo digital.
-	 \item Existe una mayor flexibilidad al poder combinar hardware y software.
-	 \item Permite un amplio rango de frecuencias y margen dinámico.
-	 \item Permite un mejor funcionamiento, garantizando así una mayor calidad.
-	 \item Los datos pueden ser almacenados para un uso posterior.
-	 \item Se pueden crear algoritmos sofisticados de PDS, como son pueden ser la compresión, encriptación, análisis espectral...
+	\item Se puede garantizar precisión y reproducibilidad.
+	\item No hay deriva del funcionamiento.
+	\item Los avances tecnológicos en semiconductores experimentan mejoras de forma continua.
+	\item La información tiende cada vez más al mundo digital.
+	\item Existe una mayor flexibilidad al poder combinar hardware y software.
+	\item Permite un amplio rango de frecuencias y margen dinámico.
+	\item Permite un mejor funcionamiento, garantizando así una mayor calidad.
+	\item Los datos pueden ser almacenados para un uso posterior.
+	\item Se pueden crear algoritmos sofisticados de PDS, como son pueden ser la compresión, encriptación, análisis espectral...
 \end{itemize}
 
 \subsection{Desventajas}
 \begin{itemize}
-	 \item Velocidad
-	 \item Coste (dependiendo de la situación)
-	 \item Problemas de longitud de palabra finita
-	 \item Muchos datos son analógicos, por lo que se requieren procesos de conversión A/D \footnote{A/D: Conversión de analógico a digital} y D/A \footnote{D/A: Conversión de digital a analógico}
+	\item Velocidad
+	\item Coste (dependiendo de la situación)
+	\item Problemas de longitud de palabra finita
+	\item Muchos datos son analógicos, por lo que se requieren procesos de conversión A/D \footnote{A/D: Conversión de analógico a digital} y D/A \footnote{D/A: Conversión de digital a analógico}
 \end{itemize}
 
 Serie exponencial de Fourier
@@ -270,9 +270,64 @@ Ecuación de síntesis
 Ecuación de análisis
 \[ a_k = \frac{1}{n}  \]
 
-\section{Estructura de un sistema DSP}
+\section{Estructura de un sistema PDS}
+
+A continuación, se encuentra representado el esquema general de un sistema PDS:
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}[auto,>=latex']
+		\node [input, name=input] (input) {};
+		\node [block, below of=input, node distance=0cm] (A) {ADC};
+
+		\node [block, right of=A, node distance=2cm] (B) {$(N)\text{SDU}$};
+
+		\node [text width=3.2cm, left of=A, node distance=3.5cm] (text6) {Metemos la información de control.};
+
+		\draw [-angle 90] (A) --  node{} (B);
+	\end{tikzpicture}
+	\caption{Esquema de un sistema PDS} \label{fig:esquema_PDS}
+\end{figure}
 
 \section{Conversión A/D y D/A}
+
+Para trabajar con sistemas continuos y discretos, vamos a establecer unos criterios de \textbf{equivalencia}, que usaremos para relacionar ambos tipos de sistema.
+
+Esta sería la representación de un
+
+\subsubsection{Ejemplo 1}
+
+Obtenga el sistema discreto que permite implementar el siguiente sistema LTI continuo:
+\[ H_c \left( j\omega \right) = \left\lbrace
+	\begin{matrix*}[l]
+		1	&, \abs{\omega }<\omega _c\\
+		0	&, \text{ resto}
+	\end{matrix*} \right. \]
+
+\textbf{\underline{Solución}}
+\begin{align*}
+	H_d \left( e^{j\omega} \right) & = \evaluat[\Big]{H_c \left( j\omega \right)}_{\omega = \frac{\Omega}{T_s}} = H_c \left( j \frac{\Omega}{T_s} \right) \quad , \abs{\Omega}<\pi \\[10pt]
+	H_d \left( e^{j\omega} \right) & = \left\lbrace
+	\begin{matrix*}[l]
+		1 & , \abs{\frac{\Omega}{T_s} }<\omega _c\\
+		0 & , \text{ resto}
+	\end{matrix*} \right. = \boxed{\left\lbrace
+	\begin{matrix*}[l]
+		1 & , \abs{\Omega}<\omega _cT_s<\pi\\
+		0 & , \text{ resto}
+	\end{matrix*} \right.}
+\end{align*}
+
+Siempre y cuando se cumpla que $\omega_s\geq 2\omega_c$, podré emular en todo el rango de frecuencias de interés $H_c \left( j\omega \right)$
+
+\subsubsection{Ejemplo 2}
+
+Encuentre el sistema discreto que permite implementar un diferenciador en tiempo continuo cuya relación entrada/salida es
+\[ y_c(t) = \dv{x_c(t)}{t} \]
+entre $-\frac{\omega_s}{2}$ y $\frac{\omega_s}{2}$.
+
+\textbf{\underline{Solución}}
+
 
 \section{ADC reales. Cuantificación}
 
