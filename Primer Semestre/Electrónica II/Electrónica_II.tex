@@ -50,7 +50,7 @@ Muchas gracias al profesor \href{https://www.euitt.upm.es/escuela/directorio?dep
 \newpage
 
 \setlength{\parskip}{0em}
-\tableofcontents 
+\tableofcontents
 \setlength{\parskip}{0.5em}
 
 
@@ -58,9 +58,9 @@ Muchas gracias al profesor \href{https://www.euitt.upm.es/escuela/directorio?dep
 
 \section{Codificación de la información}
 
-Para convertir una señal analógica en digital, tenemos que aplicarle una transformación denominada \textbf{codificación}. 
+Para convertir una señal analógica en digital, tenemos que aplicarle una transformación denominada \textbf{codificación}.
 
-La codificación 
+La codificación
 \section{Codificación de números}
 \subsection{Código BN (Binario Natural)}
 
@@ -71,16 +71,16 @@ El rango de números naturales que se pueden codificar con $n$ bits es:
 \[\left( 0, 2^{n}-1 \right)\]
 
 Existen distintas opciones de asignación de códigos. \begin{itemize}
-\item A cada elemento del conjunto debe corresponderle un único código de 0s y 1s.
-\item Se debe utilizar el \textbf{menor número de bits} posible.
-\item La asignación debe favorecer las operaciones de codificar y descodificar.
+	\item A cada elemento del conjunto debe corresponderle un único código de 0s y 1s.
+	\item Se debe utilizar el \textbf{menor número de bits} posible.
+	\item La asignación debe favorecer las operaciones de codificar y descodificar.
 \end{itemize}
 \subsection{Código BCD (Binary Coded Decimal)}
 Representa cada una de las cifras decimales de un número expresado en decimal con 4 bits.
 
 Un número decimal de $n$ cifras necesita $4n$ bits para expresarlo en BCD.
 
-El BCD se utiliza mucho para interfaces con personas, ya que cada \textit{nibble} representa  
+El BCD se utiliza mucho para interfaces con personas, ya que cada \textit{nibble} representa
 \section{Aritmética Binaria}
 
 \subsection{Suma de números}
@@ -100,31 +100,31 @@ Puede producirse un error por no utilizar suficientes bits y que el resultado no
 \subsection{Teoremas básicos}
 
 \begin{itemize}
-\item \textbf{Teorema de idempotencia}: 
-\begin{multicols}{2}
-\[\boxed{a + a = a }\]
-\[\boxed{ a \cdot  a = a}\]
-\end{multicols}
-\item \textbf{Teorema de absorción}:
-\begin{multicols}{2}
-\[\boxed{a + ab = a}\]
-\[\boxed{ a \cdot  (a+b) = a}\]
-\end{multicols}
-\item \textbf{Teorema de adyacencia}:
-\begin{multicols}{2}
-\[\boxed{ab + a\overline{b} = a}\]
-\[\boxed{ (a+b)(a+\overline{b}) = a}\]
-\end{multicols}
-\item \textbf{Teorema de simplificación}:
-\begin{multicols}{2}
-\[\boxed{a + \overline{a}b = a + b}\]
-\[\boxed{ a (\overline{a}+b) = ab}\]
-\end{multicols}
-\item \textbf{Teorema de De Morgan}: 
-\begin{multicols}{2}
-\[\boxed{\overline{a_0 \cdot a_1\cdot \ldots \cdot a_n} = \overline{a_0} + \overline{a_1} + \ldots + \overline{a_n}}\]
-\[\boxed{ \overline{a_0 + a_1+ \ldots + a_n} = \overline{a_0} \cdot  \overline{a_1} \cdot  \ldots \cdot  \overline{a_n} }\]
-\end{multicols}
+	\item \textbf{Teorema de idempotencia}:
+	      \begin{multicols}{2}
+		      \[\boxed{a + a = a }\]
+		      \[\boxed{ a \cdot  a = a}\]
+	      \end{multicols}
+	\item \textbf{Teorema de absorción}:
+	      \begin{multicols}{2}
+		      \[\boxed{a + ab = a}\]
+		      \[\boxed{ a \cdot  (a+b) = a}\]
+	      \end{multicols}
+	\item \textbf{Teorema de adyacencia}:
+	      \begin{multicols}{2}
+		      \[\boxed{ab + a\overline{b} = a}\]
+		      \[\boxed{ (a+b)(a+\overline{b}) = a}\]
+	      \end{multicols}
+	\item \textbf{Teorema de simplificación}:
+	      \begin{multicols}{2}
+		      \[\boxed{a + \overline{a}b = a + b}\]
+		      \[\boxed{ a (\overline{a}+b) = ab}\]
+	      \end{multicols}
+	\item \textbf{Teorema de De Morgan}:
+	      \begin{multicols}{2}
+		      \[\boxed{\overline{a_0 \cdot a_1\cdot \ldots \cdot a_n} = \overline{a_0} + \overline{a_1} + \ldots + \overline{a_n}}\]
+		      \[\boxed{ \overline{a_0 + a_1+ \ldots + a_n} = \overline{a_0} \cdot  \overline{a_1} \cdot  \ldots \cdot  \overline{a_n} }\]
+	      \end{multicols}
 \end{itemize}
 
 \section{Cronogramas}
@@ -143,16 +143,16 @@ La estrategia principal consiste en dividir el circuito en otros más pequeños 
 
 Por ejemplo, un sumador de $N$ bits. Podemos hacer un sumador de 1 bit y con
 
-\chapter{Bloque Temático 2} 
+\chapter{Bloque Temático 2}
 \section{Arquitecturas digitales I}
 \subsection{Sistemas basados en microprocesador}
 \subsection{Sistemas cableados}
 Pros: \begin{itemize}
-\item Velocidad y eficiencia. 
+	\item Velocidad y eficiencia.
 \end{itemize}
 Contras: \begin{itemize}
-\item Complejidad del hardware.
-\item Versatilidad. 
+	\item Complejidad del hardware.
+	\item Versatilidad.
 \end{itemize}
 
 \section{Conceptos básicos}
@@ -176,7 +176,7 @@ Células estándar: Función lógica prefijada en el diseño de la célula. Por 
 \subsubsection{SSI. Ciruitos de baja escala de integracíón}
 Tecnología de los años 60. Métodos manuales de diseño. Aplicación marginal. Lógica auxiliar (Glue logic)
 \subsubsection{Ciruitos de media escala de integracíón}
-MSI. 
+MSI.
 Como mucho, 100 transistores.
 \subsubsection{ASIC. Ciruitos de media escala de integracíón}
 Tecnología VLSI (Very Large Scale Integration).
@@ -188,7 +188,7 @@ Funcionamiento lógico configurable mediante la descarga de un fichero.
 
 \subsection{Estructura de un sistema digital}
 
-PCB (Printed Circuit Board). Es básicamente la placa donde se colocan los componentes 
+PCB (Printed Circuit Board). Es básicamente la placa donde se colocan los componentes
 
 Alimentación
 Interfaces
@@ -199,14 +199,14 @@ Disipadores
 Necesitamos modelos simplificados para abordar el diseño de sistemas muy complejos.
 Hay tres modelos:
 \begin{enumerate}
-\item Lógico. Función lógica e interfaz.
-\item Eléctrico. Características eléctricas de la interfaz.
-\item Dinámico.
+	\item Lógico. Función lógica e interfaz.
+	\item Eléctrico. Características eléctricas de la interfaz.
+	\item Dinámico.
 \end{enumerate}
 \subsubsection{Modelo lógico}
 Decribe el funcionamiento y la interfaz del chip.
 \subsubsection{Modelo eléctrico}
-Es muy importante para conectarlo  
+Es muy importante para conectarlo
 
 \chapter{Bloque Temático 3}
 

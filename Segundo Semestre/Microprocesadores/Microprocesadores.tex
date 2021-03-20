@@ -17,15 +17,15 @@
 
 % Marca de agua
 \AddToShipoutPictureFG{
-\begin{tikzpicture}[overlay,remember picture]
-\path (current page.south west) -- (current page.north east)
- node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
-\end{tikzpicture}
+	\begin{tikzpicture}[overlay,remember picture]
+		\path (current page.south west) -- (current page.north east)
+		node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+	\end{tikzpicture}
 }
 
 % Logotipos UPM y ETSIST
 \begin{figure}[t!]
-\centering
+	\centering
 	\begin{subfigure}[b]{0.65\linewidth}
 		\includegraphics[width=\linewidth]{../../Archivos comunes/upm_logo.png}
 	\end{subfigure}
@@ -41,16 +41,16 @@
 \section*{Introducción}
 Imagen de la portada: \textsl{Dante y Virgilio en el infierno}, por William-Adolphe Bouguereau.
 
-Contenidos 
+Contenidos
 
 5 Temas
 
 \begin{itemize}
-	 \item Tema 0. Presentación (S1)
-	 \item Tema 1. Memorias semiconductoras (S1-S2 + S5)
-	 \item Tema 2. Microprocesadores (S2-S4)
-	 \item Tema 3. Micro (S6-S8)
-	 \item Resolución de problemas (S5, S15-S16)
+	\item Tema 0. Presentación (S1)
+	\item Tema 1. Memorias semiconductoras (S1-S2 + S5)
+	\item Tema 2. Microprocesadores (S2-S4)
+	\item Tema 3. Micro (S6-S8)
+	\item Resolución de problemas (S5, S15-S16)
 \end{itemize}
 
 Laboratorio - Aula D8211
@@ -63,11 +63,11 @@ Miguel Chavarrías Lapastora - Tema 4
 
 Recursos
 \begin{itemize}
-	 \item The definitive guide to the ARM Cortex-M0 and Cortex-M0+ processors. Newnes
-	 \item Fast and effective embedded systems design. Applying the ARM mbed. Newnes.
-	 \item Embedded C Coding Standard. Barrgroup. IMPORTANTE, TODO EL CÓDIGO TIENE QUE TENER ESTE ESTILO
-	 
-	 Excepto que las llaves de apertura van al final de la línea y la anchura de las indentaciones es de 2 espacios, en lugar de 4 como marca el libro.
+	\item The definitive guide to the ARM Cortex-M0 and Cortex-M0+ processors. Newnes
+	\item Fast and effective embedded systems design. Applying the ARM mbed. Newnes.
+	\item Embedded C Coding Standard. Barrgroup. IMPORTANTE, TODO EL CÓDIGO TIENE QUE TENER ESTE ESTILO
+
+	      Excepto que las llaves de apertura van al final de la línea y la anchura de las indentaciones es de 2 espacios, en lugar de 4 como marca el libro.
 \end{itemize}
 
 Evaluación
@@ -85,39 +85,39 @@ Hay que sacar como mínimo un 4.5 en teoría y laboratorio para poder hacer medi
 Requisitos
 
 \begin{itemize}
-	 \item Hay que saber manejar MUY BIEN el hexadecimal y el binario natural.
-	 \item Hay que saber hacer divisores resistivos y circuitos de polarización de diodos y transistores (bipolares y FET)
-	 \item Comprender los subsistemas combinacionales y secuenciales (incluyendo autómatas) y aplicar sus técnicas de análisis y síntesis.
-	 \item Codificar programas en lenguaje C/C++
-	 \item Aplicar las herramientas de \textit{debugging} y demás
+	\item Hay que saber manejar MUY BIEN el hexadecimal y el binario natural.
+	\item Hay que saber hacer divisores resistivos y circuitos de polarización de diodos y transistores (bipolares y FET)
+	\item Comprender los subsistemas combinacionales y secuenciales (incluyendo autómatas) y aplicar sus técnicas de análisis y síntesis.
+	\item Codificar programas en lenguaje C/C++
+	\item Aplicar las herramientas de \textit{debugging} y demás
 \end{itemize}
 
 Asistencia obligatoria.
 
 Materiales para el laboratorio
 \begin{itemize}
-	 \item Una o dos \textit{protoboards}.
-	 \item Una placa STM Nucleo-l432kc. Hay que desoldar un par de jumpers. Buscar en la foto.
-	 \item Un modelo concreto de sensor ultrasónico.
-	 \item Cable de pares 1 metro (evitar los cables Duppont).
-	 \item 3 LED
-	 \item 3 micropulsadores
-	 \item 2 displays de 7 segmentos
-	 \item 1 LDR
-	 \item Para el resto de los componentes, mirar las listas de las prácticas, en Moodle.
+	\item Una o dos \textit{protoboards}.
+	\item Una placa STM Nucleo-l432kc. Hay que desoldar un par de jumpers. Buscar en la foto.
+	\item Un modelo concreto de sensor ultrasónico.
+	\item Cable de pares 1 metro (evitar los cables Duppont).
+	\item 3 LED
+	\item 3 micropulsadores
+	\item 2 displays de 7 segmentos
+	\item 1 LDR
+	\item Para el resto de los componentes, mirar las listas de las prácticas, en Moodle.
 \end{itemize}
 
 \subsubsection{Lista de tareas} \vspace{\parskip}
 \begin{enumerate}
-	 \item Ir instalando los programas para las prácticas.
-	 \item Descargar libros de bibliografía.
-	 \item Comprar material.
+	\item Ir instalando los programas para las prácticas.
+	\item Descargar libros de bibliografía.
+	\item Comprar material.
 \end{enumerate}
 \newpage
 
 % Índice (TOC)
 \setlength{\parskip}{0em}
-\tableofcontents 
+\tableofcontents
 \setlength{\parskip}{0.5em}
 
 %%% INICIO DE LOS APUNTES %%%
@@ -153,11 +153,11 @@ El output enable (OEn) es una entrada que proporciona permiso para obtener la le
 
 En esta asignatura, los datos van a ser denominados \textbf{palabras}.
 \begin{itemize}
-	 \item $n \equiv $ número de registros
-	 \item $p \equiv $ anchura del bus de direcciones $\left( n=2^p \right)$
-	 \item $q \equiv $ tamaño en bits de cada palabra
-	 \item Organización: $n\times q$. Ejemplo: \verb|32x64|
-	 \item Capacidad: $n\cdot q$. Ejemplo: $32 \cdot 64 = 2048$ palabras
+	\item $n \equiv $ número de registros
+	\item $p \equiv $ anchura del bus de direcciones $\left( n=2^p \right)$
+	\item $q \equiv $ tamaño en bits de cada palabra
+	\item Organización: $n\times q$. Ejemplo: \verb|32x64|
+	\item Capacidad: $n\cdot q$. Ejemplo: $32 \cdot 64 = 2048$ palabras
 \end{itemize}
 
 \subsection{Símbolo}
@@ -170,23 +170,23 @@ FALTA AÑADIR IMÁGENES
 
 Son registros con algunas diferencias.
 \begin{itemize}
-	 \item No emplean flip-flops para almacenar la información. Permiten almacenar mucha más información que los bancos de registros.
-	 \item Muchas veces son asíncronas, careciendo de reloj y de puerto de inicialización síncrona.
+	\item No emplean flip-flops para almacenar la información. Permiten almacenar mucha más información que los bancos de registros.
+	\item Muchas veces son asíncronas, careciendo de reloj y de puerto de inicialización síncrona.
 \end{itemize}
 
 Sin embargo, comparten bastantes características:
 \begin{itemize}
-	 \item Los conceptos de organización y capacidad son idénticos.
-	 \item Existen variantes con buses separados, doble puerto...
+	\item Los conceptos de organización y capacidad son idénticos.
+	\item Existen variantes con buses separados, doble puerto...
 \end{itemize}
 
 \subsubsection{Pasos a seguir para escribir una palabra en la memoria}
 \begin{enumerate}
-	 \item Poner la dirección a la que quieres acceder.
-	 \item Poner el dato que quieres escribir.
-	 \item Habilitar la memoria.
-	 \item Decirle que NO vas a leer. Esto es obligatorio.
-	 \item Siempre tiene que haber un flanco de subida para escribir el dato, porque las memorias son asíncronas. La escritura sucede durante el flanco.
+	\item Poner la dirección a la que quieres acceder.
+	\item Poner el dato que quieres escribir.
+	\item Habilitar la memoria.
+	\item Decirle que NO vas a leer. Esto es obligatorio.
+	\item Siempre tiene que haber un flanco de subida para escribir el dato, porque las memorias son asíncronas. La escritura sucede durante el flanco.
 \end{enumerate}
 
 \subsection{Características}
@@ -210,7 +210,7 @@ La información puede perderse al poco tiemo de ser almacenada y necesitas un re
 
 \begin{figure}[t!]
 	\centering
-		\includegraphics[width=\linewidth]{./Imágenes/Memories.png}
+	\includegraphics[width=\linewidth]{./Imágenes/Memories.png}
 \end{figure}
 
 CAMBIAR ESTA LISTA POR UN ESQUEMA
@@ -223,9 +223,9 @@ Cantidad de información (bits) que puede almacenar.
 Tiempo que transcurre desde que se pide un dato a la memoria hasta que esta lo entrega.
 
 \begin{itemize}
-	 \item \textbf{Tiempo de acceso (ta)}
-	 \item \textbf{Capacidad de almacenamiento}
-	 \item \textbf{Coste por bit:} Precio de la memoria dividido entre su capacidad en bits
+	\item \textbf{Tiempo de acceso (ta)}
+	\item \textbf{Capacidad de almacenamiento}
+	\item \textbf{Coste por bit:} Precio de la memoria dividido entre su capacidad en bits
 \end{itemize}
 
 Estas tres características están relacionadas.
@@ -308,7 +308,7 @@ Existen problemas que no pueden ser resueltos mediante sistemas combinacionales.
 
 \section{Entrada/Salida}
 
-Si se requiere que un procesador se comunique con el exterior, este lo hará a través de los \textbf{periféricos}. 
+Si se requiere que un procesador se comunique con el exterior, este lo hará a través de los \textbf{periféricos}.
 
 Los \textbf{microcontroladores} son los chips que contienen procesador, memoria y periféricos.
 

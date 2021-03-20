@@ -17,15 +17,15 @@
 
 % Marca de agua
 \AddToShipoutPictureFG{
-\begin{tikzpicture}[overlay,remember picture]
-\path (current page.south west) -- (current page.north east)
- node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
-\end{tikzpicture}
+	\begin{tikzpicture}[overlay,remember picture]
+		\path (current page.south west) -- (current page.north east)
+		node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+	\end{tikzpicture}
 }
 
 % Logotipos UPM y ETSIST
 \begin{figure}[t!]
-\centering
+	\centering
 	\begin{subfigure}[b]{0.65\linewidth}
 		\includegraphics[width=\linewidth]{../../Archivos comunes/upm_logo.png}
 	\end{subfigure}
@@ -44,7 +44,7 @@ Imagen de la portada: \textsl{Saturno devorando a su hijo}, de Franciso de Goya.
 
 % Índice (TOC)
 \setlength{\parskip}{0em}
-\tableofcontents 
+\tableofcontents
 \setlength{\parskip}{0.5em}
 
 %%% INICIO DE LOS APUNTES %%%

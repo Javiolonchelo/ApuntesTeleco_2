@@ -69,15 +69,15 @@ Las señales se pueden clasificar en:
 \subsection{Propiedades de las señales}
 Las señales, tanto las continuas como las discretas, son caracterizadas por unas ciertas propiedades:
 \begin{enumerate}
-\item \textbf{Simetría:} Una señal puede ser par, si $x(-t) = x(t)$; o impar, si $x(-t) = -x(t)$. Ten en cuenta que, para que haya simetría impar, se tiene que cumplir que $x(0) = 0$.
-\item \textbf{Periodicidad:} Una señal es periódica si se repite cada cierto tiempo $T$, al cual llamamos \emph{periodo}. Matemáticamente: \[x(t) = x(t+T) \ \forall t \qquad T \in \mathbb{R}\]
-\item \textbf{Causalidad:} \begin{itemize}
-\item En tiempo continuo, una señal es causal si $x(t) = 0 \quad \forall t < 0$.
-\item En tiempo discreto, una señal es causal si $x[n] = 0 \quad \forall n<0$.
-\end{itemize}
-\begin{nota}
-La definición que hemos visto de causalidad solo nos sirve para las señales. Más adelante, veremos que la causalidad para sistemas se define de forma diferente.
-\end{nota}
+	\item \textbf{Simetría:} Una señal puede ser par, si $x(-t) = x(t)$; o impar, si $x(-t) = -x(t)$. Ten en cuenta que, para que haya simetría impar, se tiene que cumplir que $x(0) = 0$.
+	\item \textbf{Periodicidad:} Una señal es periódica si se repite cada cierto tiempo $T$, al cual llamamos \emph{periodo}. Matemáticamente: \[x(t) = x(t+T) \ \forall t \qquad T \in \mathbb{R}\]
+	\item \textbf{Causalidad:} \begin{itemize}
+		      \item En tiempo continuo, una señal es causal si $x(t) = 0 \quad \forall t < 0$.
+		      \item En tiempo discreto, una señal es causal si $x[n] = 0 \quad \forall n<0$.
+	      \end{itemize}
+	      \begin{nota}
+		      La definición que hemos visto de causalidad solo nos sirve para las señales. Más adelante, veremos que la causalidad para sistemas se define de forma diferente.
+	      \end{nota}
 \end{enumerate}
 
 
@@ -182,9 +182,9 @@ Puedes ver la representación de estas señales en la \autoref{fig:señales_refl
 El cambio de escala de una señal se consigue multiplicando la variable independiente de la misma por una constante $\lambda \in \mathbb{R}$ , tal que:
 
 \[\left\{ \begin{array}{l c l}
-\textrm{Si } \lambda > 1 & \longrightarrow & \textrm{Operación de compresión} \\
-\textrm{Si } \lambda < 1 & \longrightarrow & \textrm{Operación de expansión}
-\end{array} \right.
+		\textrm{Si } \lambda > 1 & \longrightarrow & \textrm{Operación de compresión} \\
+		\textrm{Si } \lambda < 1 & \longrightarrow & \textrm{Operación de expansión}
+	\end{array} \right.
 \]
 
 \begin{ejemplo}
@@ -221,11 +221,11 @@ Puedes ver la representación de estas señales en la \autoref{fig:cambio_de_esc
 
 La operación del cambio de escala no es reversible en señales discretas. Por eso mismo, diferenciamos dos operaciones diferentes:
 \begin{enumerate}
-\item \textbf{Operación de diezmado:} Es equivalente a comprimir la señal. Necesariamente se pierde información en este proceso, ya que habrá ciertas muestras de la señal ($t=1$, por ejemplo) que acabarán en lugares donde, por ser una señal discreta, no puede haber información ($t=0.5$, ya que $0.5 \not \in \mathbb{Z}$).
-\item \textbf{Operación de interpolación:} Equivale a expandir la señal. Aquellas partes de la señal donde se perdió información durante el diezmado (o donde simplemente no había) ahora reaparecen como muestras de valor 0. Matemáticamente, se define como: \[y[n] \left\{ \begin{matrix*}[l]
-x\left[ \frac{n}{2} \right] & \text{si } n \text{ es par} \\
-0 & \text{si } n \text{ es impar}
-\end{matrix*} \right. \]
+	\item \textbf{Operación de diezmado:} Es equivalente a comprimir la señal. Necesariamente se pierde información en este proceso, ya que habrá ciertas muestras de la señal ($t=1$, por ejemplo) que acabarán en lugares donde, por ser una señal discreta, no puede haber información ($t=0.5$, ya que $0.5 \not \in \mathbb{Z}$).
+	\item \textbf{Operación de interpolación:} Equivale a expandir la señal. Aquellas partes de la señal donde se perdió información durante el diezmado (o donde simplemente no había) ahora reaparecen como muestras de valor 0. Matemáticamente, se define como: \[y[n] \left\{ \begin{matrix*}[l]
+			      x\left[ \frac{n}{2} \right] & \text{si } n \text{ es par} \\
+			      0 & \text{si } n \text{ es impar}
+		      \end{matrix*} \right. \]
 \end{enumerate}
 
 Puedes ver los cambios de escala de las señales discretas en la \autoref{fig:cambio_de_escala_discreto}.
@@ -266,56 +266,56 @@ A veces, puede que tratemos con señales que resulten tener energía infinita. E
 
 {\centering
 
-\underline{En tiempo \textbf{continuo}}
-\begin{multicols}{2}
-$\boxed{\text{Señal periódica}}$
-\[P_x=\frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}{\abs{x(t)}^2\dd t}\]
-$\boxed{\text{Señal no periódica}}$
-\[P_x=\lim_{T \to \infty}{\left( \frac{1}{T}\int^{\frac{T}{2}}_{-\frac{T}{2}}{\abs{x(t)}^2\dd t} \right)}\]
-\end{multicols}
+	\underline{En tiempo \textbf{continuo}}
+	\begin{multicols}{2}
+		$\boxed{\text{Señal periódica}}$
+		\[P_x=\frac{1}{T}\int_{-\frac{T}{2}}^{\frac{T}{2}}{\abs{x(t)}^2\dd t}\]
+		$\boxed{\text{Señal no periódica}}$
+		\[P_x=\lim_{T \to \infty}{\left( \frac{1}{T}\int^{\frac{T}{2}}_{-\frac{T}{2}}{\abs{x(t)}^2\dd t} \right)}\]
+	\end{multicols}
 
-\underline{En tiempo \textbf{discreto}}
-\begin{multicols}{2}
-$\boxed{\text{Señal periódica}}$
-\[P_x=\frac{1}{N}\sum_{n=N}{\abs{x[t]}^2}\]
-$\boxed{\text{Señal no periódica}}$
-\[P_x=\lim_{N \to \infty}{\left( \frac{1}{2N}\sum^{N-1}_{n=-N}{\abs{x[n]}^2} \right) }\]
-\end{multicols}}
+	\underline{En tiempo \textbf{discreto}}
+	\begin{multicols}{2}
+		$\boxed{\text{Señal periódica}}$
+		\[P_x=\frac{1}{N}\sum_{n=N}{\abs{x[t]}^2}\]
+		$\boxed{\text{Señal no periódica}}$
+		\[P_x=\lim_{N \to \infty}{\left( \frac{1}{2N}\sum^{N-1}_{n=-N}{\abs{x[n]}^2} \right) }\]
+	\end{multicols}}
 
 
 \subsection{Señales destacadas}
 \subsubsection{Señal escalón}
 La señal escalón se define de la siguiente manera:
 \begin{multicols}{2}
-\centering
-En tiempo \textbf{continuo}
-\[u(t) = \left\{ \begin{matrix*}[l]
-1 & \text{si }t\geq 0 \\[5pt]
-0 & \text{si }t <0
-\end{matrix*} \right.\]
+	\centering
+	En tiempo \textbf{continuo}
+	\[u(t) = \left\{ \begin{matrix*}[l]
+			1 & \text{si }t\geq 0 \\[5pt]
+			0 & \text{si }t <0
+		\end{matrix*} \right.\]
 
-En tiempo \textbf{discreto}
-\[u[n] = \left\{ \begin{matrix*}[l]
-1 & \text{si }n\geq 0 \\[5pt]
-0 & \text{si }n <0
-\end{matrix*} \right.\]
+	En tiempo \textbf{discreto}
+	\[u[n] = \left\{ \begin{matrix*}[l]
+			1 & \text{si }n\geq 0 \\[5pt]
+			0 & \text{si }n <0
+		\end{matrix*} \right.\]
 \end{multicols}
 
 \subsubsection{Señal impulso}
 La señal impulso se define de la siguiente manera:
 \begin{multicols}{2}
-\centering
-En tiempo \textbf{continuo} (delta de Dirac)
-\[\delta (t) = \left\{ \begin{matrix*}[l]
-\infty & \text{si }t = 0 \\[5pt]
-0 & \text{si }t \not = 0
-\end{matrix*} \right.\]
+	\centering
+	En tiempo \textbf{continuo} (delta de Dirac)
+	\[\delta (t) = \left\{ \begin{matrix*}[l]
+			\infty & \text{si }t = 0 \\[5pt]
+			0 & \text{si }t \not = 0
+		\end{matrix*} \right.\]
 
-En tiempo \textbf{discreto} (delta de Kronecker)
-\[\delta [n] = \left\{ \begin{matrix*}[l]
-1 & \text{si }n = 0 \\[5pt]
-0 & \text{si }n \not = 0
-\end{matrix*} \right.\]
+	En tiempo \textbf{discreto} (delta de Kronecker)
+	\[\delta [n] = \left\{ \begin{matrix*}[l]
+			1 & \text{si }n = 0 \\[5pt]
+			0 & \text{si }n \not = 0
+		\end{matrix*} \right.\]
 \end{multicols}
 
 En realidad, en tiempo continuo se puede definir de una manera bastante más intuitiva. Si consideramos la señal escalón $u_\Delta (t)$ como la señal representada en la \autoref{subfig:escalon}, entonces podemos definir la señal impulso como: \[\delta _\Delta (t) = \dv{t} u_\Delta (t)\]
@@ -339,9 +339,9 @@ En realidad, en tiempo continuo se puede definir de una manera bastante más int
 \end{figure}
 
 Puedes ver la señal impulso en la \autoref{subfig:impulso}. Analíticamente, quedaría de esta forma: \[\delta _{\Delta}(t) = \left\{ \begin{matrix}
-\dfrac{1}{\Delta} &  & \text{si }0<t<\Delta \\[12pt]
-0                 &  & \text{en otro caso}
-\end{matrix} \right.\]
+		\dfrac{1}{\Delta} &  & \text{si }0<t<\Delta \\[12pt]
+		0                 &  & \text{en otro caso}
+	\end{matrix} \right.\]
 
 Si nos fijamos, podemos notar que el área que encierra $\delta _\Delta (t)$ se puede calcular como el área de un rectángulo: base por altura. Es decir, \[A= \Delta\cdot \frac{1}{\Delta} = 1 \qquad \forall \Delta \in \mathbb{R} -\left\{ 0 \right\} \]
 
@@ -384,9 +384,9 @@ Sean $A,\alpha ,\beta \in \mathbb{C}$ de modo que $\alpha = e^\beta $, entonces 
 
 Se puede distinguir entre:
 \begin{enumerate}
-\item Secuencia exponencial real: $A, \alpha \in \mathbb{R}$
-\item Secuencia sinusoidal: $\abs{\alpha} = 1 \longrightarrow \alpha = e^{j\Omega}$
-\item Secuencia con oscilaciones de amplitud variable: $\abs{\alpha} \not =1,\ \Im(\alpha) \not =0$
+	\item Secuencia exponencial real: $A, \alpha \in \mathbb{R}$
+	\item Secuencia sinusoidal: $\abs{\alpha} = 1 \longrightarrow \alpha = e^{j\Omega}$
+	\item Secuencia con oscilaciones de amplitud variable: $\abs{\alpha} \not =1,\ \Im(\alpha) \not =0$
 \end{enumerate}
 
 \subsubsection{Señal sinusoidal discreta}
@@ -411,55 +411,55 @@ Podemos expresar la relación entre la entrada y la salida como una expresión m
 
 \subsection{Propiedades de los sistemas}
 \begin{itemize}
-\item \textbf{Linealidad}
+	\item \textbf{Linealidad}
 
-Se refiere a la \textbf{proporcionalidad} del sistema.
+	      Se refiere a la \textbf{proporcionalidad} del sistema.
 
-Teniéndose dos entradas $x_1(t)$ y $x_2(t)$, y sus correspondientes salidas $y_1(t)$ e $y_2(t)$, si consideramos una tercera señal $x_3(t)$ que sea una combinación lineal de las otras dos entradas, la salida $y_3(t)$ será también una combinación lineal de las salidas $y_1(t)$ e $y_2(t)$.
+	      Teniéndose dos entradas $x_1(t)$ y $x_2(t)$, y sus correspondientes salidas $y_1(t)$ e $y_2(t)$, si consideramos una tercera señal $x_3(t)$ que sea una combinación lineal de las otras dos entradas, la salida $y_3(t)$ será también una combinación lineal de las salidas $y_1(t)$ e $y_2(t)$.
 
-Es decir: \[\text{Si } x_3(t) = ax_1(t) + bx_2(t) , \text{ entonces: }\ y_3(t) = y_3(t) = ay_1(t) + by_2(t) \qquad a,b\in \mathbb{R}\]
+	      Es decir: \[\text{Si } x_3(t) = ax_1(t) + bx_2(t) , \text{ entonces: }\ y_3(t) = y_3(t) = ay_1(t) + by_2(t) \qquad a,b\in \mathbb{R}\]
 
-\item \textbf{Invarianza en el tiempo}
+	\item \textbf{Invarianza en el tiempo}
 
-Un sistema es invariante en el tiempo si, como su propio título indica, el instante en el que la señal es procesada no afecta a la salida.
+	      Un sistema es invariante en el tiempo si, como su propio título indica, el instante en el que la señal es procesada no afecta a la salida.
 
-Siendo $y(t)$ la salida correspondiente a la entrada $x(t)$, la invarianza en el tiempo también se puede expresar como: \[x(t)= x_o(t-t_0) \ \Longrightarrow \ y(t)=y_0(t-t_0) \qquad \forall x_0(t), t_0\]
-
-
-\item \textbf{Causalidad}
-
-Un sistema es \textbf{causal} (también llamado \textsl{no anticipativo}) si la salida depende únicamente del estado actual del circuito o de estados pasados.
-
-\underline{\textbf{Ejemplos:}}
-\begin{itemize}
-\item Un sistema causal es $y[n] = x[n-3]$.
-\item Un sistema no causal es $y[n] = x[-n]$
-\end{itemize}
-
-\item \textbf{Memoria}
-
-En un sistema \textbf{sin memoria}, la salida únicamente depende del estado actual del sistema. Por el contrario, en un sistema \textbf{con memoria}, la salida puede depender de situaciones pasadas o futuras del sistema.
-
-Es decir, un sistema con relación entrada-salida $y(t) = 3x(t)$ no tiene memoria, pero uno con relación $y(t) = x(t-3)$ sí que tiene memoria.
-
-\item \textbf{Estabilidad}
-
-Se dice que un sistema es estable si para cualquier entrada acotada, la salida también es acotada.
-\begin{itemize}
-\item Si tomamos como ejemplo el sistema con relación entrada-salida $y(t) = tx(t)$, podemos asignar un valor arbitrario para $x(t)$ y observar si la salida está limitada. \[x(t) = 1 \qquad \Longrightarrow \qquad y(t) = t\]
-
-Vemos que la salida puede crecer de forma ilimitada, por lo que este sistema no es estable.
-\item Si, por otra parte, tomamos el sistema con relación $y(t) = e^{x(t)}$, podemos verificar su estabilidad asignando un valor límite de $x(t)$, de modo que: \[\abs{x(t)} < k \qquad \Longrightarrow \qquad \abs{y(t)} < e^k\]
-
-Y vemos que la salida, al igual que la entrada, también está acotada. Así podemos afirmar que el sistema es estable.
-\end{itemize}
+	      Siendo $y(t)$ la salida correspondiente a la entrada $x(t)$, la invarianza en el tiempo también se puede expresar como: \[x(t)= x_o(t-t_0) \ \Longrightarrow \ y(t)=y_0(t-t_0) \qquad \forall x_0(t), t_0\]
 
 
-\item \textbf{Invertibilidad}
+	\item \textbf{Causalidad}
 
-En un sistema \textbf{invertible}, se puede determinar unívocamente qué entrada hubo según la salida que obtenemos.
+	      Un sistema es \textbf{causal} (también llamado \textsl{no anticipativo}) si la salida depende únicamente del estado actual del circuito o de estados pasados.
 
-Un sistema que cumple $y(t) = x^2(t)$ no es invertible, ya que no podemos saber qué signo hubo a la entrada solamente mirando en la salida. Por su parte, $y(t) = 2x(t)$ sí que es invertible, de modo que el sistema inverso resulta $w(t) = \frac{1}{2}y(t)$. \[w \left[ x(t) \right] = \frac{1}{2}\,  y\left[ x(t) \right] = \frac{1}{2}\, 2\, x(t) = x(t) \quad \longrightarrow \quad \boxed{ w \left[ x(t) \right] = x(t)}\]
+	      \underline{\textbf{Ejemplos:}}
+	      \begin{itemize}
+		      \item Un sistema causal es $y[n] = x[n-3]$.
+		      \item Un sistema no causal es $y[n] = x[-n]$
+	      \end{itemize}
+
+	\item \textbf{Memoria}
+
+	      En un sistema \textbf{sin memoria}, la salida únicamente depende del estado actual del sistema. Por el contrario, en un sistema \textbf{con memoria}, la salida puede depender de situaciones pasadas o futuras del sistema.
+
+	      Es decir, un sistema con relación entrada-salida $y(t) = 3x(t)$ no tiene memoria, pero uno con relación $y(t) = x(t-3)$ sí que tiene memoria.
+
+	\item \textbf{Estabilidad}
+
+	      Se dice que un sistema es estable si para cualquier entrada acotada, la salida también es acotada.
+	      \begin{itemize}
+		      \item Si tomamos como ejemplo el sistema con relación entrada-salida $y(t) = tx(t)$, podemos asignar un valor arbitrario para $x(t)$ y observar si la salida está limitada. \[x(t) = 1 \qquad \Longrightarrow \qquad y(t) = t\]
+
+		            Vemos que la salida puede crecer de forma ilimitada, por lo que este sistema no es estable.
+		      \item Si, por otra parte, tomamos el sistema con relación $y(t) = e^{x(t)}$, podemos verificar su estabilidad asignando un valor límite de $x(t)$, de modo que: \[\abs{x(t)} < k \qquad \Longrightarrow \qquad \abs{y(t)} < e^k\]
+
+		            Y vemos que la salida, al igual que la entrada, también está acotada. Así podemos afirmar que el sistema es estable.
+	      \end{itemize}
+
+
+	\item \textbf{Invertibilidad}
+
+	      En un sistema \textbf{invertible}, se puede determinar unívocamente qué entrada hubo según la salida que obtenemos.
+
+	      Un sistema que cumple $y(t) = x^2(t)$ no es invertible, ya que no podemos saber qué signo hubo a la entrada solamente mirando en la salida. Por su parte, $y(t) = 2x(t)$ sí que es invertible, de modo que el sistema inverso resulta $w(t) = \frac{1}{2}y(t)$. \[w \left[ x(t) \right] = \frac{1}{2}\,  y\left[ x(t) \right] = \frac{1}{2}\, 2\, x(t) = x(t) \quad \longrightarrow \quad \boxed{ w \left[ x(t) \right] = x(t)}\]
 
 \end{itemize}
 
@@ -478,8 +478,8 @@ Una señal discreta $x[n]$ puede ser representada como una combinación de seña
 
 Por ello, una misma señal puede ser representada de dos formas. Por ejemplo:
 \begin{align*}
-	x[n] &= u[n] - u[n-3]
-	x[n] &= \delta[n] + \delta[n-1] + \delta[n-2] 
+	x[n] & = u[n] - u[n-3]
+	x[n] & = \delta[n] + \delta[n-1] + \delta[n-2]
 \end{align*}
 
 Puedes ver la representación de esta señal en la \autoref{fig:aav}.
@@ -505,7 +505,7 @@ Si introducimos la señal impulso como entrada en un sistema, obtenemos una sali
 
 Entonces, tenemos que la relación entrada-salida del sistema viene dada por la \textbf{integral (o suma) de convolución}, y es:
 \begin{align*}
-	\text{Tiempo discreto: } & \qquad \boxed{y[n]=x[n]*h[n]=\sum^{\infty}_{m=-\infty}{x[k]h[n-k]}}    \\
+	\text{Tiempo discreto: } & \qquad \boxed{y[n]=x[n]*h[n]=\sum^{\infty}_{m=-\infty}{x[k]h[n-k]}}                \\
 	\text{Tiempo continuo: } & \qquad \boxed{y(t)=x(t)*h(t)=\int^{\infty}_{-\infty}{x(\tau )h(t-\tau )}\dd \tau }
 \end{align*}
 
@@ -554,114 +554,114 @@ Ahora podríamos pensar que, por la definición de la convolución discreta, deb
 Tienes que seguir estos pasos:
 
 \begin{enumerate}
-\item Calcular el \textbf{instante inicial} de $y[n]$ (el primer valor de $n$ para el cual la salida será no nula). Este será la suma de los instantes iniciales de las señales a convolucionar.
+	\item Calcular el \textbf{instante inicial} de $y[n]$ (el primer valor de $n$ para el cual la salida será no nula). Este será la suma de los instantes iniciales de las señales a convolucionar.
 
-En este caso, $h[n]$ empieza en $n=-1$. Si miramos $x[n]$, vemos que también empieza en $n=-1$.
+	      En este caso, $h[n]$ empieza en $n=-1$. Si miramos $x[n]$, vemos que también empieza en $n=-1$.
 
-Por lo tanto, el instante inicial de $y[n]$ será: \[n_0\footnotemark = (-1)+(-1) = -2\]
-\footnotetext{Llamar $n_0$ al instante inicial de la señal no es ninguna notación concreta. Puede que no sea la forma más adecuada de nombrarlo, pero es la que se me ha ocurrido.}
+	      Por lo tanto, el instante inicial de $y[n]$ será: \[n_0\footnotemark = (-1)+(-1) = -2\]
+	      \footnotetext{Llamar $n_0$ al instante inicial de la señal no es ninguna notación concreta. Puede que no sea la forma más adecuada de nombrarlo, pero es la que se me ha ocurrido.}
 
-\item \textbf{Realizar la pseudo-multiplicación.} La llamo así porque se parece bastante a una multiplicación de toda la vida, pero con la diferencia de que . Primero, vamos a escribir las señales de una forma más cómoda: \[\left\lbrace \begin{matrix*}[l]
-x[k] &=& [\begin{matrix} 1 & \underline{1}& 1 &2 \end{matrix} ]\\[5pt]
-h[n-k] &=& [\begin{matrix} 1 & \underline{1}& 1 \end{matrix} ]
-\end{matrix*} \right. \qquad (\text{la línea indica el valor para }n=0)\]
+	\item \textbf{Realizar la pseudo-multiplicación.} La llamo así porque se parece bastante a una multiplicación de toda la vida, pero con la diferencia de que . Primero, vamos a escribir las señales de una forma más cómoda: \[\left\lbrace \begin{matrix*}[l]
+			      x[k] &=& [\begin{matrix} 1 & \underline{1}& 1 &2 \end{matrix} ]\\[5pt]
+			      h[n-k] &=& [\begin{matrix} 1 & \underline{1}& 1 \end{matrix} ]
+		      \end{matrix*} \right. \qquad (\text{la línea indica el valor para }n=0)\]
 
-Ahora, alinearemos el último elemento de $h[k]$ con el primero de $x[k]$. Debería quedar así:
-\[ \begin{array}{ccccccc}
-&   &               & 1 & \underline{1} & 1 & 2 \\
-\circledast & 1 & \underline{1} & 1 &               &   &   \\
-\hline
-\end{array}
-\begin{array}{|l}
-\sim x[k] \\
-\sim h[k]
-\end{array}\]
+	      Ahora, alinearemos el último elemento de $h[k]$ con el primero de $x[k]$. Debería quedar así:
+	      \[ \begin{array}{ccccccc}
+			                  &   &               & 1 & \underline{1} & 1 & 2 \\
+			      \circledast & 1 & \underline{1} & 1 &               &   &   \\
+			      \hline
+		      \end{array}
+		      \begin{array}{|l}
+			      \sim x[k] \\
+			      \sim h[k]
+		      \end{array}\]
 
-Después de esto, realizaremos la pseudo-multiplicación. Escogemos el primer número de $h[k]$ y lo multiplicamos por cada elemento de $x[k]$. Los colocamos como se muestra a continuación:
+	      Después de esto, realizaremos la pseudo-multiplicación. Escogemos el primer número de $h[k]$ y lo multiplicamos por cada elemento de $x[k]$. Los colocamos como se muestra a continuación:
 
-\[ \begin{array}{ccccccc}
-&                   &               & 1 & \underline{1} & 1 & 2 \\
-\circledast & \circledNumber{1} & \underline{1} & 1 &               &   &   \\
-\hline
-& 1                 & 1             & 1 & 2             &   &   \\
-&                   &               &   &               &   &   \\
-&                   &               &   &               &   &
-\end{array}
-\begin{array}{|l}
-\sim x[k]   \\
-\sim h[k]   \\
-\phantom{a} \\
-\phantom{a} \\
-\phantom{a}
-\end{array}\]
+	      \[ \begin{array}{ccccccc}
+			                  &                   &               & 1 & \underline{1} & 1 & 2 \\
+			      \circledast & \circledNumber{1} & \underline{1} & 1 &               &   &   \\
+			      \hline
+			                  & 1                 & 1             & 1 & 2             &   &   \\
+			                  &                   &               &   &               &   &   \\
+			                  &                   &               &   &               &   &
+		      \end{array}
+		      \begin{array}{|l}
+			      \sim x[k]   \\
+			      \sim h[k]   \\
+			      \phantom{a} \\
+			      \phantom{a} \\
+			      \phantom{a}
+		      \end{array}\]
 
-Repetimos con el segundo número:
+	      Repetimos con el segundo número:
 
-\[ \begin{array}{ccccccc}
-&   &                               & 1 & \underline{1} & 1 & 2 \\
-\circledast & 1 & \circledNumber{\underline{1}} & 1 &               &   &   \\
-\hline
-& 1 & 1                             & 1 & 2             &   &   \\
-&   & 1                             & 1 & 1             & 2 &   \\
-&   &                               &   &               &   &
-\end{array}
-\begin{array}{|l}
-\sim x[k]   \\
-\sim h[k]   \\
-\phantom{a} \\
-\phantom{a} \\
-\phantom{a}
-\end{array}\]
+	      \[ \begin{array}{ccccccc}
+			                  &   &                               & 1 & \underline{1} & 1 & 2 \\
+			      \circledast & 1 & \circledNumber{\underline{1}} & 1 &               &   &   \\
+			      \hline
+			                  & 1 & 1                             & 1 & 2             &   &   \\
+			                  &   & 1                             & 1 & 1             & 2 &   \\
+			                  &   &                               &   &               &   &
+		      \end{array}
+		      \begin{array}{|l}
+			      \sim x[k]   \\
+			      \sim h[k]   \\
+			      \phantom{a} \\
+			      \phantom{a} \\
+			      \phantom{a}
+		      \end{array}\]
 
-Y repetimos esto hasta haber hecho la multiplicación con todos los números de $h[n-k]$. Solo nos queda una última vez.
+	      Y repetimos esto hasta haber hecho la multiplicación con todos los números de $h[n-k]$. Solo nos queda una última vez.
 
-\[ \begin{array}{ccccccc}
-&   &               & 1                 & \underline{1} & 1 & 2 \\
-\circledast & 1 & \underline{1} & \circledNumber{1} &               &   &   \\
-\hline
-& 1 & 1             & 1                 & 2             &   &   \\
-&   & 1             & 1                 & 1             & 2 &   \\
-&   &               & 1                 & 1             & 1 & 2 \\
-\end{array}
-\begin{array}{|l}
-\sim x[k]   \\
-\sim h[k]   \\
-\phantom{a} \\
-\phantom{a} \\
-\phantom{a}
-\end{array}\]
+	      \[ \begin{array}{ccccccc}
+			                  &   &               & 1                 & \underline{1} & 1 & 2 \\
+			      \circledast & 1 & \underline{1} & \circledNumber{1} &               &   &   \\
+			      \hline
+			                  & 1 & 1             & 1                 & 2             &   &   \\
+			                  &   & 1             & 1                 & 1             & 2 &   \\
+			                  &   &               & 1                 & 1             & 1 & 2 \\
+		      \end{array}
+		      \begin{array}{|l}
+			      \sim x[k]   \\
+			      \sim h[k]   \\
+			      \phantom{a} \\
+			      \phantom{a} \\
+			      \phantom{a}
+		      \end{array}\]
 
-Para concluir esta operación, simplemente sumamos los términos en cada columna, y obtenemos la secuencia $y[n]$.
+	      Para concluir esta operación, simplemente sumamos los términos en cada columna, y obtenemos la secuencia $y[n]$.
 
-\[ \begin{array}{ccccccc}
-&            &               & 1          & \underline{1} & 1          & 2          \\
-\circledast & 1          & \underline{1} & 1          &               &            &            \\
-\hline
-& 1          & 1             & 1          & 2             &            &            \\
-&            & 1             & 1          & 1             & 2          &            \\
-+           &            &               & 1          & 1             & 1          & 2          \\
-\hline
-& \mathbf{1} & \mathbf{2}    & \mathbf{3} & \mathbf{4}    & \mathbf{3} & \mathbf{2} \\
-\end{array}
-\begin{array}{|l}
-\sim x[k]   \\
-\sim h[k]   \\
-\phantom{a} \\
-\phantom{a} \\
-\phantom{a} \\
-\mathbf{\sim y[n]}
-\end{array}\]
+	      \[ \begin{array}{ccccccc}
+			                  &            &               & 1          & \underline{1} & 1          & 2          \\
+			      \circledast & 1          & \underline{1} & 1          &               &            &            \\
+			      \hline
+			                  & 1          & 1             & 1          & 2             &            &            \\
+			                  &            & 1             & 1          & 1             & 2          &            \\
+			      +           &            &               & 1          & 1             & 1          & 2          \\
+			      \hline
+			                  & \mathbf{1} & \mathbf{2}    & \mathbf{3} & \mathbf{4}    & \mathbf{3} & \mathbf{2} \\
+		      \end{array}
+		      \begin{array}{|l}
+			      \sim x[k]   \\
+			      \sim h[k]   \\
+			      \phantom{a} \\
+			      \phantom{a} \\
+			      \phantom{a} \\
+			      \mathbf{\sim y[n]}
+		      \end{array}\]
 \end{enumerate}
 
 Para concluir, recordamos que el instante inicial de $y[n]$ era $n_0=-2$. Esto nos permite escribir la señal de salida como: \[y[n] = \mathbf{1}\delta (n+2) + \mathbf{2}\delta (n+1) + \mathbf{3}\delta (n) + \mathbf{4}\delta (n-1) + \mathbf{3}\delta (n-2) + \mathbf{2}\delta (n-3)\]
 
 \begin{figure}[!ht]
-\caption{}
-\label{fig:Problema_2_c}
-\centering
-\begin{subfigure}[b]{0.7\linewidth}
-\includegraphics[width=\linewidth]{./Imágenes/aaq.png}
-\end{subfigure}
+	\caption{}
+	\label{fig:Problema_2_c}
+	\centering
+	\begin{subfigure}[b]{0.7\linewidth}
+		\includegraphics[width=\linewidth]{./Imágenes/aaq.png}
+	\end{subfigure}
 \end{figure}
 
 \setlength{\leftskip}{0pt}
@@ -677,48 +677,48 @@ Al igual que antes, vamos a explicarlo mediante un ejercicio para saber desenvol
 
 \underline{\textbf{Problema  - Examen final del 2 de julio de 2015}}\\[\parskip]
 \begin{myenumerate}
-La respuesta al impulso de un sistema LTI es el resultado de la siguiente convolución:
-\[h(t) = u(t) \circledast \left( \delta (t+2) - \delta (t-1) \right)\]
-\item  Obtener el resultado de la convolución y representar gráficamente la señal $h(t)$.
-\item Representar gráficamente la siguiente señal:
-\[x_1(t) = \abs{t-1}\cdot \left( u(t+1) - u(t-1) \right)\]
+	La respuesta al impulso de un sistema LTI es el resultado de la siguiente convolución:
+	\[h(t) = u(t) \circledast \left( \delta (t+2) - \delta (t-1) \right)\]
+	\item  Obtener el resultado de la convolución y representar gráficamente la señal $h(t)$.
+	\item Representar gráficamente la siguiente señal:
+	\[x_1(t) = \abs{t-1}\cdot \left( u(t+1) - u(t-1) \right)\]
 
-\item Representar gráficamente la siguiente señal: \[x_2(t) = x_1(-t-2)-x_1\left( \frac{1}{2}t -1 \right)\]
+	\item Representar gráficamente la siguiente señal: \[x_2(t) = x_1(-t-2)-x_1\left( \frac{1}{2}t -1 \right)\]
 
-\item Calcular y representar gráficamente la salida $y(t)$ que proporciona el sistema de respuesta al impulso $h(t)$ cuando la señal de entrada es $x_1(t)$.
+	\item Calcular y representar gráficamente la salida $y(t)$ que proporciona el sistema de respuesta al impulso $h(t)$ cuando la señal de entrada es $x_1(t)$.
 \end{myenumerate}
 
 \vspace{\parskip}
 \textbf{Solución:}
 \begin{myenumerate}
-\item El resultado de este apartado es inmediato si recordamos la relación que tienen la señal impulso y la señal escalón (\ref{relacion_delta_escalon}).
-\[h(t) = u(t) \circledast \left[ \delta (t+2) - \delta (t-1) \right] = \boxed{u(t+2) - u(t-1)}\]
+	\item El resultado de este apartado es inmediato si recordamos la relación que tienen la señal impulso y la señal escalón (\ref{relacion_delta_escalon}).
+	\[h(t) = u(t) \circledast \left[ \delta (t+2) - \delta (t-1) \right] = \boxed{u(t+2) - u(t-1)}\]
 
-Solo nos queda representar $h(t)$:
-\begin{figure}[!ht]
-\caption{}
-\label{fig:Problema_1_a}
-\centering
-\begin{subfigure}[b]{0.7\linewidth}
-\includegraphics[width=\linewidth]{./Imágenes/aar.png}
-\end{subfigure}
-\end{figure}
-\item Recordemos la señal con la que trabajaremos: \[x_1(t) = \abs{t-1}\cdot \left( u(t+1) - u(t-1) \right)\]
+	Solo nos queda representar $h(t)$:
+	\begin{figure}[!ht]
+		\caption{}
+		\label{fig:Problema_1_a}
+		\centering
+		\begin{subfigure}[b]{0.7\linewidth}
+			\includegraphics[width=\linewidth]{./Imágenes/aar.png}
+		\end{subfigure}
+	\end{figure}
+	\item Recordemos la señal con la que trabajaremos: \[x_1(t) = \abs{t-1}\cdot \left( u(t+1) - u(t-1) \right)\]
 
-Si nos fijamos en las señales escalón, esta señal es no nula para $-1\leq t<1$. Viendo que tiene un valor absoluto, vamos a redefinirla como una función a trozos. Se puede comprobar fácilmente que la función a trozos quedará así:
-\[x_1(t) = \left\{ \begin{matrix*}[l]
-1-t	&& -1\leq t<1\\[5pt]
-0	&& \text{resto de casos}
-\end{matrix*} \right.\]
+	Si nos fijamos en las señales escalón, esta señal es no nula para $-1\leq t<1$. Viendo que tiene un valor absoluto, vamos a redefinirla como una función a trozos. Se puede comprobar fácilmente que la función a trozos quedará así:
+	\[x_1(t) = \left\{ \begin{matrix*}[l]
+			1-t	&& -1\leq t<1\\[5pt]
+			0	&& \text{resto de casos}
+		\end{matrix*} \right.\]
 
-\begin{figure}[!ht]
-\caption{}
-\label{fig:Problema_1_b}
-\centering
-\begin{subfigure}[b]{0.7\linewidth}
-\includegraphics[width=\linewidth]{./Imágenes/aau.png}
-\end{subfigure}
-\end{figure}
+	\begin{figure}[!ht]
+		\caption{}
+		\label{fig:Problema_1_b}
+		\centering
+		\begin{subfigure}[b]{0.7\linewidth}
+			\includegraphics[width=\linewidth]{./Imágenes/aau.png}
+		\end{subfigure}
+	\end{figure}
 
 \end{myenumerate}
 
@@ -730,9 +730,9 @@ Si nos fijamos en las señales escalón, esta señal es no nula para $-1\leq t<1
 \subsubsection{Propiedades de la suma de convolución}
 \vspace{\parskip}
 \begin{itemize}
-\item Propiedad \textbf{conmutativa}. \[x_1[n]*x_2[n]=[x_2[n]*x_1[n] \]
-\item Propiedad \textbf{asociativa} (interconexión en cascada).
-\item Propiedad \textbf{distributiva} (interconexión en paralelo).
+	\item Propiedad \textbf{conmutativa}. \[x_1[n]*x_2[n]=[x_2[n]*x_1[n] \]
+	\item Propiedad \textbf{asociativa} (interconexión en cascada).
+	\item Propiedad \textbf{distributiva} (interconexión en paralelo).
 \end{itemize}
 
 \section{Sistemas discretos lineales e invariantes}
@@ -756,8 +756,8 @@ Como vamos a tratar con sistemas LTI, podemos aplicar la propiedad de linealidad
 
 En el caso de señales discretas, podemos representar estas señales básicas como:
 \begin{align*}
-\phi_k[n]  & = \delta [n-k] \\
-\psi _k[n] & = h[n-k]
+	\phi_k[n]  & = \delta [n-k] \\
+	\psi _k[n] & = h[n-k]
 \end{align*}
 
 En el laboratorio, seguramente tengas que trabajar con estas señales en el entorno de MATLAB. Esta es la expresión general de una ecuación en diferencias:
@@ -768,14 +768,14 @@ En el laboratorio, seguramente tengas que trabajar con estas señales en el ento
 
 Sin embargo, para tener una señal básica que nos sirva en un caso general, vamos a tomar la \textbf{exponencial compleja}, ya que sus propiedades nos van a ser muy útiles a la hora de operar.
 \begin{align*}
-&  &  &  &  &  &  &  & \phi_k(t)  & = e^{s_kt} & s_k \equiv \text{nº complejo} &  &  &  &  &  &  &  & \\
-&  &  &  &  &  &  &  & \psi _k[n] & = z_k^n    & z_k \equiv \text{nº complejo} &  &  &  &  &  &  &  &
+	 &  &  &  &  &  &  &  & \phi_k(t)  & = e^{s_kt} & s_k \equiv \text{nº complejo} &  &  &  &  &  &  &  & \\
+	 &  &  &  &  &  &  &  & \psi _k[n] & = z_k^n    & z_k \equiv \text{nº complejo} &  &  &  &  &  &  &  &
 \end{align*}
 
 Veremos que al realizar un análisis de Fourier de estas señales, lo que en realidad estaremos haciendo es analizar las señales \textbf{en términos de exponenciales complejas}:
 \begin{align*}
-&  &  &  &  &  &  &  & s_k       & = j\omega_k & \longrightarrow  \phi_k(t) & = e^{j\omega_kt} &  &  &  &  &  &  &  & \\
-&  &  &  &  &  &  &  & \abs{z_k} & = 1         & \longrightarrow  \phi_k[n] & = e^{j\Omega_kn} &  &  &  &  &  &  &  &
+	 &  &  &  &  &  &  &  & s_k       & = j\omega_k & \longrightarrow  \phi_k(t) & = e^{j\omega_kt} &  &  &  &  &  &  &  & \\
+	 &  &  &  &  &  &  &  & \abs{z_k} & = 1         & \longrightarrow  \phi_k[n] & = e^{j\Omega_kn} &  &  &  &  &  &  &  &
 \end{align*}
 
 \section{Señales exponenciales complejas}
@@ -789,8 +789,8 @@ Entonces la salida que obtendremos es también una combinación lineal de expone
 
 Una vez tengamos las señales en términos de exponenciales complejas, podremos realizar una aproximación diferente según el tipo de señal:
 \begin{itemize}
-\item Para \textbf{señales periódicas}, estudiaremos las \hyperref[sec:Series_de_Fourier]{series de Fourier}.
-\item Para \textbf{señales no periódicas}, estudiaremos la \hyperref[sec:Transformada_de_Fourier]{transformada de Fourier}.
+	\item Para \textbf{señales periódicas}, estudiaremos las \hyperref[sec:Series_de_Fourier]{series de Fourier}.
+	\item Para \textbf{señales no periódicas}, estudiaremos la \hyperref[sec:Transformada_de_Fourier]{transformada de Fourier}.
 \end{itemize}
 
 
@@ -798,8 +798,8 @@ Una vez tengamos las señales en términos de exponenciales complejas, podremos 
 
 Como trataremos señales periódicas, teniendo una señal $x(t) = e^{j\omega_ot}$, sabemos que:
 \begin{align*}
-x(t) & = x\left( t-T_o \right) \\
-T_o  & = \frac{2\pi}{\omega_o}
+	x(t) & = x\left( t-T_o \right) \\
+	T_o  & = \frac{2\pi}{\omega_o}
 \end{align*}
 
 Lo que Fourier descubrió fue que es posible representar cualquier señal periódica como una combinación lineal de señales armónicamente relacionadas.
@@ -868,22 +868,22 @@ Dada una señal $x(t)$, se define su \textbf{transformada de Fourier} como: \[\b
 \section{Análisis de sistemas de tiempo discreto}
 La \textbf{función de transferencia} $H(z)$ de uns sistema LTI puede obtenerse de varias formas:
 \begin{enumerate}
-\item A partir de la transforma Z de su respuesta al impulso.
-\[H(z) = \text{TZ}\{ h[n]\} = \sum_{n=-\infty}^{\infty}h[n]z^{-n}\]
-\item A partir de las transformadas Z de las señales de entrada y de salida.
+	\item A partir de la transforma Z de su respuesta al impulso.
+	      \[H(z) = \text{TZ}\{ h[n]\} = \sum_{n=-\infty}^{\infty}h[n]z^{-n}\]
+	\item A partir de las transformadas Z de las señales de entrada y de salida.
 
-\begin{figure}[!ht]
-\centering
-\begin{tikzpicture}[auto,>=latex']
-\node [input, name=input] (input) {$X(z)$};
-\node [block, right of=input, node distance=2cm] (controller) {$\quad \begin{matrix} H(z) \\[5pt]\text{LTI} \end{matrix}\quad $};
-\node [output, right of=controller, node distance=4cm] (output) {};
+	      \begin{figure}[!ht]
+		      \centering
+		      \begin{tikzpicture}[auto,>=latex']
+			      \node [input, name=input] (input) {$X(z)$};
+			      \node [block, right of=input, node distance=2cm] (controller) {$\quad \begin{matrix} H(z) \\[5pt]\text{LTI} \end{matrix}\quad $};
+			      \node [output, right of=controller, node distance=4cm] (output) {};
 
-\draw [->] (input) -- node{$X(z)$} (controller);
-\draw [->] (controller) -- node{$Y(z) = X(z)\cdot  H(z)$} (output);
-\end{tikzpicture}
-\caption{}
-\end{figure}
+			      \draw [->] (input) -- node{$X(z)$} (controller);
+			      \draw [->] (controller) -- node{$Y(z) = X(z)\cdot  H(z)$} (output);
+		      \end{tikzpicture}
+		      \caption{}
+	      \end{figure}
 \end{enumerate}
 
 En la mayor parte de los casos, nos interesará conocer $H(z)$ como el cociente de dos polinomios.
@@ -894,7 +894,7 @@ Las raíces del denominador serán los polos del sistema y las raíces del numer
 \appendix
 \chapter{Ejercicios del Tema 1}
 \begin{ejercicio} \label{ej001}
-Se tiene una señal $x(t)$ (véase la figura ...) y se quiere construir una señal $y(t) =x(2t+2)$.
+	Se tiene una señal $x(t)$ (véase la figura ...) y se quiere construir una señal $y(t) =x(2t+2)$.
 \end{ejercicio}
 \textbf{Solución:} En este tipo de ejercicios, la primera operación que tenemos que aplicar es el desplazamiento. Luego aplicaremos el resto.
 
