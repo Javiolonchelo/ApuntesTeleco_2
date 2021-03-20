@@ -30,7 +30,7 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
   - Laboratorio
 
-    - [Práctica 1](/Primer%20Semestre/Señales%20y%20Sistemas/Prácticas\P1.pdf) - `Calificación: 10/10`
+    - [Práctica 1](/Primer%20Semestre/Señales%20y%20Sistemas/Prácticas/P1.pdf) - `Calificación: 10/10`
     - Práctica 2 - `Pendiente de calificación`
     - Práctica 3 - `Sin hacer`
 
