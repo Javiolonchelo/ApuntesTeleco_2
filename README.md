@@ -36,15 +36,13 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 ### Segundo Semestre
 
-- [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia_Tecnología_y_Sociedad.pdf) - `En progreso`
-
-  - [Lectura reflexiva de **_Un mundo feliz_**](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Libro/Libro.pdf) - `Pendiente de calificación`
+- [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia_Tecnología_y_Sociedad.pdf) - `Aún no comenzado`
 
 - [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos_de_Sonido_e_Imagen.pdf) - `En progreso`
 
 - [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `En progreso`
 
-- [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `En progreso`
+- [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `Aún no comenzado`
 
 - [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación_de_Ondas.pdf) - `Aún no comenzado`
 
