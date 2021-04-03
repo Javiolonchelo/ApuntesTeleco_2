@@ -38,11 +38,18 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 - [Ciencia, Tecnología y Sociedad](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Ciencia_Tecnología_y_Sociedad.pdf) - `En progreso`
 
-  - [Lectura reflexiva de **_Un mundo feliz_**](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Libro/Libro.pdf) - `Pendiente de calificación`
+  - Lectura reflexiva de [_Un mundo feliz_](/Segundo%20Semestre/Ciencia,%20Tecnología%20y%20Sociedad/Libro/Libro.pdf) - `Pendiente de calificación`
 
 - [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos_de_Sonido_e_Imagen.pdf) - `En progreso`
 
 - [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `En progreso`
+
+  - Exámenes resueltos
+
+    - **2020 L1**
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/2020_L1.pdf)
+      - [Mi solución](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR)
+      - _Resuelto con la plantilla L1 de Primavera 2021_ ([librerías necesarias](https://upm365-my.sharepoint.com/:f:/g/personal/javier_rlopez_alumnos_upm_es/EpW7P9KRDlVBgsVPUw5PH9EBGhpBp6NJuGo1V6DF1cdoHA?e=J99Tlo))
 
 - [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `En progreso`
 
