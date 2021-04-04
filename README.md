@@ -46,16 +46,16 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
   - Exámenes resueltos
 
+    - [Carpeta plantilla](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/CarpetasNecesarias.7z) (descargar y copiar en ella el contenido de cada hito)
+
     - **2020 L1**
 
       - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/2020_L1.pdf)
-      - [Mi solución](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR)
-      - _Resuelto con la plantilla L1 de Primavera 2021_ ([librerías necesarias](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/CarpetasNecesarias.7z))
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2019 L1**
       - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/2019_L1.pdf)
-      - [Mi solución](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR)
-      - _Resuelto con la plantilla L1 de Primavera 2021_ ([librerías necesarias](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/CarpetasNecesarias.7z))
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
 - [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `En progreso`
 
