@@ -32,11 +32,17 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 - [Señales y Sistemas](/Primer%20Semestre/Señales%20y%20Sistemas/Señales_y_Sistemas.pdf) - `En progreso`
 
-  - Laboratorio
+  - <details>
+    <summary>Laboratorio</summary>
+    <p>
+
+    - **_NOTA_**: A diferencia de muchas personas en esta asignatura, utilizo las **funciones anónimas** de MATLAB porque me facilitan mucho la resolución de las prácticas. Los profesores las dan por válidas (al menos el mío).
 
     - [Práctica 1](/Primer%20Semestre/Señales%20y%20Sistemas/Prácticas/P1/P1.pdf) - `Calificación: 10/10`
-    - Práctica 2 - `Pendiente de calificación`
+    - [Práctica 2](/Primer%20Semestre/Señales%20y%20Sistemas/Prácticas/P2/P2.pdf) - `Calificación: 10/10`, aunque parece que hay un pequeño fallo en el último ejercicio: Avisaré cuando esté solucionado.
     - Práctica 3 - `Sin hacer`
+    </p>
+    </details>
 
 ### Segundo Semestre
 
@@ -48,18 +54,24 @@ Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hac
 
 - [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `En progreso`
 
-  - Exámenes resueltos
+  - <details>
+    <summary>Exámenes resueltos</summary>
+    <p>
 
     - [Carpeta plantilla](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/CarpetasNecesarias.7z) (descargar y copiar en ella el contenido de cada hito)
+
+    - **2019 L1**
+
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/2019_L1.pdf)
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2020 L1**
 
       - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/2020_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
-    - **2019 L1**
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/2019_L1.pdf)
-      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
+    </p>
+    </details>
 
 - [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `En progreso`
 
