@@ -4,7 +4,6 @@
 \usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
 \usepackage{babelbib}
 \usepackage{nccmath}
-\usepackage[oldvoltagedirection]{circuitikz}
 \usepackage{amsthm}
 \usepackage{lipsum}
 \usepackage{tcolorbox}
@@ -13,23 +12,23 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{caption}
-\usepackage{subcaption}   
-\usepackage{color}       
-\usepackage{verbatim}     
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{verbatim}
 \usepackage{enumerate}
-\usepackage{geometry} 
+\usepackage{geometry}
 \geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
 \usepackage{isotope}
-\usepackage{maybemath} 
+\usepackage{maybemath}
 \usepackage{upgreek}
-\usepackage{wasysym} 
+\usepackage{wasysym}
 \usepackage[italic]{hepparticles}
 \usepackage{subdepth}
 \usepackage{physics}
 \usepackage{braket}
 \usepackage{tensor}
-\usepackage{chemformula} 
-\usepackage{tikz} \usetikzlibrary{babel}
+\usepackage{chemformula}
+\usepackage{tikz}
 \usepackage{siunitx}
 \usepackage{url}
 \usepackage{listings}
@@ -37,41 +36,43 @@
 \usepackage{multicol}
 \usepackage[colorlinks=true]{hyperref}
 \hypersetup{
-citecolor = blue,
-linkcolor = blue,
-urlcolor = blue,
-pdfauthor = {Javier Rodrigo López}
+	citecolor = blue,
+	linkcolor = blue,
+	urlcolor = blue,
+	pdfauthor = {Javier Rodrigo López}
 }
 \usepackage{eso-pic}
 \usepackage{siunitx}
 \sisetup{
-round-mode      = places,
-round-precision = 2,
+	round-mode      = places,
+	round-precision = 2,
 }
 
 % tikz
-\usepackage{tikz} \usetikzlibrary{fit,babel,shapes,arrows,positioning}
-\tikzstyle{block} = [draw, fill=white, rectangle, 
-    minimum height=3em, minimum width=6em]
+\usepackage{tikz} \usetikzlibrary{fit,babel,shapes,arrows,patterns,positioning,calc,decorations.pathmorphing,decorations.markings}
+\tikzstyle{block} = [draw, fill=white, rectangle,
+minimum height=3em, minimum width=6em]
 \tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
 \tikzstyle{input} = [coordinate]
 \tikzstyle{output} = [coordinate]
 \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 \tikzset{
-block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=3em},
-tmp/.style  = {coordinate}, 
-sum/.style= {draw, fill=white, circle, node distance=1cm},
-input/.style = {coordinate},
-output/.style= {coordinate},
-pinstyle/.style = {pin edge={to-,thin,black}}
+	block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=3em},
+	tmp/.style  = {coordinate},
+	sum/.style= {draw, fill=white, circle, node distance=1cm},
+	input/.style = {coordinate},
+	output/.style= {coordinate},
+	pinstyle/.style = {pin edge={to-,thin,black}}
 }
+
+\usepackage[oldvoltagedirection]{circuitikz}
 
 % Títulos
 \usepackage{titlesec}
 \titleformat{\section}
-	{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 \titleformat{\subsubsection}
-	{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
 \titlespacing{\section}{0pt}{2\parskip}{\parskip}
 \titlespacing{\subsection}{0pt}{\parskip}{0pt}
 \titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
@@ -106,16 +107,16 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 \usepackage{titling}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\setlength{\droptitle}{-10cm} 
+\setlength{\droptitle}{-10cm}
 \renewcommand{\chaptermark}[1]{%
-        \markboth{#1}{}}
+	\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{%
-\markright{}}
+	\markright{}}
 \fancyhf{}
 \fancyhead[LE,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[RE]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
- \fancypagestyle{plain}{%
-   \fancyhead{} 
-   \renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{%
+	\fancyhead{}
+	\renewcommand{\headrulewidth}{0pt}
 }
 
 % Organización del texto
@@ -212,7 +213,7 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 \newcommand{\repinf}[3]{
 	\foreach \uwu in {#2,...,#3}
 		{#1_{\uwu} ,}
-	\, \ldots 
+	\, \ldots
 }
 
 %%% FIN DEL PREÁMBULO %%%

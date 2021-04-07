@@ -97,9 +97,73 @@ Hay que sacar más de un 5 en cada parte.
 %%% INICIO DE LOS APUNTES %%%
 \chapter{Señales, sistemas y medidas acústicas. Revisión de conceptos}
 
+\section{Oscilaciones mecánicas}
+
+\begin{figure}[htp]
+	\centering
+	\caption{Oscilador simple.}
+	\begin{circuitikz}
+		\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.75cm,minimum height=0.3cm]
+		\node (wall) [ground, minimum width=3cm] {};
+		\draw (wall.south west) -- (wall.south east);
+		\draw (wall) to[spring, l = $k$](0,-2);
+		\draw (-1,-2) rectangle (1,-3) node[pos=.5] {M};
+	\end{circuitikz}
+\end{figure}
+
 De la segunda Ley de Newton, podemos obtener la ecuación de ondas:
 
-\[ \sum F 0 M\cdot a \qquad \Longrightarrow \qquad M \dv[2]{x}{t} + kx = 0 \]
+\[ \sum F = M\cdot a \qquad \Longrightarrow \qquad M \dv[2]{x}{t} + kx = 0 \]
+
+Recordemos el oscilador armónico simple, que es descrito mediante la \textbf{Ley de Hooke}:
+
+\[ F = - k x \]
+
+Esta ecucación describe un movimiento sin amortiguamiento, perpetuo.
+
+Si resolvemos la ecuación de ondas, el resultado tiene la siguiente forma:
+\[ \boxed{x(t) = x_o \cos \left( \omega _o t + \varphi \right) } \]
+
+Este resultado se puede entender como la respuesta al impulso del sistema mecánico. En la práctica, usaremos señales rectangulares muy grandes y de duración muy corta para modelar el sistema, como si fueran señales impulso $\delta (t)$. Más adelante aprenderemos a hacer esto.
+
+Algunos parámetros importantes:
+
+\begin{align*}
+	\omega_o & = 2 \pi \cdot f_o = \sqrt{\frac{k}{M}}  \\
+	T_o      & = \frac{1}{f_o} = \frac{2\pi}{\omega_o}
+\end{align*}
+
+\section{MAS amortiguado en régimen libre}
+
+Si añadimos amortiguación a este movimiento, el resultado tendría la misma forma que antes, pero con una exponencial negativa que hace que decrezca en amplitud con el paso del tiempo.
+
+\begin{figure}[htp]
+	\centering
+	\caption{Oscilador con 1 grado de libertad.}
+	\begin{circuitikz}
+		\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=3cm,minimum height=0.3cm]
+		\node (wall) [ground, minimum width=3cm] {};
+		\draw (wall.south west) -- (wall.south east);
+		\draw (wall.south west) ++(1,0) to[spring, a = $k$](-0.5,-2.5);
+		\draw (wall.south east) ++(-1,0) to[damper, l = $R_M$](0.5,-2.5);
+		\draw (-1,-2.5) rectangle (1,-3.5) node[pos=.5] {M};
+	\end{circuitikz}
+\end{figure}
+
+\[ \sum F = M\cdot a \quad \Longrightarrow \quad M \dv[2]{x}{t} +R_M \dv{x}{t} + kx = 0 \quad \xrightarrow{\textrm{Solución}} \quad \boxed{x(t) = x_o e^{-\delta t}\cos \left( \omega ' t + \varphi \right) } \]
+
+\begin{align*}
+	\delta = \frac{R_M}{2M}
+	\omega ' = \sqrt{\omega _o^2 - \delta ^2} \quad \xrightarrow{\omega _o \gg \delta} \quad \underline{\omega ' \approx \omega_o}
+\end{align*}
+
+\section{Fasores}
+
+El acento circunflejo ($\hat{\phantom{x}}$) es el símbolo que usaremos para representar los fasores en este documento.
+
+\[ \hat{x} = x_o e^{j\varphi} \]
+
+
 
 \chapter{Señales acústicas}
 \section{Valor RMS y nivel de una señal}
