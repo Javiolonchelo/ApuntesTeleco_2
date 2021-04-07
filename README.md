@@ -4,7 +4,11 @@
 
 Este repositorio contiene mis apuntes de las asignaturas de 2º curso del grado en Ingeniería de Sonido e Imagen impartidos en la ETSIST de la UPM.
 
-Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hacérmelo saber, a través de GitHub (en el menú _Issues_) o bien por correo electrónico a [javiolonchelo@gmail.com](mailto:javiolonchelo@gmail.com)
+Es posible que no estén perfectos. Si encuentras alguna errata, no dudes en hacérmelo saber, a través de GitHub (en el menú _Issues_) o bien por correo electrónico: [javiolonchelo@gmail.com](mailto:javiolonchelo@gmail.com)
+
+> ### Sobre el plagio
+>
+> También debo aclarar que con este repositorio **no pretendo fomentar el plagio** ni ninguna otra forma de fraude académico. Lo hago por puro altruismo. Si eres un profesor y ves algo que no debería estar aquí, **házmelo saber**, por favor. Mi intención es ayudar, no causar problemas :)
 
 ## Tabla de contenidos
 
