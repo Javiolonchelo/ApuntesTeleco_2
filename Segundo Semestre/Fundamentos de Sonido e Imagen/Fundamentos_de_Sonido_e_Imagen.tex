@@ -100,15 +100,18 @@ Hay que sacar más de un 5 en cada parte.
 \section{Oscilaciones mecánicas}
 
 \begin{figure}[htp]
-	\centering
 	\caption{Oscilador simple.}
-	\begin{circuitikz}
-		\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.75cm,minimum height=0.3cm]
-		\node (wall) [ground, minimum width=3cm] {};
-		\draw (wall.south west) -- (wall.south east);
-		\draw (wall) to[spring, l = $k$](0,-2);
-		\draw (-1,-2) rectangle (1,-3) node[pos=.5] {M};
-	\end{circuitikz}
+	\begin{subfigure}[b]{\linewidth}
+		\centering
+		\begin{circuitikz}
+			\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.75cm,minimum height=0.3cm]
+			\node (wall) [ground, minimum width=3cm] {};
+			\draw (wall.south west) -- (wall.south east);
+			\draw (wall) to[spring, l = $k$](0,-2);
+			\draw (-1,-2) rectangle (1,-3) node[pos=.5] {M};
+		\end{circuitikz}
+		\subcaption*{Este oscilador está formado por una masa $M$ que cuelga de un muelle de constante $k$.}
+	\end{subfigure}
 \end{figure}
 
 De la segunda Ley de Newton, podemos obtener la ecuación de ondas:
@@ -124,8 +127,6 @@ Esta ecucación describe un movimiento sin amortiguamiento, perpetuo.
 Si resolvemos la ecuación de ondas, el resultado tiene la siguiente forma:
 \[ \boxed{x(t) = x_o \cos \left( \omega _o t + \varphi \right) } \]
 
-Este resultado se puede entender como la respuesta al impulso del sistema mecánico. En la práctica, usaremos señales rectangulares muy grandes y de duración muy corta para modelar el sistema, como si fueran señales impulso $\delta (t)$. Más adelante aprenderemos a hacer esto.
-
 Algunos parámetros importantes:
 
 \begin{align*}
@@ -138,23 +139,35 @@ Algunos parámetros importantes:
 Si añadimos amortiguación a este movimiento, el resultado tendría la misma forma que antes, pero con una exponencial negativa que hace que decrezca en amplitud con el paso del tiempo.
 
 \begin{figure}[htp]
-	\centering
-	\caption{Oscilador con 1 grado de libertad.}
-	\begin{circuitikz}
-		\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=3cm,minimum height=0.3cm]
-		\node (wall) [ground, minimum width=3cm] {};
-		\draw (wall.south west) -- (wall.south east);
-		\draw (wall.south west) ++(1,0) to[spring, a = $k$](-0.5,-2.5);
-		\draw (wall.south east) ++(-1,0) to[damper, l = $R_M$](0.5,-2.5);
-		\draw (-1,-2.5) rectangle (1,-3.5) node[pos=.5] {M};
-	\end{circuitikz}
+	\caption{Sistema masa-resorte} \label{fig:masa2}
+	\begin{subfigure}[b]{\linewidth}
+		\centering
+		\begin{circuitikz}
+			\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=3cm,minimum height=0.3cm]
+			\node (wall) [ground, minimum width=3cm] {};
+			\draw (wall.south west) -- (wall.south east);
+			\draw (wall.south west) ++(1,0) to[spring, a = $k$](-0.5,-2.5);
+			\draw (wall.south east) ++(-1,0) to[damper, l = $R_M$](0.5,-2.5);
+			\draw (-1,-2.5) rectangle (1,-3.5) node[pos=.5] {M};
+		\end{circuitikz}
+		\subcaption*{Este sistema es un oscilador con 1 grado de libertad.}
+	\end{subfigure}
 \end{figure}
 
 \[ \sum F = M\cdot a \quad \Longrightarrow \quad M \dv[2]{x}{t} +R_M \dv{x}{t} + kx = 0 \quad \xrightarrow{\textrm{Solución}} \quad \boxed{x(t) = x_o e^{-\delta t}\cos \left( \omega ' t + \varphi \right) } \]
 
+\begin{figure}[htp]
+	\centering
+	\caption{Respuesta al impulso del oscilador amortiguado} \label{fig:RespuestaRegimenLibre}
+	\includegraphics[width=0.7\linewidth]{Imágenes/RespuestaRegimenLibre.png}
+\end{figure}
+
+Este resultado se puede entender como la \textbf{respuesta al impulso} del sistema mecánico. En la práctica, usaremos señales rectangulares muy grandes y de duración muy corta para modelar el sistema, como si fueran señales impulso $\delta (t)$. Más adelante aprenderemos a hacer esto.
+
 \begin{align*}
-	\delta = \frac{R_M}{2M}
-	\omega ' = \sqrt{\omega _o^2 - \delta ^2} \quad \xrightarrow{\omega _o \gg \delta} \quad \underline{\omega ' \approx \omega_o}
+	\delta & = \frac{R_M}{2M}
+	\omega ' = \sqrt{\omega _o^2 - \delta ^2} \quad \xrightarrow{\omega _o \gg \delta} \quad \underline{\omega ' \approx \omega_o} \\[5pt]
+	\tau   & = \frac{x_o}{e} = \frac{1}{\delta} \qquad \tau \equiv \textrm{ Tiempo de relajación del sistema}
 \end{align*}
 
 \section{Fasores}
@@ -163,7 +176,31 @@ El acento circunflejo ($\hat{\phantom{x}}$) es el símbolo que usaremos para rep
 
 \[ \hat{x} = x_o e^{j\varphi} \]
 
+\[ \textrm{Compliancia mecánica }\equiv k = \frac{1}{C} \]
 
+\section{Fenómeno de Resonancia}
+
+En los sistemas eléctricos, acústicos y mecánicos (como el de la \autoref{fig:masa2}) tiene lugar un fenómeno denominado \textbf{resonancia}. Para ciertas frecuencias de oscilación, la resistencia que presenta el sistema puede disminuir considerablemente. A esa frecuencia se la conoce como frecuencia fundamental o \textbf{modo propio}.
+
+\section{Factor de calidad}
+
+El factor de calidad no representa la calidad del sistema mecánico que tengamos. Esto se debe a que es un parámetro heredado de la teoría de circuitos.
+
+\[ Q = \left. \frac{f_c}{\Delta f } \right\rvert _{-3\dB} = \frac{\omega_o \tau}{2}\]
+
+En un altavoz, nos interesa un tiempo de respuesta bajo. Sin embargo, se debe escoger un ancho de banda adecuado para ofrecer una respuesta en frecuencia adaptada a nuestras necesidades.
+
+\section{Energía}
+
+Esto no entra demasiado.
+
+\section{Composición de dos MAS de igual frecuencia}
+
+Esta composición es denominada \textbf{suma coherente}.
+
+\subsection{Teorema del coseno}
+
+\subsection{Cálculo fasorial}
 
 \chapter{Señales acústicas}
 \section{Valor RMS y nivel de una señal}
