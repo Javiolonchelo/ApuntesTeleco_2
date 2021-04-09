@@ -60,17 +60,31 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
     <summary>Exámenes resueltos</summary>
     <p>
 
+    - En estos exámenes hay ciertos patrones repetitivos, aquí tienes un [resumen](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/RESUMEN.md) para preparar el examen.
+
     - [Carpeta plantilla](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/CarpetasNecesarias.7z) (descargar y copiar en ella el contenido de cada hito)
 
-    - **2019 L1**
+    - **2018 Otoño - L1**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/2019_L1.pdf)
-      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2019_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Oto_L1/2018_Oto_L1.pdf)
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
-    - **2020 L1**
+    - **2018 Primavera - L1**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/2020_L1.pdf)
-      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Examen_2020_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Prim_L1/2018_Prim_L1.pdf)
+
+      - Solución 1 --> [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Prim_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Prim_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Prim_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
+      - Solución 2 --> [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Prim_L1__2/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Prim_L1__2/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2018_Prim_L1__2/MICR/EX_L1/Hitos/Hito_3/main.cpp)
+
+    - **2019 Otoño - L1**
+
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2019_Oto_L1/2019_Oto_L1.pdf)
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2019_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2019_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2019_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
+
+    - **2020 Otoño - L1**
+
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2020_Oto_L1/2020_Oto_L1.pdf)
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) - [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) - [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     </p>
     </details>
