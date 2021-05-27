@@ -120,8 +120,8 @@ Puedes ver la representación de estas señales en la \autoref{fig:señales_desp
 
 \subsubsection{Conclusión}
 \[\left\{ \begin{array}{l c l}
-		\! \! \textrm{Si se suma una cantidad}  & \longrightarrow & \textrm{Desplazamiento a la izquierda} \\
-		\! \! \textrm{Si se resta una cantidad} & \longrightarrow & \textrm{Desplazamiento a la derecha}
+		\! \! \textrm{Si se \textbf{suma} una cantidad}  & \longrightarrow & \textrm{Desplazamiento a la \textbf{izquierda}} \\
+		\! \! \textrm{Si se \textbf{resta} una cantidad} & \longrightarrow & \textrm{Desplazamiento a la \textbf{derecha}}
 	\end{array} \right.
 \]
 
@@ -857,51 +857,70 @@ Dada una señal $x(t)$, se define su \textbf{transformada de Fourier} como: \[\b
 \section{Sistemas de tiempo discreto descritos por ecuaciones en diferencias lineales de coeficientes constantes}
 
 \section{Introducción al filtrado}
+Los \textbf{filtros FIR} (también denominados \underline{no recursivos}) tienen todos los polos en el origen y corresponden a los sistemas que tienen una respuesta al impulso finita.
 
-
-\chapter{Prácticas}
-
-\section{Introducción a Matlab. Representación de Señales}
-
-\section{Convolución}
-
-\section{Análisis de sistemas de tiempo discreto}
-La \textbf{función de transferencia} $H(z)$ de uns sistema LTI puede obtenerse de varias formas:
-\begin{enumerate}
-	\item A partir de la transforma Z de su respuesta al impulso.
-	      \[H(z) = \text{TZ}\{ h[n]\} = \sum_{n=-\infty}^{\infty}h[n]z^{-n}\]
-	\item A partir de las transformadas Z de las señales de entrada y de salida.
-
-	      \begin{figure}[!ht]
-		      \centering
-		      \begin{tikzpicture}[auto,>=latex']
-			      \node [input, name=input] (input) {$X(z)$};
-			      \node [block, right of=input, node distance=2cm] (controller) {$\quad \begin{matrix} H(z) \\[5pt]\text{LTI} \end{matrix}\quad $};
-			      \node [output, right of=controller, node distance=4cm] (output) {};
-
-			      \draw [->] (input) -- node{$X(z)$} (controller);
-			      \draw [->] (controller) -- node{$Y(z) = X(z)\cdot  H(z)$} (output);
-		      \end{tikzpicture}
-		      \caption{}
-	      \end{figure}
-\end{enumerate}
-
-En la mayor parte de los casos, nos interesará conocer $H(z)$ como el cociente de dos polinomios.
-\[H(z) = \frac{b_0 +b_1z^{-1}+b_2z^{-2}+\dots}{a_0 +a_1z^{-1}+a_2z^{-2}+\dots}\]
-Las raíces del denominador serán los polos del sistema y las raíces del numerados serán los ceros del sistema.
-
-
+Los \textbf{filtros IIR} pueden tener los polos ubicados en cualquier lugar del plano complejo $s$. Corresponden a aquellos sistemas con respuesta al impulso finita.
 \appendix
-\chapter{Ejercicios del Tema 1}
-\begin{ejercicio} \label{ej001}
-	Se tiene una señal $x(t)$ (véase la figura ...) y se quiere construir una señal $y(t) =x(2t+2)$.
-\end{ejercicio}
-\textbf{Solución:} En este tipo de ejercicios, la primera operación que tenemos que aplicar es el desplazamiento. Luego aplicaremos el resto.
 
-\chapter{Ejercicios del Tema 2}
-\chapter{Ejercicios del Tema 3}
-\chapter{Ejercicios del Tema 4}
+\newpage
+\newgeometry{left=1cm,right=1cm,top=1cm,bottom=1cm}
+\titleformat{\chapter}[block]
+{\normalfont\huge\bfseries}{ANEXO.}{1em}{\Huge}
+\titlespacing*{\chapter}{0pt}{-19pt}{0pt}
+\chapter{Formulario}
+\begin{multicols}{2}
+	\section*{Tema 1}
+	\begin{itemize}
+		\item \textbf{Orden de las transformaciones:}
+		      \begin{enumerate}
+			      \item Desplazamiento
+			      \item Compresión / expansión
+			      \item Inversión
+			      \item Escalado
+		      \end{enumerate}
+		\item Partes par e impar:
+		      \begin{align*}
+			      \textrm{Par}\{x(t)\}   & = \frac{x(t) + x(-t)}{2} \\[5pt]
+			      \textrm{Impar}\{x(t)\} & = \frac{x(t) - x(-t)}{2}
+		      \end{align*}
+	\end{itemize}
 
+	\section*{Tema 2}
+	\textbf{Propiedades de los sistemas LTI}
+	\begin{description}
+		\item[Memoria.] La respuesta solo depende del instante actual. \[ h(t) = A \cdot \delta (t) \, , \forall A \in \mathbb{R} \]
+		\item[Causalidad.] La salida no puede depender de instantes futuros, solo actuales. \[ h(t) = 0 \, , \forall t<0 \]
+		\item[Estabilidad.] Criterio BIBO.
+		\item[Invertibilidad.] El sistema en cascada con su inverso deja la señal inalterada. \[ h(t) \circledast h_i(t) = \delta (t)\]
+		\item[Linealidad.] La combinación lineal de dos señales produce una combinación lineal de sus salidas. \[
+				\left\lbrace \begin{matrix*}[l]
+					x_1(t) \longrightarrow y_1(t)\\
+					x_2(t) \longrightarrow y_2(t)
+				\end{matrix*} \right. \quad
+				\left\lbrace \begin{matrix*}[l]
+					x_3(t) = a \cdot x_1(t) + b \cdot x_2(t)\\
+					x_3(t) \longrightarrow y_3(t)
+				\end{matrix*} \right.\]
+			\[ y_3(t) = a \cdot y_1(t) + b \cdot y_2(t) \]
+	\end{description}
+
+	\columnbreak
+	\section*{Tema 3}
+	\begin{itemize}
+		\item Si $h[n]$ es \underline{causal}, la $ROC_H$ es \textbf{a derechas}.
+		\item Si es \underline{anticausal}, la $ROC_H$ es \textbf{a izquierdas}.
+		\item Si es \underline{bilateral}, la $ROC_H$ es una \textbf{banda}, la intersección de las partes derecha e izquierda.
+		\item El sistema es \underline{estable} si la $ROC_H$ incluye al eje vertical $s=j\omega$. Si es estable, existe \textbf{respuesta en frecuencia}.
+	\end{itemize}
+	\section*{Tema 4}
+	Equivalente al Tema 3.
+	\begin{itemize}
+		\item Si $h[n]$ es \underline{causal}, la $ROC_H$ es \textbf{exterior}.
+		\item Si es \underline{anticausal}, la $ROC_H$ es \textbf{interior}.
+		\item Si es \underline{bilateral}, la $ROC_H$ es una \textbf{sección circular}, la intersección de las partes exterior e interior.
+		\item El sistema es \underline{estable} si la $ROC_H$ incluye a la circunferencia unidad $\left( \abs{z} = 1 \right)$. Si es estable, existe \textbf{respuesta en frecuencia}.
+	\end{itemize}
+\end{multicols}
 
 %%% FIN DE LOS APUNTES %%%
 
