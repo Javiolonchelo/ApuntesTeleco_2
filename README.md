@@ -56,6 +56,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 
 - [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `En progreso`
 
+  - Resumen para el [examen de teoría](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teoría/RESUMEN_TEORIA.md)
   - <details>
     <summary>Exámenes resueltos</summary>
     <p>
@@ -74,7 +75,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
       - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2017_Oto_L1_UsandoPlantilla/2017_Oto_L1.pdf)
 
       - Solución 1 (usando la plantilla de 2021) - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2017_Oto_L1_UsandoPlantilla/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2017_Oto_L1_UsandoPlantilla/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/2017_Oto_L1_UsandoPlantilla/MICR/EX_L1/Hitos/Hito_3/main.cpp)
-        > **¡No recomendable!** Sin cambiar nada de la plantilla, se hace muchísimo más difícil que los otros exámenes. Si lo quieres intentar, procura definir los LEDs como `DigitalOut`, en lugar de `BusOut`. Probablemente, era distinto en 2017. _(MODA reference jsjsjjsjsjs)_ Subiré próximamente una versión con la mejor forma posible de hacerlo.
+        > **¡No recomendable!** Sin cambiar nada de la plantilla, se hace muchísimo más difícil que los otros exámenes. Si lo quieres intentar, procura definir los LEDs como `DigitalOut`, en lugar de `BusOut`. Probablemente, era distinto en 2017. _(MODA reference jsjsjjsjsjs)_
 
     - **2018 Otoño - L1**
 
