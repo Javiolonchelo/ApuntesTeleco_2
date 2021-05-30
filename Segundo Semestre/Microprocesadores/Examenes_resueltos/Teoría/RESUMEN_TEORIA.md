@@ -13,7 +13,7 @@
 
 ## Lista de ejercicios resueltos
 
-Estos ejercicios están resueltos en la pizarra compartida, que puedes ver [pulsando aquí](PizarraCompartida.svg).
+Estos ejercicios están resueltos en la pizarra compartida.
 
 - 2017 Junio
   - Ejercicio 1 &#x2611; [[código de comprobación]](2017_Junio/2017_Junio_1.s)
