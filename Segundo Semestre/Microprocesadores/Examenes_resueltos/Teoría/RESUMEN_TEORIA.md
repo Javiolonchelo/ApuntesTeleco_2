@@ -1,5 +1,19 @@
 # Resumen de Microprocesadores
 
+## Índice
+
+- [Lista de ejercicios resueltos](#lista-de-ejercicios-resueltos)
+- [Archivos útiles](#archivos-útiles)
+- [Teoría](#teoría)
+  - [_Endianness_](#endianness)
+  - [Bits de estado](#bits-de-estado)
+  - [Instrucciones de salto](#instrucciones-de-salto)
+- [Laboratorio](#laboratorio)
+
+## Lista de ejercicios resueltos
+
+Estos ejercicios están resueltos en la pizarra compartida, si tienen enlace significa que los he subido a GitHub.
+
 ## Archivos útiles
 
 - Si quieres comprobar tus ejercicios, puedes descargar este [proyecto plantilla](../../../../../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/ProyectoPlantilla.7z) y programar en él.
