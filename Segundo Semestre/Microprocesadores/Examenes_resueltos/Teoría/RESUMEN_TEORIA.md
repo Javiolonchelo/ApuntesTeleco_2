@@ -2,7 +2,7 @@
 
 ## Archivos útiles
 
-- Si quieres comprobar tus ejercicios, puedes descargar este [proyecto plantilla](ProyectoPlantilla.7z) y programar en él.
+- Si quieres comprobar tus ejercicios, puedes descargar este [proyecto plantilla](../../../../../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/ProyectoPlantilla.7z) y programar en él.
 - [Set de instrucciones](Instructions_Cortex-M0.pdf) para el procesador Cortex-M0.
 
 ## Teoría
