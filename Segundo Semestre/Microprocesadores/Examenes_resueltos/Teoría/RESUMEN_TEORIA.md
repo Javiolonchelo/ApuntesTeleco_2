@@ -11,15 +11,16 @@
 
 Se refiere al orden en el que se almacenan en memoria los diferentes bytes de cada dato. Puede ser **_little endian_** o **_big endian_**.
 
-> Utilizamos un procesador _little endian_ y tenemos los siguientes datos en memoria:
+> Tenemos los siguientes datos en memoria:
 >
-> | Dirección / `y` | `0`  | `1`  | `2`  | `3`  | `4`  | `5`  | `6`  | `7`  | `8`  | `9`  | `A`  | `B`  | `C`  | `D`  | `E`  | `F`  |
-> | :-------------- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-> | `0x1000 000y`   | `0E` | `3E` | `2D` | `40` | `BF` | `C0` | `C1` | `00` | `01` | `FF` | `7E` | `7F` | `80` | `81` | `0D` | `A6` |
+> | Valor de `y`  | `0`  | `1`  | `2`  | `3`  | `4`  | `5`  | `6`  | `7`  | `8`  | `9`  | `A`  | `B`  | `C`  | `D`  | `E`  | `F`  |
+> | :------------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+> | `0x1000 000y` | `0E` | `3E` | `2D` | `40` | `BF` | `C0` | `C1` | `00` | `01` | `FF` | `7E` | `7F` | `80` | `81` | `0D` | `A6` |
 >
-> Se nos pide obtener la palabra de tamaño 32 bits (4 bytes) ubicada en la dirección de memoria `0x1000 0007`.
-> 
-> El dato obtenido será `0x00C1 C0BF`.
+> Se nos pide obtener la palabra de tamaño 32 bits (4 bytes) ubicada en la dirección de memoria `0x1000 0004`.
+>
+> - Si el procesador es _little endian_ (como el Cortex-M0), el dato obtenido será `0x00C1 C0BF`.
+> - Si es _big endian_, el dato obtenido será `0xBFC0 C100`.
 
 ### Bits de estado
 
@@ -39,6 +40,7 @@ Son aquellas que empiezan por `B`. Suelen corresponder a bucles `while`, `do whi
 ### Ejemplos
 
 - BEQ
+
 ```Assembly
         LDR     R0, =0x00000000
 loop
@@ -48,7 +50,9 @@ loop
                         ; porque CMP cambia el bit de estado Z a 1
         END
 ```
+
 - BHS / BHI / BLS / BLO
+
 ```Assembly
 ; Junio 2017 - Ejercicio 1
 
