@@ -1,5 +1,10 @@
 # Resumen de Microprocesadores
 
+## Archivos útiles
+
+- Si quieres comprobar tus ejercicios, puedes descargar este [proyecto plantilla](ProyectoPlantilla.7z) y programar en él.
+- [Set de instrucciones](Instructions_Cortex-M0.pdf) para el procesador Cortex-M0.
+
 ## Teoría
 
 ### _Endianness_
@@ -12,7 +17,9 @@ Se refiere al orden en el que se almacenan en memoria los diferentes bytes de ca
 > | :-------------- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 > | `0x1000 000y`   | `0E` | `3E` | `2D` | `40` | `BF` | `C0` | `C1` | `00` | `01` | `FF` | `7E` | `7F` | `80` | `81` | `0D` | `A6` |
 >
-> Se nos pide obtener la palabra de tamaño 32 bits (4 bytes) ubicada en la dirección de memoria `0x1000 0007`. El dato obtenido será `0x00C1 C0BF`.
+> Se nos pide obtener la palabra de tamaño 32 bits (4 bytes) ubicada en la dirección de memoria `0x1000 0007`.
+> 
+> El dato obtenido será `0x00C1 C0BF`.
 
 ### Bits de estado
 
@@ -31,16 +38,20 @@ Son aquellas que empiezan por `B`. Suelen corresponder a bucles `while`, `do whi
 
 ### Ejemplos
 
-```x86asm
+- BEQ
+```Assembly
         LDR     R0, =0x00000000
 loop
         ADDS    R0, #1
         CMP     R0, #6
-        BEQ     loop
-        ; Sale de este bucle cuando el contenido de R0 es 6,
-        ; porque CMP cambia el bit de estado Z de valor a 1
-
+        BEQ     loop    ; Sale de este bucle cuando el contenido de R0 es 6,
+                        ; porque CMP cambia el bit de estado Z a 1
         END
+```
+- BHS / BHI / BLS / BLO
+```Assembly
+; Junio 2017 - Ejercicio 1
+
 ```
 
 ## Laboratorio
