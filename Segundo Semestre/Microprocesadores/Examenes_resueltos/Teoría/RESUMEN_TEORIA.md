@@ -7,6 +7,7 @@
 - [Teoría](#teoría)
   - [_Endianness_](#endianness)
   - [Bits de estado](#bits-de-estado)
+  - [Stack](#stack)
   - [Instrucciones de salto](#instrucciones-de-salto)
 - [Laboratorio](#laboratorio)
 
@@ -53,6 +54,12 @@ Al realizar operaciones con la ALU (_Arithmetic Logic Unit_), es posible que nec
 ### Instrucciones de salto
 
 Son aquellas que empiezan por `B`. Suelen corresponder a bucles `while`, `do while`, `for`... o condiciones `if`, `else`, `else if`... Cuando se cumple la condición necesaria, se produce el salto. De lo contrario, continúa con la siguiente línea del programa.
+
+### Stack
+
+Es importante saber cómo funciona la pila o **stack** de un procesador para desarrollar correctamente los programas.
+
+![Imagen ](https://azeria-labs.com/wp-content/uploads/2017/04/stacks.gif.pagespeed.ce.tFWFJqf3Ga.gif)
 
 ### Ejemplos
 
