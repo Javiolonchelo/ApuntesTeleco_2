@@ -12,7 +12,10 @@
 
 ## Lista de ejercicios resueltos
 
-Estos ejercicios están resueltos en la pizarra compartida, si tienen enlace significa que los he subido a GitHub.
+Estos ejercicios están resueltos en la pizarra compartida, que puedes ver [pulsando aquí](PizarraCompartida.svg).
+
+- 2017 Junio
+  - Ejercicio 1 &#x2611;
 
 ## Archivos útiles
 
