@@ -19,7 +19,7 @@ Estos ejercicios fueron resueltos en la pizarra compartida de Microsoft Whiteboa
   - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
   - Ejercicio 5 - Periféricos &#x2705;
 - [Enero 2019](2019_Enero.pdf)
-  - Ejercicio 4 - &#x2705;
+  - Ejercicio 4 - Interrupciones &#x2705;
   - Ejercicio 5 - Periféricos &#x2705;
 - [Junio 2019](2019_Junio.pdf)
   - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
