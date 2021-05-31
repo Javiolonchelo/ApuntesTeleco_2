@@ -11,12 +11,22 @@
   - [Instrucciones de salto](#instrucciones-de-salto)
 - [Laboratorio](#laboratorio)
 
-## Lista de ejercicios resueltos
+## Lista de exámenes resueltos
 
-Estos ejercicios están resueltos en la pizarra compartida.
+Estos ejercicios fueron resueltos en la pizarra compartida de Microsoft Whiteboard.
 
-- 2017 Junio
-  - Ejercicio 1 &#x2611; [[código de comprobación]](2017_Junio/2017_Junio_1.s)
+- [Enero 2020](2020_Enero.pdf)
+  - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
+  - Ejercicio 5 - Periféricos &#x2705;
+- [Enero 2019](2019_Enero.pdf)
+  - Ejercicio 4 - Interrupciones &#x2705;
+  - Ejercicio 5 - Periféricos &#x2705;
+- [Junio 2019](2019_Junio.pdf)
+  - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
+- [Extraordinaria 2018](2018_Extra.pdf)
+  - Ejercicio 4 - Interrupciones &#x2705;
+- [Junio 2017](2017_Junio.pdf)
+  - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705; [[código de comprobación]](2017_Junio_1.s)
 
 ## Archivos útiles
 
