@@ -60,8 +60,8 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
   - Resumen de [laboratorio](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/RESUMEN_LABORATORIO.md)
 
   - <details>
-        <summary>Exámenes resueltos de teoría</summary>
-        <p>
+          <summary>Exámenes resueltos de teoría</summary>
+          <p>
 
     Si quieres comprobar tus ejercicios de lenguaje de ensamble, puedes descargar este [proyecto plantilla](../../eaw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/ProyectoPlantilla.7z) y programar en él, pero solo hay un ejercicio funcional ahora mismo. Te recomiendo hacerlos a mano directamente :)
 
@@ -76,9 +76,9 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
       - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713;
     - [Extraordinaria 2018](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2018_Extra.pdf)
       - Ejercicio 4 - Interrupciones &#x2713;
-    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713; [[código de comprobación]](2017_Junio_1.s)
-    </p>
-  </details>
+    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713; [[código de comprobación]](Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio_1.s)
+      </p>
+    </details>
 
   - <details>
       <summary>Exámenes resueltos de laboratorio</summary>
@@ -125,8 +125,9 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
       - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/2020_Oto_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
-        </p>
-    </details>
+            </p>
+
+        </details>
 
 - [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `En progreso`
 
