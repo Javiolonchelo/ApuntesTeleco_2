@@ -76,7 +76,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
       - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
     - [Extraordinaria 2018](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2018_Extra.pdf)
       - Ejercicio 4 - Interrupciones &#x2705;
-    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705; [[código de comprobación]](2017_Junio_1.s)
+    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705; [[código de comprobación]](Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio_1.s)
     </p>
   </details>
 
