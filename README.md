@@ -78,6 +78,9 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
       - Ejercicio 4 - Interrupciones &#x2713;
     - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713; [[código de comprobación]](Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio_1.s)
       </p>
+
+    ***
+
     </details>
 
   - <details>
@@ -94,7 +97,8 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
     - **2017 Primavera - L2**
 
       - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/Laboratorio/2017_Prim_L2/2017_Prim_L2.pdf)
-      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_3/main.cpp)
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR
+        /EX_L2/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_3/main.cpp)
 
     - **2017 Otoño - L1**
 
@@ -125,9 +129,16 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
       - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/2020_Oto_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
-            </p>
+    - **2020 Otoño - L2**
 
-        </details>
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/2020_Oto_L2.pdf)
+      - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
+
+    ***
+
+      </p>
+
+    </details>
 
 - [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `En progreso`
 
@@ -160,7 +171,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
   <summary>Segundo Semestre</summary>
 <p>
   
-* [Ciencia, Tecnología y Sociedad](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/4)
+- [Ciencia, Tecnología y Sociedad](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/4)
 
 - [Fundamentos de Sonido e Imagen](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/8)
 
@@ -174,7 +185,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 
 ---
 
-</p>
+  </p>
 </details>
 
 <br>
