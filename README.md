@@ -66,17 +66,17 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
     Si quieres comprobar tus ejercicios de lenguaje de ensamble, puedes descargar este [proyecto plantilla](../../eaw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/ProyectoPlantilla.7z) y programar en él, pero solo hay un ejercicio funcional ahora mismo. Te recomiendo hacerlos a mano directamente :)
 
     - [Enero 2020](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2020_Enero.pdf)
-      - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
-      - Ejercicio 5 - Periféricos &#x2705;
+      - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713;
+      - Ejercicio 5 - Periféricos &#x2713;
     - [Enero 2019](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2019_Enero.pdf)
-      - Ejercicio 3 - Mapas de memoria &#x2705;
-      - Ejercicio 4 - Interrupciones &#x2705;
-      - Ejercicio 5 - Periféricos &#x2705;
+      - Ejercicio 3 - Mapas de memoria &#x2713;
+      - Ejercicio 4 - Interrupciones &#x2713;
+      - Ejercicio 5 - Periféricos &#x2713;
     - [Junio 2019](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2019_Junio.pdf)
-      - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
+      - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713;
     - [Extraordinaria 2018](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2018_Extra.pdf)
-      - Ejercicio 4 - Interrupciones &#x2705;
-    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705; [[código de comprobación]](2017_Junio_1.s)
+      - Ejercicio 4 - Interrupciones &#x2713;
+    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713; [[código de comprobación]](2017_Junio_1.s)
     </p>
   </details>
 
