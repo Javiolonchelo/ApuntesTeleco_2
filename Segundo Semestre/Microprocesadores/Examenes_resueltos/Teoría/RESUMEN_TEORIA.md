@@ -3,12 +3,11 @@
 ## Índice
 
 - [Archivos útiles](#archivos-útiles)
-- [Teoría](#teoría)
-  - [_Endianness_](#endianness)
-  - [Bits de estado](#bits-de-estado)
-  - [Stack](#stack)
-  - [Instrucciones de salto](#instrucciones-de-salto)
-- [Laboratorio](#laboratorio)
+- [ARM Cortex-M0](#arm-cortex-m0)
+- [_Endianness_](#endianness)
+- [Bits de estado](#bits-de-estado)
+- [Stack](#stack)
+- [Instrucciones de salto](#instrucciones-de-salto)
 
 ## Archivos útiles
 
