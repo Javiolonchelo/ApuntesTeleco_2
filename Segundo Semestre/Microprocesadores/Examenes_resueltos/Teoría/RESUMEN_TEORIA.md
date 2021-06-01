@@ -2,7 +2,6 @@
 
 ## Índice
 
-- [Lista de ejercicios resueltos](#lista-de-ejercicios-resueltos)
 - [Archivos útiles](#archivos-útiles)
 - [Teoría](#teoría)
   - [_Endianness_](#endianness)
@@ -11,26 +10,8 @@
   - [Instrucciones de salto](#instrucciones-de-salto)
 - [Laboratorio](#laboratorio)
 
-## Lista de exámenes resueltos
-
-Estos ejercicios fueron resueltos en la pizarra compartida de Microsoft Whiteboard.
-
-- [Enero 2020](2020_Enero.pdf)
-  - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
-  - Ejercicio 5 - Periféricos &#x2705;
-- [Enero 2019](2019_Enero.pdf)
-  - Ejercicio 4 - Interrupciones &#x2705;
-  - Ejercicio 5 - Periféricos &#x2705;
-- [Junio 2019](2019_Junio.pdf)
-  - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
-- [Extraordinaria 2018](2018_Extra.pdf)
-  - Ejercicio 4 - Interrupciones &#x2705;
-- [Junio 2017](2017_Junio.pdf)
-  - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705; [[código de comprobación]](2017_Junio_1.s)
-
 ## Archivos útiles
 
-- Si quieres comprobar tus ejercicios, puedes descargar este [proyecto plantilla](../../../../../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/ProyectoPlantilla.7z) y programar en él.
 - [Set de instrucciones](Instructions_Cortex-M0.pdf) para el procesador Cortex-M0.
 
 ## Teoría
