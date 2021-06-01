@@ -131,7 +131,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 
     - **2020 Otoño - L2**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/2020_Oto_L2.pdf)
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L2/2020_Oto_L2.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     ***
