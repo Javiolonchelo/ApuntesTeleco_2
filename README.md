@@ -88,7 +88,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 
     - **2017 Primavera - L1**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/Laboratorio/2017_Prim_L1/2017_Prim_L1.pdf)
+      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/2017_Prim_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2017 Primavera - L2**
