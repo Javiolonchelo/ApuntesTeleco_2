@@ -68,17 +68,17 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
     - [Enero 2020](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2020_Enero.pdf)
       - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
       - Ejercicio 5 - Periféricos &#x2705;
-    - [Enero 2019](2019_Enero.pdf)
+    - [Enero 2019](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2019_Enero.pdf)
       - Ejercicio 3 - Mapas de memoria &#x2705;
       - Ejercicio 4 - Interrupciones &#x2705;
       - Ejercicio 5 - Periféricos &#x2705;
-    - [Junio 2019](2019_Junio.pdf)
+    - [Junio 2019](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2019_Junio.pdf)
       - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705;
-    - [Extraordinaria 2018](2018_Extra.pdf)
+    - [Extraordinaria 2018](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2018_Extra.pdf)
       - Ejercicio 4 - Interrupciones &#x2705;
-    - [Junio 2017](2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705; [[código de comprobación]](2017_Junio_1.s)
+    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2705; [[código de comprobación]](2017_Junio_1.s)
     </p>
-    </details>
+  </details>
 
   - <details>
       <summary>Exámenes resueltos de laboratorio</summary>
@@ -126,7 +126,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
         </p>
-      </details>
+    </details>
 
 - [Procesado Digital de la Señal](/Segundo%20Semestre/Procesado%20Digital%20de%20la%20Señal/Procesado_Digital_de_la_Señal.pdf) - `En progreso`
 
