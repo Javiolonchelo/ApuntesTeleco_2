@@ -1792,17 +1792,9 @@ Podemos pasar a resolver el problema.
 \section{Campo electromagnético}
 \begin{fleqn}
 	\begin{multicols}{4}
+
 		\formula{Fuerza electromotriz inducida}
-
-		\noindent La fuerza electromotriz inducida se representa como $\xi_i$ y se mide en voltios (V). La corriente inducida se representa como $I_i$ y se mide en amperios (A). La resistencia de la espira se denota con la letra $R$.
-		\[I_i=\frac{\xi}{R}\]
-
-		\formula{Ley de Faraday}
-		\[\xi_i = \frac{-d \phi\subtext{mag}}{dt}\]
-		\[\xi_i=\oint{\vec{E}\cdot \vec{l}}\ \qquad \quad \vec{E} \text{ no es conservativo}\]
-		\noindent De forma integral:
-		\[\oint{\vec{E}\cdot d\vec{l}}=-\dv{}{t}\iint{\vec{B}\cdot d\vec{s}}\]
-		\[\xi \text{ se opone a la variación de flujo.}\]
+		\[\xi = -\dv{\Phi_B}{t}\]
 
 		\formula{Coeficiente de autoinducción}
 		\[L=\dv{\phi}{I}\]
@@ -1813,7 +1805,7 @@ Podemos pasar a resolver el problema.
 		\formula{Energía en campo electromagnético}
 		\[\omega_m = \frac{1}{2}\vec{H}\cdot \vec{B}= \frac{1}{2}\cdot \frac{B^2}{\mu} \ , \quad W_m=\iiint \omega_m dv\]
 
-		\formula{Ley y Teorema de Ampère-Maxwell}
+		\formula{Teorema de Ampère-Maxwell}
 		\[\oint{\vec{B}\cdot d\vec{l}} = \mu _0I+\!\!\!\!\!\underbrace{\mu_0\varepsilon_0\pdv{\phi_E}{t}}_{ \begin{matrix}
 					\text{Corriente de} \\
 					\text{desplazamiento}

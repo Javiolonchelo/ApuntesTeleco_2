@@ -189,27 +189,92 @@ La transformada inversa de una sinc siempre es un pulso.
 
 \chapter{Procesado digital de señales analógicas}
 
-\section{Tipos de señal} \vspace{\parskip}
+\section{Introducción}
 
-\subsection{Señales continuas}
+Algunos términos.
+\subsection{Términos y conceptos importantes}
+Una \textbf{señal} es una variación de una corriente eléctrica u otra magnitud que se utiliza para transmitir información (RAE).
 
-En una señal periódica, podemos obtener el \textbf{periodo} como el mínimo común múltiplo de los periodos de sus componentes. Un ejemplo:
+Una \textbf{señal} es una función de una o más variables independientes que contiene información sobre un determinado fenómeno físico (Oppenheim).
 
-\[ x(t) = 3 \sen \left( 5\pi t + \frac{\pi}{4} \right) + \cos \left( 10\pi t \right)\, ;\qquad \omega_1 = 5\pi \, , \quad \omega_2 = 10\pi \]
-\[ T = \mcm \left( \frac{2\pi}{\omega_1} \, , \frac{2\pi}{\omega_2} \right) = \mcm \left( \frac{2\pi}{5\pi} \, , \frac{2\pi}{10\pi} \right) = \mcm \left( \frac{2}{5} \, , \frac{1}{5} \right) = \frac{1}{5} \mcm \left( 2 \, , 1 \right) = \boxed{\frac{2}{5} \, \unit{\s}}\]
+\subsection{Tipos de señal} \vspace{\parskip}
 
-\subsection{Señales discretas}
+\subsubsection{Señales continuas}
 
-El \textbf{periodo} de una señal discreta se obtiene de forma similar a las señales continuas. Sin embargo, cuando el resultado es una fracción el periodo se calcula como el numerador de dicha fracción.
+En una señal periódica, para obtener el \textbf{periodo} se hace de la siguiente forma:
 
-Siguiendo con el ejemplo anterior, a partir de la última fracción obtenida:
-\[ \frac{N}{m} = \frac{2}{5} \quad \Longrightarrow \quad \boxed{N = 2} \]
+\begin{align*}
+x(t) &= 3 \sen \left( \frac{5\pi}{3}t + \frac{\pi}{4} \right) \qquad \\
+\omega &= \frac{5\pi}{3}\\
+	T &= \frac{2\pi}{\omega} = \frac{2\pi}{\frac{5\pi}{3}} = \boxed{\frac{3}{5}}
+\end{align*}
 
-\section{Filtros}
+\subsubsection{Señales discretas}
 
-Un \textbf{filtro} es cualquier sistema que modifica la forma de la señal, tanto en su amplitud como en su fase, del modo deseado. Los catalogamos como \textbf{FIR}\footnote{FIR $\equiv$ \textit{Finite Impulse Response.}} o \textbf{IIR}\footnote{IIR $\equiv$ \textit{Infinite Impulse Response.}}, en función de su respuesta al impulso.
+El \textbf{periodo} de una señal discreta se obtiene de forma similar a las señales continuas. Sin embargo 
 
-Hablaremos de ellos con profundidad en el Tema \ref{temaDeFiltros}.
+ 
+\subsubsection{Procesamiento}
+
+\subsubsection{Sistema}
+
+\subsubsection{PDS}
+
+El Procesado Digital de la Señal (PDS) es la manipulación de señales digitales en tiempo discreto, con el fin de extraer algún tipo de información de las mismas, mediante un sistema discreto.
+
+Generalmente, las señales serán de banda limitada
+
+Todos los sistemas que veremos en la asignatura serán \textbf{LTI} (Lineales e Invariantes en el Tiempo). Por ello, tendremos varias formas de caracterizarlos:
+\begin{itemize}
+	\item Caracterización Temporal
+	\item Caracterización Frecuencial
+\end{itemize}
+
+\subsubsection{Filtros}
+
+Un \textbf{filtro} es cualquier sistema que modifica la forma de la señal, tanto en su amplitud como en su fase, del modo deseado.
+
+Existen diferentes tipos de filtros selectivos en frecuencia:
+\begin{itemize}
+	\item Según la banda de paso.
+	      \begin{itemize}
+		      \item Paso bajo
+		      \item Paso alto
+		      \item Paso banda
+		      \item Banda eliminada
+		      \item Paso todo
+	      \end{itemize}
+	\item Según la respuesta al impulso.
+\end{itemize}
+
+\subsection{Ventajas del PDS}
+\begin{itemize}
+	\item Se puede garantizar precisión y reproducibilidad.
+	\item No hay deriva del funcionamiento.
+	\item Los avances tecnológicos en semiconductores experimentan mejoras de forma continua.
+	\item La información tiende cada vez más al mundo digital.
+	\item Existe una mayor flexibilidad al poder combinar hardware y software.
+	\item Permite un amplio rango de frecuencias y margen dinámico.
+	\item Permite un mejor funcionamiento, garantizando así una mayor calidad.
+	\item Los datos pueden ser almacenados para un uso posterior.
+	\item Se pueden crear algoritmos sofisticados de PDS, como son pueden ser la compresión, encriptación, análisis espectral...
+\end{itemize}
+
+\subsection{Desventajas}
+\begin{itemize}
+	\item Velocidad
+	\item Coste (dependiendo de la situación)
+	\item Problemas de longitud de palabra finita
+	\item Muchos datos son analógicos, por lo que se requieren procesos de conversión A/D \footnote{A/D: Conversión de analógico a digital} y D/A \footnote{D/A: Conversión de digital a analógico}
+\end{itemize}
+
+Serie exponencial de Fourier
+
+Ecuación de síntesis
+\[ \boxed{x[n] = \sum_{k=<N>}^{}a_ke^{jk \frac{2\pi}{N} n}} \, , \qquad \Omega_o = \frac{2\pi}{N} \]
+
+Ecuación de análisis
+\[ a_k = \frac{1}{N} \sum_{n = <N>}^{}x[n]e^{-jk \frac{2 \pi}{N}n}  \]
 
 \section{Estructura de un sistema PDS}
 
@@ -219,22 +284,22 @@ A continuación, se encuentra representado el esquema general de un sistema PDS:
 	\centering
 	\begin{tikzpicture}[auto,>=latex']
 		\node [input, name=input] (input) {};
-		\node [block, below of=input, node distance=0cm] (A) {Filtro antialiasing};
-		\node [block, right of=A, node distance=2cm] (B) {ADC};
-		\node [block, right of=B, node distance=2cm] (C) {Proceso Digital};
-		\node [block, right of=C, node distance=2cm] (D) {DAC};
-		\node [block, right of=D, node distance=2cm] (E) {Filtro de salida};
+		\node [block, below of=input, node distance=0cm] (A) {ADC};
 
-		\node [text width=3.2cm, left of=A, node distance=1cm] (text6) {$x(t)$};
+		\node [block, right of=A, node distance=2cm] (B) {$(N)\text{SDU}$};
+
+		\node [text width=3.2cm, left of=A, node distance=3.5cm] (text6) {Metemos la información de control.};
 
 		\draw [-angle 90] (A) --  node{} (B);
 	\end{tikzpicture}
 	\caption{Esquema de un sistema PDS} \label{fig:esquema_PDS}
 \end{figure}
 
-\section{Conversión C/D y D/C}
+\section{Conversión A/D y D/A}
 
-Para trabajar con sistemas continuos y discretos, vamos a establecer unos criterios de \textbf{equivalencia}, que usaremos para relacionar ambos tipos de sistema. Sin embargo, lo mejor es entenderlo con un ejemplo.
+Para trabajar con sistemas continuos y discretos, vamos a establecer unos criterios de \textbf{equivalencia}, que usaremos para relacionar ambos tipos de sistema.
+
+Esta sería la representación de un
 
 \subsubsection{Ejemplo 1}
 
@@ -288,36 +353,20 @@ Hay algunas cosas importantes que debemos recordar sobre la Transformada Discret
 
 \subsection{TF para señales periódicas}
 
-\begin{multicols}{2}
-	\subsubsection{Ecuación de síntesis}
-	
-	\[ x[n] = \sum_{k=<N>}^{}a_ke^{jk \frac{2\pi}{N} n}\]
-	
-	\subsubsection{Ecuación de análisis}
-	
-	\[ a_k = \frac{1}{N}\sum_{n=<N>}x[n]e^{-jk \frac{2\pi}{N}n} \]
-	
-\end{multicols}
+Sea $x[n]$ una señal periódica de periodo $N$:
 
-\subsubsection{DFT}
-
-Sea $x[n]$ una señal periódica de periodo $N$: \[ x[n] = \]
+\[ x[n] = \]
 
 Podemos calcular su TF como:
+
 \[ \TF{x[n]} = X(\Omega ) = 2\pi \sum_{k=<N>}a_k \cdot \delta \left( \Omega - \frac{2\pi}{N}k \right)\]
 
 \section{Introducción al análisis espectral mediante la DFT}
 
 \section{Filtrado de señales mediante la DFT}
 
-\section{Ejercicios resueltos}
 
-
-Calcular los coeficientes $a_k$ de la señal indicada a continuación: \[ x[n] = \sen \left( \frac{2\pi}{5}n \right) \]
-
-
-
-\chapter{Diseño de filtros digitales} \label{temaDeFiltros}
+\chapter{Diseño de filtros digitales}
 
 \section{Introducción}
 
@@ -330,5 +379,16 @@ Calcular los coeficientes $a_k$ de la señal indicada a continuación: \[ x[n] =
 \section{Estructuras para la implementación de filtros digitales}
 
 %%% FIN DE LOS APUNTES %%%
+
+%%% BIBLIOGRAFÍA %%%
+% Por defecto, se encuentra desactivada. Esto disminuye el tiempo de procesado. Se puede activar cuando se vaya a exportar el PDF definitivo
+
+%\newpage
+%\phantomsection
+%\label{sec:bibliografia_final}
+%\renewcommand{\refname}{Bibliografía}
+%\addcontentsline{toc}{section}{Bibliografía}
+%\bibliography{bibliografia} % Nombre del archivo (sin ".bib")
+%\bibliographystyle{bababbrv}
 
 \end{document}

@@ -29,7 +29,6 @@
 \usepackage{tensor}
 \usepackage{chemformula}
 \usepackage{tikz}
-\usepackage{siunitx}
 \usepackage{url}
 \usepackage{listings}
 \usepackage{multirow}
@@ -44,6 +43,8 @@
 \usepackage{eso-pic}
 \usepackage{siunitx}
 \sisetup{
+	mode 			= text,
+	parse-units 	= false,
 	round-mode      = places,
 	round-precision = 2,
 }
@@ -70,10 +71,9 @@ minimum height=3em, minimum width=6em]
 
 % Títulos
 \usepackage{titlesec}
-\titleformat{\section}
-{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-\titleformat{\subsubsection}
-{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\Alph{subsection}}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
 \titlespacing{\section}{0pt}{2\parskip}{\parskip}
 \titlespacing{\subsection}{0pt}{\parskip}{0pt}
 \titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
@@ -147,7 +147,8 @@ minimum height=3em, minimum width=6em]
 \newcommand{\kg}{\operatorname{kg}}
 \newcommand{\incremento}{\Delta}
 \newcommand{\psus}{\, \ldots \,}
-\newcommand{\sen}{\operatorname{\sen}}
+\newcommand{\mcm}{\operatorname{mcm}}
+\newcommand{\MCD}{\operatorname{MCD}}
 \renewcommand{\sin}{\sen}
 \renewcommand{\arcsin}{\arcsen}
 \renewcommand{\arctan}{\arctg}
@@ -180,6 +181,7 @@ minimum height=3em, minimum width=6em]
 \DeclareMathOperator{\Exp}{Exp}
 \DeclareMathOperator{\N}{N}
 \DeclareMathOperator{\Mult}{Mult}
+\newcommand{\TF}[1]{\mathrm{TF} \left\lbrace \left. #1 \right\rbrace \right.}
 \newcommand{\probCond}[2]{P \left( #1 \: \middle\vert\:  #2 \right) }
 
 % Electromagnetismo y Ondas

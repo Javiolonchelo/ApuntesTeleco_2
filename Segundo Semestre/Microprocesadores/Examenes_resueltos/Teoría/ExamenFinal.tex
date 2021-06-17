@@ -1,0 +1,41 @@
+\documentclass[a4paper]{exam}
+
+\input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
+
+% Título y portada
+\title Examen de Microprocesadores}
+\date{\today}
+
+%%% INICIO DEL DOCUMENTO %%%
+\begin{document}
+
+\setlength{\wpYoffset}{-0.5cm}
+
+\maketitle
+
+\titleformat{\chapter}[block]
+{\normalfont\Huge\bfseries}{TEMA \thechapter.}{1em}{}
+
+% Marca de agua
+\AddToShipoutPictureFG{
+	\begin{tikzpicture}[overlay,remember picture]
+		\path (current page.south west) -- (current page.north east)
+		node[midway,scale=8,color=lightgray,sloped,opacity=0.05] {Javier Rodrigo López};
+	\end{tikzpicture}
+}
+
+% Introducción
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Introducción}
+
+% Índice (TOC)
+\setlength{\parskip}{0em}
+\tableofcontents
+\setlength{\parskip}{0.5em}
+
+%%% INICIO DE LOS APUNTES %%%
+
+
+
+\end{document}
