@@ -219,55 +219,85 @@ A continuación, se encuentra representado el esquema general de un sistema PDS:
 	\centering
 	\begin{tikzpicture}[auto,>=latex']
 		\node [input, name=input] (input) {};
-		\node [block, below of=input, node distance=0cm] (A) {Filtro antialiasing};
-		\node [block, right of=A, node distance=2cm] (B) {ADC};
-		\node [block, right of=B, node distance=2cm] (C) {Proceso Digital};
-		\node [block, right of=C, node distance=2cm] (D) {DAC};
-		\node [block, right of=D, node distance=2cm] (E) {Filtro de salida};
+		\node [block, below of=input, node distance=0cm] (A) {$
+		\begin{matrix}
+			\text{Filtro}\\
+			\text{antialiasing}
+		\end{matrix}$};
+		\node [block, right of=A, node distance=2.5cm] (B) {ADC};
+		\node [block, right of=B, node distance=2.5cm] (C) {$
+		\begin{matrix}
+			\text{Proceso}\\
+			\text{digital}
+		\end{matrix}$};
+		\node [block, right of=C, node distance=2.5cm] (D) {DAC};
+		\node [block, right of=D, node distance=2.5cm] (E) {$
+		\begin{matrix}
+			\text{Filtro de}\\
+			\text{salida}
+		\end{matrix}$};
 
-		\node [text width=3.2cm, left of=A, node distance=1cm] (text6) {$x(t)$};
-
-		\draw [-angle 90] (A) --  node{} (B);
+		\draw [-angle 90] (-2,0) --  node{$x(t)$} (A);
+		\draw [-angle 90] (A) --  node{$x'(t)$} (B);
+		\draw [-angle 90] (B) --  node{$x[n]$} (C);
+		\draw [-angle 90] (C) --  node{$y[n]$} (D);
+		\draw [-angle 90] (D) --  node{$y'(t)$} (E);
+		\draw [-angle 90] (E) --  node{$y(t)$} ++(2,0);
 	\end{tikzpicture}
 	\caption{Esquema de un sistema PDS} \label{fig:esquema_PDS}
 \end{figure}
 
-\section{Conversión C/D y D/C}
+\newpage
 
-Para trabajar con sistemas continuos y discretos, vamos a establecer unos criterios de \textbf{equivalencia}, que usaremos para relacionar ambos tipos de sistema. Sin embargo, lo mejor es entenderlo con un ejemplo.
+\section{Muestreo}
 
-\subsubsection{Ejemplo 1}
+Para realizar el muestreo de una señal sin que se produzca aliasing\footnote{El \textit{aliasing} es el solapamiento espectral no intencionado. Es producido por el submuestreo.} debemos asegurar que se cumple el \textbf{Teorema de Nyquist}
 
-Obtenga el sistema discreto que permite implementar el siguiente sistema LTI continuo:
-\[ H_c \left( j\omega \right) = \left\lbrace
-	\begin{matrix*}[l]
-		1	&, \abs{\omega }<\omega _c\\
-		0	&, \text{ resto}
-	\end{matrix*} \right. \]
+Este dice que la frecuencia de muestreo debe ser, al menos, el doble de la frecuencia máxima de la señal a muestrear\footnote{El subíndice ``s'' viene de \textit{sampling} (en inglés, muestreo). El subíndice ``m'' viene de \textit{max}.}:
+\[ w_s \geq 2w_m \]
+\section{Sistemas equivalentes. C/D y D/C)}
 
-\textbf{\underline{Solución}}
-\begin{align*}
-	H_d \left( e^{j\omega} \right) & = \evaluat[\Big]{H_c \left( j\omega \right)}_{\omega = \frac{\Omega}{T_s}} = H_c \left( j \frac{\Omega}{T_s} \right) \quad , \abs{\Omega}<\pi \\[10pt]
-	H_d \left( e^{j\omega} \right) & = \left\lbrace
-	\begin{matrix*}[l]
-		1 & , \abs{\frac{\Omega}{T_s} }<\omega _c\\
-		0 & , \text{ resto}
-	\end{matrix*} \right. = \boxed{\left\lbrace
-		\begin{matrix*}[l]
-			1 & , \abs{\Omega}<\omega _cT_s<\pi\\
-			0 & , \text{ resto}
-		\end{matrix*} \right.}
-\end{align*}
+Para trabajar con sistemas continuos y discretos, se deben establecer unos criterios de equivalencia. En resumidas cuentas, los sistemas equivalentes se basan en la siguiente característica:
 
-Siempre y cuando se cumpla que $\omega_s\geq 2\omega_c$, podré emular en todo el rango de frecuencias de interés $H_c \left( j\omega \right)$
+\[ H_D \left( e^{j\omega } \right) = \biggl. H_C \left( j\omega \right)  \biggr\vert _{\omega = \frac{\Omega}{T_s}} \]
 
-\subsubsection{Ejemplo 2}
+\begin{center}
+	\fbox{\begin{minipage}{0.85\linewidth}
+		\textbf{Ejemplo 1.} Obtenga el sistema discreto que permite implementar el siguiente sistema LTI continuo:
+		\[ H_C \left( j\omega \right) = \left\lbrace
+			\begin{matrix*}[l]
+				1	&, \abs{\omega }<\omega _c\\
+				0	&, \text{ resto}
+			\end{matrix*} \right. \]
+		\begin{center}
+			\underline{\textbf{Solución}}
+		\end{center}
+		\begin{align*}
+			H_D \left( e^{j\omega} \right) & = \biggl. H_C \left( j\omega \right) \biggr\vert_{\omega = \frac{\Omega}{T_s}} = H_C \left( j \frac{\Omega}{T_s} \right) \quad , \abs{\Omega}<\pi \\[10pt]
+			H_D \left( e^{j\omega} \right) & = \left\lbrace
+			\begin{matrix*}[l]
+				1 & , \abs{\frac{\Omega}{T_s} }<\omega _c\\
+				0 & , \text{ resto}
+			\end{matrix*} \right. = \boxed{\left\lbrace
+				\begin{matrix*}[l]
+					1 & , \abs{\Omega}<\omega _cT_s<\pi\\
+					0 & , \text{ resto}
+				\end{matrix*} \right.}
+		\end{align*}
+		Siempre y cuando se cumpla que $\omega_s\geq 2\omega_c$, podré emular en todo el rango de frecuencias de interés $H_c \left( j\omega \right)$
 
-Encuentre el sistema discreto que permite implementar un diferenciador en tiempo continuo cuya relación entrada/salida es
-\[ y_c(t) = \dv{x_c(t)}{t} \]
-entre $-\frac{\omega_s}{2}$ y $\frac{\omega_s}{2}$.
+	\end{minipage}}
+\end{center}
 
-\textbf{\underline{Solución}}
+\begin{center}
+	\fbox{\begin{minipage}{0.85\linewidth}
+		\textbf{Ejemplo 2.} Encuentre el sistema discreto que permite implementar un diferenciador en tiempo continuo cuya relación entrada/salida es $ y_c(t) = \dv{}{t}x_c(t)$ entre $-\frac{\omega_s}{2}$ y $\frac{\omega_s}{2}$.
+
+		\begin{center}
+			\underline{\textbf{Solución}}
+		\end{center}
+\end{minipage}}
+\end{center}
 
 
 \section{ADC reales. Cuantificación}
@@ -281,7 +311,7 @@ entre $-\frac{\omega_s}{2}$ y $\frac{\omega_s}{2}$.
 Hay algunas cosas importantes que debemos recordar sobre la Transformada Discreta de Fourier:
 
 \begin{itemize}
-	\item La TF de una señal discreta siempre es \textbf{periódica} $\left( N = 2\pi \right)$.
+	\item La TF de una señal discreta es \textbf{periódica}, de periodo $2\pi$.
 \end{itemize}
 
 \section{Definición, cálculo, relaciones y propiedades}
