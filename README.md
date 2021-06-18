@@ -15,10 +15,10 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 ## Tabla de contenidos
 
 - [Introducción](#introducción)
+- [Tabla de contenidos](#tabla-de-contenidos)
 - [Asignaturas](#asignaturas)
   - [Primer semestre](#primer-semestre)
   - [Segundo semestre](#segundo-semestre)
-- [Proyectos por asignatura](#proyectos-por-asignatura)
 
 ## Asignaturas
 
@@ -54,7 +54,7 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 
 - [Fundamentos de Sonido e Imagen](/Segundo%20Semestre/Fundamentos%20de%20Sonido%20e%20Imagen/Fundamentos_de_Sonido_e_Imagen.pdf) - `En progreso`
 
-- [Microprocesadores](/Segundo%20Semestre/Microprocesadores/Microprocesadores.pdf) - `En progreso`
+- Microprocesadores
 
   - Resumen de [teoría](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teoría/RESUMEN_TEORIA.md)
   - Resumen de [laboratorio](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/RESUMEN_LABORATORIO.md)
@@ -149,47 +149,3 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 - [Propagación de Ondas](/Segundo%20Semestre/Propagación%20de%20Ondas/Propagación_de_Ondas.pdf) - `Aún no comenzado`
 
 - [Teoría de la Comunicación](/Segundo%20Semestre/Teoría%20de%20la%20Comunicación/Teoría_de_la_Comunicación.pdf) - `En progreso`
-
-## Proyectos por asignatura
-
-<details>
-  <summary>Primer Semestre</summary>
-<p>
-
-- [Electromagnetismo y Ondas](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/1)
-
-- [Electrónica II](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/2)
-
-- [Estadística y Procesos Estocásticos](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/5)
-
-- [Redes y Servicios de Telecomunicación](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/6)
-
-- [Señales y Sistemas](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/7)
-
----
-
-</p>
-</details>
-
-<details>
-  <summary>Segundo Semestre</summary>
-<p>
-  
-- [Ciencia, Tecnología y Sociedad](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/4)
-
-- [Fundamentos de Sonido e Imagen](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/8)
-
-- [Microprocesadores](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/9)
-
-- [Procesado Digital de la Señal](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/10)
-
-- [Propagación de Ondas](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/11)
-
-- [Teoría de la Comunicación](https://github.com/Javiolonchelo/ApuntesTeleco_2/projects/12)
-
----
-
-  </p>
-</details>
-
-<br>

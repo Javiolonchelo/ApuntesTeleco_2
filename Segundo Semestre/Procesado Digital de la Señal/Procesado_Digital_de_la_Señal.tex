@@ -44,71 +44,12 @@
 \section*{Introducción}
 Imagen de la portada: \textsl{La fragua de Vulcano}, por Diego Velázquez.
 
-Profesores del grupo G6T2TL:
+Las clases en las que se basan estos apuntes fueron impartidas por:
 \begin{itemize}
 	\item  \href{mailto:cesar.diazm@upm.es}{César Díaz Martín}
 	\item \href{mailto:eduardo.latorre.iglesias@upm.es}{Eduardo Latorre Iglesias}
 \end{itemize}
 
-\subsubsection{Metodología} \vspace{\parskip}
-\begin{itemize}
-	\item Teoría
-	      \begin{itemize}
-		      \item 13 semanas x 2h + 1 semana x 2h
-		      \item Evaluación continua: 3 test de 30 minutos cada uno
-	      \end{itemize}
-	\item Laboratorio
-	      \begin{itemize}
-		      \item 2 exámenes
-		      \item 5 prácticas
-	      \end{itemize}
-\end{itemize}
-
-\subsubsection{Evaluación} \vspace{\parskip}
-Asistencia no obligatoria (pero recomendada)
-Sin nota mínima en ningún apartado.
-
-\begingroup
-\renewcommand{\arraystretch}{1.2}
-\begin{center}
-	\begin{tabular}{c | c }
-		                 & Evaluación continua \\ \hline
-		                 & Test 1 (4\%)        \\
-		Teoría           & Test 2 (6\%)        \\
-		70\%             & Test 3 (10\%)       \\
-		                 & Examen final (50\%) \\ \hline
-		                 & (5\%)               \\
-		Laboratorio 30\% & (10\%)              \\
-		                 & (15\%)              \\
-	\end{tabular}
-\end{center}
-\endgroup
-
-\subsubsection{Conocimientos previos} \vspace{\parskip}
-\begin{itemize}
-	\item Operaciones con números complejos
-	      \begin{itemize}
-		      \item Conversión de formatos (parte real-imaginaria y módulo-fase)
-		      \item Fórmula de Euler y exponenciales complejas
-	      \end{itemize}
-	\item Conceptos matemáticos
-	      \begin{itemize}
-		      \item Representación de funciones complejas (módulo y fase)
-		      \item baia la cabaia
-	      \end{itemize}
-	\item Señales y Sistemas
-\end{itemize}
-
-\subsubsection{Lista de tareas} \vspace{\parskip}
-\begin{enumerate}
-	\item Cambiar el índice según la asignatura.
-	\item Organizar los PDFs descargados.
-	\item Mirar calendario para cuadrar laboratorios.
-	\item Incluir lo que falta de los conocimientos previos.
-	\item Descargar bibliografía.
-	\item Descargar exámenes y resto del material.
-	\item Añadir ejemplos diapositiva 9-10.
-\end{enumerate}
 \newpage
 
 % Índice (TOC)
@@ -118,7 +59,7 @@ Sin nota mínima en ningún apartado.
 
 %%% INICIO DE LOS APUNTES %%%
 
-\chapter*{Transformada de Fourier\\ y Muestreo}
+\chapter{Transformada de Fourier y Muestreo}
 
 \section{Introducción a la Transformada de Fourier}
 
@@ -222,7 +163,7 @@ A continuación, se encuentra representado el esquema general de un sistema PDS:
 		\node [block, below of=input, node distance=0cm] (A) {$
 		\begin{matrix}
 			\text{Filtro}\\
-			\text{antialiasing}
+			\text{anti-aliasing}
 		\end{matrix}$};
 		\node [block, right of=A, node distance=2.5cm] (B) {ADC};
 		\node [block, right of=B, node distance=2.5cm] (C) {$
@@ -251,58 +192,117 @@ A continuación, se encuentra representado el esquema general de un sistema PDS:
 
 \section{Muestreo}
 
-Para realizar el muestreo de una señal sin que se produzca aliasing\footnote{El \textit{aliasing} es el solapamiento espectral no intencionado. Es producido por el submuestreo.} debemos asegurar que se cumple el \textbf{Teorema de Nyquist}
+El muestreo es la recogida de muestras temporalmente equiespaciadas de una señal analógica para conformar una señal discreta.
 
-Este dice que la frecuencia de muestreo debe ser, al menos, el doble de la frecuencia máxima de la señal a muestrear\footnote{El subíndice ``s'' viene de \textit{sampling} (en inglés, muestreo). El subíndice ``m'' viene de \textit{max}.}:
+\subsection{Teorema de Nyquist}
+
+Para realizar el muestreo de una señal sin que se produzca aliasing\footnote{El \textit{aliasing} es el solapamiento espectral producido por el submuestreo.} debemos asegurar que se cumple el \textbf{Teorema de Nyquist}. Este afirma que la frecuencia de muestreo debe ser, al menos, el doble de la frecuencia máxima de la señal a muestrear\footnote{El subíndice ``s'' viene de \textit{sampling} (en inglés, muestreo). El subíndice ``m'' viene de \textit{max}.}:
 \[ w_s \geq 2w_m \]
+
+Un ejemplo curioso es el caso de los CDs de audio. Como los humanos somos capaces de escuchar hasta \SI{20}{\kHz} (aproximadamente), los CDs tienen una frecuencia de muestreo un poquito mayor al doble de esta: \SI{44.1}{\kHz}.
+
+\subsection{Evitar solapamiento}
+
+Sabiendo que si no se cumple el teorema de Nyquis (debido al submuestreo) podemos llegar a experimentar solapamiento espectral, tenemos dos alternativas para enfrentarnos a este problema.
+\begin{itemize}
+	\item \textbf{Aumentar la frecuencia de muestreo}. Es la opción más directa y sencilla. Sin embargo, muchas veces los sistemas que usemos serán limitados. Esta no es una opción que siempre podamos usar.
+	\item Utilizar un \textbf{filtro anti-solapamiento}. El uso de un filtro paso bajo con frecuencia de corte $\omega_c = \omega_s/2$ asegura el procesado de la señal limpia. En la práctica, la pérdida de señal es menos perjudicial que los efectos del aliasing.
+\end{itemize}
+
 \section{Sistemas equivalentes. C/D y D/C)}
 
 Para trabajar con sistemas continuos y discretos, se deben establecer unos criterios de equivalencia. En resumidas cuentas, los sistemas equivalentes se basan en la siguiente característica:
 
 \[ H_D \left( e^{j\omega } \right) = \biggl. H_C \left( j\omega \right)  \biggr\vert _{\omega = \frac{\Omega}{T_s}} \]
 
-\begin{center}
-	\fbox{\begin{minipage}{0.85\linewidth}
-		\textbf{Ejemplo 1.} Obtenga el sistema discreto que permite implementar el siguiente sistema LTI continuo:
-		\[ H_C \left( j\omega \right) = \left\lbrace
-			\begin{matrix*}[l]
-				1	&, \abs{\omega }<\omega _c\\
-				0	&, \text{ resto}
-			\end{matrix*} \right. \]
-		\begin{center}
-			\underline{\textbf{Solución}}
-		\end{center}
-		\begin{align*}
-			H_D \left( e^{j\omega} \right) & = \biggl. H_C \left( j\omega \right) \biggr\vert_{\omega = \frac{\Omega}{T_s}} = H_C \left( j \frac{\Omega}{T_s} \right) \quad , \abs{\Omega}<\pi \\[10pt]
-			H_D \left( e^{j\omega} \right) & = \left\lbrace
-			\begin{matrix*}[l]
-				1 & , \abs{\frac{\Omega}{T_s} }<\omega _c\\
-				0 & , \text{ resto}
-			\end{matrix*} \right. = \boxed{\left\lbrace
-				\begin{matrix*}[l]
-					1 & , \abs{\Omega}<\omega _cT_s<\pi\\
-					0 & , \text{ resto}
-				\end{matrix*} \right.}
-		\end{align*}
-		Siempre y cuando se cumpla que $\omega_s\geq 2\omega_c$, podré emular en todo el rango de frecuencias de interés $H_c \left( j\omega \right)$
-
-	\end{minipage}}
-\end{center}
-
-\begin{center}
-	\fbox{\begin{minipage}{0.85\linewidth}
-		\textbf{Ejemplo 2.} Encuentre el sistema discreto que permite implementar un diferenciador en tiempo continuo cuya relación entrada/salida es $ y_c(t) = \dv{}{t}x_c(t)$ entre $-\frac{\omega_s}{2}$ y $\frac{\omega_s}{2}$.
-
-		\begin{center}
-			\underline{\textbf{Solución}}
-		\end{center}
-\end{minipage}}
-\end{center}
+\begin{itemize}
+	\item La propiedad de \textbf{invarianza temporal} surge de la relación entre el tiempo continuo y el tiempo discreto: $t = nT_s $
+\end{itemize}
 
 
-\section{ADC reales. Cuantificación}
+\ejemplo
+{
+	Obtenga el sistema discreto que permite implementar el siguiente sistema LTI continuo:
+	\[ H_C \left( j\omega \right) = \left\lbrace
+		\begin{matrix*}[l]
+			1	&, \abs{\omega }<\omega _c\\
+			0	&, \text{ resto}
+		\end{matrix*} \right. \]
+}
+{
+	\begin{align*}
+		H_D \left( e^{j\omega} \right) & = \biggl. H_C \left( j\omega \right) \biggr\vert_{\omega = \frac{\Omega}{T_s}} = H_C \left( j \frac{\Omega}{T_s} \right) \quad , \abs{\Omega}<\pi \\[10pt]
+		H_D \left( e^{j\omega} \right) & = \left\lbrace
+		\begin{matrix*}[l]
+			1 & , \abs{\frac{\Omega}{T_s} }<\omega _c\\
+			0 & , \text{ resto}
+		\end{matrix*} \right. = \boxed{\left\lbrace
+		\begin{matrix*}[l]
+			1 & , \abs{\Omega}<\omega _cT_s<\pi\\
+			0 & , \text{ resto}
+		\end{matrix*} \right.}
+	\end{align*}
+Siempre y cuando se cumpla que $\omega_s\geq 2\omega_c$, podré emular en todo el rango de frecuencias de interés $H_c \left( j\omega \right)$
+}
 
-\section{Cambio de la velocidad}
+\section{Cambio de velocidad de muestreo}
+
+El cambio de velocidad de muestreo (también denominado procesado multitasa) pretende obtener a partir de una señal discreta otra señal discreta con diferente frecuencia de muestreo.
+
+\subsection{Teorema del muestreo discreto}
+
+Para evitar el solapamiento espectral, se debe cumplir: \[ Q \leq \frac{\pi}{\Omega_m}\]
+
+Donde $Q$ es el número de réplicas que caben en el espectro de la señal a muestrear. En otras palabras, $Q$ es el \textbf{orden de diezmado}.
+
+\subsection{Teorema de la interpolación}
+
+Sea $x[n]$ una señal discreta a la que queremos realizar interpolación de orden $P$, la señal interpolada resultante tendrá la forma:
+\[ x_P[n] = \left\lbrace 
+\begin{matrix*}[l]
+	x \left[ \frac{n}{P} \right] & \text{si } n = \dot{P}\\[5pt]
+	0 & \text{resto}
+\end{matrix*} \right.\]
+
+Lo que se traduce en posicionar $P-1$ ceros entre cada muestra de la señal original.
+
+
+\section{Aspectos prácticos}
+
+El proceso de muestreo y reconstrucción de una señal nunca es ideal. Se producirán errores, que pueden ser minimizados en función de los parámetros que escojamos en cada proceso.
+
+El \textbf{ADC} agrupa el conjunto de operaciones que nos permite convertir una señal de entrada continua en una señal analógica.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}[auto,>=latex']
+		\node [input, name=input] (input) {};
+		\node [block, below of=input, node distance=0cm] (A) {$
+		\begin{matrix}
+			\text{Filtro}\\
+			\text{anti-aliasing}
+		\end{matrix}$};
+		\node [block, right of=A, node distance=2.5cm] (B) {$
+		\begin{matrix}
+			\text{Sampler}\\
+			\text{\& Hold}
+		\end{matrix}$};
+		\node [block, right of=B, node distance=2.5cm] (C) {Cuantificador};
+		\node [block, right of=C, node distance=2.5cm] (D) {Codificador};
+
+		\draw [color=red,thick, dashed](1.5,-1) rectangle (8.75,1);
+		\node[text width=3cm] at (9.25,1.25) {\textbf{ADC}};
+
+		\draw [-angle 90] (-2.5,0) --  node{$x(t)$} (A);
+		\draw [-angle 90] (A) --  node{} (B);
+		\draw [-angle 90] (B) --  node{} (C);
+		\draw [-angle 90] (C) --  node{} (D);
+		\draw [-angle 90] (D) --  node{$x[n]$} ++(2.5,0);
+	\end{tikzpicture}
+	\caption{Etapa de entrada ADC} \label{fig:esquema_ADC}
+\end{figure}
+
+
 
 \chapter{La Transformada Discreta de Fourier (DFT)}
 
@@ -335,6 +335,12 @@ Sea $x[n]$ una señal periódica de periodo $N$: \[ x[n] = \]
 
 Podemos calcular su TF como:
 \[ \TF{x[n]} = X(\Omega ) = 2\pi \sum_{k=<N>}a_k \cdot \delta \left( \Omega - \frac{2\pi}{N}k \right)\]
+
+\subsection{Conversión a secuencia discreta}
+
+La conversión de la DFT de una señal a una secuencia discreta se realiza con la simple relación $\Omega = \omega T_s$, adaptándola según necesitemos. A continuación, la forma de llevarlo a la práctica:
+
+\[ X \left( \omega \right) = \biggl. X \left( \Omega \right)  \biggr\vert _{\Omega = \omega T_s} \qquad \qquad X \left( \Omega \right) = \biggl. X \left( \omega \right)  \biggr\vert _{\omega = \frac{\Omega}{T_s}} \]
 
 \section{Introducción al análisis espectral mediante la DFT}
 

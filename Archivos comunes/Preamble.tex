@@ -24,6 +24,11 @@
 \usepackage{wasysym}
 \usepackage[italic]{hepparticles}
 \usepackage{subdepth}
+\usepackage{siunitx}
+\sisetup{
+	mode 			= text,
+	parse-units 	= false
+}
 \usepackage{physics}
 \usepackage{braket}
 \usepackage{tensor}
@@ -41,13 +46,6 @@
 	pdfauthor = {Javier Rodrigo López}
 }
 \usepackage{eso-pic}
-\usepackage{siunitx}
-\sisetup{
-	mode 			= text,
-	parse-units 	= false,
-	round-mode      = places,
-	round-precision = 2,
-}
 
 % tikz
 \usepackage{tikz} \usetikzlibrary{fit,babel,shapes,arrows,patterns,positioning,calc,decorations.pathmorphing,decorations.markings}
@@ -72,7 +70,7 @@ minimum height=3em, minimum width=6em]
 % Títulos
 \usepackage{titlesec}
 \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\Alph{subsection}}
+% \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\Alph{subsection}}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
 \titlespacing{\section}{0pt}{2\parskip}{\parskip}
 \titlespacing{\subsection}{0pt}{\parskip}{0pt}
@@ -97,8 +95,6 @@ minimum height=3em, minimum width=6em]
 % Own environments
 \newenvironment{nota}{\underline{\textbf{NOTA:}} }{}
 \newenvironment{caja}{\begin{tcolorbox}[colback = white, sharp corners, boxrule = 1 pt]}{\end{tcolorbox}}
-\newtheorem{ejemplo}{Ejemplo}
-\newtheorem{ejercicio}{Ejercicio}
 \newtheorem*{conclusion}{Conclusión}
 \newtheorem{teorema}{Teorema}
 \newtheorem{definicion}{Definición}
@@ -200,6 +196,21 @@ minimum height=3em, minimum width=6em]
 
 % Footnotes
 % \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+% Ejemplo
+\newcounter{elejemplo}
+\newcommand{\ejemplo}[2]{
+	\refstepcounter{elejemplo}
+	\begin{center}
+		\fbox{\begin{minipage}{0.85\linewidth}
+			\textbf{Ejemplo \arabic{elejemplo}.} #1
+			\begin{center}
+				\underline{\textbf{Solución}}
+			\end{center}
+			#2
+		\end{minipage}}
+	\end{center}
+}
 
 % Repeticiones
 \usepackage{forloop}
