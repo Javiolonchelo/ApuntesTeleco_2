@@ -25,10 +25,7 @@
 \usepackage[italic]{hepparticles}
 \usepackage{subdepth}
 \usepackage{siunitx}
-\sisetup{
-	mode 			= text,
-	parse-units 	= false
-}
+\sisetup{mode = text}
 \usepackage{physics}
 \usepackage{braket}
 \usepackage{tensor}
@@ -77,15 +74,15 @@ minimum height=3em, minimum width=6em]
 \titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
 
 % Numeración de secciones
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \setcounter{secnumdepth}{2}
 
 % Figuras y descripciones
-\renewcommand{\thefigure}{\arabic{figure}}
-\renewcommand{\thesubfigure}{\Alph{subfigure}}
 \captionsetup[figure]{labelfont={bf},name={Figura},labelsep=period}
 \numberwithin{figure}{chapter}
 \numberwithin{equation}{chapter}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thesubfigure}{\Alph{subfigure}}
 
 % Enumerations
 \newcounter{myenumi}
@@ -102,19 +99,19 @@ minimum height=3em, minimum width=6em]
 % Para una bonita portada
 \usepackage{wallpaper}
 \usepackage{titling}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\setlength{\droptitle}{-10cm}
-\renewcommand{\chaptermark}[1]{%
-	\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{%
-	\markright{}}
-\fancyhf{}
-\fancyhead[LE,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[RE]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
-\fancypagestyle{plain}{%
-	\fancyhead{}
-	\renewcommand{\headrulewidth}{0pt}
-}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \setlength{\droptitle}{-10cm}
+% \renewcommand{\chaptermark}[1]{%
+% 	\markboth{#1}{}}
+% \renewcommand{\sectionmark}[1]{%
+% 	\markright{}}
+% \fancyhf{}
+% \fancyhead[L,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[R]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
+% \fancypagestyle{plain}{%
+% 	\fancyhead{}
+% 	\renewcommand{\headrulewidth}{0pt}
+% }
 
 % Organización del texto
 \newcommand{\formula}[1]{\vspace{13 pt}\noindent \textbf{\underline{#1}}}
@@ -201,8 +198,12 @@ minimum height=3em, minimum width=6em]
 \newcounter{elejemplo}
 \newcommand{\ejemplo}[2]{
 	\refstepcounter{elejemplo}
+	\setlength{\fboxsep}{1em}
 	\begin{center}
-		\fbox{\begin{minipage}{0.85\linewidth}
+		\fbox{
+			\setlength{\fboxsep}{3pt}
+			\begin{minipage}{0.85\linewidth}
+			\setlength{\parskip}{0.5em}
 			\textbf{Ejemplo \arabic{elejemplo}.} #1
 			\begin{center}
 				\underline{\textbf{Solución}}
@@ -210,6 +211,7 @@ minimum height=3em, minimum width=6em]
 			#2
 		\end{minipage}}
 	\end{center}
+	\setlength{\fboxsep}{3pt}
 }
 
 % Repeticiones

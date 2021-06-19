@@ -1,4 +1,4 @@
-\documentclass[a4paper]{book}
+\documentclass[a4paper,oneside]{book}
 
 \input{../../Archivos comunes/Preamble.tex} % Se incluye el preámbulo
 
@@ -12,6 +12,7 @@
 \begin{document}
 
 \setlength{\wpYoffset}{-0.5cm}
+\setlength{\droptitle}{-10cm}
 \ThisCenterWallPaper{0.7}{./Imágenes/Velazquez.jpg}
 \maketitle
 
@@ -63,70 +64,17 @@ Las clases en las que se basan estos apuntes fueron impartidas por:
 
 \section{Introducción a la Transformada de Fourier}
 
-La transformada de Fourier nos servirá para representar señales como combinación lineal de unos ciertos componentes o señales básicas.
-
-La aplicación fundamental del análisis de Fourier es el estudio de las señales en el dominio de la frecuencia (\textbf{dominio espectral}).
-
-El análisis de Fourier se puede realizar para:
-\begin{itemize}
-	\item Señales continuas:
-	      \begin{itemize}
-		      \item Periódicas: Serie de Fourier de tiempo continuo
-		      \item No periódicas: Transformada de Fourier en tiempo discreto
-	      \end{itemize}
-	\item Señales discretas
-\end{itemize}
-
 \section{Series de Fourier de señales periódicas}
-Sea $x(t)$ una señal periódica, de periodo $T_o$. Esta señal puede expresarse como una combinación lineal de exponenciales complejas (serie de Fourier).
-
-La \textbf{ecuación de síntesis} es la siguiente:
-\begin{equation}
-	x(t) = \sum_{k=-\infty}^{\infty}a_k e^{jk\omega _o t}
-\end{equation}
-
-Los pesos $a_k$ se denominan \textbf{coeficientes espectrales} y determinan qué cantidad de energía reside en cada frecuencia. Se calculan mediante la \textbf{ecuación de análisis}:
-\[  \]
-
-Notas.
-\begin{itemize}
-	\item Coeficientes hermíticos
-	\item baia la cabaia
-\end{itemize}
-
-Añadir ejemplos para el seno y el coseno (se hace mediante la fórmula de Euler).
 
 \subsection{Fenómeno de Gibbs}
 
-En una señal que necesite infinitos coeficientes de Fourier para ser representada de forma exacta, al coger solo un conjunto de los coeficientes se produce un "rizado" en ciertos puntos de la señal, con amplitud independiente del número de coeficientes escogidos. Esto es el fenómeno de Gibbs
+En una señal que necesite infinitos coeficientes de Fourier para ser representada de forma exacta, al coger solo un conjunto de los coeficientes se produce un ``rizado'' en ciertos puntos de la señal, con amplitud independiente del número de coeficientes escogidos. Este suceso es lo que se conoce como \textbf{fenómeno de Gibbs}.
 
 \section{Transformada de Fourier para señales no periódicas}
 
-Si tenemos una señal no periódica. Si intentamos hacerla periódica repitiéndola cada $T$ y luego hacemos que este tiempo $T$ tienda a infinito, tenemos la transformada de Fourier.
-
-AÑADIR FÓRMULAS
-Ecuación de síntesis (transformada de Fourier inversa)
-Ecuación de análisis
-
 \subsection{Propiedades de la transformada de Fourier}
-HAY QUE EXPLICARLAS
-
-Propiedad de convolución: Convolución en el tiempo es multiplicación en frecuencia.
-
-Propiedad de modulación: Multiplicación en el tiempo es convolución en frecuencia.
-
-Añadir ejemplo
 
 \section{Transformada de Fourier de señales periódicas}
-
-La transformada de Fourier de una señal periódica es una combinación lineal de deltas.
-
-EJEMPLO IMPORTANTE (en este ejemplo se basa el muestreo)
-Se calcula $a_k$
-\subsection{Algunos pares transformados}
-
-La transformada de un pulso siempre es una sinc.
-La transformada inversa de una sinc siempre es un pulso.
 
 \chapter{Procesado digital de señales analógicas}
 
@@ -158,6 +106,7 @@ A continuación, se encuentra representado el esquema general de un sistema PDS:
 
 \begin{figure}[ht]
 	\centering
+	\caption{Esquema de un sistema PDS} \label{fig:esquema_PDS}
 	\begin{tikzpicture}[auto,>=latex']
 		\node [input, name=input] (input) {};
 		\node [block, below of=input, node distance=0cm] (A) {$
@@ -185,7 +134,6 @@ A continuación, se encuentra representado el esquema general de un sistema PDS:
 		\draw [-angle 90] (D) --  node{$y'(t)$} (E);
 		\draw [-angle 90] (E) --  node{$y(t)$} ++(2,0);
 	\end{tikzpicture}
-	\caption{Esquema de un sistema PDS} \label{fig:esquema_PDS}
 \end{figure}
 
 \newpage
@@ -209,7 +157,26 @@ Sabiendo que si no se cumple el teorema de Nyquis (debido al submuestreo) podemo
 	\item Utilizar un \textbf{filtro anti-solapamiento}. El uso de un filtro paso bajo con frecuencia de corte $\omega_c = \omega_s/2$ asegura el procesado de la señal limpia. En la práctica, la pérdida de señal es menos perjudicial que los efectos del aliasing.
 \end{itemize}
 
-\section{Sistemas equivalentes. C/D y D/C)}
+\subsection{Teorema del muestreo discreto}
+
+Para evitar el solapamiento espectral, se debe cumplir: \[ Q \leq \frac{\pi}{\Omega_m}\]
+Donde $Q$ es el número de réplicas que caben en el espectro de la señal a muestrear. En otras palabras, $Q$ es el \textbf{orden de diezmado}.
+
+
+\subsection{Teorema de la interpolación}
+
+Sea $x[n]$ una señal discreta a la que queremos realizar interpolación de orden $P$, la señal interpolada resultante tendrá la forma:
+\[ x_P[n] = \left\lbrace 
+\begin{matrix*}[l]
+	x \left[ \frac{n}{P} \right] & \text{si } n = \dot{P}\\[5pt]
+	0 & \text{resto}
+\end{matrix*} \right.\]
+
+Lo que se traduce en posicionar $P-1$ ceros entre cada muestra de la señal original.
+
+Es importante saber que una \underline{expansión} en el tiempo conlleva una \underline{compresión} en frecuencia.
+
+\section{Sistemas equivalentes. C/D y D/C}
 
 Para trabajar con sistemas continuos y discretos, se deben establecer unos criterios de equivalencia. En resumidas cuentas, los sistemas equivalentes se basan en la siguiente característica:
 
@@ -217,8 +184,8 @@ Para trabajar con sistemas continuos y discretos, se deben establecer unos crite
 
 \begin{itemize}
 	\item La propiedad de \textbf{invarianza temporal} surge de la relación entre el tiempo continuo y el tiempo discreto: $t = nT_s $
+	\item Cuando introducimos una señal continua $x(t)$ en un conversor C/D, la señal discreta que tenemos a la salida resulta escalada en un factor $\frac{1}{T_s}$ con respecto a $x(t)$. Si te surgen dudas, mira en la tabla de transformadas y propiedades de la DFT.
 \end{itemize}
-
 
 \ejemplo
 {
@@ -249,23 +216,15 @@ Siempre y cuando se cumpla que $\omega_s\geq 2\omega_c$, podré emular en todo e
 
 El cambio de velocidad de muestreo (también denominado procesado multitasa) pretende obtener a partir de una señal discreta otra señal discreta con diferente frecuencia de muestreo.
 
-\subsection{Teorema del muestreo discreto}
+\subsection{Expansor y Compresor}
 
-Para evitar el solapamiento espectral, se debe cumplir: \[ Q \leq \frac{\pi}{\Omega_m}\]
+Un \textbf{expansor} es un elemento que realiza la interpolación. Un \textbf{compresor} es un elemento que realiza el diezmado. Sin embargo, este último lo consigue en dos pasos:
+\begin{itemize}
+	\item Muestreo con $T_s = Q$.
+	\item Supresión de $Q - 1$ ceros (lo opuesto a la interpolación).
+\end{itemize}
 
-Donde $Q$ es el número de réplicas que caben en el espectro de la señal a muestrear. En otras palabras, $Q$ es el \textbf{orden de diezmado}.
-
-\subsection{Teorema de la interpolación}
-
-Sea $x[n]$ una señal discreta a la que queremos realizar interpolación de orden $P$, la señal interpolada resultante tendrá la forma:
-\[ x_P[n] = \left\lbrace 
-\begin{matrix*}[l]
-	x \left[ \frac{n}{P} \right] & \text{si } n = \dot{P}\\[5pt]
-	0 & \text{resto}
-\end{matrix*} \right.\]
-
-Lo que se traduce en posicionar $P-1$ ceros entre cada muestra de la señal original.
-
+En un sistema real, lo preferible es hacer uso del expansor antes que el compresor.
 
 \section{Aspectos prácticos}
 
@@ -275,6 +234,7 @@ El \textbf{ADC} agrupa el conjunto de operaciones que nos permite convertir una 
 
 \begin{figure}[ht]
 	\centering
+	\caption{Etapa de entrada ADC} \label{fig:esquema_ADC}
 	\begin{tikzpicture}[auto,>=latex']
 		\node [input, name=input] (input) {};
 		\node [block, below of=input, node distance=0cm] (A) {$
@@ -299,12 +259,68 @@ El \textbf{ADC} agrupa el conjunto de operaciones que nos permite convertir una 
 		\draw [-angle 90] (C) --  node{} (D);
 		\draw [-angle 90] (D) --  node{$x[n]$} ++(2.5,0);
 	\end{tikzpicture}
-	\caption{Etapa de entrada ADC} \label{fig:esquema_ADC}
 \end{figure}
 
+\subsection{Filtro antialiasing}
 
+Para evitar el aliasing, debemos usar un filtro paso bajo que, idealmente, tendría la siguiente forma:
+\[ H_{aa}(j\omega ) = \left\lbrace 
+\begin{matrix*}[l]
+	1 \, , & \abs{\omega}<\omega_c \leq \frac{\omega_s}{2}\\ 
+	0 \, , & \abs{\omega} > \omega_c
+\end{matrix*} \right. \] 
 
-\chapter{La Transformada Discreta de Fourier (DFT)}
+Sin embargo, en la realidad es muy complicado implementar un filtro de este estilo. La solución alternativa es el \textbf{sobremuestreo}. Si conseguimos $\omega_s \gg 2 \omega_m$, podemos implementar un filtro que no altere demasiado la información a filtrar.
+	
+Se define entonces la \textbf{tasa de sobremuestreo} $R$ como:
+\[ R = \frac{\omega_s}{2\omega_m} \]
+
+\subsection{Sampler \& Hold}
+
+Este circuito sirve para seleccionar ciertas muestras equiespaciadas en el tiempo de una señal continua dada y mantener su valor hasta obtener la siguiente muestra.
+
+\begin{figure}[htp] \label{fig:samplerAndHold}
+	\centering
+	\caption{Ejemplo de señal procesada por un circuito Sampler \& Hold}
+	\includegraphics[width=0.8\linewidth]{Imágenes/SamplerAndHold.png}
+\end{figure}
+
+\subsection{Cuantificador y Codificador}
+
+Un cuantificador es una etapa que asigna a cada valor leído en su entrada un valor binario de $n$ bits, de modo que puede leer $2^n$ valores diferentes (que se corresponden con los escalones proporcionados a la salida del Sampler \& Hold).
+
+Puedes ver un ejemplo del procesado de una señal a través de un cuantificador uniforme en la \autoref{fig:cuantificadorUniforme}.
+
+\begin{figure}[htp]
+	\centering
+	\caption{Ejemplo de señal procesada en un cuantificador uniforme.}\label{fig:cuantificadorUniforme}
+	\includegraphics[width=0.6\linewidth]{Imágenes/Quantification.png}
+\end{figure}
+
+\subsubsection{Error de Cuantificación}
+
+Para tratar con el ruido en estos sistemas, vamos a suponer siguie el modelo estadístico del ruido:
+\begin{itemize}
+	\item El error es un proceso estocástico estacionario.
+	\item La secuencia $e[n]$ está incorrelada con $x[n]$.
+	\item El error es un proceso de ruido blanco.
+	\item La función densidad de probabilidad (FDP) del error es uniforme entre $-\Delta / 2$ y $+\Delta / 2$.
+\end{itemize}
+
+Estas suposiciones se cumplen si la señal a tratar es complicada, fluctuando de manera rápida e impredecible, y  si el escalón de cuantificación es suficientemente pequeño.
+
+Podemos calcular varias cosas a partir de esto.
+\begin{itemize}
+	\item \textbf{Potencia del error.} \[ \sigma_e^2 = \frac{\Delta ^2}{12} = \frac{x_m^2}{12 \cdot 2^{2b}} \]
+	\item \textbf{Relación señal a ruido (SNR)}
+	\begin{align*}
+		\textrm{SNR}(\unit{\dB}) &= 10 \log \left( \frac{\sigma_x^2}{\sigma_e^2} \right) \\ 
+		&= 10 \log \left( 12 \right) + 10 \log \left( 2^{2b} \right) + 10 \log \left( \frac{\sigma_x^2}{x_m^2} \right) \\
+		&= \boxed{10.79} + \boxed{6.02 \cdot b} + \boxed{20 \log \left( \frac{x_m}{\sigma_x} \right) }
+	\end{align*}
+\end{itemize}
+
+\chapter{Transformada Discreta de Fourier: DFT}
 
 \section{Introducción}
 
@@ -364,6 +380,35 @@ Calcular los coeficientes $a_k$ de la señal indicada a continuación: \[ x[n] =
 \section{Comparación entre métodos de diseño y tipos de filtros}
 
 \section{Estructuras para la implementación de filtros digitales}
+
+\chapter{Ejercicios de examen resueltos}
+
+\ejemplo
+{ % Enunciado
+	\underline{Enero de 2013. Problema 2.} Se han muestreado, a sus frecuencias de Nyquist (el doble de la componente de frecuencia no nula de mayor frecuencia), dos señales $x_1(t)$ y $x_2(t)$ cuyos espectros de amplitud de muestran en las figuras 1 y 2.
+
+	Sabiendo que el sistema total (figura 3) trabaja en tiempo real, que los sistemas $H_1(\Omega)$ y $H_2(\Omega)$ son filtros ideales paso bajo con pulsaciones de corte $\abs{\Omega_{c1}}>0$ y $\abs{\Omega_{c2}}>0$ (respectivamente) por determinar, los sistemas $A$ y $B$ pueden ser bien un insertador de ceros bien un eliminador de muestras, y la señal de salida no presenta solapamientos espectrales, se pide:
+
+	\begin{enumerate}[label=\alph*)]
+		 \item Identificar las características ideales de los sistemas $A$, $B$, y $H_1(\Omega)$ para que el sistema pueda funcionar en tiempo real.
+		 \item Representar, indicando valores, los espectros de las señales $x_1[n], x_A[n], x_B[n], x_C[n]$.
+		 \item Representar, indicando valores, los espectros de las señales $x_2[n], x_F[n], x_M[n]$ en función de $\abs{\Omega_{c2}}>0$ y $H_2(\Omega)$.
+		 \item Sabiendo que no deben producirse solapamientos espectrales en la señal de salida $y[n]$; determinar el valor de $\Omega_{c2}$ y representar el espectro de $y_2[n]$.
+	\end{enumerate}
+
+	Otros datos:
+	\begin{itemize}
+		\item $w_{m1} = 20\pi \cdot 10^{3} \, \unit{rad/s}$
+		\item $w_{m2} = 30\pi \cdot 10^{3} \, \unit{rad/s}$
+	\end{itemize}
+}
+{ % Solución
+	\begin{enumerate}[label=\alph*)]
+		 \item Para funcionar en tiempo real, los sistemas necesitan operar en la misma frecuencia de muestreo en el momento de la suma. Para evitar pérdida de información por aliasing, primero debería ir el expansor (con $P=3$) y luego el compresor (con $Q=2$). El sistema $H_1(\Omega)$ tendrá una amplitud que compense el efecto del interpolador, por lo que será $3$. \[ \frac{P}{Q} = \frac{w_{m2}}{w_{m1}} = \frac{3}{2} \qquad \qquad \Omega_{c1} = \min \left( \frac{\pi}{2} \, , \frac{\pi}{3} \right) = \frac{\pi}{3}\]
+		 \item Hola
+		 \item Se hace igual que en el apartado a, pero sabiendo que: \[ (-1)^n = \cos \left( \pi n \right) \] Esto simplifica enormemente los cálculos.
+	\end{enumerate}
+}
 
 %%% FIN DE LOS APUNTES %%%
 
