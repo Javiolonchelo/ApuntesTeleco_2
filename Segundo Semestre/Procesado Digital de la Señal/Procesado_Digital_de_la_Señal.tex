@@ -17,7 +17,7 @@
 \maketitle
 
 \titleformat{\chapter}[block]
-{\normalfont\Huge\bfseries}{TEMA \thechapter.}{1em}{}
+{\normalfont\Huge\bfseries}{\huge{TEMA \thechapter.}\\ }{1em}{}
 
 % Marca de agua
 \AddToShipoutPictureFG{
@@ -322,35 +322,20 @@ Podemos calcular varias cosas a partir de esto.
 
 \chapter{Transformada Discreta de Fourier: DFT}
 
-\section{Introducción}
-
-Hay algunas cosas importantes que debemos recordar sobre la Transformada Discreta de Fourier:
-
-\begin{itemize}
-	\item La TF de una señal discreta es \textbf{periódica}, de periodo $2\pi$.
-\end{itemize}
-
 \section{Definición, cálculo, relaciones y propiedades}
 
-\subsection{TF para señales periódicas}
-
-\begin{multicols}{2}
-	\subsubsection{Ecuación de síntesis}
+\subsubsection{Ecuación de análisis}
 	
-	\[ x[n] = \sum_{k=<N>}^{}a_ke^{jk \frac{2\pi}{N} n}\]
+\[ X_K = \sum_{n=0}^{M-1}\tilde{x}[n]e^{-jk \frac{2\pi}{M}K n} \, , \quad 
+\begin{matrix*}[l]
+	K = 0, 1, \ldots , M-1 \\[5pt]
+	\Omega = 0, \frac{2\pi}{M}, \frac{4\pi}{M}, \ldots , 2\pi - \frac{2\pi}{M}
+\end{matrix*}\]
 	
-	\subsubsection{Ecuación de análisis}
+\subsubsection{Ecuación de síntesis}
 	
-	\[ a_k = \frac{1}{N}\sum_{n=<N>}x[n]e^{-jk \frac{2\pi}{N}n} \]
-	
-\end{multicols}
+\[ \tilde{x}[n] = \frac{1}{M} \sum_{n=0}^{M-1}X_Ke^{j \frac{2\pi}{M}Kn}\]
 
-\subsubsection{DFT}
-
-Sea $x[n]$ una señal periódica de periodo $N$: \[ x[n] = \]
-
-Podemos calcular su TF como:
-\[ \TF{x[n]} = X(\Omega ) = 2\pi \sum_{k=<N>}a_k \cdot \delta \left( \Omega - \frac{2\pi}{N}k \right)\]
 
 \subsection{Conversión a secuencia discreta}
 
@@ -358,7 +343,154 @@ La conversión de la DFT de una señal a una secuencia discreta se realiza con l
 
 \[ X \left( \omega \right) = \biggl. X \left( \Omega \right)  \biggr\vert _{\Omega = \omega T_s} \qquad \qquad X \left( \Omega \right) = \biggl. X \left( \omega \right)  \biggr\vert _{\omega = \frac{\Omega}{T_s}} \]
 
+La TF de una señal discreta es una señal continua periódica. Sin embargo, para operar con las frecuencias en el terreno digital es mucho más cómodo realizar un muestreo de la misma.
+
+La \textbf{DFT} es simplemente un muestreo realizado entre $0$ y $2\pi$ de $M$ muestras, siendo $M$ el orden de la DFT\footnote{Normalmente se denota como $\DFT^M$ para indicar directamente que la DFT es de orden $M$.}.
+
+Este muestreo se realiza de una forma completamente diferente a como lo hacíamos en un ADC. Si recuerdas, la TF surgía como una serie de Fourier de una señal cuando su periodo tendía a infinito. De forma análoga, podemos obtener realizar el desarrollo en series de Fourier de una señal no periódica si forzamos su repetición, de modo que su nuevo periodo sea $N = M$.
+
+\[ a_k = \biggl. \frac{1}{M} X(\Omega ) \biggr\vert _{\Omega = k \frac{2\pi}{M}}\]
+
+Suponemos que la señal $x[n]$ tiene $L$ muestras, podemos tener dos situaciones:
+\begin{multicols}{2}
+	\begin{itemize}
+		\item \textbf{Sobremuestreo:} $\boxed{M\geq L}$
+		\item \textbf{Submuetreo:} $\boxed{M<L}$
+	\end{itemize}
+\end{multicols}
+
+Cuando se realiza un submuestreo, no se puede recuperar la señal original una vez hayamos calculado la DFT, cosa que no sucedería si se realizara un sobremuestreo.
+
+Sin embargo, en ambas situaciones se puede realizar la DFT. Simplemente debemos saber lo que conlleva.
+
+\subsection{Cálculo matricial}
+
+Es más sencillo obtener la DFT realizando el \textbf{cálculo matricial de la DFT}:
+
+\[ \left( 
+\begin{matrix}
+	X[0]\\
+	X[1]\\
+	\vdots \\
+	X[F]\\
+\end{matrix} \right)
+= \left(
+\begin{matrix}
+	W^{0 \cdot 0} & W^{0 \cdot 1} & \cdots & W^{0 \cdot F}\\
+	W^{1 \cdot 0} & W^{1 \cdot 1} & \cdots & W^{1 \cdot F}\\
+	\vdots & \vdots & \ddots & \vdots \\
+	W^{F \cdot 0} & W^{F \cdot 1} & \cdots & W^{F \cdot F}\\
+\end{matrix} \right)
+\left( \begin{matrix}
+	\tilde{x}[0]\\
+	\tilde{x}[1]\\
+	\vdots\\
+	\tilde{x}[F]\\
+\end{matrix} \right)
+\qquad \quad 
+\begin{matrix*}[l]
+	W^{K \cdot n} = e^{-j \frac{2\pi}{M}Kn}\\[5pt]
+	F = M - 1
+\end{matrix*}
+\]
+
+De forma análoga, podemos realizar el \textbf{cálculo matricial de la DFT inversa}:
+
+\[ \left( \begin{matrix}
+	\tilde{x}[0]\\
+	\tilde{x}[1]\\
+	\vdots\\
+	\tilde{x}[F]\\
+\end{matrix} \right)
+= \left(
+\begin{matrix}
+	v^{0 \cdot 0} & v^{0 \cdot 1} & \cdots & v^{0 \cdot F}\\
+	v^{1 \cdot 0} & v^{1 \cdot 1} & \cdots & v^{1 \cdot F}\\
+	\vdots & \vdots & \ddots & \vdots \\
+	v^{F \cdot 0} & v^{F \cdot 1} & \cdots & v^{F \cdot F}\\
+\end{matrix} \right)
+\left( 
+\begin{matrix}
+	X[0]\\
+	X[1]\\
+	\vdots \\
+	X[F]\\
+\end{matrix} \right)
+\qquad \quad 
+\begin{matrix*}[l]
+	v^{K \cdot n} = \frac{1}{M} e^{j \frac{2\pi}{M}Kn}\\[5pt]
+	F = M - 1
+\end{matrix*}
+\]
+
+\subsection{Convolución circular}
+
+Para que la convolución circular y la convolución lineal coincidan, es necesario que:
+\[ N \geq L+D-1 \qquad \Longrightarrow \qquad y[n]=x[n] \circConvUnknown h[n] = \left\lbrace 
+\begin{matrix*}[l]
+	\tilde{x}[n] \circledast h[n] & 0 \leq n \leq N-1\\ 
+	0 & \textrm{resto}
+\end{matrix*} \right.\]
+
 \section{Introducción al análisis espectral mediante la DFT}
+
+\subsection{Enventanado}
+
+En los sistemas reales, no podemos coger muestras infinitas de una señal. Al acto de escoger $L$ muestras de la señal original se le denomina \textbf{enventanado}. 
+
+Se pueden modificar los parámetros según lo que se quiera conseguir. Algunas modificaciones que se pueden hacer:
+\begin{itemize}
+	\item \textbf{Ancho del lóbulo principal.} Solo depende de $L$. \[ \uparrow L \quad \downarrow W \quad \uparrow \textrm{Tiempo de adquisición} \]
+	\item \textbf{Ancho de los lóbulos secundarios.} Corresponde a las \textbf{fugas espectrales}, energía que aparece en frecuencias no deseadas. Solo depende del \textbf{tipo de ventana}.
+\end{itemize}
+
+A efectos prácticos, es como multiplicar la señal por una ventana rectangular de longitud $L$. Vamos a ver qué tipos de ventana podemos usar y qué efectos tienen en la DFT.
+
+\newpage
+
+\begin{multicols}{2}
+	\subsubsection{Ventana rectangular}\vspace{\parskip}
+	\begin{itemize}
+		\item Lóbulo lateral a \textbf{13 dB} por debajo del lóbulo principal.
+		\item La anchura del lóbulo principal se reduce a menuda que se aumenta la longitud de la ventana.
+	\end{itemize}
+	\[ w[n] = \left\lbrace 
+	\begin{matrix*}[l]
+		1 & -M\leq n \leq M\\
+		0 & \textrm{resto}
+	\end{matrix*} \right. \]
+
+	\subsubsection{Ventana de Hanning}\vspace{\parskip}
+	\begin{itemize}
+		\item Lóbulo lateral a \textbf{31 dB} por debajo del lóbulo principal.
+		\item La anchura del lóbulo principal es aproximadamente el doble que en la ventana rectangular, y se reduce según aumenta $L$.
+	\end{itemize}
+	\[ w[n] = \left\lbrace
+	\begin{matrix*}[l]
+		\displaystyle{\frac{1}{2} + \frac{1}{2}\cos \left( \frac{\pi}{M+1}n \right)} & -M\leq n \leq M\\
+		0 & \textrm{resto}
+	\end{matrix*} \right. \]
+	
+\columnbreak	
+	\subsubsection{Ventana triangular o de Bartlett}\vspace{\parskip}
+	\[ w[n] = \left\lbrace
+	\begin{matrix*}[l]
+		\displaystyle{\frac{(M+1) - \abs{n}}{(M+1)^2}} & -M\leq n \leq M\\
+		0 & \textrm{resto}
+	\end{matrix*} \right. \]
+
+	\subsubsection{Ventana de Hamming}\vspace{\parskip}
+	\begin{itemize}
+		\item Optimización de la ventana de Hanning.
+		\item Lóbulo lateral a \textbf{41 dB} por debajo del lóbulo principal.
+		\item Anchura del lóbulo principal igual que la Hanning.
+	\end{itemize}
+	\[ w[n] = \left\lbrace
+	\begin{matrix*}[l]
+		\displaystyle{0.54 + 0.46\cos \left( \frac{\pi}{M}n \right)} & -M\leq n \leq M\\
+		0 & \textrm{resto}
+	\end{matrix*} \right. \]
+\end{multicols}
 
 \section{Filtrado de señales mediante la DFT}
 

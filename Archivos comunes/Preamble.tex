@@ -1,51 +1,51 @@
 %%% INICIO DEL PREÁMBULO %%%
 
-\usepackage[utf8]{inputenc}
-\usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
-\usepackage{babelbib}
-\usepackage{nccmath}
-\usepackage{amsthm}
-\usepackage{lipsum}
-\usepackage{tcolorbox}
-\usepackage[thicklines]{cancel}
-\usepackage{mathtools}
-\usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{color}
-\usepackage{verbatim}
-\usepackage{enumerate}
-\usepackage{geometry}
-\geometry{a4paper,left=35mm,right=35mm,top=15mm,bottom=15mm}
-\usepackage{isotope}
-\usepackage{maybemath}
-\usepackage{upgreek}
-\usepackage{wasysym}
-\usepackage[italic]{hepparticles}
-\usepackage{subdepth}
-\usepackage{siunitx}
-\sisetup{mode = text}
-\usepackage{physics}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{babelbib}
 \usepackage{braket}
-\usepackage{tensor}
-\usepackage{chemformula}
-\usepackage{tikz}
-\usepackage{url}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{esint}
+\usepackage{eso-pic}
 \usepackage{listings}
-\usepackage{multirow}
+\usepackage{mathtools}
 \usepackage{multicol}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{subdepth}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{upgreek}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{vwcol}
+\usepackage{wallpaper}
+
+\usepackage{physics}
+
+\usepackage[c]{esvect}
+\usepackage[utf8]{inputenc}
+\usepackage[thicklines]{cancel}
+\usepackage[margin=2cm]{geometry}
 \usepackage[colorlinks=true]{hyperref}
+\usepackage[oldvoltagedirection]{circuitikz}
+\usepackage[greek,spanish,es-tabla,es-nodecimaldot,es-noindentfirst]{babel}
+\sisetup{mode = text}
 \hypersetup{
 	citecolor = blue,
 	linkcolor = blue,
 	urlcolor = blue,
 	pdfauthor = {Javier Rodrigo López}
 }
-\usepackage{eso-pic}
 
 % tikz
-\usepackage{tikz} \usetikzlibrary{fit,babel,shapes,arrows,patterns,positioning,calc,decorations.pathmorphing,decorations.markings}
+\usetikzlibrary{fit,babel,shapes,arrows,patterns,positioning,calc,decorations.pathmorphing,decorations.markings}
 \tikzstyle{block} = [draw, fill=white, rectangle,
 minimum height=3em, minimum width=6em]
 \tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
@@ -61,11 +61,7 @@ minimum height=3em, minimum width=6em]
 	pinstyle/.style = {pin edge={to-,thin,black}}
 }
 
-\usepackage[oldvoltagedirection]{circuitikz}
-\usepackage{pdflscape}
-
 % Títulos
-\usepackage{titlesec}
 \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 % \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\Alph{subsection}}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[{\titlerule[0.05pt]}]
@@ -96,23 +92,6 @@ minimum height=3em, minimum width=6em]
 \newtheorem{teorema}{Teorema}
 \newtheorem{definicion}{Definición}
 
-% Para una bonita portada
-\usepackage{wallpaper}
-\usepackage{titling}
-% \usepackage{fancyhdr}
-% \pagestyle{fancy}
-% \setlength{\droptitle}{-10cm}
-% \renewcommand{\chaptermark}[1]{%
-% 	\markboth{#1}{}}
-% \renewcommand{\sectionmark}[1]{%
-% 	\markright{}}
-% \fancyhf{}
-% \fancyhead[L,RO]{\bfseries\thepage} \fancyhead[LO]{\bfseries\rightmark} \fancyhead[R]{\bfseries\leftmark} \renewcommand{\headrulewidth}{0pt} \renewcommand{\footrulewidth}{0pt} \addtolength{\headheight}{15pt}
-% \fancypagestyle{plain}{%
-% 	\fancyhead{}
-% 	\renewcommand{\headrulewidth}{0pt}
-% }
-
 % Organización del texto
 \newcommand{\formula}[1]{\vspace{13 pt}\noindent \textbf{\underline{#1}}}
 \newcommand{\subtext}[1]{_{\text{#1}}}
@@ -142,15 +121,14 @@ minimum height=3em, minimum width=6em]
 \newcommand{\psus}{\, \ldots \,}
 \newcommand{\mcm}{\operatorname{mcm}}
 \newcommand{\MCD}{\operatorname{MCD}}
+\newcommand{\DFT}{\operatorname{DFT}}
 \renewcommand{\sin}{\sen}
 \renewcommand{\arcsin}{\arcsen}
 \renewcommand{\arctan}{\arctg}
 \renewcommand{\min}{\operatorname{mín}}
-
 \DeclarePairedDelimiter\evaluat{.}{\rvert}
 
 % Vectores
-\usepackage[c]{esvect}
 \renewcommand{\vec}[1]{\vv{{#1}}}
 \newcommand{\proy}[2]{\operatorname{proy}_{\vec{#2}}\vec{#1}}
 \newcommand{\antiparallel}{\downharpoonleft \! \upharpoonright}
@@ -183,7 +161,6 @@ minimum height=3em, minimum width=6em]
 \newcommand{\mcu}{M.C.U.}
 \newcommand{\ed}{E.D.}
 \newcommand{\edmas}{E.D. del M.A.S.}
-\usepackage{esint}
 
 % Señales y Sistemas
 \renewcommand{\H}{H}
@@ -215,7 +192,6 @@ minimum height=3em, minimum width=6em]
 }
 
 % Repeticiones
-\usepackage{forloop}
 \newcommand{\repvec}[3]{
 	\foreach \uwu in {1,...,#2}
 		{\vec{#1}_{\uwu} ,}
@@ -232,4 +208,5 @@ minimum height=3em, minimum width=6em]
 	\, \ldots
 }
 
-%%% FIN DEL PREÁMBULO %%%
+\renewcommand{\arraystretch}{1.5}
+\DeclareMathOperator{\circConvUnknown}{\textrm{\scriptsize{\circledNumber{\raisebox{.9pt}{\tiny{N}}}}}}
