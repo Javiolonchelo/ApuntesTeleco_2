@@ -363,9 +363,14 @@ Cuando se realiza un submuestreo, no se puede recuperar la señal original una v
 
 Sin embargo, en ambas situaciones se puede realizar la DFT. Simplemente debemos saber lo que conlleva.
 
+\subsection{Orden mínimo de la DFT}
+
+Cuando una señal que es combinación lineal de funciones armónicas de diferentes frecuencias, se puede calcular el orden mínimo necesario de la DFT para representar dichas frecuencias como:
+\[ \Omega_i = \frac{2\pi k_i}{M_i} \qquad \Longrightarrow \qquad \boxed{\frac{k_i}{M_i}} \]
+
 \subsection{Cálculo matricial}
 
-Es más sencillo obtener la DFT realizando el \textbf{cálculo matricial de la DFT}:
+También es posible obtener la DFT realizando el \textbf{cálculo matricial de la DFT}:
 
 \[ \left( 
 \begin{matrix}
@@ -422,15 +427,6 @@ De forma análoga, podemos realizar el \textbf{cálculo matricial de la DFT inve
 	F = M - 1
 \end{matrix*}
 \]
-
-\subsection{Convolución circular}
-
-Para que la convolución circular y la convolución lineal coincidan, es necesario que:
-\[ N \geq L+D-1 \qquad \Longrightarrow \qquad y[n]=x[n] \circConvUnknown h[n] = \left\lbrace 
-\begin{matrix*}[l]
-	\tilde{x}[n] \circledast h[n] & 0 \leq n \leq N-1\\ 
-	0 & \textrm{resto}
-\end{matrix*} \right.\]
 
 \section{Introducción al análisis espectral mediante la DFT}
 
@@ -490,9 +486,43 @@ A efectos prácticos, es como multiplicar la señal por una ventana rectangular 
 		\displaystyle{0.54 + 0.46\cos \left( \frac{\pi}{M}n \right)} & -M\leq n \leq M\\
 		0 & \textrm{resto}
 	\end{matrix*} \right. \]
+	\vspace*{\fill}
 \end{multicols}
 
 \section{Filtrado de señales mediante la DFT}
+
+\subsection{Convolución circular}
+
+Para que la convolución circular y la convolución lineal coincidan, es necesario que:
+\[ N \geq L+D-1 \qquad \Longrightarrow \qquad y[n]=x[n] \circConvUnknown h[n] = \left\lbrace 
+\begin{matrix*}[l]
+	\tilde{x}[n] \circledast h[n] & 0 \leq n \leq N-1\\ 
+	0 & \textrm{resto}
+\end{matrix*} \right.\]
+
+\subsection{Convolución lineal}
+
+Para trabajar con señales de larga duración, resulta muy útil dividirla en bloques para realizar el análisis en frecuencia.
+
+Siendo $N$ el orden de la DFT, $M$ la longitud de la muestra, $L$ la longitud de cada bloque y $D$ la longitud del filtro, definimos los métodos:
+
+\begin{multicols}{2}
+	\subsubsection{Overlap-Add}
+	Divide la señal en bloques, escoge un orden de la DFT que asegure indiferencia entre convolución circular y lineal, y realiza esta última.
+	\[ N = L + D - 1 \]
+	\vspace*{\fill}
+	
+\columnbreak
+	\subsubsection{Overlap-Save}	
+	Se produce solapamiento. Este método consiste en desechar aquellas muestras que son solapadas. Concretamente, si $k$ es el número de muestras desechadas:
+	\[ k = D - 1 \qquad \qquad L = N \]
+	Sin embargo, como desechamos $k$ muestras de cada bloque, la longitud de cada bloque será diferente:
+	\[ L_\text{real} = L - k\]
+	Además, debemos tener en cuenta que se necesitan $k$ muestras de valor 0 al principio. Por lo tanto, la longitud de la muestra sería:
+	\[ M_\text{real} = M + k \]
+
+	\vspace*{\fill}
+\end{multicols}
 
 \section{Ejercicios resueltos}
 
@@ -503,15 +533,221 @@ Calcular los coeficientes $a_k$ de la señal indicada a continuación: \[ x[n] =
 
 \chapter{Diseño de filtros digitales} \label{temaDeFiltros}
 
-\section{Introducción}
-
 \section{Diseño de filtros FIR}
 
+\subsection{Fases en el diseño de filtros digitales}
+
+El diseño de filtros digitales puede
+
+\begin{enumerate}
+	 \item Hay que conocer las características del filtro a implementar. Estas son indicadas en la \textbf{plantilla de especificaciones}.
+	 \item Se elige el \textbf{método de diseño} del filtro. Veremos un método para FIR y dos para IIR.
+	 \item Se calculan los \textbf{coeficientes} del filtro. El filtro es definido por una ecuación en diferencias lineal de coeficientes constantes.
+	 \item Se representa el filtro \textbf{mediante una estructura} adecuada.
+	 \item Se analizan los \textbf{efectos de la longitud de palabra finita}. Como es imposible tener precisión infinita, es necesario calcular el \textbf{error de posicionamiento} de los polos y ceros.
+	 \item Si es necesario, \textbf{rediseño del filtro o estructura}.
+	 \item \textbf{Implementación práctica}, ya sea en software o hardware.
+\end{enumerate}
+
+
+
+\subsection{Plantilla de especificaciones}
+
+La plantilla de especificaciones en un filtro FIR nos da la respuesta en frecuencia en tiempo discreto. Además se asume que $h[n]$ es real, lo que hace que la respuesta en frecuencia sea una función par. Por ello solo se representa entre $0$ y $\pi$.
+
+\begin{align*}
+	\delta_p &\equiv \text{error/rizado en banda de paso}\\ 
+	\delta_a &\equiv \text{error/rizado en banda atenuada}\
+\end{align*}
+
+\subsection{Características de los filtros FIR}
+
+Los filtros FIR (\textit{Finite Impulse Response}) se definen por los coeficientes $b_k = h[k]$ de su ecuación en diferencias de orden $N$:
+\[ \begin{matrix}
+	\displaystyle{y[n] = \sum_{k=0}^{N}b_kx[n-k] \quad \Longleftrightarrow \quad Y(z) = \sum_{k=0}^{N}b_kz^{-k}X(z)}\\
+	\displaystyle{H(z) = \sum_{k=0}^{N}b_kz^{-k} = \frac{b_0z^N + b_1z^{N-1} + \cdots + b_{N-1}z + b_N}{z^N}}
+\end{matrix} \qquad h[k] = \left\lbrace 
+\begin{matrix*}[l]
+	b_k & k = 0, 1, \ldots, N\\
+	0 & \text{resto}
+\end{matrix*} \right. \rightarrow N+1 \text{ coeficientes}\]
+
+Los coeficiente $a_k$ son todos 0, menos $a_0 = 1$.
+
+Además, los filtros FIR tienen las siguientes características:
+\begin{itemize}
+	\item Los ceros complejos deben aparecer conjugados, para que el filtro tenga una $h[n]$ real.
+	\item Todos los polos están en el origen, para que el filtro sea causal.
+	\item Debido a la característica anterior, la ROC será todo el plano $Z$ menos el origen, por lo que son siempre estables.
+	\item Sufren menos que los filtros IIR los efectos de palabra finita.
+	\item Son sencillos de implementar en un DSP.
+	\item Puede conseguirse una fase lineal.
+\end{itemize}
+
+Sin embargo, para conseguir las mismas especificaciones con un filtro FIR que con un filtro IIR, se necesita un orden mayor. Esto implica mayor tiempo de cálculo y puede añadir más latencia en el sistema.
+
+\subsection{Filtros FIR de fase lineal}
+
+Si la fase de la respuesta en frecuencia tiene la siguiente forma, se dice que el filtro tiene \textbf{fase lineal generalizada} y no introduce \textbf{distorsión de fase}.
+\[ \sphericalangle H \left( e^{j\Omega} \right) = -\alpha \Omega + \beta \qquad \qquad r_g = -\dv{H \left( e^{j\Omega} \right)}{\Omega} = \alpha = \text{cte.} \]
+
+En un filtro FIR, el \textbf{retardo de grupo} $r_g$ es constante porque tiene siempre tienen fase lineal.
+
+Si partimos de una respuesta al impulso $h_1[n]$ real y con simetría:
+\begin{itemize}
+	\item Simetría par: $H_1(\Omega )$ real (fase 0 o $\pi$)
+	\item Simetría impar: $H_1(\Omega )$ imaginario (fase 0 o $-\frac{\pi}{2}$)
+\end{itemize}
+
+Y si además desplazamos $h_1[n]$ una cantidad $\alpha$ de modo que $h[n] = h_1[n--\alpha ]$ sea causal, entonces:
+\[ H(\Omega ) = H_1(\Omega )e^{-j\alpha \Omega} \qquad \Longrightarrow \qquad  \sphericalangle H \left( e^{j\Omega} \right) = \left\lbrace 
+\begin{matrix*}[l]
+	-\alpha \Omega & \text{Si } h_1[n] \text{ es par y } H_1(\Omega ) > 0\\
+	-\alpha \Omega + \pi & \text{Si } h_1[n] \text{ es par y } H_1(\Omega ) < 0\\
+	-\alpha \Omega + \frac{\pi}{2} & \text{Si } h_1[n] \text{ es impar y } H_1(\Omega ) > 0\\
+	-\alpha \Omega - \frac{\pi}{2} & \text{Si } h_1[n] \text{ es impar y } H_1(\Omega ) < 0\\
+\end{matrix*} \right. \]
+\renewcommand{\arraystretch}{1}
+\[ r_g = -\dv{H \left( e^{j\Omega} \right)}{\Omega} = \alpha \qquad 
+\begin{matrix*}[l]
+	\text{Mismo retardo para}\\
+	\text{todas las frecuencias}
+\end{matrix*} \]
+\renewcommand{\arraystretch}{1.5}
+
+Por lo tanto, tendremos 4 tipos de filtros FIR. Usaremos principalmente el tipo I.
+
+\begin{multicols}{2}
+	\subsubsection{Tipo I}
+	Este filtro presenta en su respuesta al impulso \textbf{simetría par} y \textbf{orden par} (número de polos).
+	\[ r_g = \frac{N}{2} \]
+
+	\subsubsection{Tipo II}
+	Igual que el Tipo I, pero no permite diseñar filtros paso alto.
+	\[ \biggl. H(\Omega ) \biggr\vert _{\Omega = \pi} = 0 \]
+
+\end{multicols}
+\begin{multicols}{2}
+
+	\subsubsection{Tipo III}
+	No permite diseñar filtros paso alto ni paso bajo.
+	\[ \biggl. H(\Omega ) \biggr\vert _{\Omega = \pi} = \biggl. H(\Omega ) \biggr\vert _{\Omega = 0} = 0  \]
+
+	\subsubsection{Tipo IV}
+	No permite diseñar filtros paso bajo.
+	\[ \biggl. H(\Omega ) \biggr\vert _{\Omega = 0} = 0 \]
+\end{multicols}
+
+Todos los tipos tienen el mismo retardo de grupo para los filtros FIR.
+
+\subsection{Procedimiento de diseño e implicaciones}
+
+Necesariamente, debemos realizar un enventanado de la respuesta al impulso del filtro escogido. El \textbf{error de aproximación de pico} es el máximo error (rizado) en la respuesta en frecuencia del filtro real con respecto al filtro ideal. Solo depende del tipo de venta (ver tablas).
+
+
+
+\subsection{Particularidades: Ventana de Kaiser}
+
+La ventana de Kaiser es una ventana optimizada.
+
 \section{Diseño de filtros IIR}
+
+\subsection{Introducción}
+
+Los filtros IIR (\textit{Infinite Impulse Response}) de orden $N$ se caracterizan por una ecuación en diferencias de la forma:
+\[ \sum_{k=0}^{N}a_ky[n-k] = \sum_{k=0}^{M}b_kx[n-k] \qquad \Longrightarrow \qquad H(z) = \frac{\displaystyle{\sum_{k=0}^{N}b_kz^{-k}}}{\displaystyle{\sum_{k=0}^{N}a_kz^{-k}}} = K \frac{\left( 1 - b_0z^{-1} \right)\left( 1 - b_1z^{-1} \right)\cdots}{\left( 1 - a_0z^{-1} \right)\left( 1 - a_1z^{-1} \right)\cdots}\]	
+
+Es útil conocer la expresión de $H(z)$ para analizar el funcionamiento del filtro.
+
+Además, los filtros IIR tienen las siguientes características:
+\begin{itemize}
+	\item Los polos y ceros complejos deben aparecer conjugados, para que el filtro tenga una $h[n]$ real.
+	\item Todos los polos se encontrarán dentro de la circunferencia de radio unidad. La ROC irá desde el polo más exterior hasya el infinito, para asegurar la estabilidad y causalidad del filtro.
+	\item La principal ventaja con respecto a los filtros FIR es que se necesitan órdenes mucho menores para cumplir unas mismas especificaciones.
+	\item No se puede lograr fase lineal, por lo que tendremos siempre distorsión de fase. La clave está en tratar adecuadamente con ella.
+\end{itemize}
+
+Partiendo de la plantilla de especificaciones discreta:
+\begin{itemize}
+	\item Se trasladan las especificaciones de diseño al plano complejo $S$ ($\omega$ continua).
+	\item Se diseña el filtro en el plano $S$, siendo $H_c(s)$ un filtro analógico auxiliar. En esta asignatura, usaremos el filtro de Butterworth.
+	\item Se aplica una transformación a $H_c(s)$ para volver de nuevo al plano $Z$.
+\end{itemize}
+
+\subsection{Transformaciones entre los planos continuo y discreto}
+
+Las transformaciones entre planos deben asegurar:
+\begin{itemize}
+	\item Los puntos situados en el ejer $j\omega$ del plano $S$ se deben corresponder con puntos situados en la circunferencia de radio unidad del plano $Z$. Esto asegura la \textbf{correspondencia en frecuencia de los filtros analógico y discreto}.
+	\item Los polos situados en el semiplano izquierdo del dominio $S$ deben transformarse en poos situados en el interior de la circunferencia de radio unidad en el dominio $Z$. Esto asegura la \textbf{conservación de la estabilidad}.
+\end{itemize}
+
+\subsection{Método de la transformación invariante al impulso} \vspace*{\parskip}
+
+\begin{enumerate}
+	 \item Se pasa la plantilla de especificaciones en frecuencia discreta a frecuencia continua, usando la \textbf{teoría de simulación}. 
+	 \[ \Omega = \omega T \qquad \Longleftrightarrow \qquad \omega = \frac{\Omega}{T} \qquad \qquad \qquad T = \text{ valor arbitrario}  \]
+	 \item Mediante la teoría de diseño de filtros analógicos, se obtiene una función de transferencia $H_c(s)$, mirando en las tablas.
+	 \item Se obtiene $h_c(t)$, mediante la división de $H_c(s)$ en fracciones simples y utilizando la transforma inversa de Laplace.
+	 \item Volvemos a tiempo discreto realizando un muestreo con periodo $T$.
+	 \item Dado que el muestreo introduce un factor $\frac{1}{T}$ en la amplitud de la respuesta en frecuencia del filtro, para evitar este efecto deberemos multiplicar por $T$.
+	 \item Realizamos la transformada $Z$. Comparando la función de transferencia del filtro analógico auxiliar con la obtenida en el plano $Z$, podemos comprobar que solamente se diferencian en un factor $T$ y en que los polos situados en $s=p_k$ pasan a estar en $z=e^{p_kT}$. \[ H_c(s) = \sum_{k=1}^{N}\frac{A_k}{s-p_k} \qquad \Longrightarrow \qquad H(z) = \sum_{k=1}^{N} \frac{TA_k}{1 - e^{p_kT}z^{-1}} \]
+\end{enumerate}
+
+El inconveniente principal de este método es que obtenemos solapamiento en el resultado. Por ello, no se pueden realizar filtros paso alto. Ni siquiera filtros paso bajo con frecuencia de corte demasiado cercana a $\pi$.
+
+Cuando se usa este método, siempre \textbf{es conveniente ajustar a la banda de paso}. Con ello logramos evitar el solapamiento.
+
+\[ \overline{s} = \frac{s}{\omega_c} \]
+
+Para compensar este efecto, se realiza una \textbf{predistorsión} contraria al transformar la plantilla de discreta a continua para compensar el efecto.
+
+\subsection{Método de la transformación bilineal}
+
+Es mejor que el método de la transformación invariante al impulso, porque es más sencillo y evita problemas de solapamiento. Se basa en el siguiente cambio de variable:
+\[ s = \frac{2}{T} \left( \frac{1 - z^{-1}}{1 + z^{-1}} \right) \]
+
+Esta transformada consigue asignar a cada punto del plano $Z$ un único punto del plano $S$, y viceversa. Por lo tanto, cada frecuencia $\omega \left( -\infty , +\infty \right)$ con una única frecuencia $\Omega \left( -\pi , +\pi \right)$.
+
+Sin embargo, la correspondencia de frecuencias al utilizar esta transformación \textbf{no es lineal}. Concretamente, se puede calcular como:
+\[ \Omega = 2 \arctan \left( \frac{\omega T}{2} \right) \]
+
+\subsubsection{Síntesis de filtros IIR utilizando la transformación bilineal}
+
+\begin{enumerate}
+	 \item Se parte de la plantilla de especificaciones discreta.
+	 \item Se pasa de la plantilla discreta a una plantilla continua aplicando una predistorsión.
+	 \item Se diseña un filtro que cumpla con la plantilla de especificaciones en el plano $S$.
+	 \item Obtenemos la función de transferencia del filtro discreto aplicando el cambio de variable: \[ H(z) = \biggl. H_c(s) \biggr\vert _{s = \frac{2}{T} \left( \frac{1 -}{} \right)}^{} \]
+\end{enumerate}
 
 \section{Comparación entre métodos de diseño y tipos de filtros}
 
 \section{Estructuras para la implementación de filtros digitales}
+
+\subsection{Introducción}
+
+Un filtro discreto puede venir caracterizado por:
+\begin{itemize}
+	\item Su respuesta al impulso $h[n]$.
+	\item Su función de transferencia $H(z)$.
+	\item Su respuesta en frecuencia $H(\Omega )$, siempre que el filtro sea estable.
+	\item Su ecuación en diferencias.
+	\item Su diagrama de flujo o estructura.
+\end{itemize}
+
+Para implementar la estructura, partimos de la ecuación en diferencias. Debemos normalizar los coeficientes, de modo que:
+\[ \overline{b_k} = \frac{b_k}{a_0} \qquad \qquad \overline{a_k} = \frac{a_k}{a_0} \]
+\subsubsection{Aspectos fundamentales}
+\subsubsection{Ejemplo de representación}
+
+\subsection{Estructuras básicas de sistemas IIR}
+\subsubsection{Formas directas}
+\subsubsection{Formas indirectas (cascada y paralelo)}
+
+\subsection{Estructuras básicas de sistemas FIR}
+\subsubsection{Formas directas}
+\subsubsection{Estructuras especiales para filtros de fase lineal}
 
 \chapter{Ejercicios de examen resueltos}
 
