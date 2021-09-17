@@ -8,6 +8,7 @@
 \Large Apuntes de clase}
 \author{Javier Rodrigo López \thanks{E-mail: \href{mailto:javiolonchelo@gmail.com}{\texttt{javiolonchelo@gmail.com}}}} 
 \date{\today}
+\setlength{\droptitle}{-7cm}
 
 %%% INICIO DEL DOCUMENTO %%%
 \begin{document}
@@ -40,7 +41,8 @@
 \section*{Introducción}
 Esta pequeña recopilación de fórmulas, teoremas y demás apuntes de teoría ha sido elaborada durante el primer semestre del curso 2020-2021, en la escuela \href{https://www.etsist.upm.es/}{\textbf{ETSIST}} de la \href{http://www.upm.es/}{\textbf{UPM}} por Javier Rodrigo López, alumno de 2º de Ingeniería de Sonido e Imagen.
 
-Se han tomado como importante referencia los apuntes de \href{https://www.etsist.upm.es/escuela/departamentos/EF/personal?departamento=EFF&idTrabajador=02819b0c47b0eac780a7d0e336d9862b}{Marta Sánchez Agudo}, profesora de Electromagnetismo y Ondas en la ETSIST, descargados desde \href{https://apuntesupmcampussur.wordpress.com/}{este blog}.
+Se han tomado como importante referencia los apuntes de \href{https://www.etsist.upm.es/escuela/departamentos/EF/personal?departamento=EFF&idTrabajador=02819b0c47b0eac780a7d0e336d9862b}{Marta Sánchez Agudo}, profesora de Electromagnetismo y Ondas en la ETSIST, descargados desde \href{https://apuntesupmcampussur.wordpress.com/}{este blog}. Tambi
+en es digno mencionar que he asistido a las clases de \href{https://www.etsist.upm.es/escuela/departamentos/EF/personal?departamento=EFF&idTrabajador=d7cdf3a80e5b5b146334cffaa517eb45}{Francisco Prieto Castrillo} y otra parte importante de sus conocimientos han quedado plasmados en este documento, con mi toque personal.
 
 
 \newpage
@@ -1243,45 +1245,16 @@ Si un dipolo se encuentra en el seno de un campo eléctrico externo uniforme, co
 
 \chapter{Conceptos generales}
 
-
-\section{Notación}
-\[\dot f = \dv{f}{t}\]
-(O con respecto a la variable que sea)
-
-\section{Pasos para la resolución de problemas}
-
-\begin{enumerate}
-	\item Planteamiento \begin{itemize}
-		      \item ¿Qué se pide?
-		      \item Simetrías del problema y leyes asociadas.
-		      \item ¿Puedo adaptar (no usar a ciegas) un resultado previo?
-	      \end{itemize}
-	\item Cálculos intermedios \begin{itemize}
-		      \item ¡Aún no son el resultado!
-		      \item Evitar errores graves (los iremos viendo...) \errorGrave
-	      \end{itemize}
-	\item Resultado \begin{itemize}
-		      \item Expresado con los datos del problema.
-		      \item Los problemas están diseñados para que el resultado sea simple.
-		      \item ¡Hay que controlar el resultado final! Tenemos que usar el análisis dimensional.
-	      \end{itemize}
-\end{enumerate}
-
-
 \section{Análisis dimensional}
-Las magnitudes (dimensiones) $[X]$
-
-Dimensiones fundamentales que veremos:
-\begin{itemize}
-	\item Longitud $(L)$
-	\item Tiempo $(T)$
-	\item Masa $(M)$
-	\item Corriente $(A)$
-\end{itemize}
 
 Las magnitudes físicas se expresan como combinación de las fundamentales.
 
-Ejemplo: $F=ma \qquad  [F]=[m][a]=\frac{[m][v]}{[T]}= \frac{M[v]}{T} = ML/T^2$
+\[ F=ma \qquad  [F]=[m][a]=\frac{[m][v]}{[T]}= \frac{M[v]}{T} = ML/T^2 \]
+
+Por ello podemos expresar muchas unidades del SI en función de unas pocas.
+
+\[ F=ma \qquad  [F]=[m][a] \rightarrow \N = \kg \m \s ^{-2} \]
+
 \begin{enumerate}
 	\item No se pueden sumar peras y manzanas (por ejemplo, masas y longitudes) \errorGrave
 	\item Notar que: \begin{itemize}
@@ -1289,12 +1262,6 @@ Ejemplo: $F=ma \qquad  [F]=[m][a]=\frac{[m][v]}{[T]}= \frac{M[v]}{T} = ML/T^2$
 		      \item [dX] = [X]
 	      \end{itemize}
 \end{enumerate}
-
-Otra cosa distinta son las unidades.
-
-A no ser que se diga lo contrario, no suelen dar unidades de magnitudes. Si no se dan unidades, se responde sin unidades.
-
-Ejemplo: ``Una partícula de masa $m$ está situada a una distancia $d$ del origen de coordenadas y experimenta una velocidad $v_o$...''
 
 El Sistema Internacional (SI) es a veces conocido como Sistema MKSA (metro, kilo, segundo, amperio).
 
