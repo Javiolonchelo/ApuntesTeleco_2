@@ -65,18 +65,19 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 
     Si quieres comprobar tus ejercicios de lenguaje de ensamble, puedes descargar este [proyecto plantilla](../../eaw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/ProyectoPlantilla.7z) y programar en él, pero solo hay un ejercicio funcional ahora mismo. Te recomiendo hacerlos a mano directamente :)
 
-    - [Enero 2020](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2020_Enero.pdf)
+    - Enero 2020
       - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713;
       - Ejercicio 5 - Periféricos &#x2713;
-    - [Enero 2019](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2019_Enero.pdf)
+    - Enero 2019
       - Ejercicio 3 - Mapas de memoria &#x2713;
       - Ejercicio 4 - Interrupciones &#x2713;
       - Ejercicio 5 - Periféricos &#x2713;
-    - [Junio 2019](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2019_Junio.pdf)
+    - Junio 2019
       - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713;
-    - [Extraordinaria 2018](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2018_Extra.pdf)
+    - Extraordinaria 2018
       - Ejercicio 4 - Interrupciones &#x2713;
-    - [Junio 2017](../../raw/main/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio.pdf) - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713; [[código de comprobación]](Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio_1.s)
+    - Junio 2017
+      - Ejercicio 1 - Análisis de lenguaje de ensamble &#x2713; [[código de comprobación]](Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Teor%C3%ADa/2017_Junio_1.s)
       </p>
 
     ***
@@ -91,51 +92,39 @@ También debo aclarar que con este repositorio **no pretendo fomentar el plagio*
 
     - **2017 Primavera - L1**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/2017_Prim_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2017 Primavera - L2**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/2017_Prim_L2.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Prim_L2/MICR/EX_L2/Hitos/Hito_3/main.cpp)
 
     - **2017 Otoño - L1**
-
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Oto_L1_UsandoPlantilla/2017_Oto_L1.pdf)
 
       - Solución 1 (usando la plantilla de 2021) - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Oto_L1_UsandoPlantilla/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Oto_L1_UsandoPlantilla/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2017_Oto_L1_UsandoPlantilla/MICR/EX_L1/Hitos/Hito_3/main.cpp)
         > **¡No recomendable!** Sin cambiar nada de la plantilla, se hace muchísimo más difícil que los otros exámenes. Si lo quieres intentar, procura definir los LEDs como `DigitalOut`, en lugar de `BusOut`. Probablemente, era distinto en 2017. _(MODA reference jsjsjjsjsjs)_
 
     - **2018 Otoño - L1**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Oto_L1/2018_Oto_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2018 Primavera - L1**
-
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Prim_L1/2018_Prim_L1.pdf)
 
       - Solución 1 - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Prim_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Prim_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Prim_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
       - Solución 2 - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Prim_L1__2/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Prim_L1__2/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2018_Prim_L1__2/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2019 Otoño - L1**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2019_Oto_L1/2019_Oto_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2019_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2019_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2019_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2020 Otoño - L1**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/2020_Oto_L1.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L1/MICR/EX_L1/Hitos/Hito_3/main.cpp)
 
     - **2020 Otoño - L2**
 
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L2/2020_Oto_L2.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L2/MICR/EX_L2/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L2/MICR/EX_L2/Hitos/Hito_2/main.cpp) | [Hito 3](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2020_Oto_L2/MICR/EX_L2/Hitos/Hito_3/main.cpp)
 
     - **2021 Primavera - L2**
-
-      - [Enunciado](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2021_Prim_L2/2021_Prim_L2.pdf)
       - [Hito 1](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2021_Prim_L2/MICR/EX_L2/Hitos/Hito_1/main.cpp) | [Hito 2](/Segundo%20Semestre/Microprocesadores/Examenes_resueltos/Laboratorio/2021_Prim_L2/MICR/EX_L2/Hitos/Hito_2/main.cpp)
 
     ***
