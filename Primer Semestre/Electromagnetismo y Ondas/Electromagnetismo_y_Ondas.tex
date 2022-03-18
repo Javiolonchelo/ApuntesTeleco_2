@@ -163,7 +163,7 @@ El movimiento armónico simple, como su propio nombre indica, realiza un movimie
 En este apartado, haremos uso de los fasores, así que viene bien que le eches un vistazo en la \autoref{subsec:fasores}.
 
 Sea un \mas \space $x(t) = A\cdot \sen{\left( \omega t + \phi \right)}$, podremos definir un fasor $\vb{A}$ con $\omega$ y $\abs{\vb{A}}$ constantes (si estas dos condiciones no se cumplieran, no sería un \mas ).
-\begin{figure}[h!]
+\begin{figure}[!ht]
 	\centering
 	\begin{subfigure}[b]{0.65\linewidth}
 		\includegraphics[width=\linewidth]{./Imágenes/aaa.jpg}
@@ -1539,7 +1539,7 @@ Podemos pasar a resolver el problema.
 \begin{fleqn}
 	\begin{multicols}{4}
 		\formula{Vector posición}
-		\[\vec{r} = x \vec{u_x} + y \vec{u_x} + z \vec{u}_z \]
+		\[\vec{r} = x \hat{i} + y \vec{u_x} + z \vec{u}_z \]
 		\[r = \abs{\vec{r}} = \sqrt{x^2 +y^2+z^2} >0\]
 
 		\formula{Vector velocidad}
@@ -1547,6 +1547,9 @@ Podemos pasar a resolver el problema.
 		\[\vec{v} = v_x \vec{u_x} + v_y \vec{u_x} + v_z \vec{u}_z\]
 		\[\abs{\vec{v}} = \sqrt{{v_x}^2 +{v_y}^2+{v_z}^2} >0\]
 		\[\vec{v} \parallel \vec{u}_\text{\, tangente a la trayectoria} \]
+
+		\vspace*{\fill}
+	  \columnbreak
 
 		\formula{Vector aceleración}
 		\[\vec{a} =\pdv{\vec{v}}{t}\]
@@ -1562,7 +1565,6 @@ Podemos pasar a resolver el problema.
 		\[a(t) = \frac{\partial v(t)}{\partial t} -\omega^2 A \sin{\left(\omega t + \varphi_0\right)}\]
 		\[\frac{\partial ^2 x}{\partial t^2}+\omega^2 x = 0 \longrightarrow F= m\cdot \left( -\omega^2x \right)\]
 
-		\vspace{2 cm}
 		\formula{¡RECUERDA!}
 		\[\sin{\left(\omega t \pm \pi \right)}= -\sin{\left(\omega t\right)}\]
 		\[\cos{\left(\alpha\right)} = \sin{\left(\alpha + \frac{\pi}{2}\right)}\]
@@ -1582,7 +1584,6 @@ Podemos pasar a resolver el problema.
 		\[F =-b\cdot \vec{v}\]
 		\[x(t)=A_0e^{-\gamma t}\sin{\left(\omega t + \varphi\right)}\]
 		\[\frac{\partial ^2x}{\partial t^2}+ \underbrace{\frac{b}{m}}_{2\gamma}\cdot \frac{\partial x}{\partial t}+\frac{kx}{m}=0\]
-
 	\end{multicols}
 \end{fleqn}
 
@@ -1647,6 +1648,7 @@ Podemos pasar a resolver el problema.
 		\noindent Tiene que haber antinodos, es decir, se tiene que cumplir la condición de vientre:
 
 		\[\left( \pdv{\Psi}{x} \right)_{x_{\text{vientre}}}\! \! \! \! \! =0\quad \forall t\]
+		\vspace*{\fill}
 
 	\end{multicols}
 \end{fleqn}
@@ -1716,7 +1718,7 @@ Podemos pasar a resolver el problema.
 
 		\formula{Corrientes estacionarias}
 		\[\oiint{\vec{j}\cdot d\vec{s}}=0 \quad \longrightarrow \begin{array}{l}
-				\text{No hay sumideros} \\
+				\text{No hay sumideros} \\[-5pt]
 				\text{ni fuentes de carga.}
 			\end{array}\]
 
@@ -1758,7 +1760,7 @@ Podemos pasar a resolver el problema.
 \newpage
 \section{Campo electromagnético}
 \begin{fleqn}
-	\begin{multicols}{4}
+	\begin{multicols}{3}
 
 		\formula{Fuerza electromotriz inducida}
 		\[\xi = -\dv{\Phi_B}{t}\]
@@ -1768,13 +1770,15 @@ Podemos pasar a resolver el problema.
 
 		\formula{Coeficiente de inducción mutua}
 		\[M_{2,1}=\dv{\phi_2}{I_1}=M_{1,2}=\dv{\phi_1}{I_2}\]
+		\vspace*{\fill}
 
 		\formula{Energía en campo electromagnético}
 		\[\omega_m = \frac{1}{2}\vec{H}\cdot \vec{B}= \frac{1}{2}\cdot \frac{B^2}{\mu} \ , \quad W_m=\iiint \omega_m dv\]
+		\vspace*{\fill}
 
 		\formula{Teorema de Ampère-Maxwell}
 		\[\oint{\vec{B}\cdot d\vec{l}} = \mu _0I+\!\!\!\!\!\underbrace{\mu_0\varepsilon_0\pdv{\phi_E}{t}}_{ \begin{matrix}
-					\text{Corriente de} \\
+					\text{Corriente de} \\[-5pt]
 					\text{desplazamiento}
 				\end{matrix}}\]
 
